@@ -19,12 +19,25 @@
 [pre-commit]: https://github.com/pre-commit/pre-commit
 [black]: https://github.com/psf/black
 
+`ecoinvent_migrate` downloads the change report annex Excel files from ecoinvent, and turns them
+into something usable - [Randonneur migration files](https://github.com/brightway-lca/randonneur).
+
 ## Installation
 
 You can install _ecoinvent_migrate_ via [pip] from [PyPI]:
 
 ```console
 $ pip install ecoinvent_migrate
+```
+
+## Usage
+
+Migration are from one release to the next, e.g. from 3.5 to 3.6. There are separate files, and
+separate functions, for technosphere and biosphere edges.
+
+```python
+from ecoinvent_migrate import *
+filepath = generate_technosphere_mapping("3.7.1", "3.8")
 ```
 
 ## Contributing
@@ -42,14 +55,12 @@ _ecoinvent_migrate_ is free and open source software.
 If you encounter any problems,
 please [file an issue][Issue Tracker] along with a detailed description.
 
-
 <!-- github-only -->
 
 [command-line reference]: https://ecoinvent_migrate.readthedocs.io/en/latest/usage.html
 [License]: https://github.com/brightway-lca/ecoinvent_migrate/blob/main/LICENSE
 [Contributor Guide]: https://github.com/brightway-lca/ecoinvent_migrate/blob/main/CONTRIBUTING.md
 [Issue Tracker]: https://github.com/brightway-lca/ecoinvent_migrate/issues
-
 
 ## Building the Documentation
 
