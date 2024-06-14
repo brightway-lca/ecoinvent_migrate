@@ -273,7 +273,7 @@ def disaggregated(data: List[dict], lookup: dict) -> dict:
 
     return {
         "source": data[0]["source"],
-        "targets": [obj["target"] | {"allocation": obj["pv"] / total} for obj in data],
+        "targets": [obj["target"] | {"allocation": obj["pv"] / total} for obj in data if obj["pv"]],
     }
 
 
