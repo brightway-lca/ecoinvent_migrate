@@ -23,7 +23,7 @@
 
 These files are designed to allow for relinking against new versions of ecoinvent, **not** for updating an existing ecoinvent installation.
 
-This library requires a valid ecoinvent license for all functionality.
+This library requires a valid ecoinvent license for all functionality. Output files are provided in the `outputs` directory.
 
 ## Installation
 
