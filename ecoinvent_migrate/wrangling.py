@@ -249,9 +249,19 @@ def disaggregated(data: List[dict], lookup: dict) -> dict:
 
     """
     for obj in data:
-        obj["pv"] = lookup[
-            astuple(obj["target"], ("name", "location", "reference product"))
-        ].rp_exchange()["production volume"]
+        try:
+            obj["pv"] = lookup[
+                astuple(obj["target"], ("name", "location", "reference product"))
+            ].rp_exchange()["production volume"]
+        except KeyError:
+            logger.warning(
+                """Change report annex dataset missing from database.
+    This is likely a publication error which you can't fix.
+    Removing the following from migrations:
+    {ds}""",
+                ds=obj["target"],
+            )
+            obj["pv"] = 0
 
     total = sum(obj["pv"] for obj in data)
     if not total:
