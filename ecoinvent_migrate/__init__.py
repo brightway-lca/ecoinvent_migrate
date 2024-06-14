@@ -6,6 +6,6 @@ __all__ = (
     "generate_biosphere_mapping",
 )
 
-__version__ = "0.0.1"
+__version__ = "0.1.0"
 
-from .main import generate_technosphere_mapping, generate_biosphere_mapping
+from .main import generate_biosphere_mapping, generate_technosphere_mapping
