@@ -212,3 +212,47 @@ def test_source_target_pair_as_bw_dict_valueerror():
         source_target_pair_as_bw_dict(given, "3.8", "3.10")
     with pytest.raises(ValueError):
         source_target_pair_as_bw_dict(given, "3.9.1", "3.11")
+
+
+def test_source_target_pair_as_bw_dict_new_dataset():
+    given = {
+        "Activity Name - 3.9.1": float("NaN"),
+        "Geography - 3.9.1": float("NaN"),
+        "Reference Product - 3.9.1": float("NaN"),
+        "Reference Product Unit - 3.9.1": float("NaN"),
+        "Activity Name - 3.10": "baling",
+        "Geography - 3.10": "GLO",
+        "Reference Product - 3.10": "baling",
+        "Reference Product Unit - 3.10": "unit",
+    }
+    assert source_target_pair_as_bw_dict(given, "3.9.1", "3.10") == []
+
+
+def test_source_target_pair_as_bw_dict_multiple_some_missing():
+    given = {
+        "Activity Name - 3.9.1": "p-nitrotoluene production",
+        "Geography - 3.9.1": "GLO",
+        "Reference Product - 3.9.1": "nan;\nnan;\np-nitrotoluene",
+        "Reference Product Unit - 3.9.1": "nan;\nnan;\nkg",
+        "Activity Name - 3.10": "nitrotoluenes production, toluene nitration",
+        "Geography - 3.10": "GLO",
+        "Reference Product - 3.10": "m-nitrotoluene;\no-nitrotoluene;\np-nitrotoluene",
+        "Reference Product Unit - 3.10": "kg;\nkg;\nkg",
+    }
+    expected = [
+        {
+            "source": {
+                "name": "p-nitrotoluene production",
+                "location": "GLO",
+                "reference product": "p-nitrotoluene",
+                "unit": "kg",
+            },
+            "target": {
+                "name": "nitrotoluenes production, toluene nitration",
+                "location": "GLO",
+                "reference product": "p-nitrotoluene",
+                "unit": "kg",
+            },
+        },
+    ]
+    assert source_target_pair_as_bw_dict(given, "3.9.1", "3.10") == expected

@@ -10,11 +10,7 @@ from loguru import logger
 def get_change_report_filepath(version: str, release: EcoinventRelease) -> Path:
     """Get the filepath to the Excel change report file"""
     files = release.list_extra_files(version)
-    candidates = [
-        key
-        for key in files
-        if "change report" in key.lower() and "annex" in key.lower()
-    ]
+    candidates = [key for key in files if "change report" in key.lower() and "annex" in key.lower()]
     if not candidates:
         raise ValueError(
             "Can't find suitable change report filename from release files:\n\t{}".format(
