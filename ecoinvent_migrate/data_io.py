@@ -10,7 +10,9 @@ from .errors import MissingDatabase
 
 
 def get_change_report_filepath(version: str, release: EcoinventRelease) -> Path:
-    """Get the filepath to the Excel change report file"""
+    """Get the filepath to the Excel change report file.
+
+    Download a list of extra files from ecoinvent and do pattern matching."""
     files = release.list_extra_files(version)
     candidates = [key for key in files if "change report" in key.lower() and "annex" in key.lower()]
     if not candidates:
@@ -59,6 +61,7 @@ def setup_project(
     ecoinvent_username: Optional[str] = None,
     ecoinvent_password: Optional[str] = None,
 ) -> None:
+    """Switch to or create a Brightway project, and install the source and target databases."""
     bd.projects.set_current(project_name)
 
     if f"ecoinvent-{source_version}-{system_model}" not in bd.databases:
@@ -90,6 +93,16 @@ def setup_project(
 
 
 def get_brightway_databases(source_version: str, target_version: str, system_model: str):
+    """Get database names and process caches for source and target databases.
+
+    Returns:
+
+    * `source_db_name`: str. Standardized name for ecoinvent based on `ecoinvent_interface` standard
+    * `target_db_name`: str. Standardized name for ecoinvent based on `ecoinvent_interface` standard
+    * `source_lookup`: dict. Dictionary from attribute tuple (name, location, reference product) to `Node` object.
+    * `target_lookup`: dict. Dictionary from attribute tuple (name, location, reference product) to `Node` object.
+
+    """
     source_db_name = f"ecoinvent-{source_version}-{system_model}"
     target_db_name = f"ecoinvent-{target_version}-{system_model}"
     if source_db_name not in bd.databases:

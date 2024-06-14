@@ -19,6 +19,17 @@ def write_datapackage(
     version: str = "1.0.0",
     description: Optional[str] = None,
 ) -> Path:
+    """Write given `data` to a Frictionless Data Datapackage.
+
+    Input args for datapackage:
+
+    * output_version (str, default is "1.0.0"): [Datapackage version number](https://specs.frictionlessdata.io/data-package/#version)
+    * licenses (list, default is CC-BY): Licenses following the [datapackage standard](https://specs.frictionlessdata.io/data-package/#licenses)
+    * description (str, default is auto-generated): Description of generated datapackage.
+
+    If `output_directory` isn't provided, a `platformdirs.user_data_dir` is used.
+
+    Returns the `pathlib.Path` of the created file."""
     now = datetime.now(timezone.utc).isoformat()
     if licenses is None:
         licenses = [
