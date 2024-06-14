@@ -1,5 +1,6 @@
 import itertools
 import math
+from collections import defaultdict
 from numbers import Number
 from typing import List
 
@@ -161,28 +162,15 @@ def source_target_pair_as_bw_dict(
 
 
 def resolve_glo_row_rer_roe(
-    data: List[dict], source_version: str, target_version: str, system_model: str
+    data: List[dict],
+    source_db_name: str,
+    target_db_name: str,
+    source_lookup: dict,
+    target_lookup: dict,
 ) -> List[dict]:
     """Iterate through `data`, and change `location` attribute to `RoW` or `RoE` when needed.
 
     Looks in actual database to get correct `location` attributes."""
-    source_db_name = f"ecoinvent-{source_version}-{system_model}"
-    target_db_name = f"ecoinvent-{target_version}-{system_model}"
-    if source_db_name not in bd.databases:
-        raise MissingDatabase(f"Missing source database: {source_db_name}")
-    if target_db_name not in bd.databases:
-        raise MissingDatabase(f"Missing target database: {target_db_name}")
-
-    logger.info("Loading source database {db} to cache data attributes", db=source_db_name)
-    source_lookup = {
-        tuple([o[attr] for attr in ("name", "location", "reference product")])
-        for o in bd.Database(source_db_name)
-    }
-    logger.info("Loading target database {db} to cache data attributes", db=target_db_name)
-    target_lookup = {
-        tuple([o[attr] for attr in ("name", "location", "reference product")])
-        for o in bd.Database(target_db_name)
-    }
 
     for obj in data:
         source_missing = None
@@ -202,7 +190,7 @@ def resolve_glo_row_rer_roe(
                 logger.debug(
                     "{kind} process {name} location corrected to 'RoW'",
                     kind=kind,
-                    name=obj[kind]['name'],
+                    name=obj[kind]["name"],
                 )
             elif (
                 key not in lookup
@@ -213,10 +201,10 @@ def resolve_glo_row_rer_roe(
                 logger.debug(
                     "{kind} process {name} location corrected to 'RoE'",
                     kind=kind,
-                    name=obj[kind]['name'],
+                    name=obj[kind]["name"],
                 )
             else:
-                if kind == 'target' and source_missing:
+                if kind == "target" and source_missing:
                     # Missing in both source and target for this system model
                     source_missing = None
                     continue
@@ -231,9 +219,6 @@ def resolve_glo_row_rer_roe(
                         db_name=db_name,
                         ds=obj[kind],
                     )
-                # raise KeyError(
-                #     f"""Can't find {kind} object in database {db_name}: {obj[kind]}"""
-                # )
         if source_missing:
             # Only a debug message because this won't break anything - there is no process in the
             # source database to miss a link from.
@@ -244,3 +229,64 @@ def resolve_glo_row_rer_roe(
             )
 
     return data
+
+
+FIELDS = ("name", "location", "reference product", "unit")
+
+
+def astuple(obj: dict, fields: List[str] = FIELDS) -> tuple:
+    return tuple([obj[field] for field in fields])
+
+
+def disaggregated(data: List[dict], lookup: dict) -> dict:
+    """Take a list of mapping dictionaries with the same `source`, and create one `disaggregate`
+    object.
+
+    Applies `allocation` factors based on the production volumes in `lookup`
+
+    """
+    for obj in data:
+        obj["pv"] = lookup[
+            astuple(obj["target"], ("name", "location", "reference product"))
+        ].rp_exchange()["production volume"]
+
+    total = sum(obj["pv"] for obj in data)
+    if not total:
+        logger.warning(
+            f"Total production from {n} targets is zero for source {s}; using equal allocation factors",
+            n=len(data),
+            s=data[0]["source"],
+        )
+        return {
+            "source": data[0]["source"],
+            "targets": [obj["target"] | {"allocation": 1 / len(data)} for ob in data],
+        }
+    elif total < 0:
+        logger.warning(
+            f"Total production from {n} targets is less than zero for source {s}; what is happening!?",
+            n=len(data),
+            s=data[0]["source"],
+        )
+
+    return {
+        "source": data[0]["source"],
+        "targets": [obj["target"] | {"allocation": obj["pv"] / total} for obj in data],
+    }
+
+
+def split_replace_disaggregate(data: List[dict], target_lookup: dict) -> dict:
+    """Split the transformations in `data` into `replace` and `disaggregate` sections.
+
+    Disaggregation is needed when one dataset is replaced by multiple datasets. We lookup the
+    respective production volumes to get the disaggregation factors."""
+    groupie = defaultdict(list)
+
+    for obj in data:
+        groupie[astuple(obj["source"])].append(obj)
+
+    return {
+        "replace": [value[0] for value in groupie.values() if len(value) == 1],
+        "disaggregate": [
+            disaggregated(value, target_lookup) for value in groupie.values() if len(value) > 1
+        ],
+    }

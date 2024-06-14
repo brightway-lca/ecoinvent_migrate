@@ -7,10 +7,14 @@ import pandas as pd
 from ecoinvent_interface import EcoinventRelease, Settings
 from loguru import logger
 
-from .utils import configure_logs
-from .data_io import get_change_report_filepath, setup_project
+from .data_io import get_brightway_databases, get_change_report_filepath, setup_project
 from .errors import VersionJump
-from .wrangling import resolve_glo_row_rer_roe, source_target_pair_as_bw_dict
+from .utils import configure_logs
+from .wrangling import (
+    resolve_glo_row_rer_roe,
+    source_target_pair_as_bw_dict,
+    split_replace_disaggregate,
+)
 
 
 def get_change_report_context(
@@ -82,7 +86,7 @@ def generate_technosphere_mapping(
     system_model: str = "cutoff",
     ecoinvent_username: Optional[str] = None,
     ecoinvent_password: Optional[str] = None,
-    write_logs: bool = True
+    write_logs: bool = True,
 ) -> Path:
     """Generate a Randonneur mapping file for technosphere edge attributes from source to target."""
     configure_logs(write_logs=write_logs)
@@ -117,11 +121,16 @@ def generate_technosphere_mapping(
         )
         for pair in source_target_pair_as_bw_dict(row, source_version, target_version)
     ]
+    source_db_name, target_db_name, source_lookup, target_lookup = get_brightway_databases(
+        source_version=source_version, target_version=target_version, system_model=system_model
+    )
     data = resolve_glo_row_rer_roe(
         data=data,
-        source_version=source_version,
-        target_version=target_version,
-        system_model=system_model,
+        source_db_name=source_db_name,
+        target_db_name=target_db_name,
+        source_lookup=source_lookup,
+        target_lookup=target_lookup,
     )
-    data = [ds for ds in data if ds['source'] != ds['target']]
+    data = [ds for ds in data if ds["source"] != ds["target"]]
+    data = split_replace_disaggregate(data=data, target_lookup=target_lookup)
     return data

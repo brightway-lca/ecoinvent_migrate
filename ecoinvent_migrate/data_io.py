@@ -6,6 +6,8 @@ import bw2io as bi
 from ecoinvent_interface import EcoinventRelease
 from loguru import logger
 
+from .errors import MissingDatabase
+
 
 def get_change_report_filepath(version: str, release: EcoinventRelease) -> Path:
     """Get the filepath to the Excel change report file"""
@@ -85,3 +87,24 @@ def setup_project(
             username=ecoinvent_username,
             password=ecoinvent_password,
         )
+
+
+def get_brightway_databases(source_version: str, target_version: str, system_model: str):
+    source_db_name = f"ecoinvent-{source_version}-{system_model}"
+    target_db_name = f"ecoinvent-{target_version}-{system_model}"
+    if source_db_name not in bd.databases:
+        raise MissingDatabase(f"Missing source database: {source_db_name}")
+    if target_db_name not in bd.databases:
+        raise MissingDatabase(f"Missing target database: {target_db_name}")
+
+    logger.info("Loading source database {db} to cache data attributes", db=source_db_name)
+    source_lookup = {
+        tuple([o[attr] for attr in ("name", "location", "reference product")]): o
+        for o in bd.Database(source_db_name)
+    }
+    logger.info("Loading target database {db} to cache data attributes", db=target_db_name)
+    target_lookup = {
+        tuple([o[attr] for attr in ("name", "location", "reference product")]): o
+        for o in bd.Database(target_db_name)
+    }
+    return source_db_name, target_db_name, source_lookup, target_lookup
