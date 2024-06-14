@@ -1,0 +1,5520 @@
+{
+  "name": "ecoinvent-3.7.1-cutoff-ecoinvent-3.8-cutoff",
+  "licenses": [
+    {
+      "name": "CC BY 4.0",
+      "path": "https://creativecommons.org/licenses/by/4.0/",
+      "title": "Creative Commons Attribution 4.0 International"
+    }
+  ],
+  "version": "1.0.0",
+  "description": "Data migration file from ecoinvent-3.7.1-cutoff to ecoinvent-3.8-cutoff generated with `ecoinvent_migrate` version 0.1.0",
+  "homepage": "https://github.com/brightway-lca/ecoinvent_migrate",
+  "created": "2024-06-14T12:59:26.860279+00:00",
+  "contributors": [
+    {
+      "title": "ecoinvent association",
+      "path": "https://ecoinvent.org/",
+      "role": "author"
+    },
+    {
+      "title": "Chris Mutel",
+      "path": "https://chris.mutel.org/",
+      "role": "wrangler"
+    }
+  ],
+  "replace": [
+    {
+      "source": {
+        "name": "assembly of generator and motor, auxilliaries and energy use, heat and power co-generation unit, 160kW electrical",
+        "location": "RoW",
+        "reference product": "assembly of generator and motor, auxilliaries and energy use, for heat and power co-generation unit, 160 KW electrical",
+        "unit": "unit"
+      },
+      "target": {
+        "name": "assembly of generator and motor, auxilliaries and energy use, heat and power co-generation unit, 160kW electrical",
+        "location": "RoW",
+        "reference product": "assembly of generator and motor, auxilliaries and energy use, heat and power co-generation unit, 160kW electrical",
+        "unit": "unit"
+      }
+    },
+    {
+      "source": {
+        "name": "assembly of generator and motor, auxilliaries and energy use, heat and power co-generation unit, 160kW electrical",
+        "location": "RER",
+        "reference product": "assembly of generator and motor, auxilliaries and energy use, for heat and power co-generation unit, 160 KW electrical",
+        "unit": "unit"
+      },
+      "target": {
+        "name": "assembly of generator and motor, auxilliaries and energy use, heat and power co-generation unit, 160kW electrical",
+        "location": "RER",
+        "reference product": "assembly of generator and motor, auxilliaries and energy use, heat and power co-generation unit, 160kW electrical",
+        "unit": "unit"
+      }
+    },
+    {
+      "source": {
+        "name": "butane extraction, from natural gas liquids",
+        "location": "GLO",
+        "reference product": "butane",
+        "unit": "kg"
+      },
+      "target": {
+        "name": "natural gas liquids fractionation",
+        "location": "GLO",
+        "reference product": "butane",
+        "unit": "kg"
+      }
+    },
+    {
+      "source": {
+        "name": "cement production, blast furnace slag 40-70%",
+        "location": "RoW",
+        "reference product": "cement, blast furnace 40-70%",
+        "unit": "kg"
+      },
+      "target": {
+        "name": "cement production, blast furnace slag 40-70%",
+        "location": "RoW",
+        "reference product": "cement, blast furnace slag 40-70%",
+        "unit": "kg"
+      }
+    },
+    {
+      "source": {
+        "name": "cement production, blast furnace slag 40-70%",
+        "location": "IN",
+        "reference product": "cement, blast furnace 40-70%",
+        "unit": "kg"
+      },
+      "target": {
+        "name": "cement production, blast furnace slag 40-70%",
+        "location": "IN",
+        "reference product": "cement, blast furnace slag 40-70%",
+        "unit": "kg"
+      }
+    },
+    {
+      "source": {
+        "name": "cement production, blast furnace slag 66-80%",
+        "location": "CH",
+        "reference product": "cement, blast furnace slag, 66-80%",
+        "unit": "kg"
+      },
+      "target": {
+        "name": "cement production, blast furnace slag 66-80%",
+        "location": "CH",
+        "reference product": "cement, blast furnace slag 66-80%",
+        "unit": "kg"
+      }
+    },
+    {
+      "source": {
+        "name": "cement production, blast furnace slag 66-80%",
+        "location": "Europe without Switzerland",
+        "reference product": "cement, blast furnace slag, 66-80%",
+        "unit": "kg"
+      },
+      "target": {
+        "name": "cement production, blast furnace slag 66-80%",
+        "location": "Europe without Switzerland",
+        "reference product": "cement, blast furnace slag 66-80%",
+        "unit": "kg"
+      }
+    },
+    {
+      "source": {
+        "name": "cement production, blast furnace slag 66-80%",
+        "location": "RoW",
+        "reference product": "cement, blast furnace slag, 66-80%",
+        "unit": "kg"
+      },
+      "target": {
+        "name": "cement production, blast furnace slag 66-80%",
+        "location": "RoW",
+        "reference product": "cement, blast furnace slag 66-80%",
+        "unit": "kg"
+      }
+    },
+    {
+      "source": {
+        "name": "compact fluorescent lamp",
+        "location": "GLO",
+        "reference product": "compact fluorescent bulb",
+        "unit": "unit"
+      },
+      "target": {
+        "name": "compact fluorescent lamp production",
+        "location": "GLO",
+        "reference product": "compact fluorescent lamp",
+        "unit": "unit"
+      }
+    },
+    {
+      "source": {
+        "name": "concrete slab",
+        "location": "RoW",
+        "reference product": "concrete slab",
+        "unit": "m3"
+      },
+      "target": {
+        "name": "concrete slab production",
+        "location": "RoW",
+        "reference product": "concrete slab",
+        "unit": "m3"
+      }
+    },
+    {
+      "source": {
+        "name": "concrete slab",
+        "location": "IN",
+        "reference product": "concrete slab",
+        "unit": "m3"
+      },
+      "target": {
+        "name": "concrete slab production",
+        "location": "IN",
+        "reference product": "concrete slab",
+        "unit": "m3"
+      }
+    },
+    {
+      "source": {
+        "name": "copper smelting facility construction",
+        "location": "RoW",
+        "reference product": "copper smeting facility",
+        "unit": "unit"
+      },
+      "target": {
+        "name": "copper smelting facility construction",
+        "location": "RoW",
+        "reference product": "copper smelting facility",
+        "unit": "unit"
+      }
+    },
+    {
+      "source": {
+        "name": "copper smelting facility construction",
+        "location": "SE",
+        "reference product": "copper smeting facility",
+        "unit": "unit"
+      },
+      "target": {
+        "name": "copper smelting facility construction",
+        "location": "SE",
+        "reference product": "copper smelting facility",
+        "unit": "unit"
+      }
+    },
+    {
+      "source": {
+        "name": "demersal fish to generic market for marine fish",
+        "location": "GLO",
+        "reference product": "fish, marine",
+        "unit": "kg"
+      },
+      "target": {
+        "name": "demersal fish to generic market for marine fish",
+        "location": "GLO",
+        "reference product": "marine fish",
+        "unit": "kg"
+      }
+    },
+    {
+      "source": {
+        "name": "electricity production, hard coal",
+        "location": "US-FRCC",
+        "reference product": "electricity, high voltage",
+        "unit": "kWh"
+      },
+      "target": {
+        "name": "electricity production, hard coal",
+        "location": "US-SERC",
+        "reference product": "electricity, high voltage",
+        "unit": "kWh"
+      }
+    },
+    {
+      "source": {
+        "name": "electricity production, hydro, pumped storage",
+        "location": "US-FRCC",
+        "reference product": "electricity, high voltage",
+        "unit": "kWh"
+      },
+      "target": {
+        "name": "electricity production, hydro, pumped storage",
+        "location": "US-SERC",
+        "reference product": "electricity, high voltage",
+        "unit": "kWh"
+      }
+    },
+    {
+      "source": {
+        "name": "electricity production, hydro, reservoir, alpine region, label-certified",
+        "location": "CH",
+        "reference product": "electricity, high voltage, label-certified",
+        "unit": "kWh"
+      },
+      "target": {
+        "name": "electricity production, hydro, reservoir, alpine region, renewable energy products",
+        "location": "CH",
+        "reference product": "electricity, high voltage, renewable energy products",
+        "unit": "kWh"
+      }
+    },
+    {
+      "source": {
+        "name": "electricity production, hydro, reservoir, alpine region, label-certified",
+        "location": "GLO",
+        "reference product": "electricity, high voltage, label-certified",
+        "unit": "kWh"
+      },
+      "target": {
+        "name": "electricity production, hydro, reservoir, alpine region, renewable energy products",
+        "location": "GLO",
+        "reference product": "electricity, high voltage, renewable energy products",
+        "unit": "kWh"
+      }
+    },
+    {
+      "source": {
+        "name": "electricity production, hydro, reservoir, non-alpine region",
+        "location": "US-FRCC",
+        "reference product": "electricity, high voltage",
+        "unit": "kWh"
+      },
+      "target": {
+        "name": "electricity production, hydro, reservoir, non-alpine region",
+        "location": "US-SERC",
+        "reference product": "electricity, high voltage",
+        "unit": "kWh"
+      }
+    },
+    {
+      "source": {
+        "name": "electricity production, hydro, run-of-river",
+        "location": "US-FRCC",
+        "reference product": "electricity, high voltage",
+        "unit": "kWh"
+      },
+      "target": {
+        "name": "electricity production, hydro, run-of-river",
+        "location": "US-SERC",
+        "reference product": "electricity, high voltage",
+        "unit": "kWh"
+      }
+    },
+    {
+      "source": {
+        "name": "electricity production, hydro, run-of-river, label-certified",
+        "location": "CH",
+        "reference product": "electricity, high voltage, label-certified",
+        "unit": "kWh"
+      },
+      "target": {
+        "name": "electricity production, hydro, run-of-river, renewable energy products",
+        "location": "CH",
+        "reference product": "electricity, high voltage, renewable energy products",
+        "unit": "kWh"
+      }
+    },
+    {
+      "source": {
+        "name": "electricity production, hydro, run-of-river, label-certified",
+        "location": "GLO",
+        "reference product": "electricity, high voltage, label-certified",
+        "unit": "kWh"
+      },
+      "target": {
+        "name": "electricity production, hydro, run-of-river, renewable energy products",
+        "location": "GLO",
+        "reference product": "electricity, high voltage, renewable energy products",
+        "unit": "kWh"
+      }
+    },
+    {
+      "source": {
+        "name": "electricity production, lignite",
+        "location": "US-FRCC",
+        "reference product": "electricity, high voltage",
+        "unit": "kWh"
+      },
+      "target": {
+        "name": "electricity production, lignite",
+        "location": "US-SERC",
+        "reference product": "electricity, high voltage",
+        "unit": "kWh"
+      }
+    },
+    {
+      "source": {
+        "name": "electricity production, natural gas, combined cycle power plant",
+        "location": "US-FRCC",
+        "reference product": "electricity, high voltage",
+        "unit": "kWh"
+      },
+      "target": {
+        "name": "electricity production, natural gas, combined cycle power plant",
+        "location": "US-SERC",
+        "reference product": "electricity, high voltage",
+        "unit": "kWh"
+      }
+    },
+    {
+      "source": {
+        "name": "electricity production, natural gas, conventional power plant",
+        "location": "US-FRCC",
+        "reference product": "electricity, high voltage",
+        "unit": "kWh"
+      },
+      "target": {
+        "name": "electricity production, natural gas, conventional power plant",
+        "location": "US-SERC",
+        "reference product": "electricity, high voltage",
+        "unit": "kWh"
+      }
+    },
+    {
+      "source": {
+        "name": "electricity production, nuclear, boiling water reactor",
+        "location": "US-FRCC",
+        "reference product": "electricity, high voltage",
+        "unit": "kWh"
+      },
+      "target": {
+        "name": "electricity production, nuclear, boiling water reactor",
+        "location": "US-SERC",
+        "reference product": "electricity, high voltage",
+        "unit": "kWh"
+      }
+    },
+    {
+      "source": {
+        "name": "electricity production, nuclear, pressure water reactor",
+        "location": "US-FRCC",
+        "reference product": "electricity, high voltage",
+        "unit": "kWh"
+      },
+      "target": {
+        "name": "electricity production, nuclear, pressure water reactor",
+        "location": "US-SERC",
+        "reference product": "electricity, high voltage",
+        "unit": "kWh"
+      }
+    },
+    {
+      "source": {
+        "name": "electricity production, oil",
+        "location": "US-FRCC",
+        "reference product": "electricity, high voltage",
+        "unit": "kWh"
+      },
+      "target": {
+        "name": "electricity production, oil",
+        "location": "US-SERC",
+        "reference product": "electricity, high voltage",
+        "unit": "kWh"
+      }
+    },
+    {
+      "source": {
+        "name": "electricity production, photovoltaic, 3kWp slanted-roof installation, multi-Si, panel, mounted",
+        "location": "US-FRCC",
+        "reference product": "electricity, low voltage",
+        "unit": "kWh"
+      },
+      "target": {
+        "name": "electricity production, photovoltaic, 3kWp slanted-roof installation, multi-Si, panel, mounted",
+        "location": "US-SERC",
+        "reference product": "electricity, low voltage",
+        "unit": "kWh"
+      }
+    },
+    {
+      "source": {
+        "name": "electricity production, photovoltaic, 3kWp slanted-roof installation, multi-Si, panel, mounted, label-certified",
+        "location": "CH",
+        "reference product": "electricity, low voltage, label-certified",
+        "unit": "kWh"
+      },
+      "target": {
+        "name": "electricity production, photovoltaic, 3kWp slanted-roof installation, multi-Si, panel, mounted, renewable energy product",
+        "location": "CH",
+        "reference product": "electricity, low voltage, renewable energy products",
+        "unit": "kWh"
+      }
+    },
+    {
+      "source": {
+        "name": "electricity production, photovoltaic, 3kWp slanted-roof installation, multi-Si, panel, mounted, label-certified",
+        "location": "GLO",
+        "reference product": "electricity, low voltage, label-certified",
+        "unit": "kWh"
+      },
+      "target": {
+        "name": "electricity production, photovoltaic, 3kWp slanted-roof installation, multi-Si, panel, mounted, renewable energy product",
+        "location": "GLO",
+        "reference product": "electricity, low voltage, renewable energy products",
+        "unit": "kWh"
+      }
+    },
+    {
+      "source": {
+        "name": "electricity production, photovoltaic, 3kWp slanted-roof installation, single-Si, panel, mounted",
+        "location": "US-FRCC",
+        "reference product": "electricity, low voltage",
+        "unit": "kWh"
+      },
+      "target": {
+        "name": "electricity production, photovoltaic, 3kWp slanted-roof installation, single-Si, panel, mounted",
+        "location": "US-SERC",
+        "reference product": "electricity, low voltage",
+        "unit": "kWh"
+      }
+    },
+    {
+      "source": {
+        "name": "electricity production, photovoltaic, 3kWp slanted-roof installation, single-Si, panel, mounted, label-certified",
+        "location": "CH",
+        "reference product": "electricity, low voltage, label-certified",
+        "unit": "kWh"
+      },
+      "target": {
+        "name": "electricity production, photovoltaic, 3kWp slanted-roof installation, single-Si, panel, mounted, renewable energy produc",
+        "location": "CH",
+        "reference product": "electricity, low voltage, renewable energy products",
+        "unit": "kWh"
+      }
+    },
+    {
+      "source": {
+        "name": "electricity production, photovoltaic, 3kWp slanted-roof installation, single-Si, panel, mounted, label-certified",
+        "location": "GLO",
+        "reference product": "electricity, low voltage, label-certified",
+        "unit": "kWh"
+      },
+      "target": {
+        "name": "electricity production, photovoltaic, 3kWp slanted-roof installation, single-Si, panel, mounted, renewable energy produc",
+        "location": "GLO",
+        "reference product": "electricity, low voltage, renewable energy products",
+        "unit": "kWh"
+      }
+    },
+    {
+      "source": {
+        "name": "electricity production, photovoltaic, 570kWp open ground installation, multi-Si",
+        "location": "US-FRCC",
+        "reference product": "electricity, low voltage",
+        "unit": "kWh"
+      },
+      "target": {
+        "name": "electricity production, photovoltaic, 570kWp open ground installation, multi-Si",
+        "location": "US-SERC",
+        "reference product": "electricity, low voltage",
+        "unit": "kWh"
+      }
+    },
+    {
+      "source": {
+        "name": "electricity production, solar thermal parabolic trough, 50 MW",
+        "location": "US-FRCC",
+        "reference product": "electricity, high voltage",
+        "unit": "kWh"
+      },
+      "target": {
+        "name": "electricity production, solar thermal parabolic trough, 50 MW",
+        "location": "US-SERC",
+        "reference product": "electricity, high voltage",
+        "unit": "kWh"
+      }
+    },
+    {
+      "source": {
+        "name": "electricity production, wind, 1-3MW turbine, onshore, label-certified",
+        "location": "CH",
+        "reference product": "electricity, high voltage, label-certified",
+        "unit": "kWh"
+      },
+      "target": {
+        "name": "electricity production, wind, 1-3MW turbine, onshore, renewable energy products",
+        "location": "CH",
+        "reference product": "electricity, high voltage, renewable energy products",
+        "unit": "kWh"
+      }
+    },
+    {
+      "source": {
+        "name": "electricity production, wind, 1-3MW turbine, onshore, label-certified",
+        "location": "GLO",
+        "reference product": "electricity, high voltage, label-certified",
+        "unit": "kWh"
+      },
+      "target": {
+        "name": "electricity production, wind, 1-3MW turbine, onshore, renewable energy products",
+        "location": "GLO",
+        "reference product": "electricity, high voltage, renewable energy products",
+        "unit": "kWh"
+      }
+    },
+    {
+      "source": {
+        "name": "electricity production, wind, <1MW turbine, onshore, label-certified",
+        "location": "CH",
+        "reference product": "electricity, high voltage, label-certified",
+        "unit": "kWh"
+      },
+      "target": {
+        "name": "electricity production, wind, <1MW turbine, onshore, renewable energy products",
+        "location": "CH",
+        "reference product": "electricity, high voltage, renewable energy products",
+        "unit": "kWh"
+      }
+    },
+    {
+      "source": {
+        "name": "electricity production, wind, <1MW turbine, onshore, label-certified",
+        "location": "GLO",
+        "reference product": "electricity, high voltage, label-certified",
+        "unit": "kWh"
+      },
+      "target": {
+        "name": "electricity production, wind, <1MW turbine, onshore, renewable energy products",
+        "location": "GLO",
+        "reference product": "electricity, high voltage, renewable energy products",
+        "unit": "kWh"
+      }
+    },
+    {
+      "source": {
+        "name": "electricity production, wind, >3MW turbine, onshore, label-certified",
+        "location": "CH",
+        "reference product": "electricity, high voltage, label-certified",
+        "unit": "kWh"
+      },
+      "target": {
+        "name": "electricity production, wind, >3MW turbine, onshore, renewable energy products",
+        "location": "CH",
+        "reference product": "electricity, high voltage, renewable energy products",
+        "unit": "kWh"
+      }
+    },
+    {
+      "source": {
+        "name": "electricity production, wind, >3MW turbine, onshore, label-certified",
+        "location": "GLO",
+        "reference product": "electricity, high voltage, label-certified",
+        "unit": "kWh"
+      },
+      "target": {
+        "name": "electricity production, wind, >3MW turbine, onshore, renewable energy products",
+        "location": "GLO",
+        "reference product": "electricity, high voltage, renewable energy products",
+        "unit": "kWh"
+      }
+    },
+    {
+      "source": {
+        "name": "electricity voltage transformation from high to medium voltage",
+        "location": "US-FRCC",
+        "reference product": "electricity, medium voltage",
+        "unit": "kWh"
+      },
+      "target": {
+        "name": "electricity voltage transformation from high to medium voltage",
+        "location": "US-SERC",
+        "reference product": "electricity, medium voltage",
+        "unit": "kWh"
+      }
+    },
+    {
+      "source": {
+        "name": "electricity voltage transformation from high to medium voltage, label-certified",
+        "location": "CH",
+        "reference product": "electricity, medium voltage, label-certified",
+        "unit": "kWh"
+      },
+      "target": {
+        "name": "electricity voltage transformation from high to medium voltage, renewable energy products",
+        "location": "CH",
+        "reference product": "electricity, medium voltage, renewable energy products",
+        "unit": "kWh"
+      }
+    },
+    {
+      "source": {
+        "name": "electricity voltage transformation from high to medium voltage, label-certified",
+        "location": "GLO",
+        "reference product": "electricity, medium voltage, label-certified",
+        "unit": "kWh"
+      },
+      "target": {
+        "name": "electricity voltage transformation from high to medium voltage, renewable energy products",
+        "location": "GLO",
+        "reference product": "electricity, medium voltage, renewable energy products",
+        "unit": "kWh"
+      }
+    },
+    {
+      "source": {
+        "name": "electricity voltage transformation from medium to low voltage",
+        "location": "US-FRCC",
+        "reference product": "electricity, low voltage",
+        "unit": "kWh"
+      },
+      "target": {
+        "name": "electricity voltage transformation from medium to low voltage",
+        "location": "US-SERC",
+        "reference product": "electricity, low voltage",
+        "unit": "kWh"
+      }
+    },
+    {
+      "source": {
+        "name": "electricity voltage transformation from medium to low voltage, label-certified",
+        "location": "CH",
+        "reference product": "electricity, low voltage, label-certified",
+        "unit": "kWh"
+      },
+      "target": {
+        "name": "electricity voltage transformation from medium to low voltage, renewable energy products",
+        "location": "CH",
+        "reference product": "electricity, low voltage, renewable energy products",
+        "unit": "kWh"
+      }
+    },
+    {
+      "source": {
+        "name": "electricity voltage transformation from medium to low voltage, label-certified",
+        "location": "GLO",
+        "reference product": "electricity, low voltage, label-certified",
+        "unit": "kWh"
+      },
+      "target": {
+        "name": "electricity voltage transformation from medium to low voltage, renewable energy products",
+        "location": "GLO",
+        "reference product": "electricity, low voltage, renewable energy products",
+        "unit": "kWh"
+      }
+    },
+    {
+      "source": {
+        "name": "energy use and operation emissions, electric bicycle, label-certified electricity",
+        "location": "CH",
+        "reference product": "energy use and operation emissions, electric bicycle, label-certified electricity",
+        "unit": "km"
+      },
+      "target": {
+        "name": "energy use and operation emissions, electric bicycle, electricity from renewable energy products",
+        "location": "CH",
+        "reference product": "energy use and operation emissions, electric bicycle, electricity from renewable energy products",
+        "unit": "km"
+      }
+    },
+    {
+      "source": {
+        "name": "energy use and operation emissions, electric bicycle, label-certified electricity",
+        "location": "GLO",
+        "reference product": "energy use and operation emissions, electric bicycle, label-certified electricity",
+        "unit": "km"
+      },
+      "target": {
+        "name": "energy use and operation emissions, electric bicycle, electricity from renewable energy products",
+        "location": "GLO",
+        "reference product": "energy use and operation emissions, electric bicycle, electricity from renewable energy products",
+        "unit": "km"
+      }
+    },
+    {
+      "source": {
+        "name": "esterification of palm oil",
+        "location": "RoW",
+        "reference product": "vegetable oil methyl ester",
+        "unit": "kg"
+      },
+      "target": {
+        "name": "esterification of palm oil",
+        "location": "RoW",
+        "reference product": "fatty acid methyl ester",
+        "unit": "kg"
+      }
+    },
+    {
+      "source": {
+        "name": "esterification of palm oil",
+        "location": "MY",
+        "reference product": "vegetable oil methyl ester",
+        "unit": "kg"
+      },
+      "target": {
+        "name": "esterification of palm oil",
+        "location": "MY",
+        "reference product": "fatty acid methyl ester",
+        "unit": "kg"
+      }
+    },
+    {
+      "source": {
+        "name": "esterification of rape oil",
+        "location": "CH",
+        "reference product": "vegetable oil methyl ester",
+        "unit": "kg"
+      },
+      "target": {
+        "name": "esterification of rape oil",
+        "location": "CH",
+        "reference product": "fatty acid methyl ester",
+        "unit": "kg"
+      }
+    },
+    {
+      "source": {
+        "name": "esterification of rape oil",
+        "location": "Europe without Switzerland",
+        "reference product": "vegetable oil methyl ester",
+        "unit": "kg"
+      },
+      "target": {
+        "name": "esterification of rape oil",
+        "location": "Europe without Switzerland",
+        "reference product": "fatty acid methyl ester",
+        "unit": "kg"
+      }
+    },
+    {
+      "source": {
+        "name": "esterification of rape oil",
+        "location": "RoW",
+        "reference product": "vegetable oil methyl ester",
+        "unit": "kg"
+      },
+      "target": {
+        "name": "esterification of rape oil",
+        "location": "RoW",
+        "reference product": "fatty acid methyl ester",
+        "unit": "kg"
+      }
+    },
+    {
+      "source": {
+        "name": "esterification of soybean oil",
+        "location": "BR",
+        "reference product": "vegetable oil methyl ester",
+        "unit": "kg"
+      },
+      "target": {
+        "name": "esterification of soybean oil",
+        "location": "BR",
+        "reference product": "fatty acid methyl ester",
+        "unit": "kg"
+      }
+    },
+    {
+      "source": {
+        "name": "esterification of soybean oil",
+        "location": "RoW",
+        "reference product": "vegetable oil methyl ester",
+        "unit": "kg"
+      },
+      "target": {
+        "name": "esterification of soybean oil",
+        "location": "RoW",
+        "reference product": "fatty acid methyl ester",
+        "unit": "kg"
+      }
+    },
+    {
+      "source": {
+        "name": "esterification of soybean oil",
+        "location": "US",
+        "reference product": "vegetable oil methyl ester",
+        "unit": "kg"
+      },
+      "target": {
+        "name": "esterification of soybean oil",
+        "location": "US",
+        "reference product": "fatty acid methyl ester",
+        "unit": "kg"
+      }
+    },
+    {
+      "source": {
+        "name": "ethane extraction, from natural gas liquids",
+        "location": "GLO",
+        "reference product": "ethane",
+        "unit": "kg"
+      },
+      "target": {
+        "name": "natural gas liquids fractionation",
+        "location": "GLO",
+        "reference product": "ethane",
+        "unit": "kg"
+      }
+    },
+    {
+      "source": {
+        "name": "ethanol, from fermentation, to market for ethanol, vehicle grade",
+        "location": "CH",
+        "reference product": "ethanol, without water, in 99.7% solution state, vehicle grade",
+        "unit": "kg"
+      },
+      "target": {
+        "name": "ethanol, from fermentation, to market for ethanol, vehicle grade",
+        "location": "CH",
+        "reference product": "ethanol, without water, in 99.7% solution state, from fermentation, vehicle grade",
+        "unit": "kg"
+      }
+    },
+    {
+      "source": {
+        "name": "ethanol, from fermentation, to market for ethanol, vehicle grade",
+        "location": "RoW",
+        "reference product": "ethanol, without water, in 99.7% solution state, vehicle grade",
+        "unit": "kg"
+      },
+      "target": {
+        "name": "ethanol, from fermentation, to market for ethanol, vehicle grade",
+        "location": "RoW",
+        "reference product": "ethanol, without water, in 99.7% solution state, from fermentation, vehicle grade",
+        "unit": "kg"
+      }
+    },
+    {
+      "source": {
+        "name": "ethylene production, average",
+        "location": "RoW",
+        "reference product": "ethylene, average",
+        "unit": "kg"
+      },
+      "target": {
+        "name": "ethylene production, average",
+        "location": "RoW",
+        "reference product": "ethylene",
+        "unit": "kg"
+      }
+    },
+    {
+      "source": {
+        "name": "ethylene production, average",
+        "location": "RER",
+        "reference product": "ethylene, average",
+        "unit": "kg"
+      },
+      "target": {
+        "name": "ethylene production, average",
+        "location": "RER",
+        "reference product": "ethylene",
+        "unit": "kg"
+      }
+    },
+    {
+      "source": {
+        "name": "ferrochromium production, high carbon, 55% Cr",
+        "location": "RoW",
+        "reference product": "ferrochromium, high carbon, 55% Cr",
+        "unit": "kg"
+      },
+      "target": {
+        "name": "ferrochromium production, high-carbon, 55% Cr",
+        "location": "RoW",
+        "reference product": "ferrochromium, high-carbon, 55% Cr",
+        "unit": "kg"
+      }
+    },
+    {
+      "source": {
+        "name": "ferrochromium production, high carbon, 55% Cr",
+        "location": "ZA",
+        "reference product": "ferrochromium, high carbon, 55% Cr",
+        "unit": "kg"
+      },
+      "target": {
+        "name": "ferrochromium production, high-carbon, 55% Cr",
+        "location": "ZA",
+        "reference product": "ferrochromium, high-carbon, 55% Cr",
+        "unit": "kg"
+      }
+    },
+    {
+      "source": {
+        "name": "fertilising, by stool spliter, sugarcane",
+        "location": "BR",
+        "reference product": "fertilising, by stool splitter, sugarcane",
+        "unit": "ha"
+      },
+      "target": {
+        "name": "fertilising, by stool splitter, sugarcane",
+        "location": "BR",
+        "reference product": "fertilising, by stool splitter, sugarcane",
+        "unit": "ha"
+      }
+    },
+    {
+      "source": {
+        "name": "fertilising, by stool spliter, sugarcane",
+        "location": "RoW",
+        "reference product": "fertilising, by stool splitter, sugarcane",
+        "unit": "ha"
+      },
+      "target": {
+        "name": "fertilising, by stool splitter, sugarcane",
+        "location": "RoW",
+        "reference product": "fertilising, by stool splitter, sugarcane",
+        "unit": "ha"
+      }
+    },
+    {
+      "source": {
+        "name": "fibre-reinforced concrete production, steel",
+        "location": "BR",
+        "reference product": "fibre-reinforced concrete",
+        "unit": "m3"
+      },
+      "target": {
+        "name": "fibre-reinforced concrete production, steel",
+        "location": "BR",
+        "reference product": "fibre-reinforced concrete, steel",
+        "unit": "m3"
+      }
+    },
+    {
+      "source": {
+        "name": "fibre-reinforced concrete production, steel",
+        "location": "GLO",
+        "reference product": "fibre-reinforced concrete",
+        "unit": "m3"
+      },
+      "target": {
+        "name": "fibre-reinforced concrete production, steel",
+        "location": "GLO",
+        "reference product": "fibre-reinforced concrete, steel",
+        "unit": "m3"
+      }
+    },
+    {
+      "source": {
+        "name": "foam glass production, electricity, label-certified",
+        "location": "GLO",
+        "reference product": "foam glass, electricity, label-certified",
+        "unit": "kg"
+      },
+      "target": {
+        "name": "foam glass production, electricity from renewable energy products",
+        "location": "GLO",
+        "reference product": "foam glass, electricity from renewable energy products",
+        "unit": "kg"
+      }
+    },
+    {
+      "source": {
+        "name": "foam glass production, electricity, label-certified",
+        "location": "RER",
+        "reference product": "foam glass, electricity, label-certified",
+        "unit": "kg"
+      },
+      "target": {
+        "name": "foam glass production, electricity from renewable energy products",
+        "location": "RER",
+        "reference product": "foam glass, electricity from renewable energy products",
+        "unit": "kg"
+      }
+    },
+    {
+      "source": {
+        "name": "foam glass production, without cullet, electricity, label-certified",
+        "location": "GLO",
+        "reference product": "foam glass, electricity, label-certified",
+        "unit": "kg"
+      },
+      "target": {
+        "name": "foam glass production, without cullet, electricity from renewable energy products",
+        "location": "GLO",
+        "reference product": "foam glass, electricity from renewable energy products",
+        "unit": "kg"
+      }
+    },
+    {
+      "source": {
+        "name": "glued laminated timber production, average glue mix",
+        "location": "CA-QC",
+        "reference product": "glued laminated timber, for indoor use",
+        "unit": "m3"
+      },
+      "target": {
+        "name": "glued laminated timber production, average glue mix",
+        "location": "CA-QC",
+        "reference product": "glued laminated timber, average glue mix",
+        "unit": "m3"
+      }
+    },
+    {
+      "source": {
+        "name": "heat and power co-generation, biogas, gas engine",
+        "location": "US-FRCC",
+        "reference product": "electricity, high voltage",
+        "unit": "kWh"
+      },
+      "target": {
+        "name": "heat and power co-generation, biogas, gas engine",
+        "location": "US-SERC",
+        "reference product": "electricity, high voltage",
+        "unit": "kWh"
+      }
+    },
+    {
+      "source": {
+        "name": "heat and power co-generation, biogas, gas engine, label-certified",
+        "location": "CH",
+        "reference product": "electricity, high voltage, label-certified",
+        "unit": "kWh"
+      },
+      "target": {
+        "name": "heat and power co-generation, biogas, gas engine, renewable energy products",
+        "location": "CH",
+        "reference product": "electricity, high voltage, renewable energy products",
+        "unit": "kWh"
+      }
+    },
+    {
+      "source": {
+        "name": "heat and power co-generation, biogas, gas engine, label-certified",
+        "location": "GLO",
+        "reference product": "electricity, high voltage, label-certified",
+        "unit": "kWh"
+      },
+      "target": {
+        "name": "heat and power co-generation, biogas, gas engine, renewable energy products",
+        "location": "GLO",
+        "reference product": "electricity, high voltage, renewable energy products",
+        "unit": "kWh"
+      }
+    },
+    {
+      "source": {
+        "name": "heat and power co-generation, natural gas, combined cycle power plant, 400MW electrical",
+        "location": "US-FRCC",
+        "reference product": "heat, district or industrial, natural gas",
+        "unit": "MJ"
+      },
+      "target": {
+        "name": "heat and power co-generation, natural gas, combined cycle power plant, 400MW electrical",
+        "location": "US-SERC",
+        "reference product": "heat, district or industrial, natural gas",
+        "unit": "MJ"
+      }
+    },
+    {
+      "source": {
+        "name": "heat and power co-generation, natural gas, conventional power plant, 100MW electrical",
+        "location": "US-FRCC",
+        "reference product": "heat, district or industrial, natural gas",
+        "unit": "MJ"
+      },
+      "target": {
+        "name": "heat and power co-generation, natural gas, conventional power plant, 100MW electrical",
+        "location": "US-SERC",
+        "reference product": "heat, district or industrial, natural gas",
+        "unit": "MJ"
+      }
+    },
+    {
+      "source": {
+        "name": "heat and power co-generation, oil",
+        "location": "US-FRCC",
+        "reference product": "heat, district or industrial, other than natural gas",
+        "unit": "MJ"
+      },
+      "target": {
+        "name": "heat and power co-generation, oil",
+        "location": "US-SERC",
+        "reference product": "heat, district or industrial, other than natural gas",
+        "unit": "MJ"
+      }
+    },
+    {
+      "source": {
+        "name": "heat and power co-generation, wood chips, 6667 kW, state-of-the-art 2014",
+        "location": "US-FRCC",
+        "reference product": "heat, district or industrial, other than natural gas",
+        "unit": "MJ"
+      },
+      "target": {
+        "name": "heat and power co-generation, wood chips, 6667 kW, state-of-the-art 2014",
+        "location": "US-SERC",
+        "reference product": "heat, district or industrial, other than natural gas",
+        "unit": "MJ"
+      }
+    },
+    {
+      "source": {
+        "name": "heat and power co-generation, wood chips, 6667 kW, state-of-the-art 2014, label-certified",
+        "location": "CH",
+        "reference product": "heat, district or industrial, other than natural gas",
+        "unit": "MJ"
+      },
+      "target": {
+        "name": "heat and power co-generation, wood chips, 6667 kW, state-of-the-art 2014, renewable energy products",
+        "location": "CH",
+        "reference product": "heat, district or industrial, other than natural gas",
+        "unit": "MJ"
+      }
+    },
+    {
+      "source": {
+        "name": "heat and power co-generation, wood chips, 6667 kW, state-of-the-art 2014, label-certified",
+        "location": "GLO",
+        "reference product": "heat, district or industrial, other than natural gas",
+        "unit": "MJ"
+      },
+      "target": {
+        "name": "heat and power co-generation, wood chips, 6667 kW, state-of-the-art 2014, renewable energy products",
+        "location": "GLO",
+        "reference product": "heat, district or industrial, other than natural gas",
+        "unit": "MJ"
+      }
+    },
+    {
+      "source": {
+        "name": "heat production, borehole heat exchanger, brine-water heat pump 10kW",
+        "location": "CH",
+        "reference product": "heat, borehole heat pump",
+        "unit": "MJ"
+      },
+      "target": {
+        "name": "heat production, borehole heat exchanger, brine-water heat pump 10kW",
+        "location": "CH",
+        "reference product": "heat, brine-water heat pump 10kW",
+        "unit": "MJ"
+      }
+    },
+    {
+      "source": {
+        "name": "heat production, borehole heat exchanger, brine-water heat pump 10kW",
+        "location": "Europe without Switzerland",
+        "reference product": "heat, borehole heat pump",
+        "unit": "MJ"
+      },
+      "target": {
+        "name": "heat production, borehole heat exchanger, brine-water heat pump 10kW",
+        "location": "Europe without Switzerland",
+        "reference product": "heat, brine-water heat pump 10kW",
+        "unit": "MJ"
+      }
+    },
+    {
+      "source": {
+        "name": "heat production, borehole heat exchanger, brine-water heat pump 10kW",
+        "location": "RoW",
+        "reference product": "heat, borehole heat pump",
+        "unit": "MJ"
+      },
+      "target": {
+        "name": "heat production, borehole heat exchanger, brine-water heat pump 10kW",
+        "location": "RoW",
+        "reference product": "heat, brine-water heat pump 10kW",
+        "unit": "MJ"
+      }
+    },
+    {
+      "source": {
+        "name": "heat pump production, for heat and power co-generation unit, 160kW electrical",
+        "location": "RoW",
+        "reference product": "heat pump, for heat and power co-generation unit, 160kW electrical",
+        "unit": "unit"
+      },
+      "target": {
+        "name": "heat pump production, heat and power co-generation unit, 160kW electrical",
+        "location": "RoW",
+        "reference product": "heat pump, heat and power co-generation unit, 160kW electrical",
+        "unit": "unit"
+      }
+    },
+    {
+      "source": {
+        "name": "heat pump production, for heat and power co-generation unit, 160kW electrical",
+        "location": "RER",
+        "reference product": "heat pump, for heat and power co-generation unit, 160kW electrical",
+        "unit": "unit"
+      },
+      "target": {
+        "name": "heat pump production, heat and power co-generation unit, 160kW electrical",
+        "location": "RER",
+        "reference product": "heat pump, heat and power co-generation unit, 160kW electrical",
+        "unit": "unit"
+      }
+    },
+    {
+      "source": {
+        "name": "heavy mineral sand quarry operation and titania slag production",
+        "location": "RoW",
+        "reference product": "titania slag, 85% titanium dioxide",
+        "unit": "kg"
+      },
+      "target": {
+        "name": "heavy mineral sand quarry operation and titania slag production",
+        "location": "GLO",
+        "reference product": "titania slag, 85% titanium dioxide",
+        "unit": "kg"
+      }
+    },
+    {
+      "source": {
+        "name": "housing system construction, pig, label-certified",
+        "location": "CH",
+        "reference product": "housing system, pig, label-certified, per pig place",
+        "unit": "unit"
+      },
+      "target": {
+        "name": "housing system construction, pig, electricity from renewable energy products",
+        "location": "CH",
+        "reference product": "housing system, pig, per pig place, electricity from renewable energy products",
+        "unit": "unit"
+      }
+    },
+    {
+      "source": {
+        "name": "housing system construction, pig, label-certified",
+        "location": "RoW",
+        "reference product": "housing system, pig, label-certified, per pig place",
+        "unit": "unit"
+      },
+      "target": {
+        "name": "housing system construction, pig, electricity from renewable energy products",
+        "location": "RoW",
+        "reference product": "housing system, pig, per pig place, electricity from renewable energy products",
+        "unit": "unit"
+      }
+    },
+    {
+      "source": {
+        "name": "internal combustion engine production, passenger car",
+        "location": "GLO",
+        "reference product": "internal combustion engine, for passenger car",
+        "unit": "kg"
+      },
+      "target": {
+        "name": "internal combustion engine production, passenger car",
+        "location": "GLO",
+        "reference product": "internal combustion engine, passenger car",
+        "unit": "kg"
+      }
+    },
+    {
+      "source": {
+        "name": "iron ore mine operation and beneficiation",
+        "location": "RoW",
+        "reference product": "iron ore concentrate",
+        "unit": "kg"
+      },
+      "target": {
+        "name": "iron ore mine operation and beneficiation",
+        "location": "GLO",
+        "reference product": "iron ore concentrate",
+        "unit": "kg"
+      }
+    },
+    {
+      "source": {
+        "name": "landed anchovy by-catch, fresh to generic market for marine fish",
+        "location": "GLO",
+        "reference product": "fish, marine",
+        "unit": "kg"
+      },
+      "target": {
+        "name": "landed anchovy by-catch, fresh to generic market for marine fish",
+        "location": "GLO",
+        "reference product": "marine fish",
+        "unit": "kg"
+      }
+    },
+    {
+      "source": {
+        "name": "landed anchovy to generic market for marine fish",
+        "location": "GLO",
+        "reference product": "fish, marine",
+        "unit": "kg"
+      },
+      "target": {
+        "name": "landed anchovy to generic market for marine fish",
+        "location": "GLO",
+        "reference product": "marine fish",
+        "unit": "kg"
+      }
+    },
+    {
+      "source": {
+        "name": "landed hake to generic market for marine fish",
+        "location": "GLO",
+        "reference product": "fish, marine",
+        "unit": "kg"
+      },
+      "target": {
+        "name": "landed hake to generic market for marine fish",
+        "location": "GLO",
+        "reference product": "marine fish",
+        "unit": "kg"
+      }
+    },
+    {
+      "source": {
+        "name": "landed tuna to generic market for marine fish",
+        "location": "GLO",
+        "reference product": "fish, marine",
+        "unit": "kg"
+      },
+      "target": {
+        "name": "landed tuna to generic market for marine fish",
+        "location": "GLO",
+        "reference product": "marine fish",
+        "unit": "kg"
+      }
+    },
+    {
+      "source": {
+        "name": "market for assembly of generator and motor, auxilliaries and energy use, heat and power co-generation unit, 160kW",
+        "location": "GLO",
+        "reference product": "assembly of generator and motor, auxilliaries and energy use, for heat and power co-generation unit, 160 KW electrical",
+        "unit": "unit"
+      },
+      "target": {
+        "name": "market for assembly of generator and motor, auxilliaries and energy use, heat and power co-generation unit, 160kW",
+        "location": "GLO",
+        "reference product": "assembly of generator and motor, auxilliaries and energy use, heat and power co-generation unit, 160kW electrical",
+        "unit": "unit"
+      }
+    },
+    {
+      "source": {
+        "name": "market for cement, blast furnace slag 40-70%",
+        "location": "RoW",
+        "reference product": "cement, blast furnace 40-70%",
+        "unit": "kg"
+      },
+      "target": {
+        "name": "market for cement, blast furnace slag 40-70%",
+        "location": "RoW",
+        "reference product": "cement, blast furnace slag 40-70%",
+        "unit": "kg"
+      }
+    },
+    {
+      "source": {
+        "name": "market for cement, blast furnace slag 40-70%",
+        "location": "IN",
+        "reference product": "cement, blast furnace 40-70%",
+        "unit": "kg"
+      },
+      "target": {
+        "name": "market for cement, blast furnace slag 40-70%",
+        "location": "IN",
+        "reference product": "cement, blast furnace slag 40-70%",
+        "unit": "kg"
+      }
+    },
+    {
+      "source": {
+        "name": "market for cement, blast furnace slag 66-80%",
+        "location": "CH",
+        "reference product": "cement, blast furnace slag, 66-80%",
+        "unit": "kg"
+      },
+      "target": {
+        "name": "market for cement, blast furnace slag 66-80%",
+        "location": "CH",
+        "reference product": "cement, blast furnace slag 66-80%",
+        "unit": "kg"
+      }
+    },
+    {
+      "source": {
+        "name": "market for cement, blast furnace slag 66-80%",
+        "location": "Europe without Switzerland",
+        "reference product": "cement, blast furnace slag, 66-80%",
+        "unit": "kg"
+      },
+      "target": {
+        "name": "market for cement, blast furnace slag 66-80%",
+        "location": "Europe without Switzerland",
+        "reference product": "cement, blast furnace slag 66-80%",
+        "unit": "kg"
+      }
+    },
+    {
+      "source": {
+        "name": "market for cement, blast furnace slag 66-80%",
+        "location": "RoW",
+        "reference product": "cement, blast furnace slag, 66-80%",
+        "unit": "kg"
+      },
+      "target": {
+        "name": "market for cement, blast furnace slag 66-80%",
+        "location": "RoW",
+        "reference product": "cement, blast furnace slag 66-80%",
+        "unit": "kg"
+      }
+    },
+    {
+      "source": {
+        "name": "market for cement, limestone cement 6-20%",
+        "location": "RoW",
+        "reference product": "cement, limestone 6-20%",
+        "unit": "kg"
+      },
+      "target": {
+        "name": "market for cement, limestone 6-20%",
+        "location": "RoW",
+        "reference product": "cement, limestone 6-20%",
+        "unit": "kg"
+      }
+    },
+    {
+      "source": {
+        "name": "market for cement, limestone cement 6-20%",
+        "location": "ZA",
+        "reference product": "cement, limestone 6-20%",
+        "unit": "kg"
+      },
+      "target": {
+        "name": "market for cement, limestone 6-20%",
+        "location": "ZA",
+        "reference product": "cement, limestone 6-20%",
+        "unit": "kg"
+      }
+    },
+    {
+      "source": {
+        "name": "market for chemicals, inorganic",
+        "location": "GLO",
+        "reference product": "chemical, inorganic",
+        "unit": "kg"
+      },
+      "target": {
+        "name": "market for chemical, inorganic",
+        "location": "GLO",
+        "reference product": "chemical, inorganic",
+        "unit": "kg"
+      }
+    },
+    {
+      "source": {
+        "name": "market for compact fluorescent lamp",
+        "location": "GLO",
+        "reference product": "compact fluorescent bulb",
+        "unit": "unit"
+      },
+      "target": {
+        "name": "market for compact fluorescent lamp",
+        "location": "GLO",
+        "reference product": "compact fluorescent lamp",
+        "unit": "unit"
+      }
+    },
+    {
+      "source": {
+        "name": "market for copper smeting facility",
+        "location": "GLO",
+        "reference product": "copper smeting facility",
+        "unit": "unit"
+      },
+      "target": {
+        "name": "market for copper smelting facility",
+        "location": "GLO",
+        "reference product": "copper smelting facility",
+        "unit": "unit"
+      }
+    },
+    {
+      "source": {
+        "name": "market for earth tube heat exchanger, polyethylene, DN 200",
+        "location": "GLO",
+        "reference product": "polyethylene pipe, DN 200, SDR 41",
+        "unit": "m"
+      },
+      "target": {
+        "name": "market for polyethylene pipe, DN 200, SDR 41",
+        "location": "GLO",
+        "reference product": "polyethylene pipe, DN 200, SDR 41",
+        "unit": "m"
+      }
+    },
+    {
+      "source": {
+        "name": "market for electric powertrain, for electric scooter",
+        "location": "GLO",
+        "reference product": "powertrain, for electric scooter",
+        "unit": "kg"
+      },
+      "target": {
+        "name": "market for powertrain, for electric scooter",
+        "location": "GLO",
+        "reference product": "powertrain, for electric scooter",
+        "unit": "kg"
+      }
+    },
+    {
+      "source": {
+        "name": "market for electricity, high voltage",
+        "location": "US-FRCC",
+        "reference product": "electricity, high voltage",
+        "unit": "kWh"
+      },
+      "target": {
+        "name": "market for electricity, high voltage",
+        "location": "US-SERC",
+        "reference product": "electricity, high voltage",
+        "unit": "kWh"
+      }
+    },
+    {
+      "source": {
+        "name": "market for electricity, high voltage, label-certified",
+        "location": "CH",
+        "reference product": "electricity, high voltage, label-certified",
+        "unit": "kWh"
+      },
+      "target": {
+        "name": "market for electricity, high voltage, renewable energy products",
+        "location": "CH",
+        "reference product": "electricity, high voltage, renewable energy products",
+        "unit": "kWh"
+      }
+    },
+    {
+      "source": {
+        "name": "market for electricity, high voltage, label-certified",
+        "location": "GLO",
+        "reference product": "electricity, high voltage, label-certified",
+        "unit": "kWh"
+      },
+      "target": {
+        "name": "market for electricity, high voltage, renewable energy products",
+        "location": "GLO",
+        "reference product": "electricity, high voltage, renewable energy products",
+        "unit": "kWh"
+      }
+    },
+    {
+      "source": {
+        "name": "market for electricity, low voltage",
+        "location": "US-FRCC",
+        "reference product": "electricity, low voltage",
+        "unit": "kWh"
+      },
+      "target": {
+        "name": "market for electricity, low voltage",
+        "location": "US-SERC",
+        "reference product": "electricity, low voltage",
+        "unit": "kWh"
+      }
+    },
+    {
+      "source": {
+        "name": "market for electricity, low voltage, label-certified",
+        "location": "CH",
+        "reference product": "electricity, low voltage, label-certified",
+        "unit": "kWh"
+      },
+      "target": {
+        "name": "market for electricity, low voltage, renewable energy products",
+        "location": "CH",
+        "reference product": "electricity, low voltage, renewable energy products",
+        "unit": "kWh"
+      }
+    },
+    {
+      "source": {
+        "name": "market for electricity, low voltage, label-certified",
+        "location": "GLO",
+        "reference product": "electricity, low voltage, label-certified",
+        "unit": "kWh"
+      },
+      "target": {
+        "name": "market for electricity, low voltage, renewable energy products",
+        "location": "GLO",
+        "reference product": "electricity, low voltage, renewable energy products",
+        "unit": "kWh"
+      }
+    },
+    {
+      "source": {
+        "name": "market for electricity, medium voltage",
+        "location": "US-FRCC",
+        "reference product": "electricity, medium voltage",
+        "unit": "kWh"
+      },
+      "target": {
+        "name": "market for electricity, medium voltage",
+        "location": "US-SERC",
+        "reference product": "electricity, medium voltage",
+        "unit": "kWh"
+      }
+    },
+    {
+      "source": {
+        "name": "market for electricity, medium voltage, label-certified",
+        "location": "CH",
+        "reference product": "electricity, medium voltage, label-certified",
+        "unit": "kWh"
+      },
+      "target": {
+        "name": "market for electricity, medium voltage, renewable energy products",
+        "location": "CH",
+        "reference product": "electricity, medium voltage, renewable energy products",
+        "unit": "kWh"
+      }
+    },
+    {
+      "source": {
+        "name": "market for electricity, medium voltage, label-certified",
+        "location": "GLO",
+        "reference product": "electricity, medium voltage, label-certified",
+        "unit": "kWh"
+      },
+      "target": {
+        "name": "market for electricity, medium voltage, renewable energy products",
+        "location": "GLO",
+        "reference product": "electricity, medium voltage, renewable energy products",
+        "unit": "kWh"
+      }
+    },
+    {
+      "source": {
+        "name": "market for energy use and operation emissions, electric bicycle, label-certified electricity",
+        "location": "GLO",
+        "reference product": "energy use and operation emissions, electric bicycle, label-certified electricity",
+        "unit": "km"
+      },
+      "target": {
+        "name": "market for energy use and operation emissions, electric bicycle, electricity from renewable energy products",
+        "location": "GLO",
+        "reference product": "energy use and operation emissions, electric bicycle, electricity from renewable energy products",
+        "unit": "km"
+      }
+    },
+    {
+      "source": {
+        "name": "market for ethanol, without water, in 99.7% solution state, from fermentation, vehicle grade",
+        "location": "CH",
+        "reference product": "ethanol, without water, in 99.7% solution state, vehicle grade",
+        "unit": "kg"
+      },
+      "target": {
+        "name": "market for ethanol, without water, in 99.7% solution state, from fermentation, vehicle grade",
+        "location": "CH",
+        "reference product": "ethanol, without water, in 99.7% solution state, from fermentation, vehicle grade",
+        "unit": "kg"
+      }
+    },
+    {
+      "source": {
+        "name": "market for ethanol, without water, in 99.7% solution state, from fermentation, vehicle grade",
+        "location": "RoW",
+        "reference product": "ethanol, without water, in 99.7% solution state, vehicle grade",
+        "unit": "kg"
+      },
+      "target": {
+        "name": "market for ethanol, without water, in 99.7% solution state, from fermentation, vehicle grade",
+        "location": "RoW",
+        "reference product": "ethanol, without water, in 99.7% solution state, from fermentation, vehicle grade",
+        "unit": "kg"
+      }
+    },
+    {
+      "source": {
+        "name": "market for ethylene, average",
+        "location": "RoW",
+        "reference product": "ethylene, average",
+        "unit": "kg"
+      },
+      "target": {
+        "name": "market for ethylene",
+        "location": "RoW",
+        "reference product": "ethylene",
+        "unit": "kg"
+      }
+    },
+    {
+      "source": {
+        "name": "market for ethylene, average",
+        "location": "RER",
+        "reference product": "ethylene, average",
+        "unit": "kg"
+      },
+      "target": {
+        "name": "market for ethylene",
+        "location": "RER",
+        "reference product": "ethylene",
+        "unit": "kg"
+      }
+    },
+    {
+      "source": {
+        "name": "market for ethylene, average",
+        "location": "ZA",
+        "reference product": "ethylene, average",
+        "unit": "kg"
+      },
+      "target": {
+        "name": "market for ethylene",
+        "location": "ZA",
+        "reference product": "ethylene",
+        "unit": "kg"
+      }
+    },
+    {
+      "source": {
+        "name": "market for ferrochromium, high carbon, 55% Cr",
+        "location": "GLO",
+        "reference product": "ferrochromium, high carbon, 55% Cr",
+        "unit": "kg"
+      },
+      "target": {
+        "name": "market for ferrochromium, high-carbon, 55% Cr",
+        "location": "GLO",
+        "reference product": "ferrochromium, high-carbon, 55% Cr",
+        "unit": "kg"
+      }
+    },
+    {
+      "source": {
+        "name": "market for fibre-reinforced concrete, steel",
+        "location": "BR",
+        "reference product": "fibre-reinforced concrete",
+        "unit": "m3"
+      },
+      "target": {
+        "name": "market for fibre-reinforced concrete, steel",
+        "location": "BR",
+        "reference product": "fibre-reinforced concrete, steel",
+        "unit": "m3"
+      }
+    },
+    {
+      "source": {
+        "name": "market for fibre-reinforced concrete, steel",
+        "location": "GLO",
+        "reference product": "fibre-reinforced concrete",
+        "unit": "m3"
+      },
+      "target": {
+        "name": "market for fibre-reinforced concrete, steel",
+        "location": "GLO",
+        "reference product": "fibre-reinforced concrete, steel",
+        "unit": "m3"
+      }
+    },
+    {
+      "source": {
+        "name": "market for fish oil",
+        "location": "GLO",
+        "reference product": "fish oil, from anchovy",
+        "unit": "kg"
+      },
+      "target": {
+        "name": "market for fish oil, from anchovy",
+        "location": "GLO",
+        "reference product": "fish oil, from anchovy",
+        "unit": "kg"
+      }
+    },
+    {
+      "source": {
+        "name": "market for floor heating from borehole heat pump",
+        "location": "CH",
+        "reference product": "heat, borehole heat pump",
+        "unit": "MJ"
+      },
+      "target": {
+        "name": "market for floor heating from borehole heat pump",
+        "location": "CH",
+        "reference product": "heat, brine-water heat pump 10kW",
+        "unit": "MJ"
+      }
+    },
+    {
+      "source": {
+        "name": "market for floor heating from borehole heat pump",
+        "location": "Europe without Switzerland",
+        "reference product": "heat, borehole heat pump",
+        "unit": "MJ"
+      },
+      "target": {
+        "name": "market for floor heating from borehole heat pump",
+        "location": "Europe without Switzerland",
+        "reference product": "heat, brine-water heat pump 10kW",
+        "unit": "MJ"
+      }
+    },
+    {
+      "source": {
+        "name": "market for floor heating from borehole heat pump",
+        "location": "RoW",
+        "reference product": "heat, borehole heat pump",
+        "unit": "MJ"
+      },
+      "target": {
+        "name": "market for floor heating from borehole heat pump",
+        "location": "RoW",
+        "reference product": "heat, brine-water heat pump 10kW",
+        "unit": "MJ"
+      }
+    },
+    {
+      "source": {
+        "name": "market for foam glass, electricity, label-certified",
+        "location": "GLO",
+        "reference product": "foam glass, electricity, label-certified",
+        "unit": "kg"
+      },
+      "target": {
+        "name": "market for foam glass, electricity from renewable energy products",
+        "location": "GLO",
+        "reference product": "foam glass, electricity from renewable energy products",
+        "unit": "kg"
+      }
+    },
+    {
+      "source": {
+        "name": "market for furniture",
+        "location": "GLO",
+        "reference product": "furniture, wooden",
+        "unit": "kg"
+      },
+      "target": {
+        "name": "market for furniture, wooden",
+        "location": "GLO",
+        "reference product": "furniture, wooden",
+        "unit": "kg"
+      }
+    },
+    {
+      "source": {
+        "name": "market for heat and power co-generation unit construction, 6400kW thermal, building",
+        "location": "GLO",
+        "reference product": "heat and power co-generation unit, 6400kW thermal, building",
+        "unit": "unit"
+      },
+      "target": {
+        "name": "market for heat and power co-generation unit, 6400kW thermal, building",
+        "location": "GLO",
+        "reference product": "heat and power co-generation unit, 6400kW thermal, building",
+        "unit": "unit"
+      }
+    },
+    {
+      "source": {
+        "name": "market for heat and power co-generation unit construction, 6400kW thermal, common components for heat+electricity",
+        "location": "GLO",
+        "reference product": "heat and power co-generation unit, 6400kW thermal, common components for heat+electricity",
+        "unit": "unit"
+      },
+      "target": {
+        "name": "market for heat and power co-generation unit, 6400kW thermal, common components for heat+electricity",
+        "location": "GLO",
+        "reference product": "heat and power co-generation unit, 6400kW thermal, common components for heat+electricity",
+        "unit": "unit"
+      }
+    },
+    {
+      "source": {
+        "name": "market for heat and power co-generation unit construction, 6400kW thermal, components for electricity only",
+        "location": "GLO",
+        "reference product": "heat and power co-generation unit, 6400kW thermal, components for electricity only",
+        "unit": "unit"
+      },
+      "target": {
+        "name": "market for heat and power co-generation unit, 6400kW thermal, components for electricity only",
+        "location": "GLO",
+        "reference product": "heat and power co-generation unit, 6400kW thermal, components for electricity only",
+        "unit": "unit"
+      }
+    },
+    {
+      "source": {
+        "name": "market for heat pump, heat and power co-generation unit, 160kW electrical",
+        "location": "GLO",
+        "reference product": "heat pump, for heat and power co-generation unit, 160kW electrical",
+        "unit": "unit"
+      },
+      "target": {
+        "name": "market for heat pump, heat and power co-generation unit, 160kW electrical",
+        "location": "GLO",
+        "reference product": "heat pump, heat and power co-generation unit, 160kW electrical",
+        "unit": "unit"
+      }
+    },
+    {
+      "source": {
+        "name": "market for housing system, pig, label-certified, per pig place",
+        "location": "GLO",
+        "reference product": "housing system, pig, label-certified, per pig place",
+        "unit": "unit"
+      },
+      "target": {
+        "name": "market for housing system, pig, per pig place, electricity from renewable energy products",
+        "location": "GLO",
+        "reference product": "housing system, pig, per pig place, electricity from renewable energy products",
+        "unit": "unit"
+      }
+    },
+    {
+      "source": {
+        "name": "market for internal combustion engine, passenger car",
+        "location": "GLO",
+        "reference product": "internal combustion engine, for passenger car",
+        "unit": "kg"
+      },
+      "target": {
+        "name": "market for internal combustion engine, passenger car",
+        "location": "GLO",
+        "reference product": "internal combustion engine, passenger car",
+        "unit": "kg"
+      }
+    },
+    {
+      "source": {
+        "name": "market for laterite",
+        "location": "RoW",
+        "reference product": "laterite, mineral",
+        "unit": "kg"
+      },
+      "target": {
+        "name": "market for laterite, mineral",
+        "location": "RoW",
+        "reference product": "laterite, mineral",
+        "unit": "kg"
+      }
+    },
+    {
+      "source": {
+        "name": "market for laterite",
+        "location": "IN",
+        "reference product": "laterite, mineral",
+        "unit": "kg"
+      },
+      "target": {
+        "name": "market for laterite, mineral",
+        "location": "IN",
+        "reference product": "laterite, mineral",
+        "unit": "kg"
+      }
+    },
+    {
+      "source": {
+        "name": "market for marine fish",
+        "location": "GLO",
+        "reference product": "fish, marine",
+        "unit": "kg"
+      },
+      "target": {
+        "name": "market for marine fish",
+        "location": "GLO",
+        "reference product": "marine fish",
+        "unit": "kg"
+      }
+    },
+    {
+      "source": {
+        "name": "market for microwave oven production",
+        "location": "GLO",
+        "reference product": "microwave oven",
+        "unit": "unit"
+      },
+      "target": {
+        "name": "market for microwave oven",
+        "location": "GLO",
+        "reference product": "microwave oven",
+        "unit": "unit"
+      }
+    },
+    {
+      "source": {
+        "name": "market for network connection, turbine 2MW, onshore",
+        "location": "GLO",
+        "reference product": "wind turbine network connection, 2MW, onshore",
+        "unit": "unit"
+      },
+      "target": {
+        "name": "market for wind turbine network connection, 2MW, onshore",
+        "location": "GLO",
+        "reference product": "wind turbine network connection, 2MW, onshore",
+        "unit": "unit"
+      }
+    },
+    {
+      "source": {
+        "name": "market for network connection, turbine 4.5MW, onshore",
+        "location": "GLO",
+        "reference product": "wind turbine network connection, 4.5MW, onshore",
+        "unit": "unit"
+      },
+      "target": {
+        "name": "market for wind turbine network connection, 4.5MW, onshore",
+        "location": "GLO",
+        "reference product": "wind turbine network connection, 4.5MW, onshore",
+        "unit": "unit"
+      }
+    },
+    {
+      "source": {
+        "name": "market for nuclear power plant, pressure water reactor 1000MW",
+        "location": "GLO",
+        "reference product": "nuclear power plant, pressure water reactor 1000MW",
+        "unit": "unit"
+      },
+      "target": {
+        "name": "market for nuclear power plant, pressure water reactor, 1000MW",
+        "location": "GLO",
+        "reference product": "nuclear power plant, pressure water reactor, 1000MW",
+        "unit": "unit"
+      }
+    },
+    {
+      "source": {
+        "name": "market for nuclear power plant, pressure water reactor 650MW",
+        "location": "GLO",
+        "reference product": "nuclear power plant, pressure water reactor, 650MW",
+        "unit": "unit"
+      },
+      "target": {
+        "name": "market for nuclear power plant, pressure water reactor, 650MW",
+        "location": "GLO",
+        "reference product": "nuclear power plant, pressure water reactor, 650MW",
+        "unit": "unit"
+      }
+    },
+    {
+      "source": {
+        "name": "market for operation, computer, laptop, 68% active work with internet access 0.2 Mbit/s, label-certified electricity",
+        "location": "GLO",
+        "reference product": "operation, computer, laptop, 68% active work with internet access 0.2 Mbit/s, label-certified electricity",
+        "unit": "hour"
+      },
+      "target": {
+        "name": "market for operation, computer, laptop, 68% active work with internet access 0.2 Mbit/s, electricity from renewable ener",
+        "location": "GLO",
+        "reference product": "operation, computer, laptop, 68% active work with internet access 0.2 Mbit/s, electricity from renewable energy products",
+        "unit": "hour"
+      }
+    },
+    {
+      "source": {
+        "name": "market for operation, computer, laptop, 68% active work, label-certified electricity",
+        "location": "GLO",
+        "reference product": "operation, computer, laptop, 68% active work, label-certified electricity",
+        "unit": "hour"
+      },
+      "target": {
+        "name": "market for operation, computer, laptop, 68% active work, electricity from renewable energy products",
+        "location": "GLO",
+        "reference product": "operation, computer, laptop, 68% active work, electricity from renewable energy products",
+        "unit": "hour"
+      }
+    },
+    {
+      "source": {
+        "name": "market for operation, computer, laptop, video mode, label-certified electricity",
+        "location": "GLO",
+        "reference product": "operation, computer, laptop, video mode, label-certified electricity",
+        "unit": "hour"
+      },
+      "target": {
+        "name": "market for operation, computer, laptop, video mode, electricity from renewable energy products",
+        "location": "GLO",
+        "reference product": "operation, computer, laptop, video mode, electricity from renewable energy products",
+        "unit": "hour"
+      }
+    },
+    {
+      "source": {
+        "name": "market for operation, computer, laptop, videoconference, label-certified electricity",
+        "location": "GLO",
+        "reference product": "operation, computer, laptop, videoconference, label-certified electricity",
+        "unit": "hour"
+      },
+      "target": {
+        "name": "market for operation, computer, laptop, videoconference, electricity from renewable energy products",
+        "location": "GLO",
+        "reference product": "operation, computer, laptop, videoconference, electricity from renewable energy products",
+        "unit": "hour"
+      }
+    },
+    {
+      "source": {
+        "name": "market for operation, housing system, pig, label-certified, per pig place",
+        "location": "GLO",
+        "reference product": "operation, housing system, pig, label-certified, per pig place",
+        "unit": "unit"
+      },
+      "target": {
+        "name": "market for operation, housing system, pig, per pig place, electricity from renewable energy products",
+        "location": "GLO",
+        "reference product": "operation, housing system, pig, per pig place, electricity from renewable energy products",
+        "unit": "unit"
+      }
+    },
+    {
+      "source": {
+        "name": "market for operation, internet access equipment, label-certified electricity",
+        "location": "GLO",
+        "reference product": "operation, internet access equipment, label-certified electricity",
+        "unit": "hour"
+      },
+      "target": {
+        "name": "market for operation, internet access equipment, electricity from renewable energy products",
+        "location": "GLO",
+        "reference product": "operation, internet access equipment, electricity from renewable energy products",
+        "unit": "hour"
+      }
+    },
+    {
+      "source": {
+        "name": "market for permanent magnet, electric passenger car motor",
+        "location": "GLO",
+        "reference product": "permanent magnet, for electric motor",
+        "unit": "kg"
+      },
+      "target": {
+        "name": "market for permanent magnet, for electric motor",
+        "location": "GLO",
+        "reference product": "permanent magnet, for electric motor",
+        "unit": "kg"
+      }
+    },
+    {
+      "source": {
+        "name": "market for phosphoryl chloride",
+        "location": "RoW",
+        "reference product": "phosphoryl chloride",
+        "unit": "kg"
+      },
+      "target": {
+        "name": "market for phosphorus oxychloride",
+        "location": "RoW",
+        "reference product": "phosphorus oxychloride",
+        "unit": "kg"
+      }
+    },
+    {
+      "source": {
+        "name": "market for phosphoryl chloride",
+        "location": "RER",
+        "reference product": "phosphoryl chloride",
+        "unit": "kg"
+      },
+      "target": {
+        "name": "market for phosphorus oxychloride",
+        "location": "RER",
+        "reference product": "phosphorus oxychloride",
+        "unit": "kg"
+      }
+    },
+    {
+      "source": {
+        "name": "market for photovoltaics, electric installation for 3kWp module, at building",
+        "location": "GLO",
+        "reference product": "photovoltaic plant, electric installation for 3kWp module",
+        "unit": "unit"
+      },
+      "target": {
+        "name": "market for photovoltaics, electric installation for 3kWp module, at building",
+        "location": "GLO",
+        "reference product": "photovoltaics, electric installation for 3kWp module, at building",
+        "unit": "unit"
+      }
+    },
+    {
+      "source": {
+        "name": "market for photovoltaics, electric installation for 570kWp module, open ground",
+        "location": "GLO",
+        "reference product": "photovoltaic plant, electric installation for 570kWp open ground module",
+        "unit": "unit"
+      },
+      "target": {
+        "name": "market for photovoltaics, electric installation for 570kWp module, open ground",
+        "location": "GLO",
+        "reference product": "photovoltaics, electric installation for 570kWp module, open ground",
+        "unit": "unit"
+      }
+    },
+    {
+      "source": {
+        "name": "market for refinery",
+        "location": "GLO",
+        "reference product": "petroleum refinery",
+        "unit": "unit"
+      },
+      "target": {
+        "name": "market for petroleum refinery",
+        "location": "GLO",
+        "reference product": "petroleum refinery",
+        "unit": "unit"
+      }
+    },
+    {
+      "source": {
+        "name": "market for sawnwood, azobe, dried (u=20%), planed",
+        "location": "RoW",
+        "reference product": "sawnwood, azobe, dried (u=20%), planed",
+        "unit": "m3"
+      },
+      "target": {
+        "name": "market for sawnwood, azobe, dried (u=15%), planed",
+        "location": "RoW",
+        "reference product": "sawnwood, azobe, dried (u=15%), planed",
+        "unit": "m3"
+      }
+    },
+    {
+      "source": {
+        "name": "market for sawnwood, azobe, dried (u=20%), planed",
+        "location": "RER",
+        "reference product": "sawnwood, azobe, dried (u=20%), planed",
+        "unit": "m3"
+      },
+      "target": {
+        "name": "market for sawnwood, azobe, dried (u=15%), planed",
+        "location": "RER",
+        "reference product": "sawnwood, azobe, dried (u=15%), planed",
+        "unit": "m3"
+      }
+    },
+    {
+      "source": {
+        "name": "market for spent oxychlor catalyst for ethylene dichloride production",
+        "location": "GLO",
+        "reference product": "spent oxychlor catalyst",
+        "unit": "kg"
+      },
+      "target": {
+        "name": "market for spent oxychlor catalyst",
+        "location": "GLO",
+        "reference product": "spent oxychlor catalyst",
+        "unit": "kg"
+      }
+    },
+    {
+      "source": {
+        "name": "market for stirling heat and power co-generation unit, 3kW electrical, wood pellet, future",
+        "location": "GLO",
+        "reference product": "stirling heat and power co-generation unit, 3kW electrical, future",
+        "unit": "unit"
+      },
+      "target": {
+        "name": "market for stirling heat and power co-generation unit, 3kW electrical, wood pellet, future",
+        "location": "GLO",
+        "reference product": "stirling heat and power co-generation unit, 3kW electrical, wood pellet, future",
+        "unit": "unit"
+      }
+    },
+    {
+      "source": {
+        "name": "market for strontium sulfate, unprocessed",
+        "location": "GLO",
+        "reference product": "strontium sulfate, unprocessed",
+        "unit": "kg"
+      },
+      "target": {
+        "name": "market for strontium sulfate, 90% SrSO4",
+        "location": "GLO",
+        "reference product": "strontium sulfate, 90% SrSO4",
+        "unit": "kg"
+      }
+    },
+    {
+      "source": {
+        "name": "market for sulfidic tailing, off-site, high-gold content",
+        "location": "RoW",
+        "reference product": "sulfidic tailing, off-site, high gold content",
+        "unit": "kg"
+      },
+      "target": {
+        "name": "market for sulfidic tailing, off-site, high gold content",
+        "location": "RoW",
+        "reference product": "sulfidic tailing, off-site, high gold content",
+        "unit": "kg"
+      }
+    },
+    {
+      "source": {
+        "name": "market for sulfidic tailing, off-site, high-gold content",
+        "location": "ZA",
+        "reference product": "sulfidic tailing, off-site, high gold content",
+        "unit": "kg"
+      },
+      "target": {
+        "name": "market for sulfidic tailing, off-site, high gold content",
+        "location": "ZA",
+        "reference product": "sulfidic tailing, off-site, high gold content",
+        "unit": "kg"
+      }
+    },
+    {
+      "source": {
+        "name": "market for tantalum, powder, capacitor-grade",
+        "location": "GLO",
+        "reference product": "tantalum, powder, capacitor-grade",
+        "unit": "kg"
+      },
+      "target": {
+        "name": "market for tantalum powder, capacitor-grade",
+        "location": "GLO",
+        "reference product": "tantalum powder, capacitor-grade",
+        "unit": "kg"
+      }
+    },
+    {
+      "source": {
+        "name": "market for textile, non woven polyester",
+        "location": "GLO",
+        "reference product": "textile, non-woven polyester",
+        "unit": "kg"
+      },
+      "target": {
+        "name": "market for textile, nonwoven polyester",
+        "location": "GLO",
+        "reference product": "textile, nonwoven polyester",
+        "unit": "kg"
+      }
+    },
+    {
+      "source": {
+        "name": "market for textile, non woven polypropylene",
+        "location": "GLO",
+        "reference product": "textile, non-woven polypropylene",
+        "unit": "kg"
+      },
+      "target": {
+        "name": "market for textile, nonwoven polypropylene",
+        "location": "GLO",
+        "reference product": "textile, nonwoven polypropylene",
+        "unit": "kg"
+      }
+    },
+    {
+      "source": {
+        "name": "market for tillage, harrowing, by offset disk harrow",
+        "location": "GLO",
+        "reference product": "tillage, harrowing, by offset disk harrow",
+        "unit": "ha"
+      },
+      "target": {
+        "name": "market for tillage, harrowing, by offset disc harrow",
+        "location": "GLO",
+        "reference product": "tillage, harrowing, by offset disc harrow",
+        "unit": "ha"
+      }
+    },
+    {
+      "source": {
+        "name": "market for titanium primary, triple-melt",
+        "location": "GLO",
+        "reference product": "titanium primary, triple-melt",
+        "unit": "kg"
+      },
+      "target": {
+        "name": "market for titanium, triple-melt",
+        "location": "GLO",
+        "reference product": "titanium, triple-melt",
+        "unit": "kg"
+      }
+    },
+    {
+      "source": {
+        "name": "market for titanium, primary",
+        "location": "GLO",
+        "reference product": "titanium, primary",
+        "unit": "kg"
+      },
+      "target": {
+        "name": "market for titanium",
+        "location": "GLO",
+        "reference product": "titanium",
+        "unit": "kg"
+      }
+    },
+    {
+      "source": {
+        "name": "market for transport, freight, lorry 28 metric ton, vegetable oil methyl ester 100%",
+        "location": "CH",
+        "reference product": "transport, freight, lorry 28 metric ton, vegetable oil methyl ester 100%",
+        "unit": "metric ton*km"
+      },
+      "target": {
+        "name": "market for transport, freight, lorry 28 metric ton, fatty acid methyl ester 100%",
+        "location": "CH",
+        "reference product": "transport, freight, lorry 28 metric ton, fatty acid methyl ester 100%",
+        "unit": "metric ton*km"
+      }
+    },
+    {
+      "source": {
+        "name": "market for transport, freight, lorry 28 metric ton, vegetable oil methyl ester 100%",
+        "location": "RoW",
+        "reference product": "transport, freight, lorry 28 metric ton, vegetable oil methyl ester 100%",
+        "unit": "metric ton*km"
+      },
+      "target": {
+        "name": "market for transport, freight, lorry 28 metric ton, fatty acid methyl ester 100%",
+        "location": "RoW",
+        "reference product": "transport, freight, lorry 28 metric ton, fatty acid methyl ester 100%",
+        "unit": "metric ton*km"
+      }
+    },
+    {
+      "source": {
+        "name": "market for transport, passenger car, large size, petol, EURO 4",
+        "location": "GLO",
+        "reference product": "transport, passenger car, large size, petrol, EURO 4",
+        "unit": "km"
+      },
+      "target": {
+        "name": "market for transport, passenger car, large size, petrol, EURO 4",
+        "location": "GLO",
+        "reference product": "transport, passenger car, large size, petrol, EURO 4",
+        "unit": "km"
+      }
+    },
+    {
+      "source": {
+        "name": "market for transport, passenger, aircraft, unspecified",
+        "location": "GLO",
+        "reference product": "transport, passenger, aircraft, unspecified",
+        "unit": "person*km"
+      },
+      "target": {
+        "name": "market for transport, passenger aircraft, unspecified",
+        "location": "GLO",
+        "reference product": "transport, passenger aircraft, unspecified",
+        "unit": "person*km"
+      }
+    },
+    {
+      "source": {
+        "name": "market for transport, passenger, electric bicycle, label-certified electricity",
+        "location": "GLO",
+        "reference product": "transport, passenger, electric bicycle, label-certified electricity",
+        "unit": "person*km"
+      },
+      "target": {
+        "name": "market for transport, passenger, electric bicycle, electricity from renewable energy products",
+        "location": "GLO",
+        "reference product": "transport, passenger, electric bicycle, electricity from renewable energy products",
+        "unit": "person*km"
+      }
+    },
+    {
+      "source": {
+        "name": "market for transport, passengers, aircraft, long haul",
+        "location": "GLO",
+        "reference product": "transport, passengers, aircraft, long haul",
+        "unit": "person*km"
+      },
+      "target": {
+        "name": "market for transport, passenger aircraft, long haul",
+        "location": "GLO",
+        "reference product": "transport, passenger aircraft, long haul",
+        "unit": "person*km"
+      }
+    },
+    {
+      "source": {
+        "name": "market for transport, passengers, aircraft, medium haul",
+        "location": "GLO",
+        "reference product": "transport, passengers, aircraft, medium haul",
+        "unit": "person*km"
+      },
+      "target": {
+        "name": "market for transport, passenger aircraft, medium haul",
+        "location": "GLO",
+        "reference product": "transport, passenger aircraft, medium haul",
+        "unit": "person*km"
+      }
+    },
+    {
+      "source": {
+        "name": "market for transport, passengers, aircraft, short haul",
+        "location": "GLO",
+        "reference product": "transport, passengers, aircraft, short haul",
+        "unit": "person*km"
+      },
+      "target": {
+        "name": "market for transport, passenger aircraft, short haul",
+        "location": "GLO",
+        "reference product": "transport, passenger aircraft, short haul",
+        "unit": "person*km"
+      }
+    },
+    {
+      "source": {
+        "name": "market for transport, passengers, aircraft, very short haul",
+        "location": "GLO",
+        "reference product": "transport, passengers, aircraft, very short haul",
+        "unit": "person*km"
+      },
+      "target": {
+        "name": "market for transport, passenger aircraft, very short haul",
+        "location": "GLO",
+        "reference product": "transport, passenger aircraft, very short haul",
+        "unit": "person*km"
+      }
+    },
+    {
+      "source": {
+        "name": "market for tree seedling",
+        "location": "RoW",
+        "reference product": "tree seedling, for planting",
+        "unit": "unit"
+      },
+      "target": {
+        "name": "market for tree seedling, for planting",
+        "location": "RoW",
+        "reference product": "tree seedling, for planting",
+        "unit": "unit"
+      }
+    },
+    {
+      "source": {
+        "name": "market for tree seedling",
+        "location": "RER",
+        "reference product": "tree seedling, for planting",
+        "unit": "unit"
+      },
+      "target": {
+        "name": "market for tree seedling, for planting",
+        "location": "RER",
+        "reference product": "tree seedling, for planting",
+        "unit": "unit"
+      }
+    },
+    {
+      "source": {
+        "name": "market for used glider from electric scooter",
+        "location": "GLO",
+        "reference product": "used glider, from electric scooter",
+        "unit": "kg"
+      },
+      "target": {
+        "name": "market for used glider, electric scooter",
+        "location": "GLO",
+        "reference product": "used glider, electric scooter",
+        "unit": "kg"
+      }
+    },
+    {
+      "source": {
+        "name": "market for used industrial electronic device, WEEE collection",
+        "location": "CH",
+        "reference product": "used industrial electronic device",
+        "unit": "kg"
+      },
+      "target": {
+        "name": "market for used industrial electronic device",
+        "location": "CH",
+        "reference product": "used industrial electronic device",
+        "unit": "kg"
+      }
+    },
+    {
+      "source": {
+        "name": "market for used industrial electronic device, WEEE collection",
+        "location": "RoW",
+        "reference product": "used industrial electronic device",
+        "unit": "kg"
+      },
+      "target": {
+        "name": "market for used industrial electronic device",
+        "location": "RoW",
+        "reference product": "used industrial electronic device",
+        "unit": "kg"
+      }
+    },
+    {
+      "source": {
+        "name": "market for used internal combustion engine, passenger car",
+        "location": "GLO",
+        "reference product": "used internal combustion engine, from passenger car",
+        "unit": "kg"
+      },
+      "target": {
+        "name": "market for used internal combustion engine, passenger car",
+        "location": "GLO",
+        "reference product": "used internal combustion engine, passenger car",
+        "unit": "kg"
+      }
+    },
+    {
+      "source": {
+        "name": "market for used powertrain from electric scooter",
+        "location": "GLO",
+        "reference product": "used powertrain, from electric scooter",
+        "unit": "kg"
+      },
+      "target": {
+        "name": "market for used powertrain, electric scooter",
+        "location": "GLO",
+        "reference product": "used powertrain, electric scooter",
+        "unit": "kg"
+      }
+    },
+    {
+      "source": {
+        "name": "market for ventilation duct, PE corrugated tube, DN 75",
+        "location": "GLO",
+        "reference product": "polyethylene pipe, corrugated, DN 75",
+        "unit": "m"
+      },
+      "target": {
+        "name": "market for polyethylene pipe, corrugated, DN 75",
+        "location": "GLO",
+        "reference product": "polyethylene pipe, corrugated, DN 75",
+        "unit": "m"
+      }
+    },
+    {
+      "source": {
+        "name": "market for venting, from carbon dioxide in chemical industry",
+        "location": "GLO",
+        "reference product": "venting, from carbon dioxide in chemical industry",
+        "unit": "kg"
+      },
+      "target": {
+        "name": "market for venting of carbon dioxide, in chemical industry",
+        "location": "GLO",
+        "reference product": "venting of carbon dioxide, in chemical industry",
+        "unit": "kg"
+      }
+    },
+    {
+      "source": {
+        "name": "market for waste mineral wool, final disposal",
+        "location": "CH",
+        "reference product": "waste mineral wool, for final disposal",
+        "unit": "kg"
+      },
+      "target": {
+        "name": "market for waste mineral wool, for final disposal",
+        "location": "CH",
+        "reference product": "waste mineral wool, for final disposal",
+        "unit": "kg"
+      }
+    },
+    {
+      "source": {
+        "name": "market for waste mineral wool, final disposal",
+        "location": "Europe without Switzerland",
+        "reference product": "waste mineral wool, for final disposal",
+        "unit": "kg"
+      },
+      "target": {
+        "name": "market for waste mineral wool, for final disposal",
+        "location": "Europe without Switzerland",
+        "reference product": "waste mineral wool, for final disposal",
+        "unit": "kg"
+      }
+    },
+    {
+      "source": {
+        "name": "market for waste mineral wool, final disposal",
+        "location": "RoW",
+        "reference product": "waste mineral wool, for final disposal",
+        "unit": "kg"
+      },
+      "target": {
+        "name": "market for waste mineral wool, for final disposal",
+        "location": "RoW",
+        "reference product": "waste mineral wool, for final disposal",
+        "unit": "kg"
+      }
+    },
+    {
+      "source": {
+        "name": "market for waste plastic plaster, final disposal",
+        "location": "CH",
+        "reference product": "waste plastic plaster, for final disposal",
+        "unit": "kg"
+      },
+      "target": {
+        "name": "market for waste plastic plaster, for final disposal",
+        "location": "CH",
+        "reference product": "waste plastic plaster, for final disposal",
+        "unit": "kg"
+      }
+    },
+    {
+      "source": {
+        "name": "market for waste plastic plaster, final disposal",
+        "location": "RoW",
+        "reference product": "waste plastic plaster, for final disposal",
+        "unit": "kg"
+      },
+      "target": {
+        "name": "market for waste plastic plaster, for final disposal",
+        "location": "RoW",
+        "reference product": "waste plastic plaster, for final disposal",
+        "unit": "kg"
+      }
+    },
+    {
+      "source": {
+        "name": "market for wood pellet",
+        "location": "RoW",
+        "reference product": "wood pellet, measured as dry mass",
+        "unit": "kg"
+      },
+      "target": {
+        "name": "market for wood pellet, measured as dry mass",
+        "location": "RoW",
+        "reference product": "wood pellet, measured as dry mass",
+        "unit": "kg"
+      }
+    },
+    {
+      "source": {
+        "name": "market for wood pellet",
+        "location": "RER",
+        "reference product": "wood pellet, measured as dry mass",
+        "unit": "kg"
+      },
+      "target": {
+        "name": "market for wood pellet, measured as dry mass",
+        "location": "RER",
+        "reference product": "wood pellet, measured as dry mass",
+        "unit": "kg"
+      }
+    },
+    {
+      "source": {
+        "name": "market for wood preservation, vaccum pressure method, inorganic salt, containing Cr, outdoor use, ground contact",
+        "location": "GLO",
+        "reference product": "wood preservation, vaccum pressure method, inorganic salt, containing Cr, outdoor use, ground contact",
+        "unit": "kg"
+      },
+      "target": {
+        "name": "market for wood preservation, vacuum pressure method, inorganic salt, containing Cr, outdoor use, ground contact",
+        "location": "GLO",
+        "reference product": "wood preservation, vacuum pressure method, inorganic salt, containing Cr, outdoor use, ground contact",
+        "unit": "kg"
+      }
+    },
+    {
+      "source": {
+        "name": "market group for transport, freight, lorry 28 metric ton, vegetable oil methyl ester 100%",
+        "location": "GLO",
+        "reference product": "transport, freight, lorry 28 metric ton, vegetable oil methyl ester 100%",
+        "unit": "metric ton*km"
+      },
+      "target": {
+        "name": "market group for transport, freight, lorry 28 metric ton, fatty acid methyl ester 100%",
+        "location": "GLO",
+        "reference product": "transport, freight, lorry 28 metric ton, fatty acid methyl ester 100%",
+        "unit": "metric ton*km"
+      }
+    },
+    {
+      "source": {
+        "name": "medium density fibre board production, uncoated",
+        "location": "RoW",
+        "reference product": "medium density fibreboard",
+        "unit": "m3"
+      },
+      "target": {
+        "name": "medium density fibreboard production, uncoated",
+        "location": "RoW",
+        "reference product": "medium density fibreboard",
+        "unit": "m3"
+      }
+    },
+    {
+      "source": {
+        "name": "medium density fibre board production, uncoated",
+        "location": "RER",
+        "reference product": "medium density fibreboard",
+        "unit": "m3"
+      },
+      "target": {
+        "name": "medium density fibreboard production, uncoated",
+        "location": "RER",
+        "reference product": "medium density fibreboard",
+        "unit": "m3"
+      }
+    },
+    {
+      "source": {
+        "name": "nuclear power plant construction, pressure water reactor 1000MW",
+        "location": "CH",
+        "reference product": "nuclear power plant, pressure water reactor 1000MW",
+        "unit": "unit"
+      },
+      "target": {
+        "name": "nuclear power plant construction, pressure water reactor, 1000MW",
+        "location": "CH",
+        "reference product": "nuclear power plant, pressure water reactor, 1000MW",
+        "unit": "unit"
+      }
+    },
+    {
+      "source": {
+        "name": "nuclear power plant construction, pressure water reactor 1000MW",
+        "location": "CN",
+        "reference product": "nuclear power plant, pressure water reactor 1000MW",
+        "unit": "unit"
+      },
+      "target": {
+        "name": "nuclear power plant construction, pressure water reactor, 1000MW",
+        "location": "CN",
+        "reference product": "nuclear power plant, pressure water reactor, 1000MW",
+        "unit": "unit"
+      }
+    },
+    {
+      "source": {
+        "name": "nuclear power plant construction, pressure water reactor 1000MW",
+        "location": "DE",
+        "reference product": "nuclear power plant, pressure water reactor 1000MW",
+        "unit": "unit"
+      },
+      "target": {
+        "name": "nuclear power plant construction, pressure water reactor, 1000MW",
+        "location": "DE",
+        "reference product": "nuclear power plant, pressure water reactor, 1000MW",
+        "unit": "unit"
+      }
+    },
+    {
+      "source": {
+        "name": "nuclear power plant construction, pressure water reactor 1000MW",
+        "location": "FR",
+        "reference product": "nuclear power plant, pressure water reactor 1000MW",
+        "unit": "unit"
+      },
+      "target": {
+        "name": "nuclear power plant construction, pressure water reactor, 1000MW",
+        "location": "FR",
+        "reference product": "nuclear power plant, pressure water reactor, 1000MW",
+        "unit": "unit"
+      }
+    },
+    {
+      "source": {
+        "name": "nuclear power plant construction, pressure water reactor 1000MW",
+        "location": "RoW",
+        "reference product": "nuclear power plant, pressure water reactor 1000MW",
+        "unit": "unit"
+      },
+      "target": {
+        "name": "nuclear power plant construction, pressure water reactor, 1000MW",
+        "location": "RoW",
+        "reference product": "nuclear power plant, pressure water reactor, 1000MW",
+        "unit": "unit"
+      }
+    },
+    {
+      "source": {
+        "name": "nuclear power plant construction, pressure water reactor 1000MW",
+        "location": "US",
+        "reference product": "nuclear power plant, pressure water reactor 1000MW",
+        "unit": "unit"
+      },
+      "target": {
+        "name": "nuclear power plant construction, pressure water reactor, 1000MW",
+        "location": "US",
+        "reference product": "nuclear power plant, pressure water reactor, 1000MW",
+        "unit": "unit"
+      }
+    },
+    {
+      "source": {
+        "name": "operation, computer, laptop, 68% active work with internet access 0.2 Mbit/s, label-certified electricity",
+        "location": "CH",
+        "reference product": "operation, computer, laptop, 68% active work with internet access 0.2 Mbit/s, label-certified electricity",
+        "unit": "hour"
+      },
+      "target": {
+        "name": "operation, computer, laptop, 68% active work with internet access 0.2 Mbit/s, electricity from renewable energy products",
+        "location": "CH",
+        "reference product": "operation, computer, laptop, 68% active work with internet access 0.2 Mbit/s, electricity from renewable energy products",
+        "unit": "hour"
+      }
+    },
+    {
+      "source": {
+        "name": "operation, computer, laptop, 68% active work with internet access 0.2 Mbit/s, label-certified electricity",
+        "location": "RoW",
+        "reference product": "operation, computer, laptop, 68% active work with internet access 0.2 Mbit/s, label-certified electricity",
+        "unit": "hour"
+      },
+      "target": {
+        "name": "operation, computer, laptop, 68% active work with internet access 0.2 Mbit/s, electricity from renewable energy products",
+        "location": "RoW",
+        "reference product": "operation, computer, laptop, 68% active work with internet access 0.2 Mbit/s, electricity from renewable energy products",
+        "unit": "hour"
+      }
+    },
+    {
+      "source": {
+        "name": "operation, computer, laptop, 68% active work, label-certified electricity",
+        "location": "CH",
+        "reference product": "operation, computer, laptop, 68% active work, label-certified electricity",
+        "unit": "hour"
+      },
+      "target": {
+        "name": "operation, computer, laptop, 68% active work, electricity from renewable energy products",
+        "location": "CH",
+        "reference product": "operation, computer, laptop, 68% active work, electricity from renewable energy products",
+        "unit": "hour"
+      }
+    },
+    {
+      "source": {
+        "name": "operation, computer, laptop, 68% active work, label-certified electricity",
+        "location": "GLO",
+        "reference product": "operation, computer, laptop, 68% active work, label-certified electricity",
+        "unit": "hour"
+      },
+      "target": {
+        "name": "operation, computer, laptop, 68% active work, electricity from renewable energy products",
+        "location": "GLO",
+        "reference product": "operation, computer, laptop, 68% active work, electricity from renewable energy products",
+        "unit": "hour"
+      }
+    },
+    {
+      "source": {
+        "name": "operation, computer, laptop, video mode, label-certified electricity",
+        "location": "CH",
+        "reference product": "operation, computer, laptop, video mode, label-certified electricity",
+        "unit": "hour"
+      },
+      "target": {
+        "name": "operation, computer, laptop, video mode, electricity from renewable energy products",
+        "location": "CH",
+        "reference product": "operation, computer, laptop, video mode, electricity from renewable energy products",
+        "unit": "hour"
+      }
+    },
+    {
+      "source": {
+        "name": "operation, computer, laptop, video mode, label-certified electricity",
+        "location": "GLO",
+        "reference product": "operation, computer, laptop, video mode, label-certified electricity",
+        "unit": "hour"
+      },
+      "target": {
+        "name": "operation, computer, laptop, video mode, electricity from renewable energy products",
+        "location": "GLO",
+        "reference product": "operation, computer, laptop, video mode, electricity from renewable energy products",
+        "unit": "hour"
+      }
+    },
+    {
+      "source": {
+        "name": "operation, computer, laptop, videoconference, label-certified electricity",
+        "location": "CH",
+        "reference product": "operation, computer, laptop, videoconference, label-certified electricity",
+        "unit": "hour"
+      },
+      "target": {
+        "name": "operation, computer, laptop, videoconference, electricity from renewable energy products",
+        "location": "CH",
+        "reference product": "operation, computer, laptop, videoconference, electricity from renewable energy products",
+        "unit": "hour"
+      }
+    },
+    {
+      "source": {
+        "name": "operation, computer, laptop, videoconference, label-certified electricity",
+        "location": "RoW",
+        "reference product": "operation, computer, laptop, videoconference, label-certified electricity",
+        "unit": "hour"
+      },
+      "target": {
+        "name": "operation, computer, laptop, videoconference, electricity from renewable energy products",
+        "location": "RoW",
+        "reference product": "operation, computer, laptop, videoconference, electricity from renewable energy products",
+        "unit": "hour"
+      }
+    },
+    {
+      "source": {
+        "name": "operation, housing system, pig, label-certified",
+        "location": "CA-QC",
+        "reference product": "operation, housing system, pig, label-certified, per pig place",
+        "unit": "unit"
+      },
+      "target": {
+        "name": "operation, housing system, pig, electricity from renewable energy products",
+        "location": "CA-QC",
+        "reference product": "operation, housing system, pig, per pig place, electricity from renewable energy products",
+        "unit": "unit"
+      }
+    },
+    {
+      "source": {
+        "name": "operation, housing system, pig, label-certified",
+        "location": "CH",
+        "reference product": "operation, housing system, pig, label-certified, per pig place",
+        "unit": "unit"
+      },
+      "target": {
+        "name": "operation, housing system, pig, electricity from renewable energy products",
+        "location": "CH",
+        "reference product": "operation, housing system, pig, per pig place, electricity from renewable energy products",
+        "unit": "unit"
+      }
+    },
+    {
+      "source": {
+        "name": "operation, housing system, pig, label-certified",
+        "location": "RoW",
+        "reference product": "operation, housing system, pig, label-certified, per pig place",
+        "unit": "unit"
+      },
+      "target": {
+        "name": "operation, housing system, pig, electricity from renewable energy products",
+        "location": "RoW",
+        "reference product": "operation, housing system, pig, per pig place, electricity from renewable energy products",
+        "unit": "unit"
+      }
+    },
+    {
+      "source": {
+        "name": "operation, internet access equipment, label-certified electricity",
+        "location": "CH",
+        "reference product": "operation, internet access equipment, label-certified electricity",
+        "unit": "hour"
+      },
+      "target": {
+        "name": "operation, internet access equipment, electricity from renewable energy products",
+        "location": "CH",
+        "reference product": "operation, internet access equipment, electricity from renewable energy products",
+        "unit": "hour"
+      }
+    },
+    {
+      "source": {
+        "name": "operation, internet access equipment, label-certified electricity",
+        "location": "GLO",
+        "reference product": "operation, internet access equipment, label-certified electricity",
+        "unit": "hour"
+      },
+      "target": {
+        "name": "operation, internet access equipment, electricity from renewable energy products",
+        "location": "GLO",
+        "reference product": "operation, internet access equipment, electricity from renewable energy products",
+        "unit": "hour"
+      }
+    },
+    {
+      "source": {
+        "name": "pentane extraction, from natural gas liquids",
+        "location": "GLO",
+        "reference product": "pentane",
+        "unit": "kg"
+      },
+      "target": {
+        "name": "natural gas liquids fractionation",
+        "location": "GLO",
+        "reference product": "pentane",
+        "unit": "kg"
+      }
+    },
+    {
+      "source": {
+        "name": "phosphorus oxychloride production",
+        "location": "GLO",
+        "reference product": "phosphorus oxychloride",
+        "unit": "kg"
+      },
+      "target": {
+        "name": "phosphorus oxychloride production, from phosphorus pentachloride",
+        "location": "GLO",
+        "reference product": "phosphorus oxychloride",
+        "unit": "kg"
+      }
+    },
+    {
+      "source": {
+        "name": "phosphoryl chloride production",
+        "location": "RoW",
+        "reference product": "phosphoryl chloride",
+        "unit": "kg"
+      },
+      "target": {
+        "name": "phosphorus oxychloride production, from phosphorus trichloride",
+        "location": "RoW",
+        "reference product": "phosphorus oxychloride",
+        "unit": "kg"
+      }
+    },
+    {
+      "source": {
+        "name": "phosphoryl chloride production",
+        "location": "RER",
+        "reference product": "phosphoryl chloride",
+        "unit": "kg"
+      },
+      "target": {
+        "name": "phosphorus oxychloride production, from phosphorus trichloride",
+        "location": "RER",
+        "reference product": "phosphorus oxychloride",
+        "unit": "kg"
+      }
+    },
+    {
+      "source": {
+        "name": "photovoltaics, electric installation for 3kWp module, at building",
+        "location": "CH",
+        "reference product": "photovoltaic plant, electric installation for 3kWp module",
+        "unit": "unit"
+      },
+      "target": {
+        "name": "photovoltaics, electric installation for 3kWp module, at building",
+        "location": "CH",
+        "reference product": "photovoltaics, electric installation for 3kWp module, at building",
+        "unit": "unit"
+      }
+    },
+    {
+      "source": {
+        "name": "photovoltaics, electric installation for 3kWp module, at building",
+        "location": "RoW",
+        "reference product": "photovoltaic plant, electric installation for 3kWp module",
+        "unit": "unit"
+      },
+      "target": {
+        "name": "photovoltaics, electric installation for 3kWp module, at building",
+        "location": "RoW",
+        "reference product": "photovoltaics, electric installation for 3kWp module, at building",
+        "unit": "unit"
+      }
+    },
+    {
+      "source": {
+        "name": "photovoltaics, electric installation for 570kWp module, open ground",
+        "location": "GLO",
+        "reference product": "photovoltaic plant, electric installation for 570kWp open ground module",
+        "unit": "unit"
+      },
+      "target": {
+        "name": "photovoltaics, electric installation for 570kWp module, open ground",
+        "location": "GLO",
+        "reference product": "photovoltaics, electric installation for 570kWp module, open ground",
+        "unit": "unit"
+      }
+    },
+    {
+      "source": {
+        "name": "propane extraction, from liquefied petroleum gas",
+        "location": "GLO",
+        "reference product": "propane",
+        "unit": "kg"
+      },
+      "target": {
+        "name": "natural gas liquids fractionation",
+        "location": "GLO",
+        "reference product": "propane",
+        "unit": "kg"
+      }
+    },
+    {
+      "source": {
+        "name": "sawing and planing, azobe, air dried",
+        "location": "RoW",
+        "reference product": "sawnwood, azobe, dried (u=20%), planed",
+        "unit": "m3"
+      },
+      "target": {
+        "name": "sawing and planing, azobe, air dried",
+        "location": "RoW",
+        "reference product": "sawnwood, azobe, dried (u=15%), planed",
+        "unit": "m3"
+      }
+    },
+    {
+      "source": {
+        "name": "sawing and planing, azobe, air dried",
+        "location": "RER",
+        "reference product": "sawnwood, azobe, dried (u=20%), planed",
+        "unit": "m3"
+      },
+      "target": {
+        "name": "sawing and planing, azobe, air dried",
+        "location": "RER",
+        "reference product": "sawnwood, azobe, dried (u=15%), planed",
+        "unit": "m3"
+      }
+    },
+    {
+      "source": {
+        "name": "small pelagic fish to generic market for marine fish",
+        "location": "GLO",
+        "reference product": "fish, marine",
+        "unit": "kg"
+      },
+      "target": {
+        "name": "small pelagic fish to generic market for marine fish",
+        "location": "GLO",
+        "reference product": "marine fish",
+        "unit": "kg"
+      }
+    },
+    {
+      "source": {
+        "name": "spodumene production",
+        "location": "RER",
+        "reference product": "spodumene",
+        "unit": "kg"
+      },
+      "target": {
+        "name": "spodumene production",
+        "location": "RoW",
+        "reference product": "spodumene",
+        "unit": "kg"
+      }
+    },
+    {
+      "source": {
+        "name": "stirling heat and power co-generation unit construction, 3kW electrical, future",
+        "location": "CH",
+        "reference product": "stirling heat and power co-generation unit, 3kW electrical, future",
+        "unit": "unit"
+      },
+      "target": {
+        "name": "stirling heat and power co-generation unit construction, 3kW electrical, wood pellet, future",
+        "location": "CH",
+        "reference product": "stirling heat and power co-generation unit, 3kW electrical, wood pellet, future",
+        "unit": "unit"
+      }
+    },
+    {
+      "source": {
+        "name": "stirling heat and power co-generation unit construction, 3kW electrical, future",
+        "location": "RoW",
+        "reference product": "stirling heat and power co-generation unit, 3kW electrical, future",
+        "unit": "unit"
+      },
+      "target": {
+        "name": "stirling heat and power co-generation unit construction, 3kW electrical, wood pellet, future",
+        "location": "RoW",
+        "reference product": "stirling heat and power co-generation unit, 3kW electrical, wood pellet, future",
+        "unit": "unit"
+      }
+    },
+    {
+      "source": {
+        "name": "textile production, non woven polyester, needle punched",
+        "location": "RoW",
+        "reference product": "textile, non-woven polyester",
+        "unit": "kg"
+      },
+      "target": {
+        "name": "textile production, nonwoven polyester, needle-punched",
+        "location": "RoW",
+        "reference product": "textile, nonwoven polyester",
+        "unit": "kg"
+      }
+    },
+    {
+      "source": {
+        "name": "textile production, non woven polyester, needle punched",
+        "location": "IN",
+        "reference product": "textile, non-woven polyester",
+        "unit": "kg"
+      },
+      "target": {
+        "name": "textile production, nonwoven polyester, needle-punched",
+        "location": "IN",
+        "reference product": "textile, nonwoven polyester",
+        "unit": "kg"
+      }
+    },
+    {
+      "source": {
+        "name": "textile production, non woven polypropylene, spun bond",
+        "location": "RoW",
+        "reference product": "textile, non-woven polypropylene",
+        "unit": "kg"
+      },
+      "target": {
+        "name": "textile production, nonwoven polypropylene, spunbond",
+        "location": "RoW",
+        "reference product": "textile, nonwoven polypropylene",
+        "unit": "kg"
+      }
+    },
+    {
+      "source": {
+        "name": "textile production, non woven polypropylene, spun bond",
+        "location": "IN",
+        "reference product": "textile, non-woven polypropylene",
+        "unit": "kg"
+      },
+      "target": {
+        "name": "textile production, nonwoven polypropylene, spunbond",
+        "location": "IN",
+        "reference product": "textile, nonwoven polypropylene",
+        "unit": "kg"
+      }
+    },
+    {
+      "source": {
+        "name": "tillage, harrowing, by offset disk harrow",
+        "location": "BR",
+        "reference product": "tillage, harrowing, by offset disk harrow",
+        "unit": "ha"
+      },
+      "target": {
+        "name": "tillage, harrowing, by offset disc harrow",
+        "location": "BR",
+        "reference product": "tillage, harrowing, by offset disc harrow",
+        "unit": "ha"
+      }
+    },
+    {
+      "source": {
+        "name": "titanium production, primary",
+        "location": "GLO",
+        "reference product": "titanium, primary",
+        "unit": "kg"
+      },
+      "target": {
+        "name": "titanium production",
+        "location": "GLO",
+        "reference product": "titanium",
+        "unit": "kg"
+      }
+    },
+    {
+      "source": {
+        "name": "titanium production, primary, triple melt",
+        "location": "GLO",
+        "reference product": "titanium primary, triple-melt",
+        "unit": "kg"
+      },
+      "target": {
+        "name": "titanium production, triple-melt",
+        "location": "GLO",
+        "reference product": "titanium, triple-melt",
+        "unit": "kg"
+      }
+    },
+    {
+      "source": {
+        "name": "transport, freight, lorry 28 metric ton, vegetable oil methyl ester 100%",
+        "location": "CH",
+        "reference product": "transport, freight, lorry 28 metric ton, vegetable oil methyl ester 100%",
+        "unit": "metric ton*km"
+      },
+      "target": {
+        "name": "transport, freight, lorry 28 metric ton, fatty acid methyl ester 100%",
+        "location": "CH",
+        "reference product": "transport, freight, lorry 28 metric ton, fatty acid methyl ester 100%",
+        "unit": "metric ton*km"
+      }
+    },
+    {
+      "source": {
+        "name": "transport, freight, lorry 28 metric ton, vegetable oil methyl ester 100%",
+        "location": "RoW",
+        "reference product": "transport, freight, lorry 28 metric ton, vegetable oil methyl ester 100%",
+        "unit": "metric ton*km"
+      },
+      "target": {
+        "name": "transport, freight, lorry 28 metric ton, fatty acid methyl ester 100%",
+        "location": "RoW",
+        "reference product": "transport, freight, lorry 28 metric ton, fatty acid methyl ester 100%",
+        "unit": "metric ton*km"
+      }
+    },
+    {
+      "source": {
+        "name": "transport, passenger, aircraft, all distances to generic market for transport, passenger, unspecified",
+        "location": "GLO",
+        "reference product": "transport, passenger, aircraft, unspecified",
+        "unit": "person*km"
+      },
+      "target": {
+        "name": "transport, passenger aircraft, all distances to generic market for transport, passenger aircraft, unspecified",
+        "location": "GLO",
+        "reference product": "transport, passenger aircraft, unspecified",
+        "unit": "person*km"
+      }
+    },
+    {
+      "source": {
+        "name": "transport, passenger, electric bicycle, label-certified electricity",
+        "location": "CH",
+        "reference product": "transport, passenger, electric bicycle, label-certified electricity",
+        "unit": "person*km"
+      },
+      "target": {
+        "name": "transport, passenger, electric bicycle, electricity from renewable energy products",
+        "location": "CH",
+        "reference product": "transport, passenger, electric bicycle, electricity from renewable energy products",
+        "unit": "person*km"
+      }
+    },
+    {
+      "source": {
+        "name": "transport, passenger, electric bicycle, label-certified electricity",
+        "location": "RoW",
+        "reference product": "transport, passenger, electric bicycle, label-certified electricity",
+        "unit": "person*km"
+      },
+      "target": {
+        "name": "transport, passenger, electric bicycle, electricity from renewable energy products",
+        "location": "RoW",
+        "reference product": "transport, passenger, electric bicycle, electricity from renewable energy products",
+        "unit": "person*km"
+      }
+    },
+    {
+      "source": {
+        "name": "transport, passengers, passenger aircraft, long haul",
+        "location": "GLO",
+        "reference product": "transport, passengers, aircraft, long haul",
+        "unit": "person*km"
+      },
+      "target": {
+        "name": "transport, passenger aircraft, long haul",
+        "location": "GLO",
+        "reference product": "transport, passenger aircraft, long haul",
+        "unit": "person*km"
+      }
+    },
+    {
+      "source": {
+        "name": "transport, passengers, passenger aircraft, medium haul",
+        "location": "GLO",
+        "reference product": "transport, passengers, aircraft, medium haul",
+        "unit": "person*km"
+      },
+      "target": {
+        "name": "transport, passenger aircraft, medium haul",
+        "location": "GLO",
+        "reference product": "transport, passenger aircraft, medium haul",
+        "unit": "person*km"
+      }
+    },
+    {
+      "source": {
+        "name": "transport, passengers, passenger aircraft, short haul",
+        "location": "GLO",
+        "reference product": "transport, passengers, aircraft, short haul",
+        "unit": "person*km"
+      },
+      "target": {
+        "name": "transport, passenger aircraft, short haul",
+        "location": "GLO",
+        "reference product": "transport, passenger aircraft, short haul",
+        "unit": "person*km"
+      }
+    },
+    {
+      "source": {
+        "name": "transport, passengers, passenger aircraft, very short haul",
+        "location": "GLO",
+        "reference product": "transport, passengers, aircraft, very short haul",
+        "unit": "person*km"
+      },
+      "target": {
+        "name": "transport, passenger aircraft, very short haul",
+        "location": "GLO",
+        "reference product": "transport, passenger aircraft, very short haul",
+        "unit": "person*km"
+      }
+    },
+    {
+      "source": {
+        "name": "treatment of used glider, electric scooter, shredding",
+        "location": "GLO",
+        "reference product": "used glider, from electric scooter",
+        "unit": "kg"
+      },
+      "target": {
+        "name": "treatment of used glider, electric scooter, shredding",
+        "location": "GLO",
+        "reference product": "used glider, electric scooter",
+        "unit": "kg"
+      }
+    },
+    {
+      "source": {
+        "name": "treatment of used internal combustion engine, shredding",
+        "location": "GLO",
+        "reference product": "used internal combustion engine, from passenger car",
+        "unit": "kg"
+      },
+      "target": {
+        "name": "treatment of used internal combustion engine, passenger car, shredding",
+        "location": "GLO",
+        "reference product": "used internal combustion engine, passenger car",
+        "unit": "kg"
+      }
+    },
+    {
+      "source": {
+        "name": "treatment of used powertrain for electric scooter, manual dismantling",
+        "location": "GLO",
+        "reference product": "used powertrain, from electric scooter",
+        "unit": "kg"
+      },
+      "target": {
+        "name": "treatment of used powertrain, electric scooter, manual dismantling",
+        "location": "GLO",
+        "reference product": "used powertrain, electric scooter",
+        "unit": "kg"
+      }
+    },
+    {
+      "source": {
+        "name": "wood preservation, vacuum pressure method, inorganic salt, containing Cr, outdoor use, ground contact",
+        "location": "RoW",
+        "reference product": "wood preservation, vaccum pressure method, inorganic salt, containing Cr, outdoor use, ground contact",
+        "unit": "kg"
+      },
+      "target": {
+        "name": "wood preservation, vacuum pressure method, inorganic salt, containing Cr, outdoor use, ground contact",
+        "location": "RoW",
+        "reference product": "wood preservation, vacuum pressure method, inorganic salt, containing Cr, outdoor use, ground contact",
+        "unit": "kg"
+      }
+    },
+    {
+      "source": {
+        "name": "wood preservation, vacuum pressure method, inorganic salt, containing Cr, outdoor use, ground contact",
+        "location": "RER",
+        "reference product": "wood preservation, vaccum pressure method, inorganic salt, containing Cr, outdoor use, ground contact",
+        "unit": "kg"
+      },
+      "target": {
+        "name": "wood preservation, vacuum pressure method, inorganic salt, containing Cr, outdoor use, ground contact",
+        "location": "RER",
+        "reference product": "wood preservation, vacuum pressure method, inorganic salt, containing Cr, outdoor use, ground contact",
+        "unit": "kg"
+      }
+    }
+  ],
+  "disaggregate": [
+    {
+      "source": {
+        "name": "application of plant protection product, by field sprayer",
+        "location": "RoW",
+        "reference product": "application of plant protection product, by field sprayer",
+        "unit": "ha"
+      },
+      "targets": [
+        {
+          "name": "application of plant protection product, by field sprayer",
+          "location": "Canada without Quebec",
+          "reference product": "application of plant protection product, by field sprayer",
+          "unit": "ha",
+          "allocation": 0.025737164985667214
+        },
+        {
+          "name": "application of plant protection product, by field sprayer",
+          "location": "RoW",
+          "reference product": "application of plant protection product, by field sprayer",
+          "unit": "ha",
+          "allocation": 0.9742628350143328
+        }
+      ]
+    },
+    {
+      "source": {
+        "name": "chromite ore concentrate production",
+        "location": "GLO",
+        "reference product": "chromite ore concentrate",
+        "unit": "kg"
+      },
+      "targets": [
+        {
+          "name": "chromite ore concentrate production",
+          "location": "RoW",
+          "reference product": "chromite ore concentrate",
+          "unit": "kg",
+          "allocation": 0.8564635193133047
+        },
+        {
+          "name": "chromite ore concentrate production",
+          "location": "KZ",
+          "reference product": "chromite ore concentrate",
+          "unit": "kg",
+          "allocation": 0.14353648068669528
+        }
+      ]
+    },
+    {
+      "source": {
+        "name": "combine harvesting",
+        "location": "RoW",
+        "reference product": "combine harvesting",
+        "unit": "ha"
+      },
+      "targets": [
+        {
+          "name": "combine harvesting",
+          "location": "Canada without Quebec",
+          "reference product": "combine harvesting",
+          "unit": "ha",
+          "allocation": 0.026406920928532328
+        },
+        {
+          "name": "combine harvesting",
+          "location": "RoW",
+          "reference product": "combine harvesting",
+          "unit": "ha",
+          "allocation": 0.9735930790714676
+        }
+      ]
+    },
+    {
+      "source": {
+        "name": "concrete, all types to generic market for concrete, normal strength",
+        "location": "RoW",
+        "reference product": "concrete, normal",
+        "unit": "m3"
+      },
+      "targets": [
+        {
+          "name": "concrete, all types to generic market for concrete, normal strength",
+          "location": "AT",
+          "reference product": "concrete, normal",
+          "unit": "m3",
+          "allocation": 0.002278793289743486
+        },
+        {
+          "name": "concrete, all types to generic market for concrete, normal strength",
+          "location": "RoW",
+          "reference product": "concrete, normal",
+          "unit": "m3",
+          "allocation": 0.9977212067102565
+        }
+      ]
+    },
+    {
+      "source": {
+        "name": "electricity production, hydro, reservoir, non-alpine region",
+        "location": "RoW",
+        "reference product": "electricity, high voltage",
+        "unit": "kWh"
+      },
+      "targets": [
+        {
+          "name": "electricity production, hydro, reservoir, non-alpine region",
+          "location": "RoW",
+          "reference product": "electricity, high voltage",
+          "unit": "kWh",
+          "allocation": 0.9922828471299395
+        },
+        {
+          "name": "electricity production, hydro, reservoir, non-alpine region",
+          "location": "US-SERC",
+          "reference product": "electricity, high voltage",
+          "unit": "kWh",
+          "allocation": 0.007717152870060426
+        }
+      ]
+    },
+    {
+      "source": {
+        "name": "electricity production, solar thermal parabolic trough, 50 MW",
+        "location": "RoW",
+        "reference product": "electricity, high voltage",
+        "unit": "kWh"
+      },
+      "targets": [
+        {
+          "name": "electricity production, solar thermal parabolic trough, 50 MW",
+          "location": "RoW",
+          "reference product": "electricity, high voltage",
+          "unit": "kWh",
+          "allocation": 0.8552749658077433
+        },
+        {
+          "name": "electricity production, solar thermal parabolic trough, 50 MW",
+          "location": "US-SERC",
+          "reference product": "electricity, high voltage",
+          "unit": "kWh",
+          "allocation": 0.14472503419225669
+        }
+      ]
+    },
+    {
+      "source": {
+        "name": "electricity voltage transformation from high to medium voltage",
+        "location": "RoW",
+        "reference product": "electricity, medium voltage",
+        "unit": "kWh"
+      },
+      "targets": [
+        {
+          "name": "electricity voltage transformation from high to medium voltage",
+          "location": "RoW",
+          "reference product": "electricity, medium voltage",
+          "unit": "kWh",
+          "allocation": 0.9840614830205616
+        },
+        {
+          "name": "electricity voltage transformation from high to medium voltage",
+          "location": "US-PR",
+          "reference product": "electricity, medium voltage",
+          "unit": "kWh",
+          "allocation": 0.01593851697943843
+        }
+      ]
+    },
+    {
+      "source": {
+        "name": "electricity voltage transformation from medium to low voltage",
+        "location": "RoW",
+        "reference product": "electricity, low voltage",
+        "unit": "kWh"
+      },
+      "targets": [
+        {
+          "name": "electricity voltage transformation from medium to low voltage",
+          "location": "RoW",
+          "reference product": "electricity, low voltage",
+          "unit": "kWh",
+          "allocation": 0.9815844912401526
+        },
+        {
+          "name": "electricity voltage transformation from medium to low voltage",
+          "location": "US-PR",
+          "reference product": "electricity, low voltage",
+          "unit": "kWh",
+          "allocation": 0.018415508759847533
+        }
+      ]
+    },
+    {
+      "source": {
+        "name": "evaporation of natural gas",
+        "location": "RoW",
+        "reference product": "natural gas, high pressure",
+        "unit": "m3"
+      },
+      "targets": [
+        {
+          "name": "evaporation of natural gas",
+          "location": "BR",
+          "reference product": "natural gas, high pressure",
+          "unit": "m3",
+          "allocation": 0.015122342938129434
+        },
+        {
+          "name": "evaporation of natural gas",
+          "location": "RoW",
+          "reference product": "natural gas, high pressure",
+          "unit": "m3",
+          "allocation": 0.9848776570618706
+        }
+      ]
+    },
+    {
+      "source": {
+        "name": "ferrochromium production, high-carbon, 68% Cr",
+        "location": "GLO",
+        "reference product": "ferrochromium, high-carbon, 68% Cr",
+        "unit": "kg"
+      },
+      "targets": [
+        {
+          "name": "ferrochromium production, high-carbon, 68% Cr",
+          "location": "RoW",
+          "reference product": "ferrochromium, high-carbon, 68% Cr",
+          "unit": "kg",
+          "allocation": 0.75
+        },
+        {
+          "name": "ferrochromium production, high-carbon, 68% Cr",
+          "location": "KZ",
+          "reference product": "ferrochromium, high-carbon, 68% Cr",
+          "unit": "kg",
+          "allocation": 0.25
+        }
+      ]
+    },
+    {
+      "source": {
+        "name": "fertilising, by broadcaster",
+        "location": "RoW",
+        "reference product": "fertilising, by broadcaster",
+        "unit": "ha"
+      },
+      "targets": [
+        {
+          "name": "fertilising, by broadcaster",
+          "location": "Canada without Quebec",
+          "reference product": "fertilising, by broadcaster",
+          "unit": "ha",
+          "allocation": 0.02472848173740386
+        },
+        {
+          "name": "fertilising, by broadcaster",
+          "location": "RoW",
+          "reference product": "fertilising, by broadcaster",
+          "unit": "ha",
+          "allocation": 0.9752715182625962
+        }
+      ]
+    },
+    {
+      "source": {
+        "name": "leaching of spodumene with sulfuric acid",
+        "location": "GLO",
+        "reference product": "lithium carbonate",
+        "unit": "kg"
+      },
+      "targets": [
+        {
+          "name": "lithium carbonate production, from spodumene",
+          "location": "CN",
+          "reference product": "lithium carbonate",
+          "unit": "kg",
+          "allocation": 0.7942637934141757
+        },
+        {
+          "name": "lithium carbonate production, from spodumene",
+          "location": "RoW",
+          "reference product": "lithium carbonate",
+          "unit": "kg",
+          "allocation": 0.20573620658582426
+        }
+      ]
+    },
+    {
+      "source": {
+        "name": "market for concrete, 25MPa",
+        "location": "RoW",
+        "reference product": "concrete, 25MPa",
+        "unit": "m3"
+      },
+      "targets": [
+        {
+          "name": "market for concrete, 25MPa",
+          "location": "AT",
+          "reference product": "concrete, 25MPa",
+          "unit": "m3",
+          "allocation": 0.00543433202668451
+        },
+        {
+          "name": "market for concrete, 25MPa",
+          "location": "RoW",
+          "reference product": "concrete, 25MPa",
+          "unit": "m3",
+          "allocation": 0.9945656679733155
+        }
+      ]
+    },
+    {
+      "source": {
+        "name": "market for concrete, 30MPa",
+        "location": "RoW",
+        "reference product": "concrete, 30MPa",
+        "unit": "m3"
+      },
+      "targets": [
+        {
+          "name": "market for concrete, 30MPa",
+          "location": "AT",
+          "reference product": "concrete, 30MPa",
+          "unit": "m3",
+          "allocation": 0.03178411526179679
+        },
+        {
+          "name": "market for concrete, 30MPa",
+          "location": "RoW",
+          "reference product": "concrete, 30MPa",
+          "unit": "m3",
+          "allocation": 0.9682158847382032
+        }
+      ]
+    },
+    {
+      "source": {
+        "name": "market for electricity, high voltage",
+        "location": "GLO",
+        "reference product": "electricity, high voltage",
+        "unit": "kWh"
+      },
+      "targets": [
+        {
+          "name": "market for electricity, high voltage",
+          "location": "US-PR",
+          "reference product": "electricity, high voltage",
+          "unit": "kWh",
+          "allocation": 1.0
+        }
+      ]
+    },
+    {
+      "source": {
+        "name": "market for electricity, low voltage",
+        "location": "GLO",
+        "reference product": "electricity, low voltage",
+        "unit": "kWh"
+      },
+      "targets": [
+        {
+          "name": "market for electricity, low voltage",
+          "location": "US-PR",
+          "reference product": "electricity, low voltage",
+          "unit": "kWh",
+          "allocation": 1.0
+        }
+      ]
+    },
+    {
+      "source": {
+        "name": "market for electricity, medium voltage",
+        "location": "GLO",
+        "reference product": "electricity, medium voltage",
+        "unit": "kWh"
+      },
+      "targets": [
+        {
+          "name": "market for electricity, medium voltage",
+          "location": "US-PR",
+          "reference product": "electricity, medium voltage",
+          "unit": "kWh",
+          "allocation": 1.0
+        }
+      ]
+    },
+    {
+      "source": {
+        "name": "market for liquefied petroleum gas",
+        "location": "RoW",
+        "reference product": "liquefied petroleum gas",
+        "unit": "kg"
+      },
+      "targets": [
+        {
+          "name": "market for liquefied petroleum gas",
+          "location": "CO",
+          "reference product": "liquefied petroleum gas",
+          "unit": "kg",
+          "allocation": 0.006956317125241158
+        },
+        {
+          "name": "market for liquefied petroleum gas",
+          "location": "RoW",
+          "reference product": "liquefied petroleum gas",
+          "unit": "kg",
+          "allocation": 0.9930436828747589
+        }
+      ]
+    },
+    {
+      "source": {
+        "name": "market for natural gas, high pressure",
+        "location": "RoW",
+        "reference product": "natural gas, high pressure",
+        "unit": "m3"
+      },
+      "targets": [
+        {
+          "name": "market for natural gas, high pressure",
+          "location": "BR",
+          "reference product": "natural gas, high pressure",
+          "unit": "m3",
+          "allocation": 0.0209971661932524
+        },
+        {
+          "name": "market for natural gas, high pressure",
+          "location": "RoW",
+          "reference product": "natural gas, high pressure",
+          "unit": "m3",
+          "allocation": 0.9790028338067476
+        }
+      ]
+    },
+    {
+      "source": {
+        "name": "market for phosphorus oxychloride",
+        "location": "GLO",
+        "reference product": "phosphorus oxychloride",
+        "unit": "kg"
+      },
+      "targets": [
+        {
+          "name": "market for phosphorus oxychloride",
+          "location": "RoW",
+          "reference product": "phosphorus oxychloride",
+          "unit": "kg",
+          "allocation": 0.826
+        },
+        {
+          "name": "market for phosphorus oxychloride",
+          "location": "RER",
+          "reference product": "phosphorus oxychloride",
+          "unit": "kg",
+          "allocation": 0.174
+        }
+      ]
+    },
+    {
+      "source": {
+        "name": "market for transport, freight, lorry 16-32 metric ton, EURO1",
+        "location": "GLO",
+        "reference product": "transport, freight, lorry 16-32 metric ton, EURO1",
+        "unit": "metric ton*km"
+      },
+      "targets": [
+        {
+          "name": "market for transport, freight, lorry 16-32 metric ton, EURO1",
+          "location": "BR",
+          "reference product": "transport, freight, lorry 16-32 metric ton, EURO1",
+          "unit": "metric ton*km",
+          "allocation": 1.0
+        }
+      ]
+    },
+    {
+      "source": {
+        "name": "market for transport, freight, lorry 16-32 metric ton, EURO2",
+        "location": "GLO",
+        "reference product": "transport, freight, lorry 16-32 metric ton, EURO2",
+        "unit": "metric ton*km"
+      },
+      "targets": [
+        {
+          "name": "market for transport, freight, lorry 16-32 metric ton, EURO2",
+          "location": "BR",
+          "reference product": "transport, freight, lorry 16-32 metric ton, EURO2",
+          "unit": "metric ton*km",
+          "allocation": 1.0
+        }
+      ]
+    },
+    {
+      "source": {
+        "name": "market for transport, freight, lorry 16-32 metric ton, EURO3",
+        "location": "RoW",
+        "reference product": "transport, freight, lorry 16-32 metric ton, EURO3",
+        "unit": "metric ton*km"
+      },
+      "targets": [
+        {
+          "name": "market for transport, freight, lorry 16-32 metric ton, EURO3",
+          "location": "BR",
+          "reference product": "transport, freight, lorry 16-32 metric ton, EURO3",
+          "unit": "metric ton*km",
+          "allocation": 0.0973546046982983
+        },
+        {
+          "name": "market for transport, freight, lorry 16-32 metric ton, EURO3",
+          "location": "RoW",
+          "reference product": "transport, freight, lorry 16-32 metric ton, EURO3",
+          "unit": "metric ton*km",
+          "allocation": 0.9026453953017017
+        }
+      ]
+    },
+    {
+      "source": {
+        "name": "market for transport, freight, lorry 16-32 metric ton, EURO5",
+        "location": "RoW",
+        "reference product": "transport, freight, lorry 16-32 metric ton, EURO5",
+        "unit": "metric ton*km"
+      },
+      "targets": [
+        {
+          "name": "market for transport, freight, lorry 16-32 metric ton, EURO5",
+          "location": "BR",
+          "reference product": "transport, freight, lorry 16-32 metric ton, EURO5",
+          "unit": "metric ton*km",
+          "allocation": 0.14803072180368124
+        },
+        {
+          "name": "market for transport, freight, lorry 16-32 metric ton, EURO5",
+          "location": "RoW",
+          "reference product": "transport, freight, lorry 16-32 metric ton, EURO5",
+          "unit": "metric ton*km",
+          "allocation": 0.8519692781963187
+        }
+      ]
+    },
+    {
+      "source": {
+        "name": "market for transport, freight, lorry 16-32 metric ton, unregulated",
+        "location": "GLO",
+        "reference product": "transport, freight, lorry 16-32 metric ton, unregulated",
+        "unit": "metric ton*km"
+      },
+      "targets": [
+        {
+          "name": "market for transport, freight, lorry 16-32 metric ton, unregulated",
+          "location": "BR",
+          "reference product": "transport, freight, lorry 16-32 metric ton, unregulated",
+          "unit": "metric ton*km",
+          "allocation": 1.0
+        }
+      ]
+    },
+    {
+      "source": {
+        "name": "market for transport, freight, lorry 3.5-7.5 metric ton, EURO1",
+        "location": "GLO",
+        "reference product": "transport, freight, lorry 3.5-7.5 metric ton, EURO1",
+        "unit": "metric ton*km"
+      },
+      "targets": [
+        {
+          "name": "market for transport, freight, lorry 3.5-7.5 metric ton, EURO1",
+          "location": "BR",
+          "reference product": "transport, freight, lorry 3.5-7.5 metric ton, EURO1",
+          "unit": "metric ton*km",
+          "allocation": 1.0
+        }
+      ]
+    },
+    {
+      "source": {
+        "name": "market for transport, freight, lorry 3.5-7.5 metric ton, EURO2",
+        "location": "GLO",
+        "reference product": "transport, freight, lorry 3.5-7.5 metric ton, EURO2",
+        "unit": "metric ton*km"
+      },
+      "targets": [
+        {
+          "name": "market for transport, freight, lorry 3.5-7.5 metric ton, EURO2",
+          "location": "BR",
+          "reference product": "transport, freight, lorry 3.5-7.5 metric ton, EURO2",
+          "unit": "metric ton*km",
+          "allocation": 1.0
+        }
+      ]
+    },
+    {
+      "source": {
+        "name": "market for transport, freight, lorry 3.5-7.5 metric ton, EURO3",
+        "location": "RoW",
+        "reference product": "transport, freight, lorry 3.5-7.5 metric ton, EURO3",
+        "unit": "metric ton*km"
+      },
+      "targets": [
+        {
+          "name": "market for transport, freight, lorry 3.5-7.5 metric ton, EURO3",
+          "location": "BR",
+          "reference product": "transport, freight, lorry 3.5-7.5 metric ton, EURO3",
+          "unit": "metric ton*km",
+          "allocation": 0.12636616849858504
+        },
+        {
+          "name": "market for transport, freight, lorry 3.5-7.5 metric ton, EURO3",
+          "location": "RoW",
+          "reference product": "transport, freight, lorry 3.5-7.5 metric ton, EURO3",
+          "unit": "metric ton*km",
+          "allocation": 0.8736338315014149
+        }
+      ]
+    },
+    {
+      "source": {
+        "name": "market for transport, freight, lorry 3.5-7.5 metric ton, EURO5",
+        "location": "RoW",
+        "reference product": "transport, freight, lorry 3.5-7.5 metric ton, EURO5",
+        "unit": "metric ton*km"
+      },
+      "targets": [
+        {
+          "name": "market for transport, freight, lorry 3.5-7.5 metric ton, EURO5",
+          "location": "BR",
+          "reference product": "transport, freight, lorry 3.5-7.5 metric ton, EURO5",
+          "unit": "metric ton*km",
+          "allocation": 0.17541511502898954
+        },
+        {
+          "name": "market for transport, freight, lorry 3.5-7.5 metric ton, EURO5",
+          "location": "RoW",
+          "reference product": "transport, freight, lorry 3.5-7.5 metric ton, EURO5",
+          "unit": "metric ton*km",
+          "allocation": 0.8245848849710105
+        }
+      ]
+    },
+    {
+      "source": {
+        "name": "market for transport, freight, lorry 3.5-7.5 metric ton, unregulated",
+        "location": "GLO",
+        "reference product": "transport, freight, lorry 3.5-7.5 metric ton, unregulated",
+        "unit": "metric ton*km"
+      },
+      "targets": [
+        {
+          "name": "market for transport, freight, lorry 3.5-7.5 metric ton, unregulated",
+          "location": "BR",
+          "reference product": "transport, freight, lorry 3.5-7.5 metric ton, unregulated",
+          "unit": "metric ton*km",
+          "allocation": 1.0
+        }
+      ]
+    },
+    {
+      "source": {
+        "name": "market for transport, freight, lorry 7.5-16 metric ton, EURO1",
+        "location": "GLO",
+        "reference product": "transport, freight, lorry 7.5-16 metric ton, EURO1",
+        "unit": "metric ton*km"
+      },
+      "targets": [
+        {
+          "name": "market for transport, freight, lorry 7.5-16 metric ton, EURO1",
+          "location": "BR",
+          "reference product": "transport, freight, lorry 7.5-16 metric ton, EURO1",
+          "unit": "metric ton*km",
+          "allocation": 1.0
+        }
+      ]
+    },
+    {
+      "source": {
+        "name": "market for transport, freight, lorry 7.5-16 metric ton, EURO2",
+        "location": "GLO",
+        "reference product": "transport, freight, lorry 7.5-16 metric ton, EURO2",
+        "unit": "metric ton*km"
+      },
+      "targets": [
+        {
+          "name": "market for transport, freight, lorry 7.5-16 metric ton, EURO2",
+          "location": "BR",
+          "reference product": "transport, freight, lorry 7.5-16 metric ton, EURO2",
+          "unit": "metric ton*km",
+          "allocation": 1.0
+        }
+      ]
+    },
+    {
+      "source": {
+        "name": "market for transport, freight, lorry 7.5-16 metric ton, EURO3",
+        "location": "RoW",
+        "reference product": "transport, freight, lorry 7.5-16 metric ton, EURO3",
+        "unit": "metric ton*km"
+      },
+      "targets": [
+        {
+          "name": "market for transport, freight, lorry 7.5-16 metric ton, EURO3",
+          "location": "BR",
+          "reference product": "transport, freight, lorry 7.5-16 metric ton, EURO3",
+          "unit": "metric ton*km",
+          "allocation": 0.12636471679925224
+        },
+        {
+          "name": "market for transport, freight, lorry 7.5-16 metric ton, EURO3",
+          "location": "RoW",
+          "reference product": "transport, freight, lorry 7.5-16 metric ton, EURO3",
+          "unit": "metric ton*km",
+          "allocation": 0.8736352832007478
+        }
+      ]
+    },
+    {
+      "source": {
+        "name": "market for transport, freight, lorry 7.5-16 metric ton, EURO5",
+        "location": "RoW",
+        "reference product": "transport, freight, lorry 7.5-16 metric ton, EURO5",
+        "unit": "metric ton*km"
+      },
+      "targets": [
+        {
+          "name": "market for transport, freight, lorry 7.5-16 metric ton, EURO5",
+          "location": "BR",
+          "reference product": "transport, freight, lorry 7.5-16 metric ton, EURO5",
+          "unit": "metric ton*km",
+          "allocation": 0.1710657870810339
+        },
+        {
+          "name": "market for transport, freight, lorry 7.5-16 metric ton, EURO5",
+          "location": "RoW",
+          "reference product": "transport, freight, lorry 7.5-16 metric ton, EURO5",
+          "unit": "metric ton*km",
+          "allocation": 0.8289342129189661
+        }
+      ]
+    },
+    {
+      "source": {
+        "name": "market for transport, freight, lorry 7.5-16 metric ton, unregulated",
+        "location": "GLO",
+        "reference product": "transport, freight, lorry 7.5-16 metric ton, unregulated",
+        "unit": "metric ton*km"
+      },
+      "targets": [
+        {
+          "name": "market for transport, freight, lorry 7.5-16 metric ton, unregulated",
+          "location": "BR",
+          "reference product": "transport, freight, lorry 7.5-16 metric ton, unregulated",
+          "unit": "metric ton*km",
+          "allocation": 1.0
+        }
+      ]
+    },
+    {
+      "source": {
+        "name": "market for transport, freight, lorry >32 metric ton, EURO1",
+        "location": "GLO",
+        "reference product": "transport, freight, lorry >32 metric ton, EURO1",
+        "unit": "metric ton*km"
+      },
+      "targets": [
+        {
+          "name": "market for transport, freight, lorry >32 metric ton, EURO1",
+          "location": "BR",
+          "reference product": "transport, freight, lorry >32 metric ton, EURO1",
+          "unit": "metric ton*km",
+          "allocation": 1.0
+        }
+      ]
+    },
+    {
+      "source": {
+        "name": "market for transport, freight, lorry >32 metric ton, EURO2",
+        "location": "GLO",
+        "reference product": "transport, freight, lorry >32 metric ton, EURO2",
+        "unit": "metric ton*km"
+      },
+      "targets": [
+        {
+          "name": "market for transport, freight, lorry >32 metric ton, EURO2",
+          "location": "BR",
+          "reference product": "transport, freight, lorry >32 metric ton, EURO2",
+          "unit": "metric ton*km",
+          "allocation": 1.0
+        }
+      ]
+    },
+    {
+      "source": {
+        "name": "market for transport, freight, lorry >32 metric ton, EURO3",
+        "location": "RoW",
+        "reference product": "transport, freight, lorry >32 metric ton, EURO3",
+        "unit": "metric ton*km"
+      },
+      "targets": [
+        {
+          "name": "market for transport, freight, lorry >32 metric ton, EURO3",
+          "location": "BR",
+          "reference product": "transport, freight, lorry >32 metric ton, EURO3",
+          "unit": "metric ton*km",
+          "allocation": 0.11569740091116013
+        },
+        {
+          "name": "market for transport, freight, lorry >32 metric ton, EURO3",
+          "location": "RoW",
+          "reference product": "transport, freight, lorry >32 metric ton, EURO3",
+          "unit": "metric ton*km",
+          "allocation": 0.8843025990888399
+        }
+      ]
+    },
+    {
+      "source": {
+        "name": "market for transport, freight, lorry >32 metric ton, EURO5",
+        "location": "RoW",
+        "reference product": "transport, freight, lorry >32 metric ton, EURO5",
+        "unit": "metric ton*km"
+      },
+      "targets": [
+        {
+          "name": "market for transport, freight, lorry >32 metric ton, EURO5",
+          "location": "BR",
+          "reference product": "transport, freight, lorry >32 metric ton, EURO5",
+          "unit": "metric ton*km",
+          "allocation": 0.15487239381673482
+        },
+        {
+          "name": "market for transport, freight, lorry >32 metric ton, EURO5",
+          "location": "RoW",
+          "reference product": "transport, freight, lorry >32 metric ton, EURO5",
+          "unit": "metric ton*km",
+          "allocation": 0.8451276061832652
+        }
+      ]
+    },
+    {
+      "source": {
+        "name": "market for transport, freight, lorry >32 metric ton, unregulated",
+        "location": "GLO",
+        "reference product": "transport, freight, lorry >32 metric ton, unregulated",
+        "unit": "metric ton*km"
+      },
+      "targets": [
+        {
+          "name": "market for transport, freight, lorry >32 metric ton, unregulated",
+          "location": "BR",
+          "reference product": "transport, freight, lorry >32 metric ton, unregulated",
+          "unit": "metric ton*km",
+          "allocation": 1.0
+        }
+      ]
+    },
+    {
+      "source": {
+        "name": "market for transport, freight, lorry, unspecified",
+        "location": "RoW",
+        "reference product": "transport, freight, lorry, unspecified",
+        "unit": "metric ton*km"
+      },
+      "targets": [
+        {
+          "name": "market for transport, freight, lorry, unspecified",
+          "location": "BR",
+          "reference product": "transport, freight, lorry, unspecified",
+          "unit": "metric ton*km",
+          "allocation": 0.11652869222513274
+        },
+        {
+          "name": "market for transport, freight, lorry, unspecified",
+          "location": "RoW",
+          "reference product": "transport, freight, lorry, unspecified",
+          "unit": "metric ton*km",
+          "allocation": 0.8834713077748673
+        }
+      ]
+    },
+    {
+      "source": {
+        "name": "market for vegetable oil methyl ester",
+        "location": "GLO",
+        "reference product": "vegetable oil methyl ester",
+        "unit": "kg"
+      },
+      "targets": [
+        {
+          "name": "market for fatty acid methyl ester",
+          "location": "BR",
+          "reference product": "fatty acid methyl ester",
+          "unit": "kg",
+          "allocation": 0.18235721742292169
+        },
+        {
+          "name": "market for fatty acid methyl ester",
+          "location": "RoW",
+          "reference product": "fatty acid methyl ester",
+          "unit": "kg",
+          "allocation": 0.8176427825770782
+        }
+      ]
+    },
+    {
+      "source": {
+        "name": "petroleum and gas production, off-shore",
+        "location": "RoW",
+        "reference product": "natural gas, high pressure",
+        "unit": "m3"
+      },
+      "targets": [
+        {
+          "name": "petroleum and gas production, off-shore",
+          "location": "BR",
+          "reference product": "natural gas, high pressure",
+          "unit": "m3",
+          "allocation": 0.10450226769966404
+        },
+        {
+          "name": "petroleum and gas production, off-shore",
+          "location": "RoW",
+          "reference product": "natural gas, high pressure",
+          "unit": "m3",
+          "allocation": 0.8954977323003359
+        }
+      ]
+    },
+    {
+      "source": {
+        "name": "petroleum and gas production, off-shore",
+        "location": "RoW",
+        "reference product": "petroleum",
+        "unit": "kg"
+      },
+      "targets": [
+        {
+          "name": "petroleum and gas production, off-shore",
+          "location": "BR",
+          "reference product": "petroleum",
+          "unit": "kg",
+          "allocation": 0.20522697643695126
+        },
+        {
+          "name": "petroleum and gas production, off-shore",
+          "location": "RoW",
+          "reference product": "petroleum",
+          "unit": "kg",
+          "allocation": 0.7947730235630487
+        }
+      ]
+    },
+    {
+      "source": {
+        "name": "petroleum and gas production, on-shore",
+        "location": "RoW",
+        "reference product": "natural gas, high pressure",
+        "unit": "m3"
+      },
+      "targets": [
+        {
+          "name": "petroleum and gas production, on-shore",
+          "location": "BO",
+          "reference product": "natural gas, high pressure",
+          "unit": "m3",
+          "allocation": 0.050724498970922696
+        },
+        {
+          "name": "petroleum and gas production, on-shore",
+          "location": "BR",
+          "reference product": "natural gas, high pressure",
+          "unit": "m3",
+          "allocation": 0.01173916949719446
+        },
+        {
+          "name": "petroleum and gas production, on-shore",
+          "location": "RoW",
+          "reference product": "natural gas, high pressure",
+          "unit": "m3",
+          "allocation": 0.9375363315318828
+        }
+      ]
+    },
+    {
+      "source": {
+        "name": "petroleum and gas production, on-shore",
+        "location": "RoW",
+        "reference product": "petroleum",
+        "unit": "kg"
+      },
+      "targets": [
+        {
+          "name": "petroleum and gas production, on-shore",
+          "location": "BO",
+          "reference product": "petroleum",
+          "unit": "kg",
+          "allocation": 0.0016546115517990655
+        },
+        {
+          "name": "petroleum and gas production, on-shore",
+          "location": "BR",
+          "reference product": "petroleum",
+          "unit": "kg",
+          "allocation": 0.004588681996930917
+        },
+        {
+          "name": "petroleum and gas production, on-shore",
+          "location": "RoW",
+          "reference product": "petroleum",
+          "unit": "kg",
+          "allocation": 0.99375670645127
+        }
+      ]
+    },
+    {
+      "source": {
+        "name": "polyurethane production, flexible foam",
+        "location": "RoW",
+        "reference product": "polyurethane, flexible foam",
+        "unit": "kg"
+      },
+      "targets": [
+        {
+          "name": "polyurethane production, flexible foam, MDI-based",
+          "location": "RoW",
+          "reference product": "polyurethane, flexible foam",
+          "unit": "kg",
+          "allocation": 0.2
+        },
+        {
+          "name": "polyurethane production, flexible foam, TDI-based, high density",
+          "location": "RoW",
+          "reference product": "polyurethane, flexible foam",
+          "unit": "kg",
+          "allocation": 0.4
+        },
+        {
+          "name": "polyurethane production, flexible foam, TDI-based, low density",
+          "location": "RoW",
+          "reference product": "polyurethane, flexible foam",
+          "unit": "kg",
+          "allocation": 0.4
+        }
+      ]
+    },
+    {
+      "source": {
+        "name": "polyurethane production, flexible foam",
+        "location": "RER",
+        "reference product": "polyurethane, flexible foam",
+        "unit": "kg"
+      },
+      "targets": [
+        {
+          "name": "polyurethane production, flexible foam, MDI-based",
+          "location": "RER",
+          "reference product": "polyurethane, flexible foam",
+          "unit": "kg",
+          "allocation": 0.2
+        },
+        {
+          "name": "polyurethane production, flexible foam, TDI-based, high density",
+          "location": "RER",
+          "reference product": "polyurethane, flexible foam",
+          "unit": "kg",
+          "allocation": 0.4
+        },
+        {
+          "name": "polyurethane production, flexible foam, TDI-based, low density",
+          "location": "RER",
+          "reference product": "polyurethane, flexible foam",
+          "unit": "kg",
+          "allocation": 0.4
+        }
+      ]
+    },
+    {
+      "source": {
+        "name": "protein pea production",
+        "location": "RoW",
+        "reference product": "protein pea",
+        "unit": "kg"
+      },
+      "targets": [
+        {
+          "name": "protein pea production",
+          "location": "CA-AB",
+          "reference product": "protein pea",
+          "unit": "kg",
+          "allocation": 1.1402893376775444e-05
+        },
+        {
+          "name": "protein pea production",
+          "location": "CA-MB",
+          "reference product": "protein pea",
+          "unit": "kg",
+          "allocation": 8.436943995006208e-07
+        },
+        {
+          "name": "protein pea production",
+          "location": "CA-SK",
+          "reference product": "protein pea",
+          "unit": "kg",
+          "allocation": 8.236498170905834e-06
+        },
+        {
+          "name": "protein pea production",
+          "location": "RoW",
+          "reference product": "protein pea",
+          "unit": "kg",
+          "allocation": 0.9999795169140527
+        }
+      ]
+    },
+    {
+      "source": {
+        "name": "rutile production, synthetic, 95% titanium dioxide, Becher process",
+        "location": "GLO",
+        "reference product": "rutile, 95% titanium dioxide",
+        "unit": "kg"
+      },
+      "targets": [
+        {
+          "name": "rutile production, synthetic, 95% titanium dioxide, Becher process",
+          "location": "AU",
+          "reference product": "rutile, 95% titanium dioxide",
+          "unit": "kg",
+          "allocation": 1.0
+        }
+      ]
+    },
+    {
+      "source": {
+        "name": "rutile production, synthetic, 95% titanium dioxide, Benelite process",
+        "location": "GLO",
+        "reference product": "rutile, 95% titanium dioxide",
+        "unit": "kg"
+      },
+      "targets": [
+        {
+          "name": "rutile production, synthetic, 95% titanium dioxide, Benelite process",
+          "location": "IN",
+          "reference product": "rutile, 95% titanium dioxide",
+          "unit": "kg",
+          "allocation": 1.0
+        }
+      ]
+    },
+    {
+      "source": {
+        "name": "sowing",
+        "location": "RoW",
+        "reference product": "sowing",
+        "unit": "ha"
+      },
+      "targets": [
+        {
+          "name": "sowing",
+          "location": "Canada without Quebec",
+          "reference product": "sowing",
+          "unit": "ha",
+          "allocation": 0.024758547345790596
+        },
+        {
+          "name": "sowing",
+          "location": "RoW",
+          "reference product": "sowing",
+          "unit": "ha",
+          "allocation": 0.9752414526542094
+        }
+      ]
+    },
+    {
+      "source": {
+        "name": "spodumene production",
+        "location": "RoW",
+        "reference product": "spodumene",
+        "unit": "kg"
+      },
+      "targets": [
+        {
+          "name": "spodumene production",
+          "location": "AU",
+          "reference product": "spodumene",
+          "unit": "kg",
+          "allocation": 0.9049783868376019
+        },
+        {
+          "name": "spodumene production",
+          "location": "RoW",
+          "reference product": "spodumene",
+          "unit": "kg",
+          "allocation": 0.09502161316239806
+        }
+      ]
+    },
+    {
+      "source": {
+        "name": "strontium sulfate quarry operation",
+        "location": "GLO",
+        "reference product": "strontium sulfate, unprocessed",
+        "unit": "kg"
+      },
+      "targets": [
+        {
+          "name": "strontium mine operation and beneficiation",
+          "location": "CN",
+          "reference product": "strontium sulfate, 90% SrSO4",
+          "unit": "kg",
+          "allocation": 0.22727272727272727
+        },
+        {
+          "name": "strontium mine operation and beneficiation",
+          "location": "ES",
+          "reference product": "strontium sulfate, 90% SrSO4",
+          "unit": "kg",
+          "allocation": 0.4090909090909091
+        },
+        {
+          "name": "strontium mine operation and beneficiation",
+          "location": "RoW",
+          "reference product": "strontium sulfate, 90% SrSO4",
+          "unit": "kg",
+          "allocation": 0.36363636363636365
+        }
+      ]
+    },
+    {
+      "source": {
+        "name": "swath, by rotary windrower",
+        "location": "RoW",
+        "reference product": "swath, by rotary windrower",
+        "unit": "ha"
+      },
+      "targets": [
+        {
+          "name": "swath, by rotary windrower",
+          "location": "Canada without Quebec",
+          "reference product": "swath, by rotary windrower",
+          "unit": "ha",
+          "allocation": 0.024055827685684615
+        },
+        {
+          "name": "swath, by rotary windrower",
+          "location": "RoW",
+          "reference product": "swath, by rotary windrower",
+          "unit": "ha",
+          "allocation": 0.9759441723143154
+        }
+      ]
+    },
+    {
+      "source": {
+        "name": "tantalum production, powder, capacitor-grade",
+        "location": "GLO",
+        "reference product": "tantalum, powder, capacitor-grade",
+        "unit": "kg"
+      },
+      "targets": [
+        {
+          "name": "tantalum powder production, capacitor-grade",
+          "location": "CN",
+          "reference product": "tantalum powder, capacitor-grade",
+          "unit": "kg",
+          "allocation": 0.480000107072789
+        },
+        {
+          "name": "tantalum powder production, capacitor-grade",
+          "location": "RoW",
+          "reference product": "tantalum powder, capacitor-grade",
+          "unit": "kg",
+          "allocation": 0.519999892927211
+        }
+      ]
+    },
+    {
+      "source": {
+        "name": "tillage, cultivating, chiselling",
+        "location": "RoW",
+        "reference product": "tillage, cultivating, chiselling",
+        "unit": "ha"
+      },
+      "targets": [
+        {
+          "name": "tillage, cultivating, chiselling",
+          "location": "Canada without Quebec",
+          "reference product": "tillage, cultivating, chiselling",
+          "unit": "ha",
+          "allocation": 0.02403923947280416
+        },
+        {
+          "name": "tillage, cultivating, chiselling",
+          "location": "RoW",
+          "reference product": "tillage, cultivating, chiselling",
+          "unit": "ha",
+          "allocation": 0.9759607605271958
+        }
+      ]
+    },
+    {
+      "source": {
+        "name": "tillage, harrowing, by offset disk harrow",
+        "location": "RoW",
+        "reference product": "tillage, harrowing, by offset disk harrow",
+        "unit": "ha"
+      },
+      "targets": [
+        {
+          "name": "tillage, harrowing, by offset disc harrow",
+          "location": "CA",
+          "reference product": "tillage, harrowing, by offset disc harrow",
+          "unit": "ha",
+          "allocation": 0.025196269247059703
+        },
+        {
+          "name": "tillage, harrowing, by offset disc harrow",
+          "location": "RoW",
+          "reference product": "tillage, harrowing, by offset disc harrow",
+          "unit": "ha",
+          "allocation": 0.9748037307529402
+        }
+      ]
+    },
+    {
+      "source": {
+        "name": "tillage, harrowing, by rotary harrow",
+        "location": "RoW",
+        "reference product": "tillage, harrowing, by rotary harrow",
+        "unit": "ha"
+      },
+      "targets": [
+        {
+          "name": "tillage, harrowing, by rotary harrow",
+          "location": "CA",
+          "reference product": "tillage, harrowing, by rotary harrow",
+          "unit": "ha",
+          "allocation": 0.02400695305742031
+        },
+        {
+          "name": "tillage, harrowing, by rotary harrow",
+          "location": "RoW",
+          "reference product": "tillage, harrowing, by rotary harrow",
+          "unit": "ha",
+          "allocation": 0.9759930469425797
+        }
+      ]
+    },
+    {
+      "source": {
+        "name": "tillage, rolling",
+        "location": "RoW",
+        "reference product": "tillage, rolling",
+        "unit": "ha"
+      },
+      "targets": [
+        {
+          "name": "tillage, rolling",
+          "location": "Canada without Quebec",
+          "reference product": "tillage, rolling",
+          "unit": "ha",
+          "allocation": 0.02403923947280416
+        },
+        {
+          "name": "tillage, rolling",
+          "location": "RoW",
+          "reference product": "tillage, rolling",
+          "unit": "ha",
+          "allocation": 0.9759607605271958
+        }
+      ]
+    },
+    {
+      "source": {
+        "name": "tillage, rotary cultivator",
+        "location": "RoW",
+        "reference product": "tillage, rotary cultivator",
+        "unit": "ha"
+      },
+      "targets": [
+        {
+          "name": "tillage, rotary cultivator",
+          "location": "Canada without Quebec",
+          "reference product": "tillage, rotary cultivator",
+          "unit": "ha",
+          "allocation": 0.024256749723080062
+        },
+        {
+          "name": "tillage, rotary cultivator",
+          "location": "RoW",
+          "reference product": "tillage, rotary cultivator",
+          "unit": "ha",
+          "allocation": 0.9757432502769199
+        }
+      ]
+    },
+    {
+      "source": {
+        "name": "titanium tetrachloride production",
+        "location": "GLO",
+        "reference product": "titanium tetrachloride",
+        "unit": "kg"
+      },
+      "targets": [
+        {
+          "name": "titanium tetrachloride production",
+          "location": "CN",
+          "reference product": "titanium tetrachloride",
+          "unit": "kg",
+          "allocation": 0.425
+        },
+        {
+          "name": "titanium tetrachloride production",
+          "location": "RoW",
+          "reference product": "titanium tetrachloride",
+          "unit": "kg",
+          "allocation": 0.33
+        },
+        {
+          "name": "titanium tetrachloride production",
+          "location": "JP",
+          "reference product": "titanium tetrachloride",
+          "unit": "kg",
+          "allocation": 0.245
+        }
+      ]
+    },
+    {
+      "source": {
+        "name": "transport, freight, lorry 16-32 metric ton, EURO1",
+        "location": "GLO",
+        "reference product": "transport, freight, lorry 16-32 metric ton, EURO1",
+        "unit": "metric ton*km"
+      },
+      "targets": [
+        {
+          "name": "transport, freight, lorry 16-32 metric ton, EURO1",
+          "location": "BR",
+          "reference product": "transport, freight, lorry 16-32 metric ton, EURO1",
+          "unit": "metric ton*km",
+          "allocation": 1.0
+        }
+      ]
+    },
+    {
+      "source": {
+        "name": "transport, freight, lorry 16-32 metric ton, EURO2",
+        "location": "GLO",
+        "reference product": "transport, freight, lorry 16-32 metric ton, EURO2",
+        "unit": "metric ton*km"
+      },
+      "targets": [
+        {
+          "name": "transport, freight, lorry 16-32 metric ton, EURO2",
+          "location": "BR",
+          "reference product": "transport, freight, lorry 16-32 metric ton, EURO2",
+          "unit": "metric ton*km",
+          "allocation": 1.0
+        }
+      ]
+    },
+    {
+      "source": {
+        "name": "transport, freight, lorry 16-32 metric ton, EURO3",
+        "location": "RoW",
+        "reference product": "transport, freight, lorry 16-32 metric ton, EURO3",
+        "unit": "metric ton*km"
+      },
+      "targets": [
+        {
+          "name": "transport, freight, lorry 16-32 metric ton, EURO3",
+          "location": "BR",
+          "reference product": "transport, freight, lorry 16-32 metric ton, EURO3",
+          "unit": "metric ton*km",
+          "allocation": 0.0973546046982983
+        },
+        {
+          "name": "transport, freight, lorry 16-32 metric ton, EURO3",
+          "location": "RoW",
+          "reference product": "transport, freight, lorry 16-32 metric ton, EURO3",
+          "unit": "metric ton*km",
+          "allocation": 0.9026453953017017
+        }
+      ]
+    },
+    {
+      "source": {
+        "name": "transport, freight, lorry 16-32 metric ton, EURO5",
+        "location": "RoW",
+        "reference product": "transport, freight, lorry 16-32 metric ton, EURO5",
+        "unit": "metric ton*km"
+      },
+      "targets": [
+        {
+          "name": "transport, freight, lorry 16-32 metric ton, EURO5",
+          "location": "BR",
+          "reference product": "transport, freight, lorry 16-32 metric ton, EURO5",
+          "unit": "metric ton*km",
+          "allocation": 0.14803072180368124
+        },
+        {
+          "name": "transport, freight, lorry 16-32 metric ton, EURO5",
+          "location": "RoW",
+          "reference product": "transport, freight, lorry 16-32 metric ton, EURO5",
+          "unit": "metric ton*km",
+          "allocation": 0.8519692781963187
+        }
+      ]
+    },
+    {
+      "source": {
+        "name": "transport, freight, lorry 16-32 metric ton, unregulated",
+        "location": "GLO",
+        "reference product": "transport, freight, lorry 16-32 metric ton, unregulated",
+        "unit": "metric ton*km"
+      },
+      "targets": [
+        {
+          "name": "transport, freight, lorry 16-32 metric ton, unregulated",
+          "location": "BR",
+          "reference product": "transport, freight, lorry 16-32 metric ton, unregulated",
+          "unit": "metric ton*km",
+          "allocation": 1.0
+        }
+      ]
+    },
+    {
+      "source": {
+        "name": "transport, freight, lorry 3.5-7.5 metric ton, EURO1",
+        "location": "GLO",
+        "reference product": "transport, freight, lorry 3.5-7.5 metric ton, EURO1",
+        "unit": "metric ton*km"
+      },
+      "targets": [
+        {
+          "name": "transport, freight, lorry 3.5-7.5 metric ton, EURO1",
+          "location": "BR",
+          "reference product": "transport, freight, lorry 3.5-7.5 metric ton, EURO1",
+          "unit": "metric ton*km",
+          "allocation": 1.0
+        }
+      ]
+    },
+    {
+      "source": {
+        "name": "transport, freight, lorry 3.5-7.5 metric ton, EURO2",
+        "location": "GLO",
+        "reference product": "transport, freight, lorry 3.5-7.5 metric ton, EURO2",
+        "unit": "metric ton*km"
+      },
+      "targets": [
+        {
+          "name": "transport, freight, lorry 3.5-7.5 metric ton, EURO2",
+          "location": "BR",
+          "reference product": "transport, freight, lorry 3.5-7.5 metric ton, EURO2",
+          "unit": "metric ton*km",
+          "allocation": 1.0
+        }
+      ]
+    },
+    {
+      "source": {
+        "name": "transport, freight, lorry 3.5-7.5 metric ton, EURO3",
+        "location": "RoW",
+        "reference product": "transport, freight, lorry 3.5-7.5 metric ton, EURO3",
+        "unit": "metric ton*km"
+      },
+      "targets": [
+        {
+          "name": "transport, freight, lorry 3.5-7.5 metric ton, EURO3",
+          "location": "BR",
+          "reference product": "transport, freight, lorry 3.5-7.5 metric ton, EURO3",
+          "unit": "metric ton*km",
+          "allocation": 0.12636616849858504
+        },
+        {
+          "name": "transport, freight, lorry 3.5-7.5 metric ton, EURO3",
+          "location": "RoW",
+          "reference product": "transport, freight, lorry 3.5-7.5 metric ton, EURO3",
+          "unit": "metric ton*km",
+          "allocation": 0.8736338315014149
+        }
+      ]
+    },
+    {
+      "source": {
+        "name": "transport, freight, lorry 3.5-7.5 metric ton, EURO5",
+        "location": "RoW",
+        "reference product": "transport, freight, lorry 3.5-7.5 metric ton, EURO5",
+        "unit": "metric ton*km"
+      },
+      "targets": [
+        {
+          "name": "transport, freight, lorry 3.5-7.5 metric ton, EURO5",
+          "location": "BR",
+          "reference product": "transport, freight, lorry 3.5-7.5 metric ton, EURO5",
+          "unit": "metric ton*km",
+          "allocation": 0.17541511502898954
+        },
+        {
+          "name": "transport, freight, lorry 3.5-7.5 metric ton, EURO5",
+          "location": "RoW",
+          "reference product": "transport, freight, lorry 3.5-7.5 metric ton, EURO5",
+          "unit": "metric ton*km",
+          "allocation": 0.8245848849710105
+        }
+      ]
+    },
+    {
+      "source": {
+        "name": "transport, freight, lorry 3.5-7.5 metric ton, unregulated",
+        "location": "GLO",
+        "reference product": "transport, freight, lorry 3.5-7.5 metric ton, unregulated",
+        "unit": "metric ton*km"
+      },
+      "targets": [
+        {
+          "name": "transport, freight, lorry 3.5-7.5 metric ton, unregulated",
+          "location": "BR",
+          "reference product": "transport, freight, lorry 3.5-7.5 metric ton, unregulated",
+          "unit": "metric ton*km",
+          "allocation": 1.0
+        }
+      ]
+    },
+    {
+      "source": {
+        "name": "transport, freight, lorry 7.5-16 metric ton, EURO1",
+        "location": "GLO",
+        "reference product": "transport, freight, lorry 7.5-16 metric ton, EURO1",
+        "unit": "metric ton*km"
+      },
+      "targets": [
+        {
+          "name": "transport, freight, lorry 7.5-16 metric ton, EURO1",
+          "location": "BR",
+          "reference product": "transport, freight, lorry 7.5-16 metric ton, EURO1",
+          "unit": "metric ton*km",
+          "allocation": 1.0
+        }
+      ]
+    },
+    {
+      "source": {
+        "name": "transport, freight, lorry 7.5-16 metric ton, EURO2",
+        "location": "GLO",
+        "reference product": "transport, freight, lorry 7.5-16 metric ton, EURO2",
+        "unit": "metric ton*km"
+      },
+      "targets": [
+        {
+          "name": "transport, freight, lorry 7.5-16 metric ton, EURO2",
+          "location": "BR",
+          "reference product": "transport, freight, lorry 7.5-16 metric ton, EURO2",
+          "unit": "metric ton*km",
+          "allocation": 1.0
+        }
+      ]
+    },
+    {
+      "source": {
+        "name": "transport, freight, lorry 7.5-16 metric ton, EURO3",
+        "location": "RoW",
+        "reference product": "transport, freight, lorry 7.5-16 metric ton, EURO3",
+        "unit": "metric ton*km"
+      },
+      "targets": [
+        {
+          "name": "transport, freight, lorry 7.5-16 metric ton, EURO3",
+          "location": "BR",
+          "reference product": "transport, freight, lorry 7.5-16 metric ton, EURO3",
+          "unit": "metric ton*km",
+          "allocation": 0.12636471679925224
+        },
+        {
+          "name": "transport, freight, lorry 7.5-16 metric ton, EURO3",
+          "location": "RoW",
+          "reference product": "transport, freight, lorry 7.5-16 metric ton, EURO3",
+          "unit": "metric ton*km",
+          "allocation": 0.8736352832007478
+        }
+      ]
+    },
+    {
+      "source": {
+        "name": "transport, freight, lorry 7.5-16 metric ton, EURO5",
+        "location": "RoW",
+        "reference product": "transport, freight, lorry 7.5-16 metric ton, EURO5",
+        "unit": "metric ton*km"
+      },
+      "targets": [
+        {
+          "name": "transport, freight, lorry 7.5-16 metric ton, EURO5",
+          "location": "BR",
+          "reference product": "transport, freight, lorry 7.5-16 metric ton, EURO5",
+          "unit": "metric ton*km",
+          "allocation": 0.1710657870810339
+        },
+        {
+          "name": "transport, freight, lorry 7.5-16 metric ton, EURO5",
+          "location": "RoW",
+          "reference product": "transport, freight, lorry 7.5-16 metric ton, EURO5",
+          "unit": "metric ton*km",
+          "allocation": 0.8289342129189661
+        }
+      ]
+    },
+    {
+      "source": {
+        "name": "transport, freight, lorry 7.5-16 metric ton, unregulated",
+        "location": "GLO",
+        "reference product": "transport, freight, lorry 7.5-16 metric ton, unregulated",
+        "unit": "metric ton*km"
+      },
+      "targets": [
+        {
+          "name": "transport, freight, lorry 7.5-16 metric ton, unregulated",
+          "location": "BR",
+          "reference product": "transport, freight, lorry 7.5-16 metric ton, unregulated",
+          "unit": "metric ton*km",
+          "allocation": 1.0
+        }
+      ]
+    },
+    {
+      "source": {
+        "name": "transport, freight, lorry >32 metric ton, EURO1",
+        "location": "GLO",
+        "reference product": "transport, freight, lorry >32 metric ton, EURO1",
+        "unit": "metric ton*km"
+      },
+      "targets": [
+        {
+          "name": "transport, freight, lorry >32 metric ton, EURO1",
+          "location": "BR",
+          "reference product": "transport, freight, lorry >32 metric ton, EURO1",
+          "unit": "metric ton*km",
+          "allocation": 1.0
+        }
+      ]
+    },
+    {
+      "source": {
+        "name": "transport, freight, lorry >32 metric ton, EURO2",
+        "location": "GLO",
+        "reference product": "transport, freight, lorry >32 metric ton, EURO2",
+        "unit": "metric ton*km"
+      },
+      "targets": [
+        {
+          "name": "transport, freight, lorry >32 metric ton, EURO2",
+          "location": "BR",
+          "reference product": "transport, freight, lorry >32 metric ton, EURO2",
+          "unit": "metric ton*km",
+          "allocation": 1.0
+        }
+      ]
+    },
+    {
+      "source": {
+        "name": "transport, freight, lorry >32 metric ton, EURO3",
+        "location": "RoW",
+        "reference product": "transport, freight, lorry >32 metric ton, EURO3",
+        "unit": "metric ton*km"
+      },
+      "targets": [
+        {
+          "name": "transport, freight, lorry >32 metric ton, EURO3",
+          "location": "BR",
+          "reference product": "transport, freight, lorry >32 metric ton, EURO3",
+          "unit": "metric ton*km",
+          "allocation": 0.11569740091116013
+        },
+        {
+          "name": "transport, freight, lorry >32 metric ton, EURO3",
+          "location": "RoW",
+          "reference product": "transport, freight, lorry >32 metric ton, EURO3",
+          "unit": "metric ton*km",
+          "allocation": 0.8843025990888399
+        }
+      ]
+    },
+    {
+      "source": {
+        "name": "transport, freight, lorry >32 metric ton, EURO5",
+        "location": "RoW",
+        "reference product": "transport, freight, lorry >32 metric ton, EURO5",
+        "unit": "metric ton*km"
+      },
+      "targets": [
+        {
+          "name": "transport, freight, lorry >32 metric ton, EURO5",
+          "location": "BR",
+          "reference product": "transport, freight, lorry >32 metric ton, EURO5",
+          "unit": "metric ton*km",
+          "allocation": 0.15487239381673482
+        },
+        {
+          "name": "transport, freight, lorry >32 metric ton, EURO5",
+          "location": "RoW",
+          "reference product": "transport, freight, lorry >32 metric ton, EURO5",
+          "unit": "metric ton*km",
+          "allocation": 0.8451276061832652
+        }
+      ]
+    },
+    {
+      "source": {
+        "name": "transport, freight, lorry >32 metric ton, unregulated",
+        "location": "GLO",
+        "reference product": "transport, freight, lorry >32 metric ton, unregulated",
+        "unit": "metric ton*km"
+      },
+      "targets": [
+        {
+          "name": "transport, freight, lorry >32 metric ton, unregulated",
+          "location": "BR",
+          "reference product": "transport, freight, lorry >32 metric ton, unregulated",
+          "unit": "metric ton*km",
+          "allocation": 1.0
+        }
+      ]
+    },
+    {
+      "source": {
+        "name": "transport, freight, lorry, all sizes, EURO1 to generic market for transport, freight, lorry, unspecified",
+        "location": "GLO",
+        "reference product": "transport, freight, lorry, unspecified",
+        "unit": "metric ton*km"
+      },
+      "targets": [
+        {
+          "name": "transport, freight, lorry, all sizes, EURO1 to generic market for transport, freight, lorry, unspecified",
+          "location": "BR",
+          "reference product": "transport, freight, lorry, unspecified",
+          "unit": "metric ton*km",
+          "allocation": 1.0
+        }
+      ]
+    },
+    {
+      "source": {
+        "name": "transport, freight, lorry, all sizes, EURO2 to generic market for transport, freight, lorry, unspecified",
+        "location": "GLO",
+        "reference product": "transport, freight, lorry, unspecified",
+        "unit": "metric ton*km"
+      },
+      "targets": [
+        {
+          "name": "transport, freight, lorry, all sizes, EURO2 to generic market for transport, freight, lorry, unspecified",
+          "location": "BR",
+          "reference product": "transport, freight, lorry, unspecified",
+          "unit": "metric ton*km",
+          "allocation": 1.0
+        }
+      ]
+    },
+    {
+      "source": {
+        "name": "transport, freight, lorry, all sizes, EURO3 to generic market for transport, freight, lorry, unspecified",
+        "location": "RoW",
+        "reference product": "transport, freight, lorry, unspecified",
+        "unit": "metric ton*km"
+      },
+      "targets": [
+        {
+          "name": "transport, freight, lorry, all sizes, EURO3 to generic market for transport, freight, lorry, unspecified",
+          "location": "BR",
+          "reference product": "transport, freight, lorry, unspecified",
+          "unit": "metric ton*km",
+          "allocation": 0.1125149255716249
+        },
+        {
+          "name": "transport, freight, lorry, all sizes, EURO3 to generic market for transport, freight, lorry, unspecified",
+          "location": "RoW",
+          "reference product": "transport, freight, lorry, unspecified",
+          "unit": "metric ton*km",
+          "allocation": 0.8874850744283751
+        }
+      ]
+    },
+    {
+      "source": {
+        "name": "transport, freight, lorry, all sizes, EURO5 to generic market for transport, freight, lorry, unspecified",
+        "location": "RoW",
+        "reference product": "transport, freight, lorry, unspecified",
+        "unit": "metric ton*km"
+      },
+      "targets": [
+        {
+          "name": "transport, freight, lorry, all sizes, EURO5 to generic market for transport, freight, lorry, unspecified",
+          "location": "BR",
+          "reference product": "transport, freight, lorry, unspecified",
+          "unit": "metric ton*km",
+          "allocation": 0.15555724989434128
+        },
+        {
+          "name": "transport, freight, lorry, all sizes, EURO5 to generic market for transport, freight, lorry, unspecified",
+          "location": "RoW",
+          "reference product": "transport, freight, lorry, unspecified",
+          "unit": "metric ton*km",
+          "allocation": 0.8444427501056587
+        }
+      ]
+    },
+    {
+      "source": {
+        "name": "transport, freight, lorry, all sizes, unregulated to generic market for transport, freight, lorry, unspecified",
+        "location": "GLO",
+        "reference product": "transport, freight, lorry, unspecified",
+        "unit": "metric ton*km"
+      },
+      "targets": [
+        {
+          "name": "transport, freight, lorry, all sizes, unregulated to generic market for transport, freight, lorry, unspecified",
+          "location": "BR",
+          "reference product": "transport, freight, lorry, unspecified",
+          "unit": "metric ton*km",
+          "allocation": 1.0
+        }
+      ]
+    }
+  ]
+}

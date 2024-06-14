@@ -1,0 +1,226 @@
+{
+  "name": "ecoinvent-3.8-biosphere-ecoinvent-3.9-biosphere",
+  "licenses": [
+    {
+      "name": "CC BY 4.0",
+      "path": "https://creativecommons.org/licenses/by/4.0/",
+      "title": "Creative Commons Attribution 4.0 International"
+    }
+  ],
+  "version": "1.0.0",
+  "description": "Data migration file from ecoinvent-3.8-biosphere to ecoinvent-3.9-biosphere generated with `ecoinvent_migrate` version 0.1.0",
+  "homepage": "https://github.com/brightway-lca/ecoinvent_migrate",
+  "created": "2024-06-14T12:59:50.731325+00:00",
+  "contributors": [
+    {
+      "title": "ecoinvent association",
+      "path": "https://ecoinvent.org/",
+      "role": "author"
+    },
+    {
+      "title": "Chris Mutel",
+      "path": "https://chris.mutel.org/",
+      "role": "wrangler"
+    }
+  ],
+  "replace": [
+    {
+      "source": {
+        "uuid": "c4e01cfb-2f50-52d5-8177-1518ad8b7bea",
+        "name": "Chloride, ion"
+      },
+      "target": {
+        "uuid": "6d25e386-4ef9-4d40-85c6-e694f523a4da",
+        "name": "Chloride"
+      },
+      "comment": "replaced"
+    },
+    {
+      "source": {
+        "uuid": "9547aff9-e1fc-5fad-a674-9b9a9fdb1c9c",
+        "name": "Dichlorodimethylsilane"
+      },
+      "target": {
+        "uuid": "d0cde0b1-afcc-5179-8895-0aacba2e15a1",
+        "name": "Dimethyldichlorosilane"
+      },
+      "comment": "replaced"
+    },
+    {
+      "source": {
+        "uuid": "9c2a7dc9-8b1f-46ba-bc16-0d761a4f6016",
+        "name": "Ethene"
+      },
+      "target": {
+        "uuid": "90f722bf-cb9b-571a-88fc-34286632bdc4",
+        "name": "Ethylene"
+      },
+      "comment": "replaced"
+    },
+    {
+      "source": {
+        "uuid": "3fa03c96-b976-4f0f-8089-220968515ee1",
+        "name": "Ethene, trichloro-"
+      },
+      "target": {
+        "uuid": "a0950325-06dc-5ca0-84b6-983c9e6ccf74",
+        "name": "Trichloroethylene"
+      },
+      "comment": "replaced"
+    },
+    {
+      "source": {
+        "uuid": "43b2649e-26f8-400d-bc0a-a0667e850915",
+        "name": "Gangue, bauxite, in ground"
+      },
+      "target": {
+        "uuid": "0d218f74-181d-49b6-978c-8af836611102",
+        "name": "Gangue"
+      },
+      "comment": "replaced"
+    },
+    {
+      "source": {
+        "uuid": "66a6dad0-e450-4206-88e1-f823a04f8b1d",
+        "name": "Haloxyfop- (R) Methylester"
+      },
+      "target": {
+        "uuid": "a058168e-9a1e-5126-80b6-2d202e746835",
+        "name": "Haloxyfop-P-methyl"
+      },
+      "comment": "replaced"
+    },
+    {
+      "source": {
+        "uuid": "c941d6d0-a56c-4e6c-95de-ac685635218d",
+        "name": "Hydrogen chloride"
+      },
+      "target": {
+        "uuid": "c9a8073a-8a19-5b9b-a120-7d549563b67b",
+        "name": "Hydrochloric acid"
+      },
+      "comment": "replaced"
+    },
+    {
+      "source": {
+        "uuid": "e3043a7f-5347-4c7b-89ee-93f11b2f6d9b",
+        "name": "Iron"
+      },
+      "target": {
+        "uuid": "33fd8342-58e7-45c9-ad92-0951c002c403",
+        "name": "Iron ion"
+      },
+      "comment": "replaced"
+    },
+    {
+      "source": {
+        "uuid": "09cf7c11-0269-4fc1-a5f3-47121a7882d3",
+        "name": "Lithium, ion"
+      },
+      "target": {
+        "uuid": "4569494e-085e-413a-8fef-63a3c419e0cf",
+        "name": "Lithium I"
+      },
+      "comment": "replaced"
+    },
+    {
+      "source": {
+        "uuid": "b53d3744-3629-4219-be20-980865e54031",
+        "name": "Methane"
+      },
+      "target": {
+        "uuid": "5f7aad3d-566c-4d0d-ad59-e765f971aa0f",
+        "name": "Methane, fossil"
+      },
+      "comment": "replaced"
+    },
+    {
+      "source": {
+        "uuid": "ec420d84-577b-402e-bd90-f8a4b2310135",
+        "name": "Methyl amine"
+      },
+      "target": {
+        "uuid": "be13179a-7e8b-57f8-9852-137ce88a1525",
+        "name": "Methylamine"
+      },
+      "comment": "replaced"
+    },
+    {
+      "source": {
+        "uuid": "4412a76b-eb71-4fd3-afc9-6871a58cae5f",
+        "name": "Metiram"
+      },
+      "target": {
+        "uuid": "02156abf-3839-5778-897a-4c06444701d4",
+        "name": "Zineb"
+      },
+      "comment": "replaced"
+    },
+    {
+      "source": {
+        "uuid": "7346ba9f-476c-4343-9f37-d1bb174eed6d",
+        "name": "Naphtalene"
+      },
+      "target": {
+        "uuid": "3df4c2f4-c854-4493-b514-f2f3accdc307",
+        "name": "Naphthalene"
+      },
+      "comment": "replaced"
+    },
+    {
+      "source": {
+        "uuid": "e030108f-2125-4bcb-a73b-ad72130fcca3",
+        "name": "Nickel, ion"
+      },
+      "target": {
+        "uuid": "56815b4f-6138-4e0b-9fac-c94fd6b102b3",
+        "name": "Nickel II"
+      },
+      "comment": "replaced"
+    },
+    {
+      "source": {
+        "uuid": "a07b8a8c-8cab-4656-a82f-310e8069e323",
+        "name": "Potassium, ion"
+      },
+      "target": {
+        "uuid": "c21a1397-82dc-427a-a6cb-c790ba2626f4",
+        "name": "Potassium I"
+      },
+      "comment": "replaced"
+    },
+    {
+      "source": {
+        "uuid": "f9c73aca-3d5c-4072-81dd-b8e0643530a6",
+        "name": "Quizalofop ethyl ester"
+      },
+      "target": {
+        "uuid": "9ae11925-3df9-5fde-b7af-1627c0818347",
+        "name": "Quizalofop-ethyl"
+      },
+      "comment": "replaced"
+    },
+    {
+      "source": {
+        "uuid": "b8c794de-ac20-47f6-ae87-84d91e95da93",
+        "name": "Sulfate, ion"
+      },
+      "target": {
+        "uuid": "31eacbfc-683a-4d36-afc1-80dee42a3b94",
+        "name": "Sulfate"
+      },
+      "comment": "replaced"
+    },
+    {
+      "source": {
+        "uuid": "f3e5bff4-5bdf-55d7-8dd9-3cac7b09e57f",
+        "name": "Sulfate, ion"
+      },
+      "target": {
+        "uuid": "28bca51a-6cc7-46af-961a-fd2b675a1376",
+        "name": "Sulfate"
+      },
+      "comment": "replaced"
+    }
+  ]
+}

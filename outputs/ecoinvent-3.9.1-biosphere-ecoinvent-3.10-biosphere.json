@@ -1,0 +1,4306 @@
+{
+  "name": "ecoinvent-3.9.1-biosphere-ecoinvent-3.10-biosphere",
+  "licenses": [
+    {
+      "name": "CC BY 4.0",
+      "path": "https://creativecommons.org/licenses/by/4.0/",
+      "title": "Creative Commons Attribution 4.0 International"
+    }
+  ],
+  "version": "1.0.0",
+  "description": "Data migration file from ecoinvent-3.9.1-biosphere to ecoinvent-3.10-biosphere generated with `ecoinvent_migrate` version 0.1.0",
+  "homepage": "https://github.com/brightway-lca/ecoinvent_migrate",
+  "created": "2024-06-14T12:59:54.219963+00:00",
+  "contributors": [
+    {
+      "title": "ecoinvent association",
+      "path": "https://ecoinvent.org/",
+      "role": "author"
+    },
+    {
+      "title": "Chris Mutel",
+      "path": "https://chris.mutel.org/",
+      "role": "wrangler"
+    }
+  ],
+  "replace": [
+    {
+      "source": {
+        "uuid": "4f777e05-70f9-4a18-a406-d8232325073f",
+        "name": "2,4-D amines"
+      },
+      "target": {
+        "uuid": "b6b4201e-0561-5992-912f-e729fbf04e41",
+        "name": "2,4-D dimethylamine salt"
+      }
+    },
+    {
+      "source": {
+        "uuid": "0eba8639-12c1-40ce-b1b6-e3394ec94dc0",
+        "name": "2,4-D amines"
+      },
+      "target": {
+        "uuid": "41a4e1fe-34ee-54d9-b049-3a60ada1ae3e",
+        "name": "2,4-D dimethylamine salt"
+      }
+    },
+    {
+      "source": {
+        "uuid": "49b29466-706e-42c3-ac8c-f89f9530cb60",
+        "name": "2,4-D amines"
+      },
+      "target": {
+        "uuid": "e36c124e-64b2-450d-b55d-f2cabf73eeff",
+        "name": "2,4-D dimethylamine salt"
+      }
+    },
+    {
+      "source": {
+        "uuid": "c7dcf08c-f297-495b-b7db-f4f54799814b",
+        "name": "2,4-D amines"
+      },
+      "target": {
+        "uuid": "b8db7f8d-c4a3-5aea-b95f-f5729d5656fd",
+        "name": "2,4-D dimethylamine salt"
+      }
+    },
+    {
+      "source": {
+        "uuid": "af60ad28-ce2b-4ea0-9277-983538e1a739",
+        "name": "Chromium IV"
+      },
+      "target": {
+        "uuid": "7a59e8d5-cd11-4ee7-b1ca-30979d2b0b3a",
+        "name": "Chromium VI"
+      }
+    },
+    {
+      "source": {
+        "uuid": "2a042136-80fd-4c1c-8996-65a7985497d3",
+        "name": "Cyclohexane (for all cycloalkanes)"
+      },
+      "target": {
+        "uuid": "18282ab8-5b46-4c56-9038-588ed28a4a95",
+        "name": "Hydrocarbons, aliphatic, alkanes, cyclic"
+      }
+    },
+    {
+      "source": {
+        "uuid": "bc86067c-20e8-46e7-8419-de1eee73ccdd",
+        "name": "Elemental carbon"
+      },
+      "target": {
+        "uuid": "14ea575b-5caa-4958-acf7-0bcc47f9cadf",
+        "name": "Carbon"
+      }
+    },
+    {
+      "source": {
+        "uuid": "8bdedc25-af46-4c46-9b3a-670d0c177d8f",
+        "name": "Fresh water (obsolete)"
+      },
+      "target": {
+        "uuid": "db4566b1-bd88-427d-92da-2d25879063b9",
+        "name": "Water"
+      }
+    },
+    {
+      "source": {
+        "uuid": "19d4089d-11a2-520c-84a0-b307ec625a0c",
+        "name": "Pyrethrins"
+      },
+      "target": {
+        "uuid": "69edbf6f-66cb-5e8f-8741-f34a16fed5ca",
+        "name": "Pyrethrum"
+      }
+    },
+    {
+      "source": {
+        "uuid": "73a1b292-e31d-4100-a413-304795a3656f",
+        "name": "Sodium"
+      },
+      "target": {
+        "uuid": "ee9fdd7c-5e29-4bdb-852a-3258f06ec2ab",
+        "name": "Sodium I"
+      }
+    },
+    {
+      "source": {
+        "uuid": "723f56f9-c68e-5692-a969-0fb2a70bce20",
+        "name": "Sodium"
+      },
+      "target": {
+        "uuid": "5ac961f0-8e53-42ff-b13f-1a7fb9133868",
+        "name": "Sodium I"
+      }
+    },
+    {
+      "source": {
+        "uuid": "8bc65fca-548d-4831-b102-391bbdd6bc8c",
+        "name": "Aluminium, 24% in bauxite, 11% in crude ore"
+      },
+      "target": {
+        "uuid": "a45cd247-3532-4e27-bddc-b519fdb5e08f",
+        "name": "Aluminium"
+      }
+    },
+    {
+      "source": {
+        "uuid": "c13beafb-2aed-4a52-b09a-78d28913b6ce",
+        "name": "Barite, 15% in crude ore"
+      },
+      "target": {
+        "uuid": "240177d8-6f3b-43f5-8d1e-0c18114dfa02",
+        "name": "Barium"
+      },
+      "allocation": 0.588,
+      "comment": "To be modelled as pure elements, the Barium content of Barite (BaSO4) is 0.588."
+    },
+    {
+      "source": {
+        "uuid": "61341186-aac8-4088-a2b7-ba50093bab6c",
+        "name": "Bromine, 0.23% in water"
+      },
+      "target": {
+        "uuid": "45d6f26b-596b-5182-8c08-d6d975ff4efe",
+        "name": "Bromine"
+      }
+    },
+    {
+      "source": {
+        "uuid": "621b1cf1-9b47-4c44-b71e-ebeb9afd9bbc",
+        "name": "Cadmium, 0.30% in sulfide, Cd 0.18%, Pb, Zn, Ag, In"
+      },
+      "target": {
+        "uuid": "bf377e4f-3a95-4ce2-a9ba-66ee31f00f60",
+        "name": "Cadmium"
+      }
+    },
+    {
+      "source": {
+        "uuid": "7a636bea-94c0-4774-a791-2512b7fbda94",
+        "name": "Cerium, 24% in bastnasite, 2.4% in crude ore"
+      },
+      "target": {
+        "uuid": "4057f8b4-f20a-59c9-9bb7-fdeaf5ad106d",
+        "name": "Cerium"
+      }
+    },
+    {
+      "source": {
+        "uuid": "ef6dd09f-bddc-49b4-a207-dbaec2f07bb5",
+        "name": "Chromium, 25.5% in chromite, 11.6% in crude ore"
+      },
+      "target": {
+        "uuid": "e189e2d4-3d3f-4ada-b302-91611784311f",
+        "name": "Chromium"
+      }
+    },
+    {
+      "source": {
+        "uuid": "02e8658e-3c88-404c-865d-4d4934661ea6",
+        "name": "Cobalt, Co 5.0E-2%, in mixed ore"
+      },
+      "target": {
+        "uuid": "d0779a5e-6969-4144-954e-ceb81fb83f15",
+        "name": "Cobalt"
+      }
+    },
+    {
+      "source": {
+        "uuid": "1aee4aa7-32e0-48e7-a6b5-73d8acf672d3",
+        "name": "Copper, 0.52% in sulfide, Cu 0.27% and Mo 8.2E-3% in crude ore"
+      },
+      "target": {
+        "uuid": "a9ac40a0-9bea-4c48-afa7-66aa6eb90624",
+        "name": "Copper"
+      }
+    },
+    {
+      "source": {
+        "uuid": "1b35070a-eb57-4f0f-a27f-5ba181ff0d4d",
+        "name": "Copper, 0.59% in sulfide, Cu 0.22% and Mo 8.2E-3% in crude ore"
+      },
+      "target": {
+        "uuid": "a9ac40a0-9bea-4c48-afa7-66aa6eb90624",
+        "name": "Copper"
+      }
+    },
+    {
+      "source": {
+        "uuid": "19988f5b-a9a6-48f3-9e8e-150b66a1bf12",
+        "name": "Copper, 0.97% in sulfide, Cu 0.36% and Mo 4.1E-2% in crude ore"
+      },
+      "target": {
+        "uuid": "a9ac40a0-9bea-4c48-afa7-66aa6eb90624",
+        "name": "Copper"
+      }
+    },
+    {
+      "source": {
+        "uuid": "79df5650-160a-4ab7-a14f-cc8162877f4a",
+        "name": "Copper, 0.99% in sulfide, Cu 0.36% and Mo 8.2E-3% in crude ore"
+      },
+      "target": {
+        "uuid": "a9ac40a0-9bea-4c48-afa7-66aa6eb90624",
+        "name": "Copper"
+      }
+    },
+    {
+      "source": {
+        "uuid": "ed5ace5c-a203-4816-b33b-9fe0c5f0f519",
+        "name": "Copper, 1.13% in sulfide, Cu 0.76% and Ni 0.76% in crude ore"
+      },
+      "target": {
+        "uuid": "a9ac40a0-9bea-4c48-afa7-66aa6eb90624",
+        "name": "Copper"
+      }
+    },
+    {
+      "source": {
+        "uuid": "31998285-fb5c-411d-b853-ce78be2a0b49",
+        "name": "Copper, 1.18% in sulfide, Cu 0.39% and Mo 8.2E-3% in crude ore"
+      },
+      "target": {
+        "uuid": "a9ac40a0-9bea-4c48-afa7-66aa6eb90624",
+        "name": "Copper"
+      }
+    },
+    {
+      "source": {
+        "uuid": "01b9f1e8-4423-5393-ba63-2067935bdb13",
+        "name": "Copper, 1.25% in sulfide, Cu 0.24% and Zn 0,1% in crude ore"
+      },
+      "target": {
+        "uuid": "a9ac40a0-9bea-4c48-afa7-66aa6eb90624",
+        "name": "Copper"
+      }
+    },
+    {
+      "source": {
+        "uuid": "c8f18160-6937-4bb9-ad0c-dffa942ca41e",
+        "name": "Copper, 1.42% in sulfide, Cu 0.81% and Mo 8.2E-3% in crude ore"
+      },
+      "target": {
+        "uuid": "a9ac40a0-9bea-4c48-afa7-66aa6eb90624",
+        "name": "Copper"
+      }
+    },
+    {
+      "source": {
+        "uuid": "b569dc97-52fe-4e39-9627-183b1002c287",
+        "name": "Copper, 2.19% in sulfide, Cu 1.83% and Mo 8.2E-3% in crude ore"
+      },
+      "target": {
+        "uuid": "a9ac40a0-9bea-4c48-afa7-66aa6eb90624",
+        "name": "Copper"
+      }
+    },
+    {
+      "source": {
+        "uuid": "704399e3-cf6b-483d-84f5-466e91a9d17c",
+        "name": "Copper, Cu 0.2%, in mixed ore"
+      },
+      "target": {
+        "uuid": "a9ac40a0-9bea-4c48-afa7-66aa6eb90624",
+        "name": "Copper"
+      }
+    },
+    {
+      "source": {
+        "uuid": "5afa470c-ab8c-4ec3-8a18-5c0bed973571",
+        "name": "Copper, Cu 0.38%, in mixed ore"
+      },
+      "target": {
+        "uuid": "a9ac40a0-9bea-4c48-afa7-66aa6eb90624",
+        "name": "Copper"
+      }
+    },
+    {
+      "source": {
+        "uuid": "4f684798-3870-45a1-b5f2-aa3444c0b8d6",
+        "name": "Copper, Cu 6.8E-1%, in mixed ore"
+      },
+      "target": {
+        "uuid": "a9ac40a0-9bea-4c48-afa7-66aa6eb90624",
+        "name": "Copper"
+      }
+    },
+    {
+      "source": {
+        "uuid": "73b7f080-b7ae-417c-b740-b4c9eabfb35a",
+        "name": "Cu, Cu 3.2E+0%, Pt 2.5E-4%, Pd 7.3E-4%, Rh 2.0E-5%, Ni 2.3E+0% in ore"
+      },
+      "target": {
+        "uuid": "a9ac40a0-9bea-4c48-afa7-66aa6eb90624",
+        "name": "Copper"
+      }
+    },
+    {
+      "source": {
+        "uuid": "8508a83c-6a37-4159-93cc-21a2645390ab",
+        "name": "Cu, Cu 5.2E-2%, Pt 4.8E-4%, Pd 2.0E-4%, Rh 2.4E-5%, Ni 3.7E-2% in ore"
+      },
+      "target": {
+        "uuid": "a9ac40a0-9bea-4c48-afa7-66aa6eb90624",
+        "name": "Copper"
+      }
+    },
+    {
+      "source": {
+        "uuid": "7c954971-4bce-41db-9e8b-2b2f049539d7",
+        "name": "Europium, 0.06% in bastnasite, 0.006% in crude ore"
+      },
+      "target": {
+        "uuid": "3d73ec21-de4d-5b68-b504-4ef59e15bd0e",
+        "name": "Europium"
+      }
+    },
+    {
+      "source": {
+        "uuid": "e5fadc0b-1d79-4604-ac32-fd3321f27933",
+        "name": "Fluorine, 4.5% in apatite, 1% in crude ore"
+      },
+      "target": {
+        "uuid": "3048af84-1d72-5e3f-a739-b2d7fa7d4773",
+        "name": "Fluorine"
+      }
+    },
+    {
+      "source": {
+        "uuid": "355785ee-56e0-455b-aaa6-bee43c82b49c",
+        "name": "Fluorine, 4.5% in apatite, 3% in crude ore"
+      },
+      "target": {
+        "uuid": "3048af84-1d72-5e3f-a739-b2d7fa7d4773",
+        "name": "Fluorine"
+      }
+    },
+    {
+      "source": {
+        "uuid": "de2d220b-9fe8-4c39-bef7-a76c00d6ff33",
+        "name": "Fluorspar, 92%"
+      },
+      "target": {
+        "uuid": "0fa4f51e-b0dc-5d11-84d3-b32f0f3c88d5",
+        "name": "Fluorspar"
+      }
+    },
+    {
+      "source": {
+        "uuid": "b878ca93-d699-421e-a4b6-f694dc627062",
+        "name": "Gadolinium, 0.15% in bastnasite, 0.015% in crude ore"
+      },
+      "target": {
+        "uuid": "f55e2203-ef91-50bf-8f5a-119bb210522c",
+        "name": "Gadolinium"
+      }
+    },
+    {
+      "source": {
+        "uuid": "e2c5109f-9a68-4828-b824-eb2193864803",
+        "name": "Gallium, 0.014% in bauxite"
+      },
+      "target": {
+        "uuid": "0878c1c6-4c1d-4f90-a2de-a9383855d5c6",
+        "name": "Gallium"
+      }
+    },
+    {
+      "source": {
+        "uuid": "60b67dea-a332-4d8d-968b-df8f3df6088a",
+        "name": "Gold, Au 1.0E-7%, in mixed ore"
+      },
+      "target": {
+        "uuid": "d080e6a4-42c6-484e-b5d7-d74693aec7d9",
+        "name": "Gold"
+      }
+    },
+    {
+      "source": {
+        "uuid": "ff741136-d6ee-444a-a15b-3b308e376db8",
+        "name": "Gold, Au 1.1E-4%, Ag 4.2E-3%, in ore"
+      },
+      "target": {
+        "uuid": "d080e6a4-42c6-484e-b5d7-d74693aec7d9",
+        "name": "Gold"
+      }
+    },
+    {
+      "source": {
+        "uuid": "7cd1d217-70a7-4452-abc4-3b1100763d6d",
+        "name": "Gold, Au 1.3E-4%, Ag 4.6E-5%, in ore"
+      },
+      "target": {
+        "uuid": "d080e6a4-42c6-484e-b5d7-d74693aec7d9",
+        "name": "Gold"
+      }
+    },
+    {
+      "source": {
+        "uuid": "a8896ed6-4c9d-4b06-a356-49d8cdd9e9d7",
+        "name": "Gold, Au 1.4E-4%, in ore"
+      },
+      "target": {
+        "uuid": "d080e6a4-42c6-484e-b5d7-d74693aec7d9",
+        "name": "Gold"
+      }
+    },
+    {
+      "source": {
+        "uuid": "16ddda12-daf4-460c-83fb-c361bdbbc9e9",
+        "name": "Gold, Au 1.8E-4%, in mixed ore"
+      },
+      "target": {
+        "uuid": "d080e6a4-42c6-484e-b5d7-d74693aec7d9",
+        "name": "Gold"
+      }
+    },
+    {
+      "source": {
+        "uuid": "2d65a3f7-2a10-4a10-ac9e-a0cc7cd57979",
+        "name": "Gold, Au 2.1E-4%, Ag 2.1E-4%, in ore"
+      },
+      "target": {
+        "uuid": "d080e6a4-42c6-484e-b5d7-d74693aec7d9",
+        "name": "Gold"
+      }
+    },
+    {
+      "source": {
+        "uuid": "95268685-7bea-4883-a412-119d7e88372c",
+        "name": "Gold, Au 4.3E-4%, in ore"
+      },
+      "target": {
+        "uuid": "d080e6a4-42c6-484e-b5d7-d74693aec7d9",
+        "name": "Gold"
+      }
+    },
+    {
+      "source": {
+        "uuid": "8c888d2b-d608-4dac-bad5-1c2a17050838",
+        "name": "Gold, Au 4.9E-5%, in ore"
+      },
+      "target": {
+        "uuid": "d080e6a4-42c6-484e-b5d7-d74693aec7d9",
+        "name": "Gold"
+      }
+    },
+    {
+      "source": {
+        "uuid": "d6c7644f-0d7c-4bb3-b8bb-686ebede951e",
+        "name": "Gold, Au 5.4E-4%, Ag 1.5E-5%, in ore"
+      },
+      "target": {
+        "uuid": "d080e6a4-42c6-484e-b5d7-d74693aec7d9",
+        "name": "Gold"
+      }
+    },
+    {
+      "source": {
+        "uuid": "3eece329-cf79-4167-93c2-b8d7d7eb5058",
+        "name": "Gold, Au 6.7E-4%, in ore"
+      },
+      "target": {
+        "uuid": "d080e6a4-42c6-484e-b5d7-d74693aec7d9",
+        "name": "Gold"
+      }
+    },
+    {
+      "source": {
+        "uuid": "4f5aad55-54d2-4628-a509-b28ef1929bb4",
+        "name": "Gold, Au 6.8E-4%, Ag 1.5E-4%, in ore"
+      },
+      "target": {
+        "uuid": "d080e6a4-42c6-484e-b5d7-d74693aec7d9",
+        "name": "Gold"
+      }
+    },
+    {
+      "source": {
+        "uuid": "d28f9d42-5df5-41c3-be59-fdfa7ff57112",
+        "name": "Gold, Au 7.1E-4%, in ore"
+      },
+      "target": {
+        "uuid": "d080e6a4-42c6-484e-b5d7-d74693aec7d9",
+        "name": "Gold"
+      }
+    },
+    {
+      "source": {
+        "uuid": "cf3d3dbc-0e4b-402d-92a1-8ea6b4869ed5",
+        "name": "Gold, Au 9.7E-4%, in mixed ore"
+      },
+      "target": {
+        "uuid": "d080e6a4-42c6-484e-b5d7-d74693aec7d9",
+        "name": "Gold"
+      }
+    },
+    {
+      "source": {
+        "uuid": "c7d38707-3b22-4fb1-b001-0c8cad496a60",
+        "name": "Gold, Au 9.7E-5%, Ag 7.6E-5%, in ore"
+      },
+      "target": {
+        "uuid": "d080e6a4-42c6-484e-b5d7-d74693aec7d9",
+        "name": "Gold"
+      }
+    },
+    {
+      "source": {
+        "uuid": "4c276350-de3d-4bba-90a9-0d0a9ad097c0",
+        "name": "Helium, 0.08% in natural gas"
+      },
+      "target": {
+        "uuid": "b6381644-4633-5bc6-9e90-c5d0514f9363",
+        "name": "Helium, in natural gas"
+      }
+    },
+    {
+      "source": {
+        "uuid": "e5cbe371-d33e-46ef-a832-a176f5e28520",
+        "name": "Indium, 0.005% in sulfide, In 0.003%, Pb, Zn, Ag, Cd"
+      },
+      "target": {
+        "uuid": "7aaf1a4e-f72f-5dc6-b999-de4e99948eb8",
+        "name": "Indium"
+      }
+    },
+    {
+      "source": {
+        "uuid": "7de77239-7074-4443-9dc9-4492c5e2ef35",
+        "name": "Iodine, 0.03% in water"
+      },
+      "target": {
+        "uuid": "36a3d172-7373-507f-85bd-12b8ba31a6d4",
+        "name": "Iodine"
+      }
+    },
+    {
+      "source": {
+        "uuid": "f77aacc3-2c22-4bda-99ab-fe1110a1b891",
+        "name": "Iron, 46% in ore, 25% in crude ore"
+      },
+      "target": {
+        "uuid": "8ce3ff02-7a1e-48e3-881e-3248b944f28a",
+        "name": "Iron"
+      }
+    },
+    {
+      "source": {
+        "uuid": "99c56f25-9ebb-4e6a-a3e2-e4dc61e9d697",
+        "name": "Iron, 72% in magnetite, 14% in crude ore"
+      },
+      "target": {
+        "uuid": "8ce3ff02-7a1e-48e3-881e-3248b944f28a",
+        "name": "Iron"
+      }
+    },
+    {
+      "source": {
+        "uuid": "ee540366-b970-46af-94d8-4c253ded5577",
+        "name": "Kaolinite, 24% in crude ore"
+      },
+      "target": {
+        "uuid": "81ff5c0b-c44f-534e-a55e-8fc017e33dd2",
+        "name": "Kaolinite"
+      }
+    },
+    {
+      "source": {
+        "uuid": "38eff837-5465-47a9-a1c9-e1edd70922ef",
+        "name": "Kieserite, 25% in crude ore"
+      },
+      "target": {
+        "uuid": "f3380341-7f76-5423-9704-c25ccf777a39",
+        "name": "Kieserite"
+      }
+    },
+    {
+      "source": {
+        "uuid": "d61418f3-c1a4-4b95-807c-06b7e1fa2915",
+        "name": "Lanthanum, 7.2% in bastnasite, 0.72% in crude ore"
+      },
+      "target": {
+        "uuid": "176598c1-699c-5dd8-8c33-d269ff7f5edd",
+        "name": "Lanthanum"
+      }
+    },
+    {
+      "source": {
+        "uuid": "4f701354-38fd-40b0-8c90-4c1df36ec45a",
+        "name": "Lead, 5.0% in sulfide, Pb 3.0%, Zn, Ag, Cd, In"
+      },
+      "target": {
+        "uuid": "fbcb9c7a-eea7-4694-ba6c-568e01d28883",
+        "name": "Lead"
+      }
+    },
+    {
+      "source": {
+        "uuid": "2d9f9c6b-8dca-4641-8ff9-53cb8beabd13",
+        "name": "Lead, Pb 0.014%, in mixed ore"
+      },
+      "target": {
+        "uuid": "fbcb9c7a-eea7-4694-ba6c-568e01d28883",
+        "name": "Lead"
+      }
+    },
+    {
+      "source": {
+        "uuid": "4df0eac4-44bb-46b6-b588-e3513a1ead2f",
+        "name": "Lead, Pb 3.6E-1%, in mixed ore"
+      },
+      "target": {
+        "uuid": "fbcb9c7a-eea7-4694-ba6c-568e01d28883",
+        "name": "Lead"
+      }
+    },
+    {
+      "source": {
+        "uuid": "a9ad523f-b721-4f07-ad9f-584053f3454d",
+        "name": "Lithium, 0.15% in brine"
+      },
+      "target": {
+        "uuid": "7d2c1cdd-a64a-5936-a577-5b82db0c0d1b",
+        "name": "Lithium"
+      }
+    },
+    {
+      "source": {
+        "uuid": "d2bf022d-9cbf-4f19-a8ec-7f507746942b",
+        "name": "Magnesite, 60% in crude ore"
+      },
+      "target": {
+        "uuid": "a4bab069-74a9-5b4c-8d6e-5ca984cd9ecd",
+        "name": "Magnesite"
+      }
+    },
+    {
+      "source": {
+        "uuid": "752d138f-3723-42c1-bf5c-ca5316809c4c",
+        "name": "Magnesium, 0.13% in water"
+      },
+      "target": {
+        "uuid": "247f3d96-7da2-5adf-a399-65745bc042fb",
+        "name": "Magnesium"
+      }
+    },
+    {
+      "source": {
+        "uuid": "9f9f1f14-6eee-4067-b4a5-80e75fc7b295",
+        "name": "Manganese, 35.7% in sedimentary deposit, 14.2% in crude ore"
+      },
+      "target": {
+        "uuid": "c2586875-bb56-4b1e-84c5-5ff255a1108b",
+        "name": "Manganese"
+      }
+    },
+    {
+      "source": {
+        "uuid": "06874cbb-2daf-4981-a55e-2c38be5b7277",
+        "name": "Molybdenum, 0.010% in sulfide, Mo 8.2E-3% and Cu 1.83% in crude ore"
+      },
+      "target": {
+        "uuid": "e5a3dff5-72dc-5287-893c-597dd4a19566",
+        "name": "Molybdenum"
+      }
+    },
+    {
+      "source": {
+        "uuid": "5514ccd2-469f-4074-9905-529154e7f742",
+        "name": "Molybdenum, 0.014% in sulfide, Mo 8.2E-3% and Cu 0.81% in crude ore"
+      },
+      "target": {
+        "uuid": "e5a3dff5-72dc-5287-893c-597dd4a19566",
+        "name": "Molybdenum"
+      }
+    },
+    {
+      "source": {
+        "uuid": "ac8571b8-b00b-479d-93cf-b9374feaee05",
+        "name": "Molybdenum, 0.016% in sulfide, Mo 8.2E-3% and Cu 0.27% in crude ore"
+      },
+      "target": {
+        "uuid": "e5a3dff5-72dc-5287-893c-597dd4a19566",
+        "name": "Molybdenum"
+      }
+    },
+    {
+      "source": {
+        "uuid": "a76cf135-2be1-4e53-9423-9211acd100f1",
+        "name": "Molybdenum, 0.022% in sulfide, Mo 8.2E-3% and Cu 0.22% in crude ore"
+      },
+      "target": {
+        "uuid": "e5a3dff5-72dc-5287-893c-597dd4a19566",
+        "name": "Molybdenum"
+      }
+    },
+    {
+      "source": {
+        "uuid": "30fed59d-d722-482f-be4f-f3d93bdd2527",
+        "name": "Molybdenum, 0.022% in sulfide, Mo 8.2E-3% and Cu 0.36% in crude ore"
+      },
+      "target": {
+        "uuid": "e5a3dff5-72dc-5287-893c-597dd4a19566",
+        "name": "Molybdenum"
+      }
+    },
+    {
+      "source": {
+        "uuid": "719def62-0941-4264-bc54-97093d847d7a",
+        "name": "Molybdenum, 0.025% in sulfide, Mo 8.2E-3% and Cu 0.39% in crude ore"
+      },
+      "target": {
+        "uuid": "e5a3dff5-72dc-5287-893c-597dd4a19566",
+        "name": "Molybdenum"
+      }
+    },
+    {
+      "source": {
+        "uuid": "eda28c96-8899-4d84-bf18-35c3f1de518e",
+        "name": "Molybdenum, 0.11% in sulfide, Mo 4.1E-2% and Cu 0.36% in crude ore"
+      },
+      "target": {
+        "uuid": "e5a3dff5-72dc-5287-893c-597dd4a19566",
+        "name": "Molybdenum"
+      }
+    },
+    {
+      "source": {
+        "uuid": "c970e81e-1c4e-4f21-814c-0c25444f41d2",
+        "name": "Neodymium, 4% in bastnasite, 0.4% in crude ore"
+      },
+      "target": {
+        "uuid": "db0c855c-e9ef-58d9-97cc-960e646fc882",
+        "name": "Neodymium"
+      }
+    },
+    {
+      "source": {
+        "uuid": "0d7f8b87-12f4-4e83-a5a2-854e2f2b47de",
+        "name": "Ni, Ni 2.3E+0%, Pt 2.5E-4%, Pd 7.3E-4%, Rh 2.0E-5%, Cu 3.2E+0% in ore"
+      },
+      "target": {
+        "uuid": "974213ef-1ba0-40e5-bc7b-52ef099e9e09",
+        "name": "Nickel"
+      }
+    },
+    {
+      "source": {
+        "uuid": "febbfa6e-44d4-42a0-abcd-aec8a428f75e",
+        "name": "Ni, Ni 3.7E-2%, Pt 4.8E-4%, Pd 2.0E-4%, Rh 2.4E-5%, Cu 5.2E-2% in ore"
+      },
+      "target": {
+        "uuid": "974213ef-1ba0-40e5-bc7b-52ef099e9e09",
+        "name": "Nickel"
+      }
+    },
+    {
+      "source": {
+        "uuid": "86c6e6cd-c2f5-4977-bad6-ce9cd48cf721",
+        "name": "Nickel, 1.13% in sulfide, Ni 0.76% and Cu 0.76% in crude ore"
+      },
+      "target": {
+        "uuid": "974213ef-1ba0-40e5-bc7b-52ef099e9e09",
+        "name": "Nickel"
+      }
+    },
+    {
+      "source": {
+        "uuid": "e47e4e5f-6528-413d-a8fb-1cd1875fbd73",
+        "name": "Nickel, 1.98% in silicates, 1.04% in crude ore"
+      },
+      "target": {
+        "uuid": "974213ef-1ba0-40e5-bc7b-52ef099e9e09",
+        "name": "Nickel"
+      }
+    },
+    {
+      "source": {
+        "uuid": "f09c3144-a268-4bed-8ca2-63005b6ef75f",
+        "name": "Nickel, Ni 2.5E+0%, in mixed ore"
+      },
+      "target": {
+        "uuid": "974213ef-1ba0-40e5-bc7b-52ef099e9e09",
+        "name": "Nickel"
+      }
+    },
+    {
+      "source": {
+        "uuid": "669ab0eb-c020-4b98-bfe4-e0989013121a",
+        "name": "Palladium, Pd 1.6E-6%, in mixed ore"
+      },
+      "target": {
+        "uuid": "edc69c63-a776-4dbf-acbf-e0368914980a",
+        "name": "Palladium"
+      }
+    },
+    {
+      "source": {
+        "uuid": "4b8ac2cb-3fa6-4047-a9ab-183d9e63ccac",
+        "name": "Pd, Pd 2.0E-4%, Pt 4.8E-4%, Rh 2.4E-5%, Ni 3.7E-2%, Cu 5.2E-2% in ore"
+      },
+      "target": {
+        "uuid": "edc69c63-a776-4dbf-acbf-e0368914980a",
+        "name": "Palladium"
+      }
+    },
+    {
+      "source": {
+        "uuid": "535bbc83-033b-42fe-9a68-8dc9eb420385",
+        "name": "Pd, Pd 7.3E-4%, Pt 2.5E-4%, Rh 2.0E-5%, Ni 2.3E+0%, Cu 3.2E+0% in ore"
+      },
+      "target": {
+        "uuid": "edc69c63-a776-4dbf-acbf-e0368914980a",
+        "name": "Palladium"
+      }
+    },
+    {
+      "source": {
+        "uuid": "a64e65fe-3c33-44f1-bd2d-ab7fac07653f",
+        "name": "Phosphorus, 18% in apatite, 12% in crude ore"
+      },
+      "target": {
+        "uuid": "483ae3c5-4eb0-46e4-b811-a72ad391716b",
+        "name": "Phosphorus"
+      }
+    },
+    {
+      "source": {
+        "uuid": "9a7380d1-6e23-48ad-b35a-14bd1ecb3133",
+        "name": "Phosphorus, 18% in apatite, 4% in crude ore"
+      },
+      "target": {
+        "uuid": "483ae3c5-4eb0-46e4-b811-a72ad391716b",
+        "name": "Phosphorus"
+      }
+    },
+    {
+      "source": {
+        "uuid": "68be4a67-89e0-4cfe-a089-fa8706de230e",
+        "name": "Platinum, Pt 4.7E-7%, in mixed ore"
+      },
+      "target": {
+        "uuid": "d13b2665-505d-49e2-8edd-dc966b0342af",
+        "name": "Platinum"
+      }
+    },
+    {
+      "source": {
+        "uuid": "909bc093-18b2-4a7e-8131-16f68eebc193",
+        "name": "Praseodymium, 0.42% in bastnasite, 0.042% in crude ore"
+      },
+      "target": {
+        "uuid": "35da65ff-7287-571d-b859-13d398ac5182",
+        "name": "Praseodymium"
+      }
+    },
+    {
+      "source": {
+        "uuid": "3250f566-58bc-46d3-ab88-1d2e23ca3e1b",
+        "name": "Pt, Pt 2.5E-4%, Pd 7.3E-4%, Rh 2.0E-5%, Ni 2.3E+0%, Cu 3.2E+0% in ore"
+      },
+      "target": {
+        "uuid": "d13b2665-505d-49e2-8edd-dc966b0342af",
+        "name": "Platinum"
+      }
+    },
+    {
+      "source": {
+        "uuid": "636a8446-9899-43a6-b4bf-213f25d69c88",
+        "name": "Pt, Pt 4.8E-4%, Pd 2.0E-4%, Rh 2.4E-5%, Ni 3.7E-2%, Cu 5.2E-2% in ore"
+      },
+      "target": {
+        "uuid": "d13b2665-505d-49e2-8edd-dc966b0342af",
+        "name": "Platinum"
+      }
+    },
+    {
+      "source": {
+        "uuid": "7005a356-23d8-4d38-9dbc-fa75401b400e",
+        "name": "Rh, Rh 2.0E-5%, Pt 2.5E-4%, Pd 7.3E-4%, Ni 2.3E+0%, Cu 3.2E+0% in ore"
+      },
+      "target": {
+        "uuid": "4803f22f-6950-489b-914d-fa953a8081f6",
+        "name": "Rhodium"
+      }
+    },
+    {
+      "source": {
+        "uuid": "f7360584-688a-4b6f-bc4a-db00a1e7b022",
+        "name": "Rh, Rh 2.4E-5%, Pt 4.8E-4%, Pd 2.0E-4%, Ni 3.7E-2%, Cu 5.2E-2% in ore"
+      },
+      "target": {
+        "uuid": "4803f22f-6950-489b-914d-fa953a8081f6",
+        "name": "Rhodium"
+      }
+    },
+    {
+      "source": {
+        "uuid": "a3930b4d-74da-4489-9a50-d175c25d4fe8",
+        "name": "Rhenium, in crude ore"
+      },
+      "target": {
+        "uuid": "a2e6fb74-b047-5697-b5dd-e28cc68f29e6",
+        "name": "Rhenium"
+      }
+    },
+    {
+      "source": {
+        "uuid": "ba2da2fe-3420-45d1-9d1b-58b9e99714eb",
+        "name": "Rhodium, Rh 1.6E-7%, in mixed ore"
+      },
+      "target": {
+        "uuid": "4803f22f-6950-489b-914d-fa953a8081f6",
+        "name": "Rhodium"
+      }
+    },
+    {
+      "source": {
+        "uuid": "f46130cc-dbd4-4a3b-a537-5efbcd89063f",
+        "name": "Samarium, 0.3% in bastnasite, 0.03% in crude ore"
+      },
+      "target": {
+        "uuid": "cf791833-26bc-5207-a9bd-6ddcd8ac7625",
+        "name": "Samarium"
+      }
+    },
+    {
+      "source": {
+        "uuid": "c15f6c4d-bf7a-4a7c-91c6-53aad6a630a8",
+        "name": "Silver, 0.007% in sulfide, Ag 0.004%, Pb, Zn, Cd, In"
+      },
+      "target": {
+        "uuid": "361a64cb-ab76-4a72-9ea1-c07d6a20c124",
+        "name": "Silver"
+      }
+    },
+    {
+      "source": {
+        "uuid": "bc153c00-6c93-412f-aadc-750f2fc6f9c7",
+        "name": "Silver, 0.01% in crude ore"
+      },
+      "target": {
+        "uuid": "361a64cb-ab76-4a72-9ea1-c07d6a20c124",
+        "name": "Silver"
+      }
+    },
+    {
+      "source": {
+        "uuid": "14946240-b1ee-412c-b900-ed5728a4e684",
+        "name": "Silver, 3.2ppm in sulfide, Ag 1.2ppm, Cu and Te, in crude ore"
+      },
+      "target": {
+        "uuid": "361a64cb-ab76-4a72-9ea1-c07d6a20c124",
+        "name": "Silver"
+      }
+    },
+    {
+      "source": {
+        "uuid": "ed8c57b5-6012-4f21-8b70-92a85923786a",
+        "name": "Silver, Ag 1.5E-4%, Au 6.8E-4%, in ore"
+      },
+      "target": {
+        "uuid": "361a64cb-ab76-4a72-9ea1-c07d6a20c124",
+        "name": "Silver"
+      }
+    },
+    {
+      "source": {
+        "uuid": "adfff256-b19a-4083-9783-ffbc7a7cb437",
+        "name": "Silver, Ag 1.5E-5%, Au 5.4E-4%, in ore"
+      },
+      "target": {
+        "uuid": "361a64cb-ab76-4a72-9ea1-c07d6a20c124",
+        "name": "Silver"
+      }
+    },
+    {
+      "source": {
+        "uuid": "45ed0c16-0e34-45f1-8bf9-3b1ce8489e73",
+        "name": "Silver, Ag 1.8E-6%, in mixed ore"
+      },
+      "target": {
+        "uuid": "361a64cb-ab76-4a72-9ea1-c07d6a20c124",
+        "name": "Silver"
+      }
+    },
+    {
+      "source": {
+        "uuid": "d02343bd-b00d-4fb3-9bda-2e8183f3b012",
+        "name": "Silver, Ag 2.1E-4%, Au 2.1E-4%, in ore"
+      },
+      "target": {
+        "uuid": "361a64cb-ab76-4a72-9ea1-c07d6a20c124",
+        "name": "Silver"
+      }
+    },
+    {
+      "source": {
+        "uuid": "d76320f7-6761-4864-92a6-660fa3453ffa",
+        "name": "Silver, Ag 4.2E-3%, Au 1.1E-4%, in ore"
+      },
+      "target": {
+        "uuid": "361a64cb-ab76-4a72-9ea1-c07d6a20c124",
+        "name": "Silver"
+      }
+    },
+    {
+      "source": {
+        "uuid": "6f70e7c7-ef61-4489-b4f3-157e7e8541ef",
+        "name": "Silver, Ag 4.6E-5%, Au 1.3E-4%, in ore"
+      },
+      "target": {
+        "uuid": "361a64cb-ab76-4a72-9ea1-c07d6a20c124",
+        "name": "Silver"
+      }
+    },
+    {
+      "source": {
+        "uuid": "eaa3e9d4-68d6-4267-a7a5-48b141c3861e",
+        "name": "Silver, Ag 5.4E-3%, in mixed ore"
+      },
+      "target": {
+        "uuid": "361a64cb-ab76-4a72-9ea1-c07d6a20c124",
+        "name": "Silver"
+      }
+    },
+    {
+      "source": {
+        "uuid": "781dda0c-ffeb-4664-9667-7506ce6269b9",
+        "name": "Silver, Ag 7.6E-5%, Au 9.7E-5%, in ore"
+      },
+      "target": {
+        "uuid": "361a64cb-ab76-4a72-9ea1-c07d6a20c124",
+        "name": "Silver"
+      }
+    },
+    {
+      "source": {
+        "uuid": "cfaa80f4-8e19-4fd6-942a-eaea14812896",
+        "name": "Silver, Ag 9.7E-4%, in mixed ore"
+      },
+      "target": {
+        "uuid": "361a64cb-ab76-4a72-9ea1-c07d6a20c124",
+        "name": "Silver"
+      }
+    },
+    {
+      "source": {
+        "uuid": "d80610f2-df83-4e2a-9dc3-f74fced6577f",
+        "name": "Sylvite, 25 % in sylvinite"
+      },
+      "target": {
+        "uuid": "b1e13de6-e0a4-56b6-b096-7ab1171d60e3",
+        "name": "Sylvite"
+      }
+    },
+    {
+      "source": {
+        "uuid": "5f1d740e-804d-4080-8ef9-aeaa0d8e1115",
+        "name": "Tantalum, 81.9% in tantalite, 1.6E-4% in crude ore"
+      },
+      "target": {
+        "uuid": "775fdf03-b0bb-5c25-b14d-107231d5b2f0",
+        "name": "Tantalum"
+      }
+    },
+    {
+      "source": {
+        "uuid": "7a81cd45-7f4c-40b3-989c-6a65f42df999",
+        "name": "Tellurium, 0.5ppm in sulfide, Te 0.2ppm, Cu and Ag, in crude ore"
+      },
+      "target": {
+        "uuid": "7b6da1f2-e191-5a77-ae06-af96201f5803",
+        "name": "Tellurium"
+      }
+    },
+    {
+      "source": {
+        "uuid": "31b4eea9-640e-4056-ac2f-0555627af18a",
+        "name": "Tin, 79% in cassiterite, 0.1% in crude ore"
+      },
+      "target": {
+        "uuid": "53d5ef26-66d8-4536-afa2-2f6b114189ba",
+        "name": "Tin"
+      }
+    },
+    {
+      "source": {
+        "uuid": "90a94ea5-bca4-483d-a591-2e886c0ff47f",
+        "name": "TiO2, 54% in ilmenite, 18% in crude ore"
+      },
+      "target": {
+        "uuid": "2f033407-6060-4e1e-868c-9f362d10fdb2",
+        "name": "Titanium"
+      },
+      "allocation": 0.599,
+      "comment": "To be modelled as pure elements, the titanium content of titanium dioxide is 0.599."
+    },
+    {
+      "source": {
+        "uuid": "78cd4852-e7b9-4301-adf7-51e730b0356a",
+        "name": "TiO2, 54% in ilmenite, 2.6% in crude ore"
+      },
+      "target": {
+        "uuid": "2f033407-6060-4e1e-868c-9f362d10fdb2",
+        "name": "Titanium"
+      },
+      "allocation": 0.599,
+      "comment": "To be modelled as pure elements, the titanium content of titanium dioxide is 0.599."
+    },
+    {
+      "source": {
+        "uuid": "ec0fa5ce-51b4-4792-a8e8-c4ee668eddc3",
+        "name": "TiO2, 95% in rutile, 0.40% in crude ore"
+      },
+      "target": {
+        "uuid": "2f033407-6060-4e1e-868c-9f362d10fdb2",
+        "name": "Titanium"
+      },
+      "allocation": 0.599,
+      "comment": "To be modelled as pure elements, the titanium content of titanium dioxide is 0.599."
+    },
+    {
+      "source": {
+        "uuid": "3faef344-9e52-47a3-a317-e17b824cc540",
+        "name": "Zinc, 9.0% in sulfide, Zn 5.3%, Pb, Ag, Cd, In"
+      },
+      "target": {
+        "uuid": "be73218b-18af-492e-96e6-addd309d1e32",
+        "name": "Zinc"
+      }
+    },
+    {
+      "source": {
+        "uuid": "f8f1ba14-9934-4678-8a78-e2cf1fce7775",
+        "name": "Zinc, Zn 0.63%, in mixed ore"
+      },
+      "target": {
+        "uuid": "be73218b-18af-492e-96e6-addd309d1e32",
+        "name": "Zinc"
+      }
+    },
+    {
+      "source": {
+        "uuid": "c3b2ba62-b158-47b1-8e1e-e76156e5292a",
+        "name": "Zinc, Zn 3.1%, in mixed ore"
+      },
+      "target": {
+        "uuid": "be73218b-18af-492e-96e6-addd309d1e32",
+        "name": "Zinc"
+      }
+    },
+    {
+      "source": {
+        "uuid": "fcee6eab-e906-4ddf-bc14-2b131b937893",
+        "name": "Zirconium, 50% in zircon, 0.39% in crude ore"
+      },
+      "target": {
+        "uuid": "cd2932c5-a486-4bf1-99b8-815d8a7ce11a",
+        "name": "Zirconium"
+      }
+    },
+    {
+      "source": {
+        "uuid": "77db8bd1-5a69-465c-b51f-7b27fbb574a5",
+        "name": "1,2-Dichlorobenzene"
+      },
+      "target": {
+        "uuid": "b1c36287-329c-49f0-93c2-68246d34007c",
+        "name": "1,2-Dichlorobenzene"
+      }
+    },
+    {
+      "source": {
+        "uuid": "90653a29-2f53-4b1b-88bd-9ae2fe64a8d6",
+        "name": "1,4-Butanediol"
+      },
+      "target": {
+        "uuid": "09db39be-d9a6-4fc3-8d25-1f80b23e9131",
+        "name": "1,4-Butanediol"
+      }
+    },
+    {
+      "source": {
+        "uuid": "b78e77cb-7636-4420-855e-17239984f8b3",
+        "name": "1-Pentanol"
+      },
+      "target": {
+        "uuid": "048baf1e-6cdc-44a5-92e2-32d15ff54885",
+        "name": "1-Pentanol"
+      }
+    },
+    {
+      "source": {
+        "uuid": "87eed31b-5a6b-43ae-9a02-778a8c6e4ff8",
+        "name": "1-Pentene"
+      },
+      "target": {
+        "uuid": "651cbfbb-3027-4e20-a5b0-4a67e86e837a",
+        "name": "1-Pentene"
+      }
+    },
+    {
+      "source": {
+        "uuid": "c43cede7-18e7-49a4-aaf1-574975584a1b",
+        "name": "2-Aminopropanol"
+      },
+      "target": {
+        "uuid": "3e07d825-a98e-4cdc-afa3-610fa7739261",
+        "name": "2-Aminopropanol"
+      }
+    },
+    {
+      "source": {
+        "uuid": "17f06f74-feea-4b7c-a125-a67ae6e1dcfb",
+        "name": "2-Methyl-1-propanol"
+      },
+      "target": {
+        "uuid": "47bee45d-6d2b-48a6-a0c8-fcb8debc7f5d",
+        "name": "2-Methyl-1-propanol"
+      }
+    },
+    {
+      "source": {
+        "uuid": "f9501098-4a8e-4cd1-98b7-00afbac477a4",
+        "name": "2-Methyl-2-butene"
+      },
+      "target": {
+        "uuid": "4e44630f-4197-4f05-809f-0fef07fba7d3",
+        "name": "2-Methyl-2-butene"
+      }
+    },
+    {
+      "source": {
+        "uuid": "a9afc2a9-9479-44b6-afcf-23f305bb261c",
+        "name": "2-Methylpentane"
+      },
+      "target": {
+        "uuid": "059e6a26-7035-4621-a360-c71c5778eec8",
+        "name": "2-Methylpentane"
+      }
+    },
+    {
+      "source": {
+        "uuid": "878099e4-3f82-4ec6-88c5-1acd745bf01a",
+        "name": "2-Nitrobenzoic acid"
+      },
+      "target": {
+        "uuid": "98d3f159-b420-4e43-aab5-4fd093b82429",
+        "name": "2-Nitrobenzoic acid"
+      }
+    },
+    {
+      "source": {
+        "uuid": "1cd24bc8-53b9-43e8-ad58-4438c9244a10",
+        "name": "2-Propanol"
+      },
+      "target": {
+        "uuid": "479edec6-763c-49fc-83f8-49780f08cf29",
+        "name": "2-Propanol"
+      }
+    },
+    {
+      "source": {
+        "uuid": "f792a1df-81cb-4c95-8c4a-e0626701e619",
+        "name": "3-Methyl-1-butanol"
+      },
+      "target": {
+        "uuid": "1eefb686-03de-4dc8-933a-e3b7459438da",
+        "name": "3-Methyl-1-butanol"
+      }
+    },
+    {
+      "source": {
+        "uuid": "a6dd536a-5443-4c23-bb5e-60f0fa68af13",
+        "name": "4-Methyl-2-pentanone"
+      },
+      "target": {
+        "uuid": "53214ef0-3cc1-4166-920b-08ca46f7c457",
+        "name": "4-Methyl-2-pentanone"
+      }
+    },
+    {
+      "source": {
+        "uuid": "f6432a5a-eb35-4395-9909-5d0e17296681",
+        "name": "Acenaphthene"
+      },
+      "target": {
+        "uuid": "1f4afa32-a9a2-40da-8396-104452cb637f",
+        "name": "Acenaphthene"
+      }
+    },
+    {
+      "source": {
+        "uuid": "43a7e8ef-634e-401b-92f1-32cb42f226ac",
+        "name": "Acetaldehyde"
+      },
+      "target": {
+        "uuid": "e3e8f6a2-c45e-4685-9859-698b2eadaf5b",
+        "name": "Acetaldehyde"
+      }
+    },
+    {
+      "source": {
+        "uuid": "f53378fe-3e04-4f74-9a08-bea2a6332b67",
+        "name": "Acetic acid"
+      },
+      "target": {
+        "uuid": "d157416d-db9b-4f88-a7f3-a9a5f1ea88f2",
+        "name": "Acetic acid"
+      }
+    },
+    {
+      "source": {
+        "uuid": "66d62655-2b96-4e07-84f6-721f4a3e3ec7",
+        "name": "Acetic acid, trifluoro-"
+      },
+      "target": {
+        "uuid": "d4f209e8-335f-4a2f-9384-77a23fbc7dee",
+        "name": "Acetic acid, trifluoro-"
+      }
+    },
+    {
+      "source": {
+        "uuid": "a765d3a1-65c6-4544-8487-b3104b937568",
+        "name": "Acetone"
+      },
+      "target": {
+        "uuid": "f3d5fd96-8805-4d3d-867a-5df27975b07f",
+        "name": "Acetone"
+      }
+    },
+    {
+      "source": {
+        "uuid": "590475cc-79c7-4398-8fc7-d2bcb396d9ee",
+        "name": "Acetonitrile"
+      },
+      "target": {
+        "uuid": "ff45a199-18e0-4777-886b-e2d0422d2f82",
+        "name": "Acetonitrile"
+      }
+    },
+    {
+      "source": {
+        "uuid": "1ccc25c5-f5c0-4deb-b34a-965ccbaa4caa",
+        "name": "Acrolein"
+      },
+      "target": {
+        "uuid": "d896ced7-a107-4017-b284-d95a8ef3e735",
+        "name": "Acrolein"
+      }
+    },
+    {
+      "source": {
+        "uuid": "f6b4242e-ea42-4d2e-b7c1-ba8e9ed2fbb0",
+        "name": "Acrylic acid"
+      },
+      "target": {
+        "uuid": "faca26d7-b953-4dd6-94a9-7b8975452e1c",
+        "name": "Acrylic acid"
+      }
+    },
+    {
+      "source": {
+        "uuid": "9808cb2d-f1d8-41c2-9a8d-74d5092b27ec",
+        "name": "Acrylonitrile"
+      },
+      "target": {
+        "uuid": "981ea86a-b527-4e29-b092-f16d2cd57e45",
+        "name": "Acrylonitrile"
+      }
+    },
+    {
+      "source": {
+        "uuid": "c56df4f7-c9e9-4892-a045-4b2fb93ff297",
+        "name": "Actinides, radioactive, unspecified"
+      },
+      "target": {
+        "uuid": "d3805249-4c8b-48fb-8843-a7765b8d1322",
+        "name": "Actinides, radioactive, unspecified"
+      }
+    },
+    {
+      "source": {
+        "uuid": "e0a9f6c3-eee7-4a77-82fd-6a64af73a790",
+        "name": "Aerosols, radioactive, unspecified"
+      },
+      "target": {
+        "uuid": "cec0687d-7d44-4e80-ae2f-428c2664d66d",
+        "name": "Aerosols, radioactive, unspecified"
+      }
+    },
+    {
+      "source": {
+        "uuid": "ac07bb4a-a492-45b3-9a07-4ab9b8959374",
+        "name": "Aldehydes, unspecified"
+      },
+      "target": {
+        "uuid": "06f0a67c-ec68-435d-8c32-0decd79a4a1a",
+        "name": "Aldehydes, unspecified"
+      }
+    },
+    {
+      "source": {
+        "uuid": "d96403bf-902e-4b7a-8ffd-32fe09e4017f",
+        "name": "Aluminium III"
+      },
+      "target": {
+        "uuid": "ff65658c-2d39-44a2-b23e-7ec3c644f064",
+        "name": "Aluminium III"
+      }
+    },
+    {
+      "source": {
+        "uuid": "ce11d77b-c85a-4f03-816e-714dcda260ea",
+        "name": "Americium-241"
+      },
+      "target": {
+        "uuid": "a0e98cdc-79cd-4073-9713-c1a48238883a",
+        "name": "Americium-241"
+      }
+    },
+    {
+      "source": {
+        "uuid": "8494ed3c-0416-4aa5-b100-51a2b2bcadbd",
+        "name": "Ammonia"
+      },
+      "target": {
+        "uuid": "87883a4e-1e3e-4c9d-90c0-f1bea36f8014",
+        "name": "Ammonia"
+      }
+    },
+    {
+      "source": {
+        "uuid": "73ec59d7-a227-407f-963a-fd9c61b4d172",
+        "name": "Ammonium carbonate"
+      },
+      "target": {
+        "uuid": "c36f35d1-e815-4c85-8686-1a2d21264a2c",
+        "name": "Ammonium carbonate"
+      }
+    },
+    {
+      "source": {
+        "uuid": "62e75c30-0933-4b72-a2ec-6251b7ab8e67",
+        "name": "Aniline"
+      },
+      "target": {
+        "uuid": "ffcd4d88-aeb9-491c-ae8c-98838ed38b4d",
+        "name": "Aniline"
+      }
+    },
+    {
+      "source": {
+        "uuid": "cb03e520-4102-4fdf-a904-300f60e88151",
+        "name": "Anthranilic acid"
+      },
+      "target": {
+        "uuid": "9495989d-ca0f-4c30-a301-9aa8ae006676",
+        "name": "Anthranilic acid"
+      }
+    },
+    {
+      "source": {
+        "uuid": "49803ad0-9ca2-4507-a5ea-f152d16c929d",
+        "name": "Antimony ion"
+      },
+      "target": {
+        "uuid": "77927dac-dea3-429d-a434-d5a71d92c4f7",
+        "name": "Antimony ion"
+      }
+    },
+    {
+      "source": {
+        "uuid": "f7236656-9c75-47c1-8435-26283fd5d58b",
+        "name": "Antimony-124"
+      },
+      "target": {
+        "uuid": "8cd82962-d90f-409a-b3c1-961d5365d338",
+        "name": "Antimony-124"
+      }
+    },
+    {
+      "source": {
+        "uuid": "b2466957-a3f8-4b31-8b95-3f5e6f99b594",
+        "name": "Antimony-125"
+      },
+      "target": {
+        "uuid": "9314fbdb-a2c7-466b-bb6c-61c89f09df51",
+        "name": "Antimony-125"
+      }
+    },
+    {
+      "source": {
+        "uuid": "4af1e88c-f848-4b3e-8a58-20c14de505d9",
+        "name": "Argon-41"
+      },
+      "target": {
+        "uuid": "e7edd471-6c72-42b0-8c2b-8dc9f1959c63",
+        "name": "Argon-41"
+      }
+    },
+    {
+      "source": {
+        "uuid": "cfce0b1a-2873-46fa-8e12-afb5a4213886",
+        "name": "Arsenic ion"
+      },
+      "target": {
+        "uuid": "dc6dbdaa-9f13-43a8-8af5-6603688c6ad0",
+        "name": "Arsenic ion"
+      }
+    },
+    {
+      "source": {
+        "uuid": "652c8dd0-bc61-4ac0-b15f-fa9be858645d",
+        "name": "Arsine"
+      },
+      "target": {
+        "uuid": "aeae7594-af69-46d2-9965-8c235b5c3fe3",
+        "name": "Arsine"
+      }
+    },
+    {
+      "source": {
+        "uuid": "98267bbc-0591-4eb8-8581-2231208c548d",
+        "name": "Barium II"
+      },
+      "target": {
+        "uuid": "7e246e3a-5cff-43fc-a8e6-02d191424559",
+        "name": "Barium II"
+      }
+    },
+    {
+      "source": {
+        "uuid": "e00fd1b8-6eb9-43c2-b6b1-2f6a7d37f981",
+        "name": "Barium-140"
+      },
+      "target": {
+        "uuid": "634463b6-08b4-487a-b0af-4e19fbe8bca2",
+        "name": "Barium-140"
+      }
+    },
+    {
+      "source": {
+        "uuid": "525f6850-5f34-447c-9132-cde666d12b52",
+        "name": "Benzal chloride"
+      },
+      "target": {
+        "uuid": "a65f4744-f555-44cb-8534-aa5adc72d7a7",
+        "name": "Benzal chloride"
+      }
+    },
+    {
+      "source": {
+        "uuid": "4c08620f-1001-43b2-a42c-e02163ac41a3",
+        "name": "Benzaldehyde"
+      },
+      "target": {
+        "uuid": "10d26189-a688-4859-8aa9-525e058a07f0",
+        "name": "Benzaldehyde"
+      }
+    },
+    {
+      "source": {
+        "uuid": "eb15dd66-43ee-4161-ac90-2cd6d19ca72d",
+        "name": "Benzene"
+      },
+      "target": {
+        "uuid": "28999907-a8a7-45b3-857e-836495ca2aa0",
+        "name": "Benzene"
+      }
+    },
+    {
+      "source": {
+        "uuid": "9b60f739-1e89-4e4f-a786-a8086058e656",
+        "name": "Benzene, ethyl-"
+      },
+      "target": {
+        "uuid": "88ef28f1-cfd5-44a0-ac34-01acf2db84a0",
+        "name": "Benzene, ethyl-"
+      }
+    },
+    {
+      "source": {
+        "uuid": "fcd292e0-69dd-4093-9cd4-ff2e0b8c9b69",
+        "name": "Benzene, hexachloro-"
+      },
+      "target": {
+        "uuid": "04f42988-6207-4d09-a91f-155be8d27eb0",
+        "name": "Benzene, hexachloro-"
+      }
+    },
+    {
+      "source": {
+        "uuid": "0cc9c42e-7ebf-4f34-b90f-cc3f6b5aa9a6",
+        "name": "Benzene, pentachloro-"
+      },
+      "target": {
+        "uuid": "6a9ef0ac-2a82-492b-90f7-7f8d09995bbc",
+        "name": "Benzene, pentachloro-"
+      }
+    },
+    {
+      "source": {
+        "uuid": "4e054ec3-6e16-4544-8ef8-69b22414adf6",
+        "name": "Benzo(a)pyrene"
+      },
+      "target": {
+        "uuid": "5e13c2ab-5466-4ff5-816d-702dfdf25f76",
+        "name": "Benzo(a)pyrene"
+      }
+    },
+    {
+      "source": {
+        "uuid": "a2b3bbb7-53ec-44e5-a184-9689f356235b",
+        "name": "Beryllium II"
+      },
+      "target": {
+        "uuid": "20557d93-2b1c-49b5-b6c0-3528a8bbc307",
+        "name": "Beryllium II"
+      }
+    },
+    {
+      "source": {
+        "uuid": "3d07d5f0-4ee5-4803-a5a3-6ad8f89bf4b1",
+        "name": "Boric acid"
+      },
+      "target": {
+        "uuid": "f19d8e53-09ab-45fa-a7c1-f7da101dab3e",
+        "name": "Boric acid"
+      }
+    },
+    {
+      "source": {
+        "uuid": "2ffd26c6-0d3d-4379-9da2-2b578807a14b",
+        "name": "Boron"
+      },
+      "target": {
+        "uuid": "b8fc2875-a1ce-4a7c-a73d-6ba5b26319d3",
+        "name": "Boron"
+      }
+    },
+    {
+      "source": {
+        "uuid": "5128d076-e7a6-4bba-9a3a-432b2bce31fd",
+        "name": "Boron carbide"
+      },
+      "target": {
+        "uuid": "4c0d236e-e50f-409e-b84b-b053da3394fa",
+        "name": "Boron carbide"
+      }
+    },
+    {
+      "source": {
+        "uuid": "0bb03c13-6035-4e0c-88a7-2c7d0bcd4125",
+        "name": "Boron trifluoride"
+      },
+      "target": {
+        "uuid": "8e7d8523-2761-4eb1-a55a-958be4b0d23b",
+        "name": "Boron trifluoride"
+      }
+    },
+    {
+      "source": {
+        "uuid": "4cb5fe3d-123b-4ae3-8ead-e3825fddf58e",
+        "name": "Bromine"
+      },
+      "target": {
+        "uuid": "c24f5894-f95e-4661-ba76-130397348894",
+        "name": "Bromine"
+      }
+    },
+    {
+      "source": {
+        "uuid": "91c76c8e-d725-475d-9be6-a90b99747075",
+        "name": "Butadiene"
+      },
+      "target": {
+        "uuid": "5064da53-d4ec-44ee-ba23-b20a4f8c4964",
+        "name": "Butadiene"
+      }
+    },
+    {
+      "source": {
+        "uuid": "66ff5d22-17e2-4112-b486-3ea4e0191fba",
+        "name": "Butane"
+      },
+      "target": {
+        "uuid": "982b0510-96ac-4bcb-a758-e98006b95f4d",
+        "name": "Butane"
+      }
+    },
+    {
+      "source": {
+        "uuid": "b83f893c-f4b4-473f-bd13-a23fd300c5d1",
+        "name": "Butanol"
+      },
+      "target": {
+        "uuid": "b9a9b2ad-5db3-47aa-81de-3a48ae9ad4ec",
+        "name": "Butanol"
+      }
+    },
+    {
+      "source": {
+        "uuid": "f2663c0c-3618-4095-b8d8-9c3b5c7097fb",
+        "name": "Butene"
+      },
+      "target": {
+        "uuid": "91f6386a-af2e-4bbb-a05c-62e4483b1bcf",
+        "name": "Butene"
+      }
+    },
+    {
+      "source": {
+        "uuid": "9f7e577d-509b-4bbd-805f-3293a44fdc89",
+        "name": "Butyl acetate"
+      },
+      "target": {
+        "uuid": "da3d541f-0063-4ddf-9b0d-7ba7b8cb6ec7",
+        "name": "Butyl acetate"
+      }
+    },
+    {
+      "source": {
+        "uuid": "ac7e2a8c-bf1a-42c7-b033-179a039dd437",
+        "name": "Butyrolactone"
+      },
+      "target": {
+        "uuid": "17ae628d-e769-4aa3-a20e-9f9bad222bf2",
+        "name": "Butyrolactone"
+      }
+    },
+    {
+      "source": {
+        "uuid": "7e4fad26-2081-4b55-8acc-974dafafeed8",
+        "name": "Caesium-134"
+      },
+      "target": {
+        "uuid": "4f2051b8-22e6-4592-8803-1e984f8fa61b",
+        "name": "Caesium-134"
+      }
+    },
+    {
+      "source": {
+        "uuid": "3a08acee-6c03-4335-b14f-4b51a2945a6f",
+        "name": "Caesium-137"
+      },
+      "target": {
+        "uuid": "7b87ce50-ede0-40fa-a3ee-5f72553af0e7",
+        "name": "Caesium-137"
+      }
+    },
+    {
+      "source": {
+        "uuid": "b24b66e6-633c-49bf-a6ce-1e81da0715ce",
+        "name": "Calcium"
+      },
+      "target": {
+        "uuid": "b87016c6-ac91-4414-98ce-fb665e0a6d2e",
+        "name": "Calcium"
+      }
+    },
+    {
+      "source": {
+        "uuid": "411d78df-01f8-4a5f-8d13-92670620b934",
+        "name": "Calcium hydroxide"
+      },
+      "target": {
+        "uuid": "5c2957fe-5790-4bbe-a7f1-06be8e6fb89a",
+        "name": "Calcium hydroxide"
+      }
+    },
+    {
+      "source": {
+        "uuid": "6d89125e-e9b7-4d7e-a1fc-ada45dbd8815",
+        "name": "Carbon dioxide, from soil or biomass stock"
+      },
+      "target": {
+        "uuid": "e4e9febc-07c1-403d-8d3a-6707bb4d96e6",
+        "name": "Carbon dioxide, from soil or biomass stock"
+      }
+    },
+    {
+      "source": {
+        "uuid": "4e1f0bb0-2703-4303-bf86-972d810612cf",
+        "name": "Carbon dioxide, non-fossil"
+      },
+      "target": {
+        "uuid": "eba59fd6-f37e-41dc-9ca3-c7ea22d602c7",
+        "name": "Carbon dioxide, non-fossil"
+      }
+    },
+    {
+      "source": {
+        "uuid": "a0399529-bdc0-49bc-a09b-9aea421fbd34",
+        "name": "Carbon disulfide"
+      },
+      "target": {
+        "uuid": "d94a5a1a-bc06-48fd-b6d9-7477ea65cacd",
+        "name": "Carbon disulfide"
+      }
+    },
+    {
+      "source": {
+        "uuid": "e1da7e11-cc2c-4ea2-a42a-bf558150014b",
+        "name": "Carbon monoxide, from soil or biomass stock"
+      },
+      "target": {
+        "uuid": "69a6c884-39be-444f-a67c-7436a5e66de2",
+        "name": "Carbon monoxide, from soil or biomass stock"
+      }
+    },
+    {
+      "source": {
+        "uuid": "968495ec-1000-438a-9e11-467776ebb54e",
+        "name": "Carbon monoxide, non-fossil"
+      },
+      "target": {
+        "uuid": "2cb2333c-1599-46cf-8435-3dffce627524",
+        "name": "Carbon monoxide, non-fossil"
+      }
+    },
+    {
+      "source": {
+        "uuid": "6e7276bb-64f5-4421-8696-b0103b687ddd",
+        "name": "Carbon-14"
+      },
+      "target": {
+        "uuid": "bfc66f26-0b11-4e6e-9e8c-2bfde24dc23c",
+        "name": "Carbon-14"
+      }
+    },
+    {
+      "source": {
+        "uuid": "54ec40c4-c612-43f2-b6bb-222f93fe0771",
+        "name": "Cerium-141"
+      },
+      "target": {
+        "uuid": "c9e7bf95-483c-469c-8d21-9012f926b3b0",
+        "name": "Cerium-141"
+      }
+    },
+    {
+      "source": {
+        "uuid": "e9935076-7617-4f7d-82dc-e0b842f4a78e",
+        "name": "Cerium-144"
+      },
+      "target": {
+        "uuid": "8aed2c21-f23c-4b4b-877e-69c2aa519a47",
+        "name": "Cerium-144"
+      }
+    },
+    {
+      "source": {
+        "uuid": "339edacb-b552-4ac4-b5ed-db6192e1925a",
+        "name": "Chloramine"
+      },
+      "target": {
+        "uuid": "643e2fb1-a875-40a8-aaf5-ea4bde9a4872",
+        "name": "Chloramine"
+      }
+    },
+    {
+      "source": {
+        "uuid": "fb598112-aae8-4185-b71e-0a8f2c631aac",
+        "name": "Chlorine"
+      },
+      "target": {
+        "uuid": "39d1390a-ded6-41cb-a536-d47510bf2fbc",
+        "name": "Chlorine"
+      }
+    },
+    {
+      "source": {
+        "uuid": "666ba6f3-014c-4e96-b660-bcb5daa18798",
+        "name": "Chloroacetic acid"
+      },
+      "target": {
+        "uuid": "9eb7a71d-0e15-4cf3-b8db-4b2ccf87380a",
+        "name": "Chloroacetic acid"
+      }
+    },
+    {
+      "source": {
+        "uuid": "20750a37-320b-48cb-9fd4-366a86fcd6d6",
+        "name": "Chloroethylene"
+      },
+      "target": {
+        "uuid": "2a51889e-9264-45df-9753-64c25a755d9e",
+        "name": "Chloroethylene"
+      }
+    },
+    {
+      "source": {
+        "uuid": "98af3079-fb76-488d-8afe-713814e14d36",
+        "name": "Chloroform"
+      },
+      "target": {
+        "uuid": "fbf6ab3a-74e3-4cbe-b61d-959728bdce46",
+        "name": "Chloroform"
+      }
+    },
+    {
+      "source": {
+        "uuid": "b0cfe7ff-d676-440b-a113-414b733daaf8",
+        "name": "Chlorosilane, trimethyl-"
+      },
+      "target": {
+        "uuid": "fa442f6a-4fc6-4c57-942b-c84c6c41c8b4",
+        "name": "Chlorosilane, trimethyl-"
+      }
+    },
+    {
+      "source": {
+        "uuid": "514de41e-c977-4ae7-8fe8-86a29791fee4",
+        "name": "Chlorosulfonic acid"
+      },
+      "target": {
+        "uuid": "19e10755-75cf-4518-98c3-624201ac089f",
+        "name": "Chlorosulfonic acid"
+      }
+    },
+    {
+      "source": {
+        "uuid": "abbd3b09-a7ec-435a-9d01-34cf8581739e",
+        "name": "Chromium VI"
+      },
+      "target": {
+        "uuid": "81e17d9a-3e0b-414e-9b2e-eca7e5b3bd4a",
+        "name": "Chromium VI"
+      }
+    },
+    {
+      "source": {
+        "uuid": "0a4d49cc-8a90-4ca2-8417-468951ae232b",
+        "name": "Chromium-51"
+      },
+      "target": {
+        "uuid": "b7802a4d-3a51-4449-9e1f-39fc663cc646",
+        "name": "Chromium-51"
+      }
+    },
+    {
+      "source": {
+        "uuid": "9ce88274-57b6-42ed-a78b-4abef2301865",
+        "name": "Cobalt II"
+      },
+      "target": {
+        "uuid": "f0e28a62-ddf9-4c93-af81-676a58c3f2d4",
+        "name": "Cobalt II"
+      }
+    },
+    {
+      "source": {
+        "uuid": "1070d47d-3834-423e-9603-3626ecc162d8",
+        "name": "Cobalt-57"
+      },
+      "target": {
+        "uuid": "1d013cac-a0ec-4c02-936c-053afe24f47f",
+        "name": "Cobalt-57"
+      }
+    },
+    {
+      "source": {
+        "uuid": "40526886-fcc3-4059-b025-58e254c03233",
+        "name": "Cobalt-58"
+      },
+      "target": {
+        "uuid": "70d0e8c8-8c46-4eee-ad05-92f05e8f129e",
+        "name": "Cobalt-58"
+      }
+    },
+    {
+      "source": {
+        "uuid": "b4024357-ed17-4b19-9382-91815e67f62b",
+        "name": "Cobalt-60"
+      },
+      "target": {
+        "uuid": "ab4a11c8-14f8-40f1-8c4e-888347bb2546",
+        "name": "Cobalt-60"
+      }
+    },
+    {
+      "source": {
+        "uuid": "137f2ebc-8f8b-41fc-9ff6-d32f42565d56",
+        "name": "Cumene"
+      },
+      "target": {
+        "uuid": "a192f5ac-fb5d-4e14-ac11-3c38283da9d0",
+        "name": "Cumene"
+      }
+    },
+    {
+      "source": {
+        "uuid": "90c20168-5796-42f8-a305-c181b38ec1d4",
+        "name": "Curium alpha"
+      },
+      "target": {
+        "uuid": "7545531d-dfc2-446d-9d9b-a0a3dfaa25df",
+        "name": "Curium alpha"
+      }
+    },
+    {
+      "source": {
+        "uuid": "e0072fbb-8008-45b7-af36-834606d58cfe",
+        "name": "Curium-242"
+      },
+      "target": {
+        "uuid": "9dc200b0-6faa-4518-9787-be7db7a9e29a",
+        "name": "Curium-242"
+      }
+    },
+    {
+      "source": {
+        "uuid": "f78de285-5fdc-4d33-92bb-d2ecea2b8641",
+        "name": "Curium-244"
+      },
+      "target": {
+        "uuid": "8c64a7e7-0f81-410f-a0df-cbea124dd203",
+        "name": "Curium-244"
+      }
+    },
+    {
+      "source": {
+        "uuid": "27c1a9a6-c45e-431f-830b-7061a100fed7",
+        "name": "Cyanide"
+      },
+      "target": {
+        "uuid": "d3e038e1-728c-4dea-ac30-c9abbbfcbc84",
+        "name": "Cyanide"
+      }
+    },
+    {
+      "source": {
+        "uuid": "b3ebd051-6ad4-4741-abf3-b55cad059e2c",
+        "name": "Cyanoacetic acid"
+      },
+      "target": {
+        "uuid": "8af6a281-8879-4945-b476-550612e50527",
+        "name": "Cyanoacetic acid"
+      }
+    },
+    {
+      "source": {
+        "uuid": "f9727bf8-d8e3-432c-8feb-2dc43da4c37d",
+        "name": "Cyclohexane"
+      },
+      "target": {
+        "uuid": "165aaeac-93d1-4afd-adf2-e3d6c0eaf629",
+        "name": "Cyclohexane"
+      }
+    },
+    {
+      "source": {
+        "uuid": "e3a77fe9-4fa1-4977-93cf-3495b355817f",
+        "name": "Diborane"
+      },
+      "target": {
+        "uuid": "57655806-a54e-47ca-a8d2-9881813b7afa",
+        "name": "Diborane"
+      }
+    },
+    {
+      "source": {
+        "uuid": "67dd6e98-c44a-491d-97b1-8961777538a5",
+        "name": "Diethyl ether"
+      },
+      "target": {
+        "uuid": "22524a35-32c0-482a-82f7-49724ad1c595",
+        "name": "Diethyl ether"
+      }
+    },
+    {
+      "source": {
+        "uuid": "98adfbf6-2ab7-45fd-85cc-73318da5427d",
+        "name": "Diethylamine"
+      },
+      "target": {
+        "uuid": "34698efa-71c8-4fec-9a43-6529f45887ac",
+        "name": "Diethylamine"
+      }
+    },
+    {
+      "source": {
+        "uuid": "dbdaa334-3101-418d-bc52-8ddb066864d6",
+        "name": "Diethylene glycol"
+      },
+      "target": {
+        "uuid": "af7f6412-a55f-4799-b7bc-a3f69d0cc8cb",
+        "name": "Diethylene glycol"
+      }
+    },
+    {
+      "source": {
+        "uuid": "4f061396-da10-49b3-a7ac-ac1d2eb49fa1",
+        "name": "Dimethyl ether"
+      },
+      "target": {
+        "uuid": "acfeda73-2eee-4ca2-ad41-e8c564e75cec",
+        "name": "Dimethyl ether"
+      }
+    },
+    {
+      "source": {
+        "uuid": "07798b07-13be-41f9-b754-5b389695cf78",
+        "name": "Dimethyl malonate"
+      },
+      "target": {
+        "uuid": "f5ce0b83-d178-4f50-b1cb-844091b7f0bc",
+        "name": "Dimethyl malonate"
+      }
+    },
+    {
+      "source": {
+        "uuid": "4aecbaff-32ae-4655-9587-db9337d0d350",
+        "name": "Dimethylamine"
+      },
+      "target": {
+        "uuid": "56d00bcd-9da1-4486-bfe6-10dc0f1d4575",
+        "name": "Dimethylamine"
+      }
+    },
+    {
+      "source": {
+        "uuid": "473826ae-125a-4b02-8c8e-c84322491d80",
+        "name": "Dinitrogen monoxide"
+      },
+      "target": {
+        "uuid": "20185046-64bb-4c09-a8e7-e8a9e144ca98",
+        "name": "Dinitrogen monoxide"
+      }
+    },
+    {
+      "source": {
+        "uuid": "e385da6d-8c5a-42ff-a8fe-d18943079774",
+        "name": "Dioxins, measured as 2,3,7,8-tetrachlorodibenzo-p-dioxin"
+      },
+      "target": {
+        "uuid": "082903e4-45d8-4078-94cb-736b15279277",
+        "name": "Dioxins, measured as 2,3,7,8-tetrachlorodibenzo-p-dioxin"
+      }
+    },
+    {
+      "source": {
+        "uuid": "9102514a-4cd5-4560-a1bf-b8fe57d8c303",
+        "name": "Dipropylamine"
+      },
+      "target": {
+        "uuid": "ad273394-b76d-4c19-a140-3112bdec8524",
+        "name": "Dipropylamine"
+      }
+    },
+    {
+      "source": {
+        "uuid": "6e604e6b-d023-47d6-aedc-9d99d6296918",
+        "name": "Epichlorohydrin"
+      },
+      "target": {
+        "uuid": "d547f43d-63e3-4928-ae85-28e6fd7aabc5",
+        "name": "Epichlorohydrin"
+      }
+    },
+    {
+      "source": {
+        "uuid": "6cfec9aa-691b-4be2-940d-56e73fda16de",
+        "name": "Ethane"
+      },
+      "target": {
+        "uuid": "8e30c990-5ed4-4f94-9d0e-2f5e4ff1a1f9",
+        "name": "Ethane"
+      }
+    },
+    {
+      "source": {
+        "uuid": "421bac85-d0d7-4ace-84d1-14865baabd3c",
+        "name": "Ethane thiol"
+      },
+      "target": {
+        "uuid": "468111da-3988-4c54-b6a0-b8feb1b5e5da",
+        "name": "Ethane thiol"
+      }
+    },
+    {
+      "source": {
+        "uuid": "75fe1a2c-49fa-49e4-90f1-8f102508a96d",
+        "name": "Ethane, 1,1,1,2-tetrafluoro-, HFC-134a"
+      },
+      "target": {
+        "uuid": "e87f039d-d9ce-4242-ac18-c9284cc80f3d",
+        "name": "Ethane, 1,1,1,2-tetrafluoro-, HFC-134a"
+      }
+    },
+    {
+      "source": {
+        "uuid": "9e7d019f-c8c0-4631-9bbb-ced3e081c90d",
+        "name": "Ethane, 1,1,1-trichloro-, HCFC-140"
+      },
+      "target": {
+        "uuid": "ce6294f5-2ed7-46ee-a967-33e265e34455",
+        "name": "Ethane, 1,1,1-trichloro-, HCFC-140"
+      }
+    },
+    {
+      "source": {
+        "uuid": "5eb2d548-1694-496d-b3bd-a439984fca7d",
+        "name": "Ethane, 1,1,1-trifluoro-, HFC-143a"
+      },
+      "target": {
+        "uuid": "e86bfec2-1025-4fa2-90b1-81e35e621e91",
+        "name": "Ethane, 1,1,1-trifluoro-, HFC-143a"
+      }
+    },
+    {
+      "source": {
+        "uuid": "22317c8a-3b60-4479-8798-eec0bdfada2f",
+        "name": "Ethane, 1,1,2-trichloro-"
+      },
+      "target": {
+        "uuid": "b32061b1-8d24-4663-b10d-0a1c705f2937",
+        "name": "Ethane, 1,1,2-trichloro-"
+      }
+    },
+    {
+      "source": {
+        "uuid": "53b87932-00c8-4bf4-b519-ecd3c401ed4d",
+        "name": "Ethane, 1,1,2-trichloro-1,2,2-trifluoro-, CFC-113"
+      },
+      "target": {
+        "uuid": "cacfd448-6c2d-4061-9363-fd506b979f25",
+        "name": "Ethane, 1,1,2-trichloro-1,2,2-trifluoro-, CFC-113"
+      }
+    },
+    {
+      "source": {
+        "uuid": "8c193650-c4ae-4e9a-b25b-eaa7b2b9ea2d",
+        "name": "Ethane, 1,1-dichloro-1-fluoro-, HCFC-141b"
+      },
+      "target": {
+        "uuid": "843fd145-61ac-4fa7-a608-ce4ac4d88d49",
+        "name": "Ethane, 1,1-dichloro-1-fluoro-, HCFC-141b"
+      }
+    },
+    {
+      "source": {
+        "uuid": "fff3d2db-2784-4044-a6a2-2bc7242456ee",
+        "name": "Ethane, 1,1-difluoro-, HFC-152a"
+      },
+      "target": {
+        "uuid": "9cf9bf0e-86fe-42c0-90cc-bfed96fbdc8f",
+        "name": "Ethane, 1,1-difluoro-, HFC-152a"
+      }
+    },
+    {
+      "source": {
+        "uuid": "cab70244-9e25-42d3-b31e-ddabfd3eeb67",
+        "name": "Ethane, 1,2-dichloro-"
+      },
+      "target": {
+        "uuid": "03758df7-503a-400e-bc7b-ec05825761a5",
+        "name": "Ethane, 1,2-dichloro-"
+      }
+    },
+    {
+      "source": {
+        "uuid": "7d05319a-1260-45e0-8872-d5ff1712ea7e",
+        "name": "Ethane, 1,2-dichloro-1,1,2,2-tetrafluoro-, CFC-114"
+      },
+      "target": {
+        "uuid": "8a3a44e4-e2f1-476d-9e9e-a90fda263fe3",
+        "name": "Ethane, 1,2-dichloro-1,1,2,2-tetrafluoro-, CFC-114"
+      }
+    },
+    {
+      "source": {
+        "uuid": "1652c2e3-c6c5-49e1-9ad1-34c188087ca6",
+        "name": "Ethane, 1-chloro-1,1-difluoro-, HCFC-142b"
+      },
+      "target": {
+        "uuid": "ba781ac6-cdf1-4a09-86b5-76b19ed3438b",
+        "name": "Ethane, 1-chloro-1,1-difluoro-, HCFC-142b"
+      }
+    },
+    {
+      "source": {
+        "uuid": "2fff3bda-1eec-4166-9969-bc9e757c8e8e",
+        "name": "Ethane, 2,2-dichloro-1,1,1-trifluoro-, HCFC-123"
+      },
+      "target": {
+        "uuid": "050da0cd-2957-45a9-ae7a-ace372083fe5",
+        "name": "Ethane, 2,2-dichloro-1,1,1-trifluoro-, HCFC-123"
+      }
+    },
+    {
+      "source": {
+        "uuid": "9b7e5cbf-e1eb-420d-ad43-248df23457ee",
+        "name": "Ethane, 2-chloro-1,1,1,2-tetrafluoro-, HCFC-124"
+      },
+      "target": {
+        "uuid": "60268f3d-468b-487e-acb1-24d7250cb6b3",
+        "name": "Ethane, 2-chloro-1,1,1,2-tetrafluoro-, HCFC-124"
+      }
+    },
+    {
+      "source": {
+        "uuid": "30533fd3-b19c-44fc-9a88-fb6b12409b47",
+        "name": "Ethane, chloropentafluoro-, CFC-115"
+      },
+      "target": {
+        "uuid": "ec8789e5-d140-4ca8-b7ef-b3abfd044414",
+        "name": "Ethane, chloropentafluoro-, CFC-115"
+      }
+    },
+    {
+      "source": {
+        "uuid": "7f62f535-e81a-476c-9c39-4d59f289db1a",
+        "name": "Ethane, hexafluoro-, HFC-116"
+      },
+      "target": {
+        "uuid": "acc39720-dda7-4b3a-80c7-c6394cad4191",
+        "name": "Ethane, hexafluoro-, HFC-116"
+      }
+    },
+    {
+      "source": {
+        "uuid": "40022b1f-8906-4c54-a074-bf1a3fc9b13f",
+        "name": "Ethane, pentafluoro-, HFC-125"
+      },
+      "target": {
+        "uuid": "281e1011-f121-4d5b-ad4d-22d562b2c2cd",
+        "name": "Ethane, pentafluoro-, HFC-125"
+      }
+    },
+    {
+      "source": {
+        "uuid": "e47fcb9f-ef2f-4047-b902-37363ea5345c",
+        "name": "Ethanol"
+      },
+      "target": {
+        "uuid": "d3f5d0b9-0155-4800-9dbb-b0583948c8c6",
+        "name": "Ethanol"
+      }
+    },
+    {
+      "source": {
+        "uuid": "bb656df7-0d8a-427c-b58c-02962e50df57",
+        "name": "Ethyl acetate"
+      },
+      "target": {
+        "uuid": "8077467e-8d30-46cc-ab55-5759286eebd3",
+        "name": "Ethyl acetate"
+      }
+    },
+    {
+      "source": {
+        "uuid": "0061b12a-9084-499b-9fc0-bf66025198eb",
+        "name": "Ethyl cellulose"
+      },
+      "target": {
+        "uuid": "779f93e2-bbb4-4a06-a46a-ce636fe59a62",
+        "name": "Ethyl cellulose"
+      }
+    },
+    {
+      "source": {
+        "uuid": "99dfc9b6-7e98-4751-9a50-39d19cbe6d5a",
+        "name": "Ethylamine"
+      },
+      "target": {
+        "uuid": "b1dc1428-e198-464d-a434-a7e6d880f041",
+        "name": "Ethylamine"
+      }
+    },
+    {
+      "source": {
+        "uuid": "b02991d4-c180-4b16-8035-ac38f4a64b87",
+        "name": "Ethylene"
+      },
+      "target": {
+        "uuid": "90f722bf-cb9b-571a-88fc-34286632bdc4",
+        "name": "Ethylene"
+      }
+    },
+    {
+      "source": {
+        "uuid": "c75bec2e-3599-4279-bae3-f8bef3ad2a29",
+        "name": "Ethylene diamine"
+      },
+      "target": {
+        "uuid": "397c6564-d1c4-41f5-a4ff-4832874f397f",
+        "name": "Ethylene diamine"
+      }
+    },
+    {
+      "source": {
+        "uuid": "fe976683-7080-4a79-8538-810793d21c53",
+        "name": "Ethylene glycol monoethyl ether"
+      },
+      "target": {
+        "uuid": "45e23e23-d952-4721-a514-2acfa5bfcab5",
+        "name": "Ethylene glycol monoethyl ether"
+      }
+    },
+    {
+      "source": {
+        "uuid": "0bb66845-6ccf-4648-b565-2e704989d7c0",
+        "name": "Ethylene oxide"
+      },
+      "target": {
+        "uuid": "4407dc37-09ec-4d52-b65a-9c3f0a88306d",
+        "name": "Ethylene oxide"
+      }
+    },
+    {
+      "source": {
+        "uuid": "6c95c917-d232-4c5b-9721-8b2841e6671c",
+        "name": "Ethyne"
+      },
+      "target": {
+        "uuid": "42a2f3e7-5393-4a69-9b0b-f70a9139ee24",
+        "name": "Ethyne"
+      }
+    },
+    {
+      "source": {
+        "uuid": "fe58044a-f54b-4c93-8c79-9cbdea3dfc6a",
+        "name": "Fluorine"
+      },
+      "target": {
+        "uuid": "1c389e81-9f9d-4e52-a6e9-11cc6b73d90d",
+        "name": "Fluorine"
+      }
+    },
+    {
+      "source": {
+        "uuid": "cc0815ac-dd64-48f1-adc4-2c798b2a437c",
+        "name": "Fluosilicic acid"
+      },
+      "target": {
+        "uuid": "ee71f42f-de6b-46ef-a1dc-7e5d2f33a3ed",
+        "name": "Fluosilicic acid"
+      }
+    },
+    {
+      "source": {
+        "uuid": "22b0b296-d066-4159-a44b-69fdb17dc802",
+        "name": "Formaldehyde"
+      },
+      "target": {
+        "uuid": "a861cfae-a310-4e9d-b9eb-5d555c9a684c",
+        "name": "Formaldehyde"
+      }
+    },
+    {
+      "source": {
+        "uuid": "313cdf6d-ac44-4583-87a1-5f2ba3413a88",
+        "name": "Formamide"
+      },
+      "target": {
+        "uuid": "1d8ba55c-e60b-45ef-8e66-d947d8e7a01f",
+        "name": "Formamide"
+      }
+    },
+    {
+      "source": {
+        "uuid": "da3057af-dca7-4b7d-b36e-8b241586cc0c",
+        "name": "Formic acid"
+      },
+      "target": {
+        "uuid": "27804c78-5eee-47f9-9a91-1f6126ccfe45",
+        "name": "Formic acid"
+      }
+    },
+    {
+      "source": {
+        "uuid": "3d20d2fc-2e7e-4c8c-a77d-91bd822a1dfe",
+        "name": "Furan"
+      },
+      "target": {
+        "uuid": "284d6491-de2c-4124-95db-7732cbb5136c",
+        "name": "Furan"
+      }
+    },
+    {
+      "source": {
+        "uuid": "ef7b0b7e-16e2-4e14-af28-94d9dd3c675d",
+        "name": "Heat, waste"
+      },
+      "target": {
+        "uuid": "f2d84834-d0b3-42e5-b41a-f04cc80337a4",
+        "name": "Heat, waste"
+      }
+    },
+    {
+      "source": {
+        "uuid": "f7882aae-499b-42ab-8fa0-b4e20b609cc0",
+        "name": "Helium"
+      },
+      "target": {
+        "uuid": "f2e74872-f56d-4e49-8dfd-1428c6fbd59c",
+        "name": "Helium"
+      }
+    },
+    {
+      "source": {
+        "uuid": "745503c2-768d-4f2c-b63c-bb75c1c5419c",
+        "name": "Heptane"
+      },
+      "target": {
+        "uuid": "1ec6c4b4-ee5f-4788-8683-c95a84d6d63c",
+        "name": "Heptane"
+      }
+    },
+    {
+      "source": {
+        "uuid": "082c37bb-a9f2-46e7-97de-5a023050ab7a",
+        "name": "Hexamethyldisilizane"
+      },
+      "target": {
+        "uuid": "5bd325f2-8c4b-4e1f-bb84-2f58900f4d51",
+        "name": "Hexamethyldisilizane"
+      }
+    },
+    {
+      "source": {
+        "uuid": "5f29e18d-ace2-466c-831e-be1aee84323a",
+        "name": "Hexane"
+      },
+      "target": {
+        "uuid": "6b248529-b754-4be7-8b1a-91b9756fc2bc",
+        "name": "Hexane"
+      }
+    },
+    {
+      "source": {
+        "uuid": "fea16062-6c4b-4d59-be9e-e9b0b56ca9f0",
+        "name": "Hydrocarbons, aliphatic, alkanes, cyclic"
+      },
+      "target": {
+        "uuid": "5c9ec415-12f1-4390-bcff-3ff0fcd7ba73",
+        "name": "Hydrocarbons, aliphatic, alkanes, cyclic"
+      }
+    },
+    {
+      "source": {
+        "uuid": "84cd61aa-92a0-40d1-aad5-e9e5c0d4c93e",
+        "name": "Hydrocarbons, aliphatic, alkanes, unspecified"
+      },
+      "target": {
+        "uuid": "2451f9df-0596-49ec-8380-08e4ad75a153",
+        "name": "Hydrocarbons, aliphatic, alkanes, unspecified"
+      }
+    },
+    {
+      "source": {
+        "uuid": "f228fcae-8e19-4a73-9d8c-60ec8adaea50",
+        "name": "Hydrocarbons, aliphatic, unsaturated"
+      },
+      "target": {
+        "uuid": "4cff006f-c6df-42a8-9dee-cc064f14326e",
+        "name": "Hydrocarbons, aliphatic, unsaturated"
+      }
+    },
+    {
+      "source": {
+        "uuid": "34cbdeb9-6462-4938-a048-881a9f7e6978",
+        "name": "Hydrocarbons, aromatic"
+      },
+      "target": {
+        "uuid": "3cca7f02-58b0-4b49-9938-e0f8bea03064",
+        "name": "Hydrocarbons, aromatic"
+      }
+    },
+    {
+      "source": {
+        "uuid": "15a335be-9a71-431f-a0b0-56585fbafe5e",
+        "name": "Hydrocarbons, chlorinated"
+      },
+      "target": {
+        "uuid": "d14eb0da-95fd-46c3-90db-55ca33d78701",
+        "name": "Hydrocarbons, chlorinated"
+      }
+    },
+    {
+      "source": {
+        "uuid": "50f3bc1e-fafc-44a2-9800-4468d8c3b643",
+        "name": "Hydrochloric acid"
+      },
+      "target": {
+        "uuid": "c9a8073a-8a19-5b9b-a120-7d549563b67b",
+        "name": "Hydrochloric acid"
+      }
+    },
+    {
+      "source": {
+        "uuid": "5b8f9dca-cb63-4332-8fd9-92a10aed2232",
+        "name": "Hydrogen"
+      },
+      "target": {
+        "uuid": "b301fa9a-ba60-4eac-8ccc-6ccbdf099b35",
+        "name": "Hydrogen"
+      }
+    },
+    {
+      "source": {
+        "uuid": "b1689d22-7f6d-432c-8948-13d8f6df8a27",
+        "name": "Hydrogen fluoride"
+      },
+      "target": {
+        "uuid": "24541c8c-9f11-49ae-9de5-456f238a3f5e",
+        "name": "Hydrogen fluoride"
+      }
+    },
+    {
+      "source": {
+        "uuid": "2fd1f829-b1c3-4464-bc13-315d40387228",
+        "name": "Hydrogen peroxide"
+      },
+      "target": {
+        "uuid": "1dcf6b74-c474-420b-81ca-0b8d3d4f28d7",
+        "name": "Hydrogen peroxide"
+      }
+    },
+    {
+      "source": {
+        "uuid": "59281544-7c5a-4101-a972-10118e8df6aa",
+        "name": "Hydrogen sulfide"
+      },
+      "target": {
+        "uuid": "20d4d821-f4f7-4017-8810-f822fcdf619e",
+        "name": "Hydrogen sulfide"
+      }
+    },
+    {
+      "source": {
+        "uuid": "bf75c125-b39c-49d3-b06e-83153db03bd8",
+        "name": "Hydrogen-3, Tritium"
+      },
+      "target": {
+        "uuid": "22043b06-1981-45a5-bfbb-20ae6f253191",
+        "name": "Hydrogen-3, Tritium"
+      }
+    },
+    {
+      "source": {
+        "uuid": "4e2078f2-3ac3-46d1-8ee8-a23c8d1909ed",
+        "name": "Iodine"
+      },
+      "target": {
+        "uuid": "446d8fe4-fde6-4640-bc23-f04a663bbc04",
+        "name": "Iodine"
+      }
+    },
+    {
+      "source": {
+        "uuid": "0bd4b5ea-feb6-47d4-a657-c5b33b26fded",
+        "name": "Iodine-129"
+      },
+      "target": {
+        "uuid": "106689fa-52d8-4f7d-aa5b-920122aaf1aa",
+        "name": "Iodine-129"
+      }
+    },
+    {
+      "source": {
+        "uuid": "19ff96c2-6796-44e3-ab85-3635e8cb7e89",
+        "name": "Iodine-131"
+      },
+      "target": {
+        "uuid": "c317b216-2668-40f8-9e24-1ce183d53697",
+        "name": "Iodine-131"
+      }
+    },
+    {
+      "source": {
+        "uuid": "55ff8efa-cc35-407c-b5b4-b63781da2183",
+        "name": "Iodine-133"
+      },
+      "target": {
+        "uuid": "29f7aad7-40e1-44db-af21-b3604c10b3f0",
+        "name": "Iodine-133"
+      }
+    },
+    {
+      "source": {
+        "uuid": "51ad3110-da7a-4625-b445-df74e83ae832",
+        "name": "Iodine-135"
+      },
+      "target": {
+        "uuid": "a18a3afb-9456-4b80-bafb-78be060c90dc",
+        "name": "Iodine-135"
+      }
+    },
+    {
+      "source": {
+        "uuid": "0dc0bbb0-1141-4dff-b6a2-8bd5368e14af",
+        "name": "Iron ion"
+      },
+      "target": {
+        "uuid": "8dba66e2-0f2e-4038-84ef-1e40b4f573a6",
+        "name": "Iron ion"
+      }
+    },
+    {
+      "source": {
+        "uuid": "400330af-871b-4e34-b5cd-4a34eda6fc40",
+        "name": "Iron-59"
+      },
+      "target": {
+        "uuid": "b5bc86de-20f6-4791-8f67-e9ba7930f76c",
+        "name": "Iron-59"
+      }
+    },
+    {
+      "source": {
+        "uuid": "349a76e2-a467-439f-a179-76d16b656ed1",
+        "name": "Isocyanic acid"
+      },
+      "target": {
+        "uuid": "ca6e057b-6b74-4ec2-83b0-0e82b98d97f2",
+        "name": "Isocyanic acid"
+      }
+    },
+    {
+      "source": {
+        "uuid": "a31cd36e-e3ca-42ac-8d71-de1b6b12f523",
+        "name": "Isoprene"
+      },
+      "target": {
+        "uuid": "0c209634-80bb-4909-8442-3189b7cb01d7",
+        "name": "Isoprene"
+      }
+    },
+    {
+      "source": {
+        "uuid": "e2ce19fb-c975-4002-ac3d-719f10990871",
+        "name": "Isopropylamine"
+      },
+      "target": {
+        "uuid": "3bdac115-edd6-463f-8ad7-84552b81393c",
+        "name": "Isopropylamine"
+      }
+    },
+    {
+      "source": {
+        "uuid": "3616e7c0-d323-4dc7-96aa-e06ac7fd808b",
+        "name": "Krypton-85"
+      },
+      "target": {
+        "uuid": "8653eab9-c010-4d0b-ae9f-71694cb5291f",
+        "name": "Krypton-85"
+      }
+    },
+    {
+      "source": {
+        "uuid": "3a426398-ce2c-4803-aabf-d00b8bc1c277",
+        "name": "Krypton-85m"
+      },
+      "target": {
+        "uuid": "421a7f1b-01a5-4160-bb7e-32fa8967d9b9",
+        "name": "Krypton-85m"
+      }
+    },
+    {
+      "source": {
+        "uuid": "68bdd315-335b-406b-ab7d-beefca01768a",
+        "name": "Krypton-87"
+      },
+      "target": {
+        "uuid": "e49fc1ed-4bf5-4ec2-88b1-29ff979b37b8",
+        "name": "Krypton-87"
+      }
+    },
+    {
+      "source": {
+        "uuid": "7b836e07-985e-4962-8835-dc378299b12f",
+        "name": "Krypton-88"
+      },
+      "target": {
+        "uuid": "d350156f-e614-4206-9949-02de6f45f5ab",
+        "name": "Krypton-88"
+      }
+    },
+    {
+      "source": {
+        "uuid": "65a50013-0303-4ff2-a880-696dc23c2738",
+        "name": "Krypton-89"
+      },
+      "target": {
+        "uuid": "e9633b45-9a6e-4d43-8c5e-4d59377bfe32",
+        "name": "Krypton-89"
+      }
+    },
+    {
+      "source": {
+        "uuid": "538fe63d-1b39-4aab-b50c-427dd4c0552b",
+        "name": "Lactic acid"
+      },
+      "target": {
+        "uuid": "35a27f5c-487b-48c6-bfd5-0a2dbacf2045",
+        "name": "Lactic acid"
+      }
+    },
+    {
+      "source": {
+        "uuid": "cf733396-30c8-4525-a4d9-a2d7b13b6fa1",
+        "name": "Lanthanum"
+      },
+      "target": {
+        "uuid": "b6e43995-389d-4353-a5ad-6957ab1ae048",
+        "name": "Lanthanum"
+      }
+    },
+    {
+      "source": {
+        "uuid": "e744dc0a-de91-43db-b95e-76d72ba16678",
+        "name": "Lanthanum-140"
+      },
+      "target": {
+        "uuid": "b03fcc8f-b010-459d-b021-e832cff01700",
+        "name": "Lanthanum-140"
+      }
+    },
+    {
+      "source": {
+        "uuid": "f707adbb-1784-42ec-8970-6efa10cd790e",
+        "name": "Lead-210"
+      },
+      "target": {
+        "uuid": "00e73fdb-98df-4a03-8290-79931cddfd12",
+        "name": "Lead-210"
+      }
+    },
+    {
+      "source": {
+        "uuid": "e023deca-8929-4972-9528-e421a42e8bfd",
+        "name": "Lithium carbonate"
+      },
+      "target": {
+        "uuid": "800ec8a5-e0f2-4f47-8c43-dd93962cc0da",
+        "name": "Lithium carbonate"
+      }
+    },
+    {
+      "source": {
+        "uuid": "24da5f03-1b1e-4a60-a925-248122c9d2a0",
+        "name": "Magnesium"
+      },
+      "target": {
+        "uuid": "aeefa758-5f4f-4bb4-a28a-4075e81f2fde",
+        "name": "Magnesium"
+      }
+    },
+    {
+      "source": {
+        "uuid": "42053ffb-9284-49cb-88f9-33ac5c77be4a",
+        "name": "Manganese II"
+      },
+      "target": {
+        "uuid": "295060ba-3c3d-45e4-99ca-e17b1204b553",
+        "name": "Manganese II"
+      }
+    },
+    {
+      "source": {
+        "uuid": "fdd3a558-5d4d-4ca0-b0a5-950051dc92da",
+        "name": "Manganese-54"
+      },
+      "target": {
+        "uuid": "28955c40-9925-47d2-9770-dc18a4bba82a",
+        "name": "Manganese-54"
+      }
+    },
+    {
+      "source": {
+        "uuid": "6bdb666d-e227-4f57-9b1d-d25009d3c44b",
+        "name": "Methane, bromo-, Halon 1001"
+      },
+      "target": {
+        "uuid": "8c283de2-50d3-40c8-8bff-1e172c3398f8",
+        "name": "Methane, bromo-, Halon 1001"
+      }
+    },
+    {
+      "source": {
+        "uuid": "50f528ca-45e7-42d0-b399-998ea63ddabf",
+        "name": "Methane, bromochlorodifluoro-, Halon 1211"
+      },
+      "target": {
+        "uuid": "ee31ac2a-9336-4ed6-8077-9663003bc2f9",
+        "name": "Methane, bromochlorodifluoro-, Halon 1211"
+      }
+    },
+    {
+      "source": {
+        "uuid": "cf719b78-9834-4649-a1dd-8554c366c83f",
+        "name": "Methane, bromotrifluoro-, Halon 1301"
+      },
+      "target": {
+        "uuid": "4ac2ffc3-312e-4e2d-88c4-2630d4a73d8c",
+        "name": "Methane, bromotrifluoro-, Halon 1301"
+      }
+    },
+    {
+      "source": {
+        "uuid": "26991da1-c263-4707-9f85-78685acc94dc",
+        "name": "Methane, chlorodifluoro-, HCFC-22"
+      },
+      "target": {
+        "uuid": "18c582fe-7336-4138-8797-2db8b7a754c7",
+        "name": "Methane, chlorodifluoro-, HCFC-22"
+      }
+    },
+    {
+      "source": {
+        "uuid": "41f45128-cebe-4ece-aafa-7406a5c98775",
+        "name": "Methane, chloro-fluoro-, HCFC-31"
+      },
+      "target": {
+        "uuid": "5eafb840-6f50-418d-98bd-27b86f75613c",
+        "name": "Methane, chloro-fluoro-, HCFC-31"
+      }
+    },
+    {
+      "source": {
+        "uuid": "b9c1ac70-e2eb-4fcd-bc63-befa92866af5",
+        "name": "Methane, chlorotrifluoro-, CFC-13"
+      },
+      "target": {
+        "uuid": "e06e2e1e-ad87-49e2-a184-f2d1c48b7b46",
+        "name": "Methane, chlorotrifluoro-, CFC-13"
+      }
+    },
+    {
+      "source": {
+        "uuid": "b328d33e-9a9f-407d-a767-5c64ccdc163f",
+        "name": "Methane, dichloro-, HCC-30"
+      },
+      "target": {
+        "uuid": "432a3326-73f8-4752-bc4d-06b7b4b1243c",
+        "name": "Methane, dichloro-, HCC-30"
+      }
+    },
+    {
+      "source": {
+        "uuid": "1013b9ec-a7b5-459c-be3d-74f61b9ce06e",
+        "name": "Methane, dichlorodifluoro-, CFC-12"
+      },
+      "target": {
+        "uuid": "c0e8ec60-a5ae-432e-97a5-cf76b6247a00",
+        "name": "Methane, dichlorodifluoro-, CFC-12"
+      }
+    },
+    {
+      "source": {
+        "uuid": "de8d76cb-7216-4e6f-8bf2-8cdf76e99902",
+        "name": "Methane, dichlorofluoro-, HCFC-21"
+      },
+      "target": {
+        "uuid": "04a6edb8-624a-484e-8f85-d771657adae7",
+        "name": "Methane, dichlorofluoro-, HCFC-21"
+      }
+    },
+    {
+      "source": {
+        "uuid": "20d0fc73-b9ce-4001-ac15-893b30ed10a3",
+        "name": "Methane, difluoro-, HFC-32"
+      },
+      "target": {
+        "uuid": "151212b4-079b-43a2-96d5-a6eef59166ac",
+        "name": "Methane, difluoro-, HFC-32"
+      }
+    },
+    {
+      "source": {
+        "uuid": "6b1b495b-70ee-4be6-b1c2-3031aa4d6add",
+        "name": "Methane, fossil"
+      },
+      "target": {
+        "uuid": "0795345f-c7ae-410c-ad25-1845784c75f5",
+        "name": "Methane, fossil"
+      }
+    },
+    {
+      "source": {
+        "uuid": "ef4566f0-60d5-4bbe-a2cb-7268a81fecd4",
+        "name": "Methane, from soil or biomass stock"
+      },
+      "target": {
+        "uuid": "7f0ba7c9-341e-413d-80f6-8753727d65d1",
+        "name": "Methane, from soil or biomass stock"
+      }
+    },
+    {
+      "source": {
+        "uuid": "0f70e720-127e-44dc-bb85-438158235ab6",
+        "name": "Methane, monochloro-, R-40"
+      },
+      "target": {
+        "uuid": "18ea247b-edc2-43fe-89bd-cedd04102bcc",
+        "name": "Methane, monochloro-, R-40"
+      }
+    },
+    {
+      "source": {
+        "uuid": "258263a0-6be3-4439-bd84-efee0498b849",
+        "name": "Methane, non-fossil"
+      },
+      "target": {
+        "uuid": "da1157e2-7593-4dfd-80dd-a3449b37a4d8",
+        "name": "Methane, non-fossil"
+      }
+    },
+    {
+      "source": {
+        "uuid": "6c833956-6302-47c3-8abc-7ecae92266fb",
+        "name": "Methane, tetrachloro-, R-10"
+      },
+      "target": {
+        "uuid": "86d12e70-0c64-4ecf-ba52-114fa0c5d402",
+        "name": "Methane, tetrachloro-, R-10"
+      }
+    },
+    {
+      "source": {
+        "uuid": "6d023c39-c04e-4305-b2e4-adc89b53e708",
+        "name": "Methane, tetrafluoro-, R-14"
+      },
+      "target": {
+        "uuid": "33681770-a0e1-4ce8-93c3-941fd607fa5f",
+        "name": "Methane, tetrafluoro-, R-14"
+      }
+    },
+    {
+      "source": {
+        "uuid": "6e61b542-5681-44f4-afcb-e30368bca420",
+        "name": "Methane, trichlorofluoro-, CFC-11"
+      },
+      "target": {
+        "uuid": "51e99a55-bcdb-4d18-9484-6de4b142e09d",
+        "name": "Methane, trichlorofluoro-, CFC-11"
+      }
+    },
+    {
+      "source": {
+        "uuid": "a3724600-89c1-4f35-97c9-0de3adbadc8b",
+        "name": "Methane, trifluoro-, HFC-23"
+      },
+      "target": {
+        "uuid": "e5ba3517-a93f-422e-9ce2-f1007fcf6c06",
+        "name": "Methane, trifluoro-, HFC-23"
+      }
+    },
+    {
+      "source": {
+        "uuid": "4b470546-8110-49f5-af13-1bf7eb11b78e",
+        "name": "Methanesulfonic acid"
+      },
+      "target": {
+        "uuid": "4ddc40ac-2b6a-4f7f-8f8a-db439b443263",
+        "name": "Methanesulfonic acid"
+      }
+    },
+    {
+      "source": {
+        "uuid": "adf4ac5e-7edd-4ca3-9adb-0b50903a71c1",
+        "name": "Methanol"
+      },
+      "target": {
+        "uuid": "0ebdb68a-f50d-4b0c-ad4b-3a1104d8b454",
+        "name": "Methanol"
+      }
+    },
+    {
+      "source": {
+        "uuid": "435b0dec-6a6a-4f44-8fa4-0988332459f5",
+        "name": "Methyl acetate"
+      },
+      "target": {
+        "uuid": "bd70c699-1ea1-4bb1-b23d-bc771d7d6311",
+        "name": "Methyl acetate"
+      }
+    },
+    {
+      "source": {
+        "uuid": "4909973f-d10f-41aa-bf17-68f1d9dd21bc",
+        "name": "Methyl acrylate"
+      },
+      "target": {
+        "uuid": "39c49db2-409a-4d5d-93f5-454535398965",
+        "name": "Methyl acrylate"
+      }
+    },
+    {
+      "source": {
+        "uuid": "419bd741-384e-41ba-a432-5ad25e006a45",
+        "name": "Methyl borate"
+      },
+      "target": {
+        "uuid": "971246f7-14d9-4ad5-98da-fc147dd8800f",
+        "name": "Methyl borate"
+      }
+    },
+    {
+      "source": {
+        "uuid": "903e0cf9-6ef2-42a1-b3a8-364dfe6d04d3",
+        "name": "Methyl ethyl ketone"
+      },
+      "target": {
+        "uuid": "d3709c7e-7c61-45a4-92e4-f7cf95ebe3a2",
+        "name": "Methyl ethyl ketone"
+      }
+    },
+    {
+      "source": {
+        "uuid": "f4ce8a13-0159-48e3-a773-669d75e9fd78",
+        "name": "Methyl formate"
+      },
+      "target": {
+        "uuid": "4877b7b5-0ac1-47f7-96bd-677179544c9f",
+        "name": "Methyl formate"
+      }
+    },
+    {
+      "source": {
+        "uuid": "7c2a4d8b-a21a-4688-93b2-1fe41ce9e5d9",
+        "name": "Methyl lactate"
+      },
+      "target": {
+        "uuid": "a3b906e7-7466-4500-8636-f1a4c2950eb8",
+        "name": "Methyl lactate"
+      }
+    },
+    {
+      "source": {
+        "uuid": "78457869-af20-404f-a3bf-bad384fc177b",
+        "name": "Methylamine"
+      },
+      "target": {
+        "uuid": "be13179a-7e8b-57f8-9852-137ce88a1525",
+        "name": "Methylamine"
+      }
+    },
+    {
+      "source": {
+        "uuid": "697e8ecf-bdbe-4857-92c9-e01960c91db7",
+        "name": "Molybdenum VI"
+      },
+      "target": {
+        "uuid": "640e30d2-3158-4a1a-82ef-fd0c72922c9a",
+        "name": "Molybdenum VI"
+      }
+    },
+    {
+      "source": {
+        "uuid": "4394c871-7245-4bfc-8e9d-9a875e81b7ee",
+        "name": "Monochloroethane"
+      },
+      "target": {
+        "uuid": "bce77a75-c399-4fa6-94ab-90d0e704ebde",
+        "name": "Monochloroethane"
+      }
+    },
+    {
+      "source": {
+        "uuid": "e4ff4151-febe-4c3f-bfaf-924d6f7bf101",
+        "name": "Monoethanolamine"
+      },
+      "target": {
+        "uuid": "9f550c00-0f0f-45e7-a29c-a450752d4c7a",
+        "name": "Monoethanolamine"
+      }
+    },
+    {
+      "source": {
+        "uuid": "50e083ba-5784-4801-8011-164a14c61b5a",
+        "name": "m-Xylene"
+      },
+      "target": {
+        "uuid": "cfdbc576-e8dc-44ef-bdf2-ddd7009ce57e",
+        "name": "m-Xylene"
+      }
+    },
+    {
+      "source": {
+        "uuid": "bbff44a2-cd6d-4200-98c7-e4f772fd24c5",
+        "name": "N-Bromoacetamide"
+      },
+      "target": {
+        "uuid": "c37ff1f2-c2de-4d31-a875-8b6265ab97bf",
+        "name": "N-Bromoacetamide"
+      }
+    },
+    {
+      "source": {
+        "uuid": "f78331c1-2f23-4661-b37e-c51c9eea5384",
+        "name": "Neptunium-237"
+      },
+      "target": {
+        "uuid": "9fb84b6b-8396-4190-80f0-fc8cbc97b107",
+        "name": "Neptunium-237"
+      }
+    },
+    {
+      "source": {
+        "uuid": "8e70c356-ceaa-4f83-8a06-55ec5eadd14a",
+        "name": "Niobium-95"
+      },
+      "target": {
+        "uuid": "70896cfa-fd83-4a5d-b663-74f7e4670217",
+        "name": "Niobium-95"
+      }
+    },
+    {
+      "source": {
+        "uuid": "0e9e6b81-0a68-4350-8368-566c083bd3e0",
+        "name": "Nitrate"
+      },
+      "target": {
+        "uuid": "5e7cf95c-9cc3-4479-89af-55377b3db99c",
+        "name": "Nitrate"
+      }
+    },
+    {
+      "source": {
+        "uuid": "2fdf4d27-d787-4a48-9e8e-8cbd79246c74",
+        "name": "Nitrobenzene"
+      },
+      "target": {
+        "uuid": "3be7ab07-a4fd-4d32-a31f-134d2c5b5143",
+        "name": "Nitrobenzene"
+      }
+    },
+    {
+      "source": {
+        "uuid": "fdf090d7-ee05-4f33-8b7f-5504c718c3cd",
+        "name": "Nitrogen fluoride"
+      },
+      "target": {
+        "uuid": "e79e03c3-5b19-45f6-b3f3-bf710c6663d2",
+        "name": "Nitrogen fluoride"
+      }
+    },
+    {
+      "source": {
+        "uuid": "a385870b-a14e-4fc1-a8e9-4d37257bf970",
+        "name": "Noble gases, radioactive, unspecified"
+      },
+      "target": {
+        "uuid": "fef20853-5b12-4b7f-8228-0dcbe0baba1c",
+        "name": "Noble gases, radioactive, unspecified"
+      }
+    },
+    {
+      "source": {
+        "uuid": "4278f8fe-d3ac-4744-8386-7c8030f7386c",
+        "name": "o-Nitrotoluene"
+      },
+      "target": {
+        "uuid": "f9f12076-1cdf-4a3d-a70d-eab640038144",
+        "name": "o-Nitrotoluene"
+      }
+    },
+    {
+      "source": {
+        "uuid": "4b841af5-7061-4e59-89d4-cace8bc364e1",
+        "name": "o-Xylene"
+      },
+      "target": {
+        "uuid": "527d6cb5-bbd7-403d-8dcc-b6678fb123f5",
+        "name": "o-Xylene"
+      }
+    },
+    {
+      "source": {
+        "uuid": "085bfe35-58e0-4a33-850c-4cb87ce32352",
+        "name": "Ozone"
+      },
+      "target": {
+        "uuid": "2058d91e-bb9f-4fce-8e53-131825b14a23",
+        "name": "Ozone"
+      }
+    },
+    {
+      "source": {
+        "uuid": "1f5330ac-e81c-45f2-8c9c-335b531faab0",
+        "name": "PAH, polycyclic aromatic hydrocarbons"
+      },
+      "target": {
+        "uuid": "3e5d7d91-67d7-4afb-91dd-36fab58e4685",
+        "name": "PAH, polycyclic aromatic hydrocarbons"
+      }
+    },
+    {
+      "source": {
+        "uuid": "1ce92120-8acb-4e30-a97c-0b1ffd369b89",
+        "name": "Paraffins"
+      },
+      "target": {
+        "uuid": "c955fc32-da91-468e-8f65-5aca2c8aa4cc",
+        "name": "Paraffins"
+      }
+    },
+    {
+      "source": {
+        "uuid": "e22e8f39-d8f2-4702-bed3-0b95babb7788",
+        "name": "Particulate Matter, > 10 um"
+      },
+      "target": {
+        "uuid": "66020d27-7ae4-4e59-83a3-89214b72c40a",
+        "name": "Particulate Matter, > 10 um"
+      }
+    },
+    {
+      "source": {
+        "uuid": "604f9273-f26b-46be-83a7-3a65280011d1",
+        "name": "Particulate Matter, > 2.5 um and < 10um"
+      },
+      "target": {
+        "uuid": "b967e1bf-f09b-4c89-8740-ace21db47bba",
+        "name": "Particulate Matter, > 2.5 um and < 10um"
+      }
+    },
+    {
+      "source": {
+        "uuid": "d9da59f1-695d-465b-959d-1cff9d86d923",
+        "name": "Pentane"
+      },
+      "target": {
+        "uuid": "516606eb-99f6-4e8c-b99a-6b439aaed48c",
+        "name": "Pentane"
+      }
+    },
+    {
+      "source": {
+        "uuid": "d8b6c259-4e1a-4482-8eed-237cde14f346",
+        "name": "Phenol"
+      },
+      "target": {
+        "uuid": "5896c761-4e02-4573-8747-c4bbf73162c0",
+        "name": "Phenol"
+      }
+    },
+    {
+      "source": {
+        "uuid": "919aa517-c05d-4bcc-9070-422b8e16d9a9",
+        "name": "Phenol, 2,4-dichloro"
+      },
+      "target": {
+        "uuid": "d45eed0a-e60a-46bb-a769-494f037c71bc",
+        "name": "Phenol, 2,4-dichloro"
+      }
+    },
+    {
+      "source": {
+        "uuid": "db14d898-11e8-4fcc-9880-91537c4af283",
+        "name": "Phenol, pentachloro-"
+      },
+      "target": {
+        "uuid": "cec6e39b-700c-432f-8c80-4840b0ddc92e",
+        "name": "Phenol, pentachloro-"
+      }
+    },
+    {
+      "source": {
+        "uuid": "88453d4e-0fc0-4a5a-999d-14abe3a389b7",
+        "name": "Phosphine"
+      },
+      "target": {
+        "uuid": "097cecfb-bed2-43a0-81b7-c153d0bb14b9",
+        "name": "Phosphine"
+      }
+    },
+    {
+      "source": {
+        "uuid": "13d2fabe-9282-4905-9dfc-5c859022835c",
+        "name": "Phosphoric acid"
+      },
+      "target": {
+        "uuid": "2257e9f9-f38c-494b-b99f-f49b4768b4b9",
+        "name": "Phosphoric acid"
+      }
+    },
+    {
+      "source": {
+        "uuid": "f5e7e615-4160-4df9-b39b-7463eaed77c7",
+        "name": "Phosphorus"
+      },
+      "target": {
+        "uuid": "d761f94e-517d-41cf-89fa-17dc72f7a69b",
+        "name": "Phosphorus"
+      }
+    },
+    {
+      "source": {
+        "uuid": "c5344661-1f7c-46c1-ae59-2da67d710d63",
+        "name": "Phosphorus trichloride"
+      },
+      "target": {
+        "uuid": "dcedc211-8daa-49ac-82a9-ce60a22d9b43",
+        "name": "Phosphorus trichloride"
+      }
+    },
+    {
+      "source": {
+        "uuid": "28677a43-a849-4e4b-9504-58b7c07b25ed",
+        "name": "Platinum"
+      },
+      "target": {
+        "uuid": "f29a1f6e-0c76-4074-ba64-dcb724b2de9c",
+        "name": "Platinum"
+      }
+    },
+    {
+      "source": {
+        "uuid": "be1642be-ad24-46e2-8539-a74fc11d637d",
+        "name": "Plutonium-238"
+      },
+      "target": {
+        "uuid": "336fca6f-2dc9-4514-96ae-2a2af154c74e",
+        "name": "Plutonium-238"
+      }
+    },
+    {
+      "source": {
+        "uuid": "97596ee2-074c-4d93-84b3-9eeae7e0475e",
+        "name": "Plutonium-241"
+      },
+      "target": {
+        "uuid": "da5c6969-8f16-4d53-a424-d87ff6ab1470",
+        "name": "Plutonium-241"
+      }
+    },
+    {
+      "source": {
+        "uuid": "14ee3991-b63b-47bc-989f-0f4db81f7c72",
+        "name": "Plutonium-alpha"
+      },
+      "target": {
+        "uuid": "3ef6e30a-9742-48c8-adcd-48e38148004c",
+        "name": "Plutonium-alpha"
+      }
+    },
+    {
+      "source": {
+        "uuid": "a511d493-3360-4de9-9d43-e9a52e586579",
+        "name": "Polonium-210"
+      },
+      "target": {
+        "uuid": "13738d15-2256-40f6-99da-d802e5f4c747",
+        "name": "Polonium-210"
+      }
+    },
+    {
+      "source": {
+        "uuid": "64f98ce3-c7b4-4bfc-b398-c191824f26db",
+        "name": "Polychlorinated biphenyls"
+      },
+      "target": {
+        "uuid": "c9b97088-efc6-43c1-8d26-f78d6cdbb50b",
+        "name": "Polychlorinated biphenyls"
+      }
+    },
+    {
+      "source": {
+        "uuid": "5f16e477-6c5d-4c10-98df-97d47e584351",
+        "name": "Potassium chloride"
+      },
+      "target": {
+        "uuid": "c6e057e1-c344-455c-a613-e1d222e58048",
+        "name": "Potassium chloride"
+      }
+    },
+    {
+      "source": {
+        "uuid": "0a17349d-b0d6-4dae-b3e6-c363df32148c",
+        "name": "Potassium hydroxide"
+      },
+      "target": {
+        "uuid": "a817ad04-5b8f-48cd-a2e7-2c798a65f0a7",
+        "name": "Potassium hydroxide"
+      }
+    },
+    {
+      "source": {
+        "uuid": "6910bf7d-d956-41bf-bb93-db5d565f0ef0",
+        "name": "Potassium I"
+      },
+      "target": {
+        "uuid": "756b1234-887b-406e-88ed-b50ba4694f09",
+        "name": "Potassium I"
+      }
+    },
+    {
+      "source": {
+        "uuid": "4dc5b605-36cc-435f-a6de-83781b1f7779",
+        "name": "Potassium-40"
+      },
+      "target": {
+        "uuid": "4bc2ecf7-fbc3-4c74-81f6-30f9f4425d30",
+        "name": "Potassium-40"
+      }
+    },
+    {
+      "source": {
+        "uuid": "21ada84c-f5c9-49cc-9df1-0ca996091370",
+        "name": "Promethium-147"
+      },
+      "target": {
+        "uuid": "1784e16f-e070-4e2e-b567-182f8f6b9cbd",
+        "name": "Promethium-147"
+      }
+    },
+    {
+      "source": {
+        "uuid": "737857df-4504-4068-9a5f-67e9ff53ec30",
+        "name": "Propanal"
+      },
+      "target": {
+        "uuid": "555aed47-6c62-4cbe-b9b8-d01229284c8a",
+        "name": "Propanal"
+      }
+    },
+    {
+      "source": {
+        "uuid": "aec794cd-e559-46f6-a2a0-7f4ef195144c",
+        "name": "Propane"
+      },
+      "target": {
+        "uuid": "3a6c936c-0276-4f11-9d98-1bd011387a6e",
+        "name": "Propane"
+      }
+    },
+    {
+      "source": {
+        "uuid": "f6979c44-2a8a-4730-a4b4-376d5539dcd0",
+        "name": "Propanol"
+      },
+      "target": {
+        "uuid": "ff5d0fa9-6ca8-4e61-b99b-14981620c0d7",
+        "name": "Propanol"
+      }
+    },
+    {
+      "source": {
+        "uuid": "b45082cf-2816-46b9-816c-c4036d727804",
+        "name": "Propene"
+      },
+      "target": {
+        "uuid": "64165202-4870-47d0-8602-b85e5d672865",
+        "name": "Propene"
+      }
+    },
+    {
+      "source": {
+        "uuid": "e4a9cefa-7a99-406f-8b32-3e001ca82d31",
+        "name": "Propionic acid"
+      },
+      "target": {
+        "uuid": "a1ecc854-a399-4b01-bae2-3a88b12ed44f",
+        "name": "Propionic acid"
+      }
+    },
+    {
+      "source": {
+        "uuid": "f4acd7b6-e3a1-44d9-b3ce-4abcf440f6fc",
+        "name": "Propylamine"
+      },
+      "target": {
+        "uuid": "3b25024e-0347-411b-9315-c85f74e3b3ed",
+        "name": "Propylamine"
+      }
+    },
+    {
+      "source": {
+        "uuid": "5e02df40-53f4-42c4-b809-84a474fa08e8",
+        "name": "Propylene oxide"
+      },
+      "target": {
+        "uuid": "c4503380-1045-4670-a7da-fe5dcce56699",
+        "name": "Propylene oxide"
+      }
+    },
+    {
+      "source": {
+        "uuid": "f3620d5c-e025-4d7c-8af5-47d257694dbe",
+        "name": "Protactinium-234"
+      },
+      "target": {
+        "uuid": "0267272f-ea07-498a-9723-43583f115b46",
+        "name": "Protactinium-234"
+      }
+    },
+    {
+      "source": {
+        "uuid": "26997b2a-7acf-445b-b07e-d6736fd4ac81",
+        "name": "Radiation, electromagnetic"
+      },
+      "target": {
+        "uuid": "1ff59fcb-f634-422c-bbbf-63dae44d9485",
+        "name": "Radiation, electromagnetic"
+      }
+    },
+    {
+      "source": {
+        "uuid": "a5f7045e-4f1f-4cdb-88ac-1a8e8e0232dd",
+        "name": "Radioactive species, other beta emitters"
+      },
+      "target": {
+        "uuid": "630a48ab-c9f7-4bf0-9efd-9f865934c2c8",
+        "name": "Radioactive species, other beta emitters"
+      }
+    },
+    {
+      "source": {
+        "uuid": "2eb231c3-447f-42e3-bcb6-fdcbdb8ee915",
+        "name": "Radium-226"
+      },
+      "target": {
+        "uuid": "b912f4b4-34ac-4ec1-aba1-01b9c83683e5",
+        "name": "Radium-226"
+      }
+    },
+    {
+      "source": {
+        "uuid": "e9041c16-9cae-4fc0-ac93-f9a486ef53db",
+        "name": "Radium-228"
+      },
+      "target": {
+        "uuid": "d5ca33b3-f101-4371-b684-c720463ae2ab",
+        "name": "Radium-228"
+      }
+    },
+    {
+      "source": {
+        "uuid": "7a2d5b3a-aac7-4a82-a990-0f4e1501db0b",
+        "name": "Radon-220"
+      },
+      "target": {
+        "uuid": "b613b3b0-a98d-4b7a-a908-999ccfe1452d",
+        "name": "Radon-220"
+      }
+    },
+    {
+      "source": {
+        "uuid": "18bcb736-db8a-445c-ba28-ca648838a1a0",
+        "name": "Radon-222"
+      },
+      "target": {
+        "uuid": "cb3265f8-49a0-4b09-9bd9-c374370c4cc4",
+        "name": "Radon-222"
+      }
+    },
+    {
+      "source": {
+        "uuid": "12544a15-e0ef-48cb-a0e1-ee9cc0ec7592",
+        "name": "Ruthenium-103"
+      },
+      "target": {
+        "uuid": "d61e8791-f091-457a-8cb9-8d000d35e132",
+        "name": "Ruthenium-103"
+      }
+    },
+    {
+      "source": {
+        "uuid": "60152e95-1e70-4a32-907e-34c13cc3c616",
+        "name": "Ruthenium-106"
+      },
+      "target": {
+        "uuid": "46a7d92e-523c-430c-a5ec-ee9e8a34c09c",
+        "name": "Ruthenium-106"
+      }
+    },
+    {
+      "source": {
+        "uuid": "2853753b-084a-4962-bc19-c32d3a52ac2d",
+        "name": "Scandium"
+      },
+      "target": {
+        "uuid": "8000fc7d-edfe-4970-9224-a4c05281d46b",
+        "name": "Scandium"
+      }
+    },
+    {
+      "source": {
+        "uuid": "0d7ef054-35e2-4d02-9113-574d7f022631",
+        "name": "Silicon"
+      },
+      "target": {
+        "uuid": "e98b9661-2844-49dc-9ae4-855b9912c700",
+        "name": "Silicon"
+      }
+    },
+    {
+      "source": {
+        "uuid": "80c83d84-1aad-489a-9c7f-1d65b7f84f45",
+        "name": "Silicon tetrafluoride"
+      },
+      "target": {
+        "uuid": "10555050-586c-46b7-848e-9d90324d104b",
+        "name": "Silicon tetrafluoride"
+      }
+    },
+    {
+      "source": {
+        "uuid": "6e8a87bf-baea-4cd9-a967-932e750968d1",
+        "name": "Silver I"
+      },
+      "target": {
+        "uuid": "ebb88ef4-50ab-4e3b-9251-c5fcdf6b4768",
+        "name": "Silver I"
+      }
+    },
+    {
+      "source": {
+        "uuid": "1329e7f0-ff40-45e2-8e46-a2192b87e407",
+        "name": "Silver-110"
+      },
+      "target": {
+        "uuid": "e51e73a4-bc86-40a4-bdf7-83192b3618a3",
+        "name": "Silver-110"
+      }
+    },
+    {
+      "source": {
+        "uuid": "460716f9-f5b8-4ee0-8198-545b24822124",
+        "name": "Sodium"
+      },
+      "target": {
+        "uuid": "235b2f02-ff98-4da9-82e2-e4246c7b7990",
+        "name": "Sodium"
+      }
+    },
+    {
+      "source": {
+        "uuid": "b54ed595-69b7-478b-88d9-a6bd574d46b8",
+        "name": "Sodium chlorate"
+      },
+      "target": {
+        "uuid": "d380bac0-e4c5-430a-b75f-ace6b50a3e30",
+        "name": "Sodium chlorate"
+      }
+    },
+    {
+      "source": {
+        "uuid": "4c0af94e-e0d5-4409-9ec4-ac501a99aabd",
+        "name": "Sodium dichromate"
+      },
+      "target": {
+        "uuid": "a57bf693-7ffa-409d-919c-c806e34a4c67",
+        "name": "Sodium dichromate"
+      }
+    },
+    {
+      "source": {
+        "uuid": "ed1e2680-f3f7-4f86-bbd3-78819f6c2f1c",
+        "name": "Sodium formate"
+      },
+      "target": {
+        "uuid": "19696f8c-c5e9-4444-a0e8-3e8782748237",
+        "name": "Sodium formate"
+      }
+    },
+    {
+      "source": {
+        "uuid": "131565d8-5d8d-466f-be1d-3615fb77da86",
+        "name": "Sodium hydroxide"
+      },
+      "target": {
+        "uuid": "7dd10f03-00ef-483e-88c7-ba23e5330316",
+        "name": "Sodium hydroxide"
+      }
+    },
+    {
+      "source": {
+        "uuid": "aa416529-bb87-40a1-bbbc-3772a7ff7848",
+        "name": "Sodium hypochlorite"
+      },
+      "target": {
+        "uuid": "f237cc62-40b2-4a40-a5fa-d46681d39cf2",
+        "name": "Sodium hypochlorite"
+      }
+    },
+    {
+      "source": {
+        "uuid": "021b8f30-26ac-4012-880a-69bfd65bfed4",
+        "name": "Sodium perchlorate"
+      },
+      "target": {
+        "uuid": "5298c766-a7f8-4bff-8409-369818561b7c",
+        "name": "Sodium perchlorate"
+      }
+    },
+    {
+      "source": {
+        "uuid": "f1a587cf-0335-4410-b7d3-ea90497a07a6",
+        "name": "Sodium tetrahydridoborate"
+      },
+      "target": {
+        "uuid": "d471d4f2-5a9b-4ecb-93e8-6b2c364ae143",
+        "name": "Sodium tetrahydridoborate"
+      }
+    },
+    {
+      "source": {
+        "uuid": "d6fba50b-3691-4101-9dae-6b7935cd1cd0",
+        "name": "Strontium"
+      },
+      "target": {
+        "uuid": "0d9f52b2-f2d5-46a3-90a3-e22ef252cc37",
+        "name": "Strontium"
+      }
+    },
+    {
+      "source": {
+        "uuid": "8395bd8d-9893-41f8-9d91-1ef0ca962aa6",
+        "name": "Strontium-89"
+      },
+      "target": {
+        "uuid": "416ebc48-7199-43a0-bc57-f7f6c951fff0",
+        "name": "Strontium-89"
+      }
+    },
+    {
+      "source": {
+        "uuid": "5b44c026-dd45-45c6-95c5-2d451b9a0d20",
+        "name": "Strontium-90"
+      },
+      "target": {
+        "uuid": "1f8e9158-d59b-4991-872f-5a3f622979a7",
+        "name": "Strontium-90"
+      }
+    },
+    {
+      "source": {
+        "uuid": "2b676e9e-1e3b-45d6-b209-6ed3af61fc42",
+        "name": "Styrene"
+      },
+      "target": {
+        "uuid": "9cec94a2-e7fe-43f4-82f4-293c477f86dc",
+        "name": "Styrene"
+      }
+    },
+    {
+      "source": {
+        "uuid": "d64c693d-aa5a-40de-a250-ed9d24b90542",
+        "name": "Sulfate"
+      },
+      "target": {
+        "uuid": "9b00c244-fcce-4d38-922b-601a81f2ba34",
+        "name": "Sulfate"
+      }
+    },
+    {
+      "source": {
+        "uuid": "44e4d1ce-fa79-4ed5-93f9-445c4ff8df2e",
+        "name": "Sulfur hexafluoride"
+      },
+      "target": {
+        "uuid": "35d1dff5-b535-4628-9826-4a8fce08a1f2",
+        "name": "Sulfur hexafluoride"
+      }
+    },
+    {
+      "source": {
+        "uuid": "aeb3e625-906a-4993-9f02-785f8cfd1ea5",
+        "name": "Sulfur trioxide"
+      },
+      "target": {
+        "uuid": "3268d8df-59cc-4740-a89f-dee8355ad7c3",
+        "name": "Sulfur trioxide"
+      }
+    },
+    {
+      "source": {
+        "uuid": "3caec0e2-2d07-4463-abae-bef6a0d4bbdb",
+        "name": "Sulfuric acid"
+      },
+      "target": {
+        "uuid": "99c65c6a-6871-40ba-af79-5bd6851688e4",
+        "name": "Sulfuric acid"
+      }
+    },
+    {
+      "source": {
+        "uuid": "454f5552-15ca-412d-821d-ab79cc0c989b",
+        "name": "t-Butyl methyl ether"
+      },
+      "target": {
+        "uuid": "beb69352-568e-4a33-b9d4-3b5bfafc85bd",
+        "name": "t-Butyl methyl ether"
+      }
+    },
+    {
+      "source": {
+        "uuid": "bfcc7ab0-a9a7-41b6-895f-25450e8c0d40",
+        "name": "t-Butylamine"
+      },
+      "target": {
+        "uuid": "7bbe624a-3626-46d4-abf4-86bda793bdd7",
+        "name": "t-Butylamine"
+      }
+    },
+    {
+      "source": {
+        "uuid": "06a2e2b7-0c98-4a77-8cc9-84349e2f3fcf",
+        "name": "Technetium-99"
+      },
+      "target": {
+        "uuid": "2e972b23-f14e-477d-9360-7a88a35f0501",
+        "name": "Technetium-99"
+      }
+    },
+    {
+      "source": {
+        "uuid": "6402a177-ff01-4112-8c54-9061b756c8c9",
+        "name": "Tellurium-123m"
+      },
+      "target": {
+        "uuid": "43efdef0-6157-4436-8a23-2f50ac3c6fc2",
+        "name": "Tellurium-123m"
+      }
+    },
+    {
+      "source": {
+        "uuid": "9cda96ce-e1cf-4192-8614-52be32d200f4",
+        "name": "Terpenes"
+      },
+      "target": {
+        "uuid": "96bec6ea-fd71-48a1-ae8b-87a7b818eb77",
+        "name": "Terpenes"
+      }
+    },
+    {
+      "source": {
+        "uuid": "a8a2f53b-c6d2-4302-a59f-502bd7e242fc",
+        "name": "Tetrachloroethylene"
+      },
+      "target": {
+        "uuid": "9bc66656-9f37-44bc-ae0b-5d5243b8137e",
+        "name": "Tetrachloroethylene"
+      }
+    },
+    {
+      "source": {
+        "uuid": "1fa8ca7c-c285-49c5-a96d-60a3dc467310",
+        "name": "Tetramethyl ammonium hydroxide"
+      },
+      "target": {
+        "uuid": "5186b1e9-506c-4846-994d-789c5204b38a",
+        "name": "Tetramethyl ammonium hydroxide"
+      }
+    },
+    {
+      "source": {
+        "uuid": "9182d01f-27f3-4b65-a183-07508dfc5981",
+        "name": "Thallium I"
+      },
+      "target": {
+        "uuid": "18aa2daa-0188-4328-b24b-1ad1398ecf81",
+        "name": "Thallium I"
+      }
+    },
+    {
+      "source": {
+        "uuid": "aae8ad45-5cea-4b59-b3eb-3a58dd8fc8e9",
+        "name": "Thorium"
+      },
+      "target": {
+        "uuid": "c93b5919-6b01-46c9-8510-cc94d1712168",
+        "name": "Thorium"
+      }
+    },
+    {
+      "source": {
+        "uuid": "de0478a0-377a-46dc-89ac-0e1705bb9e7f",
+        "name": "Thorium-228"
+      },
+      "target": {
+        "uuid": "ecc877ac-3c34-4838-b1f8-6ae0ff2cd2fc",
+        "name": "Thorium-228"
+      }
+    },
+    {
+      "source": {
+        "uuid": "7bc25bb7-caa5-45cf-bbf0-889879173590",
+        "name": "Thorium-230"
+      },
+      "target": {
+        "uuid": "22d1736f-baa9-481e-9583-42654a6a7c26",
+        "name": "Thorium-230"
+      }
+    },
+    {
+      "source": {
+        "uuid": "532d8b1e-14aa-45df-8f89-dd749c83635f",
+        "name": "Thorium-232"
+      },
+      "target": {
+        "uuid": "08ebf986-d40a-4538-8aa7-21da2f99edf7",
+        "name": "Thorium-232"
+      }
+    },
+    {
+      "source": {
+        "uuid": "80d316d2-631d-4642-8100-28aa63ec7a79",
+        "name": "Thorium-234"
+      },
+      "target": {
+        "uuid": "898c1c27-5cc0-4713-89f6-1ab864aadc44",
+        "name": "Thorium-234"
+      }
+    },
+    {
+      "source": {
+        "uuid": "6366d4ec-5ffc-4488-be51-0c239cdf535d",
+        "name": "Tin ion"
+      },
+      "target": {
+        "uuid": "2a7b68ff-f12a-44c6-8b31-71ec91d29889",
+        "name": "Tin ion"
+      }
+    },
+    {
+      "source": {
+        "uuid": "a5b82cff-6334-45a8-aef7-1761f2b83722",
+        "name": "Titanium ion"
+      },
+      "target": {
+        "uuid": "b15d845f-810e-4614-8633-af8bab2014ee",
+        "name": "Titanium ion"
+      }
+    },
+    {
+      "source": {
+        "uuid": "0b0d8098-ecbf-4020-afd6-4bcf9db686ce",
+        "name": "Toluene"
+      },
+      "target": {
+        "uuid": "3b1ecf8e-1d2c-4330-81da-a79f9068976d",
+        "name": "Toluene"
+      }
+    },
+    {
+      "source": {
+        "uuid": "2df9d4e0-f095-4089-be46-1c1acbcf3a09",
+        "name": "Toluene, 2-chloro"
+      },
+      "target": {
+        "uuid": "53578c58-7cd6-4623-9dd5-2c275bdc9f38",
+        "name": "Toluene, 2-chloro"
+      }
+    },
+    {
+      "source": {
+        "uuid": "2e1396a2-b8e0-4f4a-89c7-11c4ee4733c1",
+        "name": "Trichloroethylene"
+      },
+      "target": {
+        "uuid": "a0950325-06dc-5ca0-84b6-983c9e6ccf74",
+        "name": "Trichloroethylene"
+      }
+    },
+    {
+      "source": {
+        "uuid": "e4020f30-9370-4f8d-854b-a342d4d6419c",
+        "name": "Trichlorosilane"
+      },
+      "target": {
+        "uuid": "0e6489b3-cfcf-4563-9064-67637fc455de",
+        "name": "Trichlorosilane"
+      }
+    },
+    {
+      "source": {
+        "uuid": "0e938bce-f780-4e2e-9de0-a8efd8c0804b",
+        "name": "Trimethylamine"
+      },
+      "target": {
+        "uuid": "8e0afcd9-9955-41d4-8ad0-397a38f82dca",
+        "name": "Trimethylamine"
+      }
+    },
+    {
+      "source": {
+        "uuid": "d68bd053-2f8c-4890-a0fd-771f4be30c14",
+        "name": "Tungsten"
+      },
+      "target": {
+        "uuid": "da5e6be3-ed71-48ac-9397-25bac666c7b7",
+        "name": "Tungsten"
+      }
+    },
+    {
+      "source": {
+        "uuid": "347de5bf-3551-4022-8371-258e830b5a09",
+        "name": "Uranium"
+      },
+      "target": {
+        "uuid": "595f08d9-6304-497e-bb7d-48b6d2d8bff3",
+        "name": "Uranium"
+      }
+    },
+    {
+      "source": {
+        "uuid": "4e6641cc-7ec3-45a7-bd20-ccff1acb4cc4",
+        "name": "Uranium alpha"
+      },
+      "target": {
+        "uuid": "e8e0b8c1-ad10-4d32-8167-10dc8c67f59c",
+        "name": "Uranium alpha"
+      }
+    },
+    {
+      "source": {
+        "uuid": "521cd1c6-03bb-4608-8f6f-8bc289a11306",
+        "name": "Uranium-234"
+      },
+      "target": {
+        "uuid": "bf112355-f868-42b8-8f39-6f2901cc38b9",
+        "name": "Uranium-234"
+      }
+    },
+    {
+      "source": {
+        "uuid": "d58263d0-1a0e-43d0-ad91-6ed0dd55d737",
+        "name": "Uranium-235"
+      },
+      "target": {
+        "uuid": "698d08b4-fee6-40d4-93dd-24a28d48df45",
+        "name": "Uranium-235"
+      }
+    },
+    {
+      "source": {
+        "uuid": "4e079e10-cee0-4afe-bf91-e7d8b23f6a94",
+        "name": "Uranium-238"
+      },
+      "target": {
+        "uuid": "c36056d2-5101-4198-b13b-fdc0a8cf27ee",
+        "name": "Uranium-238"
+      }
+    },
+    {
+      "source": {
+        "uuid": "9841f5a4-027e-4dbf-87fe-f0bcf56b91ab",
+        "name": "Vanadium V"
+      },
+      "target": {
+        "uuid": "591b0a62-8064-4697-86ed-47bfa1f8b5e6",
+        "name": "Vanadium V"
+      }
+    },
+    {
+      "source": {
+        "uuid": "bac00b68-32e7-4f0b-8319-fc36fe9dcd1c",
+        "name": "Xenon-131m"
+      },
+      "target": {
+        "uuid": "e6183e67-e45e-4d8d-a9ec-85ba8d7d1600",
+        "name": "Xenon-131m"
+      }
+    },
+    {
+      "source": {
+        "uuid": "85b391ed-7db5-4f95-ba22-1305940ccd3d",
+        "name": "Xenon-133"
+      },
+      "target": {
+        "uuid": "fe85df5c-5587-4a5f-a33b-c6e2b240e238",
+        "name": "Xenon-133"
+      }
+    },
+    {
+      "source": {
+        "uuid": "d91700b6-1760-4e8c-8501-fa5f12559ba0",
+        "name": "Xenon-133m"
+      },
+      "target": {
+        "uuid": "e61544d9-cf2f-4001-a855-9a014c2972ac",
+        "name": "Xenon-133m"
+      }
+    },
+    {
+      "source": {
+        "uuid": "91a6d437-29ac-4b52-829c-094543c025c1",
+        "name": "Xenon-135"
+      },
+      "target": {
+        "uuid": "f5e7f3b4-6423-4914-bb36-d6f52b8e5dbb",
+        "name": "Xenon-135"
+      }
+    },
+    {
+      "source": {
+        "uuid": "d369cba2-e0a7-4d98-8227-05657cf1479f",
+        "name": "Xenon-135m"
+      },
+      "target": {
+        "uuid": "94eb7305-be1e-416f-b9de-9865d5395bff",
+        "name": "Xenon-135m"
+      }
+    },
+    {
+      "source": {
+        "uuid": "88af0a76-5bd7-4e99-a14e-9cf2608abef0",
+        "name": "Xenon-137"
+      },
+      "target": {
+        "uuid": "47859760-4329-4dde-9c61-2e7a2401d3c5",
+        "name": "Xenon-137"
+      }
+    },
+    {
+      "source": {
+        "uuid": "cf12e6aa-1e5a-40d0-90d6-1ca8e58e9b89",
+        "name": "Xenon-138"
+      },
+      "target": {
+        "uuid": "2cbfe861-7436-4a43-8892-f057320dc57d",
+        "name": "Xenon-138"
+      }
+    },
+    {
+      "source": {
+        "uuid": "6da40876-a6ab-459e-ba17-9a5e3d4da146",
+        "name": "Xylene"
+      },
+      "target": {
+        "uuid": "5c234628-ab1e-4284-ae2b-f1c2f6883f71",
+        "name": "Xylene"
+      }
+    },
+    {
+      "source": {
+        "uuid": "994de784-726c-4c75-87d5-1c9c8499943a",
+        "name": "Zinc-65"
+      },
+      "target": {
+        "uuid": "4aed2261-0461-4014-be23-cf83de76a3b4",
+        "name": "Zinc-65"
+      }
+    },
+    {
+      "source": {
+        "uuid": "75af210f-0455-487e-ba2c-e9dd317af77c",
+        "name": "Zirconium"
+      },
+      "target": {
+        "uuid": "c13fc7a0-f240-468b-aaf6-e781743a46d5",
+        "name": "Zirconium"
+      }
+    },
+    {
+      "source": {
+        "uuid": "ae941326-4981-44fa-8be1-8757aab10d00",
+        "name": "Zirconium-95"
+      },
+      "target": {
+        "uuid": "88a02d30-d9fe-4dc1-b1e5-e95745df0956",
+        "name": "Zirconium-95"
+      }
+    }
+  ]
+}

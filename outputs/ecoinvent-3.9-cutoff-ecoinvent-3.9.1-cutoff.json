@@ -1,0 +1,28 @@
+{
+  "name": "ecoinvent-3.9-cutoff-ecoinvent-3.9.1-cutoff",
+  "licenses": [
+    {
+      "name": "CC BY 4.0",
+      "path": "https://creativecommons.org/licenses/by/4.0/",
+      "title": "Creative Commons Attribution 4.0 International"
+    }
+  ],
+  "version": "1.0.0",
+  "description": "Data migration file from ecoinvent-3.9-cutoff to ecoinvent-3.9.1-cutoff generated with `ecoinvent_migrate` version 0.1.0 at 2024-06-14T12:00:07.185719+00:00",
+  "homepage": "https://github.com/brightway-lca/ecoinvent_migrate",
+  "created": "2024-06-14T12:00:07.185719+00:00",
+  "contributors": [
+    {
+      "title": "ecoinvent association",
+      "path": "https://ecoinvent.org/",
+      "role": "author"
+    },
+    {
+      "title": "Chris Mutel",
+      "path": "https://chris.mutel.org/",
+      "role": "wrangler"
+    }
+  ],
+  "replace": [],
+  "disaggregate": []
+}
