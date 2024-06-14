@@ -121,6 +121,7 @@ def generate_technosphere_mapping(
         )
         for pair in source_target_pair_as_bw_dict(row, source_version, target_version)
     ]
+
     source_db_name, target_db_name, source_lookup, target_lookup = get_brightway_databases(
         source_version=source_version, target_version=target_version, system_model=system_model
     )
@@ -131,6 +132,6 @@ def generate_technosphere_mapping(
         source_lookup=source_lookup,
         target_lookup=target_lookup,
     )
-    data = [ds for ds in data if ds["source"] != ds["target"]]
+
     data = split_replace_disaggregate(data=data, target_lookup=target_lookup)
     return data

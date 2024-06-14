@@ -280,12 +280,15 @@ def split_replace_disaggregate(data: List[dict], target_lookup: dict) -> dict:
     Disaggregation is needed when one dataset is replaced by multiple datasets. We lookup the
     respective production volumes to get the disaggregation factors."""
     groupie = defaultdict(list)
-
     for obj in data:
         groupie[astuple(obj["source"])].append(obj)
 
     return {
-        "replace": [value[0] for value in groupie.values() if len(value) == 1],
+        "replace": [
+            value[0]
+            for value in groupie.values()
+            if len(value) == 1 and value[0]["source"] != value[0]["target"]
+        ],
         "disaggregate": [
             disaggregated(value, target_lookup) for value in groupie.values() if len(value) > 1
         ],
