@@ -217,8 +217,8 @@ def resolve_glo_row_rer_roe(
                     # Only missing in target database - but this is a big problem, we don't have a
                     # suitable target for existing edges to relink to.
                     logger.warning(
-                        "{kind.title()} process given in change report but missing in {db_name} lookup: {ds}",
-                        kind=kind,
+                        "{kind} process given in change report but missing in {db_name} lookup: {ds}",
+                        kind=kind.title(),
                         db_name=db_name,
                         ds=obj[kind],
                     )
