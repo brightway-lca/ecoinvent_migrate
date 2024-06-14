@@ -139,6 +139,16 @@ def generate_technosphere_mapping(
     )
     data = split_replace_disaggregate(data=data, target_lookup=target_lookup)
 
+    if not data["replace"] and not data["disaggregate"]:
+        logger.info(
+            "It seems like there are no technosphere changes for this release. Doing nothing."
+        )
+        return
+    if not data["replace"]:
+        del data["replace"]
+    if not data["disaggregate"]:
+        del data["disaggregate"]
+
     return write_datapackage(
         data=data,
         source_db_name=source_db_name,
