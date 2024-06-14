@@ -2,12 +2,15 @@ import itertools
 import math
 from collections import defaultdict
 from numbers import Number
-from typing import List
+from typing import List, Union
 
-import bw2data as bd
 from loguru import logger
 
-from .errors import Mismatch, MissingDatabase, Uncombinable
+from .errors import Mismatch, Uncombinable
+
+
+def isnan(o: Union[str, Number]) -> bool:
+    return isinstance(o, Number) and math.isnan(o)
 
 
 def split_by_semicolon(row: dict, version: str) -> list[dict]:
@@ -293,3 +296,64 @@ def split_replace_disaggregate(data: List[dict], target_lookup: dict) -> dict:
             disaggregated(value, target_lookup) for value in groupie.values() if len(value) > 1
         ],
     }
+
+
+def get_column_labels(example: dict, version: str) -> dict:
+    """Guess column labels from Excel change report annex."""
+    uuid_tries = [f"UUID - {version}", f"ID - {version}"]
+    for uuid_try in uuid_tries:
+        if uuid_try in example:
+            uuid = uuid_try
+            break
+    else:
+        raise ValueError(f"Can't find uuid field for database version {version} in {example}")
+    name_tries = [f"Name - {version}", f"{version} name", f"{version} - name"]
+    for name_try in name_tries:
+        if name_try in example:
+            name = name_try
+            break
+    else:
+        raise ValueError(f"Can't find name field for database version {version} in {example}")
+    return {
+        "uuid": uuid,
+        "name": name,
+    }
+
+
+def source_target_biosphere_pair(
+    data: List[dict], source_version: str, target_version: str, keep_deletions: bool
+) -> List[dict]:
+    """Turn pandas DataFrame rows into source/target pairs."""
+    source_labels = get_column_labels(example=data[0], version=source_version)
+    target_labels = get_column_labels(example=data[0], version=target_version)
+
+    formatted = {
+        "replace": [
+            {
+                "source": {k: row[v] for k, v in source_labels.items()},
+                "target": {k: row[v] for k, v in target_labels.items()},
+                "allocation": float(row.get("Conversion Factor (old-new)", 1.0)),
+                "comment": row.get("Comment"),
+            }
+            for row in data
+            if not isnan(row[target_labels["uuid"]])
+        ]
+    }
+    if keep_deletions:
+        formatted["delete"] = [
+            {
+                "source": {k: row[v] for k, v in source_labels.items()},
+                "comment": row.get("Comment"),
+            }
+            for row in data
+            if isnan(row[target_labels["uuid"]])
+        ]
+
+    for lst in formatted.values():
+        for obj in lst:
+            if "comment" in obj and (not obj['comment'] or isnan(obj['comment'])):
+                del obj['comment']
+            if "allocation" in obj and (obj['allocation'] == 1. or isnan(obj['allocation'])):
+                del obj['allocation']
+
+    return formatted

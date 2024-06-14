@@ -1,17 +1,18 @@
-import json
 import warnings
 from pathlib import Path
-from typing import Optional
+from typing import List, Optional
 
 import pandas as pd
 from ecoinvent_interface import EcoinventRelease, Settings
 from loguru import logger
 
 from .data_io import get_brightway_databases, get_change_report_filepath, setup_project
+from .datapackage import write_datapackage
 from .errors import VersionJump
 from .utils import configure_logs
 from .wrangling import (
     resolve_glo_row_rer_roe,
+    source_target_biosphere_pair,
     source_target_pair_as_bw_dict,
     split_replace_disaggregate,
 )
@@ -87,6 +88,10 @@ def generate_technosphere_mapping(
     ecoinvent_username: Optional[str] = None,
     ecoinvent_password: Optional[str] = None,
     write_logs: bool = True,
+    licenses: Optional[List[dict]] = None,
+    output_directory: Optional[Path] = None,
+    output_version: str = "1.0.0",
+    description: Optional[str] = None,
 ) -> Path:
     """Generate a Randonneur mapping file for technosphere edge attributes from source to target."""
     configure_logs(write_logs=write_logs)
@@ -132,6 +137,77 @@ def generate_technosphere_mapping(
         source_lookup=source_lookup,
         target_lookup=target_lookup,
     )
-
     data = split_replace_disaggregate(data=data, target_lookup=target_lookup)
-    return data
+
+    return write_datapackage(
+        data=data,
+        source_db_name=source_db_name,
+        target_db_name=target_db_name,
+        licenses=licenses,
+        output_directory=output_directory,
+        version=output_version,
+        description=description,
+    )
+
+
+def generate_biosphere_mapping(
+    source_version: str,
+    target_version: str,
+    keep_deletions: bool = False,
+    project_name: str = "ecoinvent-migration",
+    ecoinvent_username: Optional[str] = None,
+    ecoinvent_password: Optional[str] = None,
+    write_logs: bool = True,
+    licenses: Optional[List[dict]] = None,
+    output_directory: Optional[Path] = None,
+    output_version: str = "1.0.0",
+    description: Optional[str] = None,
+) -> Path:
+    """Generate a Randonneur mapping file for biosphere edge attributes from source to target."""
+    configure_logs(write_logs=write_logs)
+
+    logger.info(
+        """The `EE Deletions` format is not consistent across versions.
+Please check the outputs carefully before applying them."""
+    )
+
+    excel_filepath = get_change_report_context(
+        source_version=source_version,
+        target_version=target_version,
+        project_name=project_name,
+        ecoinvent_username=ecoinvent_username,
+        ecoinvent_password=ecoinvent_password,
+    )
+
+    sheet_names = pd.ExcelFile(excel_filepath).sheet_names
+    candidates = [name for name in sheet_names if name.lower() == "ee deletions"]
+    if not candidates:
+        logger.info(
+            "It seems like there are no biosphere changes; no sheet name like `EE Deletions` found. Sheet names found:\n\t{sn}",
+            sn="\n\t".join(sheet_names),
+        )
+        return
+    elif len(candidates) > 1:
+        raise ValueError(
+            "Found multiple sheet names like 'EE Deletions' for change report file:\n\t{}".format(
+                "\n\t".join(sheet_names)
+            )
+        )
+
+    data = pd.read_excel(io=excel_filepath, sheet_name=candidates[0]).to_dict(orient="records")
+    data = source_target_biosphere_pair(
+        data=data,
+        source_version=source_version,
+        target_version=target_version,
+        keep_deletions=keep_deletions,
+    )
+
+    return write_datapackage(
+        data=data,
+        source_db_name=f"ecoinvent-{source_version}-biosphere",
+        target_db_name=f"ecoinvent-{target_version}-biosphere",
+        licenses=licenses,
+        output_directory=output_directory,
+        version=output_version,
+        description=description,
+    )
