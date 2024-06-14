@@ -29,7 +29,7 @@ def write_datapackage(
             }
         ]
     if description is None:
-        description = f"Data migration file from {source_db_name} to {target_db_name} generated with `ecoinvent_migrate` version {__version__} at {now}"
+        description = f"Data migration file from {source_db_name} to {target_db_name} generated with `ecoinvent_migrate` version {__version__}"
 
     formatted = {
         "name": f"{source_db_name}-{target_db_name}",
