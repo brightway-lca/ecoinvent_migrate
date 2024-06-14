@@ -19,7 +19,9 @@
 [pre-commit]: https://github.com/pre-commit/pre-commit
 [black]: https://github.com/psf/black
 
-`ecoinvent_migrate` downloads the change report Excel files from ecoinvent, and turns them into something usable - [Randonneur migration files](https://github.com/brightway-lca/randonneur). These files are designed to allow for relinking against new versions of ecoinvent, **not** for updating an existing ecoinvent installation.
+`ecoinvent_migrate` makes the change report Excel files from ecoinvent usable.
+
+These files are designed to allow for relinking against new versions of ecoinvent, **not** for updating an existing ecoinvent installation.
 
 This library requires a valid ecoinvent license for all functionality.
 
@@ -115,7 +117,7 @@ This produces a file which has allows foreground inventory datasets which linked
 }
 ```
 
-To use this file, you will need to take different actions for the two verbs. For `replace`, edges in your foreground with links to an ecoinvent dataset with the `source` attributes can be replaced one-to-one with an ecoinvent from the later release whose attributes match those in the `target` section. For the `disaggregate` verb, you will need to split the initial foreground edge into two or more edges, and scale the original amount and uncertainty information by the `allocation` value.
+To use this file, you will need to take different actions for the two verbs. For `replace`, edges in your foreground which link to an ecoinvent dataset with the same attributes as in the `source` section can be replaced one-to-one with an edge to an ecoinvent process from the later release whose attributes match those in the `target` section. For the `disaggregate` verb, you will need to split the initial foreground edge into two or more edges, and scale the original amount and uncertainty information by the `allocation` value.
 
 If you are using Brightway, there are convenience functions in `bw_migrations` and cached migration files which will be used for you automatically.
 
@@ -203,25 +205,25 @@ By default, the `delete` verb is skipped, as this is a more cautious approach to
 
 Both `generate_technosphere_mapping` and `generate_biosphere_mapping` accept the following input arguments:
 
-    * source_version (str): String representation of an ecoinvent version, e.g. "3.8"
-    * target_version (str): String representation of an ecoinvent version, e.g. "3.8"
-    * ecoinvent_username (str, optional): Ecoinvent account username
-    * ecoinvent_password (str, optional): Ecoinvent account password
-    * write_logs (bool, default `True`): Create detailed and high-level logs during mapping file creation
-    * output_directory (`pathlib.Path`, default is `platformlibs.user_data_dir`): Directory for the result files
+* source_version (str): String representation of an ecoinvent version, e.g. "3.8"
+* target_version (str): String representation of an ecoinvent version, e.g. "3.8"
+* ecoinvent_username (str, optional): Ecoinvent account username
+* ecoinvent_password (str, optional): Ecoinvent account password
+* write_logs (bool, default `True`): Create detailed and high-level logs during mapping file creation
+* output_directory (`pathlib.Path`, default is `platformlibs.user_data_dir`): Directory for the result files
 
 Note that we **strongly recommend** [permanently setting your ecoinvent user credentials](https://github.com/brightway-lca/ecoinvent_interface?tab=readme-ov-file#authentication-via-settings-object).
 
 The following input parameters should normally be left to their default values:
 
-    * project_name (str): The Brightway project name into which we install ecoinvent releases to check change report data validity.
-    * output_version (str, default is "1.0.0"): [Datapackage version number](https://specs.frictionlessdata.io/data-package/#version)
-    * licenses (list, default is CC-BY): Licenses following the [frictionless data datapackage standard](https://specs.frictionlessdata.io/data-package/#licenses)
-    * description (str, default is auto-generated): Description of generated datapackage.
+* project_name (str): The Brightway project name into which we install ecoinvent releases to check change report data validity.
+* output_version (str, default is "1.0.0"): [Datapackage version number](https://specs.frictionlessdata.io/data-package/#version)
+* licenses (list, default is CC-BY): Licenses following the [frictionless data datapackage standard](https://specs.frictionlessdata.io/data-package/#licenses)
+* description (str, default is auto-generated): Description of generated datapackage.
 
 ### How does this library work?
 
-We start by using [ecoinvent_interface](https://github.com/brightway-lca/ecoinvent_interface) to download the change report Excel file, and the two ecoinvent releases (source and target). We need to download the ecoinvent data because the change report is for the unlinked and unallocated "master" data; there are some changes made for the specific system models.
+We start by using [ecoinvent_interface](https://github.com/brightway-lca/ecoinvent_interface) to download the change report Excel file, and the two ecoinvent releases (source and target). We need to download the ecoinvent data because the change report is for the unlinked and unallocated "master" data; there are some changes needed for the specific system models.
 
 For biosphere mapping, we read the Excel file, search around for the correct worksheet and column names, and map the data to "replace" and "delete" sections. This is pretty simple.
 
@@ -230,7 +232,11 @@ For technosphere mapping, we need to check if the indicated datasets are actuall
 Not every line in the change report Excel file can be used, either because of the specifics of the system model, or some other unknown discrepancy. These exceptions are logged to both the log files and `sys.stderr`:
 
 ```console
-2024-06-14 14:17:38.641 | WARNING  | ecoinvent_migrate.wrangling:resolve_glo_row_rer_roe:219 - Target process given in change report but missing in ecoinvent-3.8-cutoff lookup: {'name': 'rutile production, synthetic, 95% titanium dioxide, Benelite process', 'location': 'GLO', 'reference product': 'rutile, 95% titanium dioxide', 'unit': 'kg'}
+2024-06-14 14:17:38.641 | WARNING  | ecoinvent_migrate.wrangling:resolve_glo_row_rer_roe:219 -
+    Target process given in change report but missing in ecoinvent-3.8-cutoff lookup:
+    {'name': 'rutile production, synthetic, 95% titanium dioxide, Benelite process',
+     'location': 'GLO',
+     'reference product': 'rutile, 95% titanium dioxide', 'unit': 'kg'}
 ```
 
 Once the given change data is segregated and cleaned, it is serialized to JSON.
