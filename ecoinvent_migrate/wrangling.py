@@ -266,7 +266,7 @@ def disaggregated(data: List[dict], lookup: dict) -> dict:
     total = sum(obj["pv"] for obj in data)
     if not total:
         logger.warning(
-            f"Total production from {n} targets is zero for source {s}; using equal allocation factors",
+            "Total production from {n} targets is zero for source {s}; using equal allocation factors",
             n=len(data),
             s=data[0]["source"],
         )
@@ -276,7 +276,7 @@ def disaggregated(data: List[dict], lookup: dict) -> dict:
         }
     elif total < 0:
         logger.warning(
-            f"Total production from {n} targets is less than zero for source {s}; what is happening!?",
+            "Total production from {n} targets is less than zero for source {s}; what is happening!?",
             n=len(data),
             s=data[0]["source"],
         )
@@ -361,9 +361,9 @@ def source_target_biosphere_pair(
 
     for lst in formatted.values():
         for obj in lst:
-            if "comment" in obj and (not obj['comment'] or isnan(obj['comment'])):
-                del obj['comment']
-            if "allocation" in obj and (obj['allocation'] == 1. or isnan(obj['allocation'])):
-                del obj['allocation']
+            if "comment" in obj and (not obj["comment"] or isnan(obj["comment"])):
+                del obj["comment"]
+            if "allocation" in obj and (obj["allocation"] == 1.0 or isnan(obj["allocation"])):
+                del obj["allocation"]
 
     return formatted
