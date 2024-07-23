@@ -14,7 +14,9 @@ def isnan(o: Union[str, Number]) -> bool:
 
 
 def split_by_semicolon(row: dict, version: str) -> list[dict]:
-    """Possible split a data row into"""
+    """Turn a data `row` into one or more dictionaries.
+
+    Splits reference product and unit values by `;\n`."""
     if isinstance(row[f"Activity Name - {version}"], Number) and math.isnan(
         row[f"Activity Name - {version}"]
     ):
