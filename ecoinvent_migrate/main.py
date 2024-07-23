@@ -1,21 +1,22 @@
 import warnings
 from pathlib import Path
-from typing import List, Optional
+from typing import List, Optional, Union
 
 import pandas as pd
 from ecoinvent_interface import EcoinventRelease, Settings
 from loguru import logger
+from randonneur import Datapackage, MappingConstants
 
 from .data_io import get_brightway_databases, get_change_report_filepath, setup_project
-from .datapackage import write_datapackage
 from .errors import VersionJump
-from .utils import configure_logs
+from .utils import configure_logs, setup_output_directory
 from .wrangling import (
     resolve_glo_row_rer_roe,
     source_target_biosphere_pair,
     source_target_pair_as_bw_dict,
     split_replace_disaggregate,
 )
+from . import __version__
 
 
 def get_change_report_context(
@@ -88,11 +89,12 @@ def generate_technosphere_mapping(
     ecoinvent_username: Optional[str] = None,
     ecoinvent_password: Optional[str] = None,
     write_logs: bool = True,
+    write_file: bool = True,
     licenses: Optional[List[dict]] = None,
     output_directory: Optional[Path] = None,
-    output_version: str = "1.0.0",
+    output_version: str = "2.0.0",
     description: Optional[str] = None,
-) -> Path:
+) -> Union[Path, Datapackage]:
     """Generate a Randonneur mapping file for technosphere edge attributes from source to target."""
     configure_logs(write_logs=write_logs)
 
@@ -130,6 +132,10 @@ def generate_technosphere_mapping(
     source_db_name, target_db_name, source_lookup, target_lookup = get_brightway_databases(
         source_version=source_version, target_version=target_version, system_model=system_model
     )
+
+    if not description:
+        description = f"Data migration file from {source_db_name} to {target_db_name} generated with `ecoinvent_migrate` version {__version__}"
+
     data = resolve_glo_row_rer_roe(
         data=data,
         source_db_name=source_db_name,
@@ -149,15 +155,32 @@ def generate_technosphere_mapping(
     if not data["disaggregate"]:
         del data["disaggregate"]
 
-    return write_datapackage(
-        data=data,
-        source_db_name=source_db_name,
-        target_db_name=target_db_name,
-        licenses=licenses,
-        output_directory=output_directory,
-        version=output_version,
+    dp = Datapackage(
+        name=f"{source_db_name}-{target_db_name}",
         description=description,
+        contributors=[
+            {"title": "ecoinvent association", "path": "https://ecoinvent.org/", "role": "author"},
+            {"title": "Chris Mutel", "path": "https://chris.mutel.org/", "role": "wrangler"},
+        ],
+        mapping_source=MappingConstants.ECOSPOLD2,
+        mapping_target=MappingConstants.ECOSPOLD2,
+        homepage="https://github.com/brightway-lca/ecoinvent_migrate",
+        version="2.0.0",
+        source_id=source_db_name,
+        target_id=target_db_name,
+        licenses=licenses,
     )
+    for key, value in data.items():
+        dp.add_data(key, value)
+
+    if write_file:
+        filename = f"{source_db_name}-{target_db_name}.json"
+        output_directory = setup_output_directory(output_directory)
+        fp = output_directory / filename
+        logger.info("Writing output file {fp}", fp=str(fp))
+        return dp.to_json(fp)
+    else:
+        return dp
 
 
 def generate_biosphere_mapping(
@@ -168,13 +191,17 @@ def generate_biosphere_mapping(
     ecoinvent_username: Optional[str] = None,
     ecoinvent_password: Optional[str] = None,
     write_logs: bool = True,
+    write_file: bool = True,
     licenses: Optional[List[dict]] = None,
     output_directory: Optional[Path] = None,
-    output_version: str = "1.0.0",
+    output_version: str = "2.0.0",
     description: Optional[str] = None,
 ) -> Path:
     """Generate a Randonneur mapping file for biosphere edge attributes from source to target."""
     configure_logs(write_logs=write_logs)
+
+    source_db_name = f"ecoinvent-{source_version}-biosphere"
+    target_db_name = f"ecoinvent-{target_version}-biosphere"
 
     logger.info(
         """The `EE Deletions` format is not consistent across versions.
@@ -212,12 +239,29 @@ Please check the outputs carefully before applying them."""
         keep_deletions=keep_deletions,
     )
 
-    return write_datapackage(
-        data=data,
-        source_db_name=f"ecoinvent-{source_version}-biosphere",
-        target_db_name=f"ecoinvent-{target_version}-biosphere",
-        licenses=licenses,
-        output_directory=output_directory,
-        version=output_version,
+    dp = Datapackage(
+        name=f"{source_db_name}-{target_db_name}",
         description=description,
+        contributors=[
+            {"title": "ecoinvent association", "path": "https://ecoinvent.org/", "role": "author"},
+            {"title": "Chris Mutel", "path": "https://chris.mutel.org/", "role": "wrangler"},
+        ],
+        mapping_source=MappingConstants.ECOSPOLD2_BIO,
+        mapping_target=MappingConstants.ECOSPOLD2_BIO,
+        homepage="https://github.com/brightway-lca/ecoinvent_migrate",
+        version="2.0.0",
+        source_id=source_db_name,
+        target_id=target_db_name,
+        licenses=licenses,
     )
+    for key, value in data.items():
+        dp.add_data(key, value)
+
+    if write_file:
+        filename = f"{source_db_name}-{target_db_name}.json"
+        output_directory = setup_output_directory(output_directory)
+        fp = output_directory / filename
+        logger.info("Writing output file {fp}", fp=str(fp))
+        return dp.to_json(fp)
+    else:
+        return dp
