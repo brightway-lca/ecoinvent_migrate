@@ -16,6 +16,7 @@ from .wrangling import (
     source_target_pair_as_bw_dict,
     split_replace_disaggregate,
 )
+from .patches import TECHNOSPHERE_PATCHES
 from . import __version__
 
 
@@ -145,6 +146,12 @@ def generate_technosphere_mapping(
     )
     data = split_replace_disaggregate(data=data, target_lookup=target_lookup)
 
+    try:
+        for key, value in TECHNOSPHERE_PATCHES[(source_version, target_version)].items():
+            data[key].extend(value)
+    except KeyError:
+        pass
+
     if not data["replace"] and not data["disaggregate"]:
         logger.info(
             "It seems like there are no technosphere changes for this release. Doing nothing."
@@ -230,6 +237,9 @@ Please check the outputs carefully before applying them."""
                 "\n\t".join(sheet_names)
             )
         )
+
+    if not description:
+        description = f"Data migration file from {source_db_name} to {target_db_name} generated with `ecoinvent_migrate` version {__version__}"
 
     data = pd.read_excel(io=excel_filepath, sheet_name=candidates[0]).to_dict(orient="records")
     data = source_target_biosphere_pair(
