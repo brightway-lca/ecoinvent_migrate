@@ -7,8 +7,10 @@ from ecoinvent_interface import EcoinventRelease, Settings
 from loguru import logger
 from randonneur import Datapackage, MappingConstants
 
+from . import __version__
 from .data_io import get_brightway_databases, get_change_report_filepath, setup_project
 from .errors import VersionJump
+from .patches import TECHNOSPHERE_PATCHES
 from .utils import configure_logs, setup_output_directory
 from .wrangling import (
     resolve_glo_row_rer_roe,
@@ -16,8 +18,6 @@ from .wrangling import (
     source_target_pair_as_bw_dict,
     split_replace_disaggregate,
 )
-from .patches import TECHNOSPHERE_PATCHES
-from . import __version__
 
 
 def get_change_report_context(

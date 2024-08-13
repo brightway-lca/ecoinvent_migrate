@@ -1,12 +1,11 @@
 import datetime
+import os
 import sys
 from pathlib import Path
-from platformdirs import user_data_dir
-import os
 from typing import Optional
 
 from loguru import logger
-from platformdirs import user_log_dir
+from platformdirs import user_data_dir, user_log_dir
 
 
 def configure_logs(write_logs: bool = True) -> None:
