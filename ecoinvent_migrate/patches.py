@@ -71,6 +71,62 @@ TECHNOSPHERE_PATCHES = {
                     "unit": "kg",
                 },
             },
+            {
+                "source": {
+                    "name": "air separation, cryogenic",
+                    "reference product": "nitrogen, liquid",
+                    "location": "RER",
+                    "unit": "kg",
+                },
+                "target": {
+                    "name": "industrial gases production, cryogenic air separation",
+                    "reference product": "nitrogen, liquid",
+                    "location": "RER",
+                    "unit": "kg",
+                },
+            },
+            {
+                "source": {
+                    "name": "air separation, cryogenic",
+                    "reference product": "nitrogen, liquid",
+                    "location": "RoW",
+                    "unit": "kg",
+                },
+                "target": {
+                    "name": "industrial gases production, cryogenic air separation",
+                    "reference product": "nitrogen, liquid",
+                    "location": "RoW",
+                    "unit": "kg",
+                },
+            },
+            {
+                "source": {
+                    "name": "air separation, cryogenic",
+                    "reference product": "argon, crude, liquid",
+                    "location": "RER",
+                    "unit": "kg",
+                },
+                "target": {
+                    "name": "industrial gases production, cryogenic air separation",
+                    "reference product": "argon, crude, liquid",
+                    "location": "RER",
+                    "unit": "kg",
+                },
+            },
+            {
+                "source": {
+                    "name": "air separation, cryogenic",
+                    "reference product": "argon, crude, liquid",
+                    "location": "RoW",
+                    "unit": "kg",
+                },
+                "target": {
+                    "name": "industrial gases production, cryogenic air separation",
+                    "reference product": "argon, crude, liquid",
+                    "location": "RoW",
+                    "unit": "kg",
+                },
+            },
         ]
     }
 }
