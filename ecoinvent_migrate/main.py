@@ -1,11 +1,13 @@
 import warnings
 from pathlib import Path
 from typing import List, Optional, Union
+import itertools
 
 import pandas as pd
-from ecoinvent_interface import EcoinventRelease, Settings
+from ecoinvent_interface import EcoinventRelease, Settings, ReleaseType, CachedStorage
 from loguru import logger
 from randonneur import Datapackage, MappingConstants
+import xmltodict
 
 from . import __version__
 from .data_io import get_brightway_databases, get_change_report_filepath, setup_project
@@ -201,7 +203,7 @@ def generate_biosphere_mapping(
     write_file: bool = True,
     licenses: Optional[List[dict]] = None,
     output_directory: Optional[Path] = None,
-    output_version: str = "2.0.0",
+    output_version: str = "3.0.0",
     description: Optional[str] = None,
 ) -> Path:
     """Generate a Randonneur mapping file for biosphere edge attributes from source to target."""
@@ -227,27 +229,52 @@ Please check the outputs carefully before applying them."""
     candidates = [name for name in sheet_names if name.lower() == "ee deletions"]
     if not candidates:
         logger.info(
-            "It seems like there are no biosphere changes; no sheet name like `EE Deletions` found. Sheet names found:\n\t{sn}",
+            "It seems like there are no biosphere changes; no sheet name like `EE Deletions` found. Sheet names found:\n\t{sn}. Looking at actual data to see if there are changes not included in the change report.",
             sn="\n\t".join(sheet_names),
         )
-        return
+        missing_sheet = True
     elif len(candidates) > 1:
         raise ValueError(
             "Found multiple sheet names like 'EE Deletions' for change report file:\n\t{}".format(
                 "\n\t".join(sheet_names)
             )
         )
+    else:
+        missing_sheet = False
 
     if not description:
         description = f"Data migration file from {source_db_name} to {target_db_name} generated with `ecoinvent_migrate` version {__version__}"
 
-    data = pd.read_excel(io=excel_filepath, sheet_name=candidates[0]).to_dict(orient="records")
-    data = source_target_biosphere_pair(
-        data=data,
-        source_version=source_version,
-        target_version=target_version,
-        keep_deletions=keep_deletions,
-    )
+    if not missing_sheet:
+        data = pd.read_excel(io=excel_filepath, sheet_name=candidates[0]).to_dict(orient="records")
+        data = source_target_biosphere_pair(
+            data=data,
+            source_version=source_version,
+            target_version=target_version,
+            keep_deletions=keep_deletions,
+        )
+        affected_uuids = {
+            o["source"]["uuid"] for o in itertools.chain(data["replace"], data["delete"])
+        }
+        data = supplement_biosphere_changes_with_real_data_comparison(
+            data=data,
+            affected_uuids=affected_uuids,
+            source_version=source_version,
+            target_version=target_version,
+        )
+    else:
+        data = supplement_biosphere_changes_with_real_data_comparison(
+            data={"delete": [], "replace": []},
+            affected_uuids=set(),
+            source_version=source_version,
+            target_version=target_version,
+        )
+
+    if not data["delete"] and not data["replace"]:
+        logger.info(
+            "It seems like there are no biosphere changes for this release. Doing nothing."
+        )
+        return
 
     dp = Datapackage(
         name=f"{source_db_name}-{target_db_name}",
@@ -275,3 +302,82 @@ Please check the outputs carefully before applying them."""
         return dp.to_json(fp)
     else:
         return dp
+
+
+def supplement_biosphere_changes_with_real_data_comparison(
+    data: dict, affected_uuids: set, source_version: str, target_version: str
+) -> dict:
+    cs = CachedStorage()
+
+    def format(ecospold: dict) -> dict:
+        return {
+            obj["@id"]: {
+                "name": obj["name"]["#text"].strip(),
+                "formula": obj.get("@formula").strip() if obj.get("@formula") else None,
+                "unit": obj["unitName"]["#text"].strip(),
+            }
+            for obj in ecospold["validElementaryExchanges"]["elementaryExchange"]
+        }
+
+    source_ee = format(
+        xmltodict.parse(
+            open(
+                Path(
+                    cs.catalogue[
+                        ReleaseType.ecospold.filename(
+                            version=source_version, system_model_abbr="cutoff"
+                        )
+                    ]["path"]
+                )
+                / "MasterData"
+                / "ElementaryExchanges.xml",
+                "rb",
+            )
+        )
+    )
+    target_ee = format(
+        xmltodict.parse(
+            open(
+                Path(
+                    cs.catalogue[
+                        ReleaseType.ecospold.filename(
+                            version=target_version, system_model_abbr="cutoff"
+                        )
+                    ]["path"]
+                )
+                / "MasterData"
+                / "ElementaryExchanges.xml",
+                "rb",
+            )
+        )
+    )
+
+    # Patch changes which aren't included in the change report
+    for key_source, value_source in source_ee.items():
+        if key_source not in target_ee and key_source not in affected_uuids:
+            data["delete"].append(
+                {
+                    "source": {"uuid": key_source, "name": value_source["name"]},
+                    "comment": "Deleted flow not listed in change report",
+                }
+            )
+            continue
+        elif key_source not in target_ee:
+            # Included in change report
+            continue
+
+        diff = {
+            key: value
+            for key, value in target_ee[key_source].items()
+            if value and value != value_source[key]
+        }
+        if diff:
+            data["replace"].append(
+                {
+                    "source": {k: v for k, v in value_source.items() if v} | {"uuid": key_source},
+                    "target": diff | {"uuid": key_source},
+                    "comment": "Flow attribute change not listed in change report",
+                }
+            )
+
+    return data
