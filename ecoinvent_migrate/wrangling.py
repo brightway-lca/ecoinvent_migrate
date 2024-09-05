@@ -344,7 +344,7 @@ def source_target_biosphere_pair(
             {
                 "source": {k: row[v] for k, v in source_labels.items()},
                 "target": {k: row[v] for k, v in target_labels.items()},
-                "allocation": float(row.get("Conversion Factor (old-new)", 1.0)),
+                "conversion_factor": float(row.get("Conversion Factor (old-new)", 1.0)),
                 "comment": row.get("Comment"),
             }
             for row in data
@@ -365,7 +365,7 @@ def source_target_biosphere_pair(
         for obj in lst:
             if "comment" in obj and (not obj["comment"] or isnan(obj["comment"])):
                 del obj["comment"]
-            if "allocation" in obj and (obj["allocation"] == 1.0 or isnan(obj["allocation"])):
-                del obj["allocation"]
+            if "conversion_factor" in obj and (obj["conversion_factor"] == 1.0 or isnan(obj["conversion_factor"])):
+                del obj["conversion_factor"]
 
     return formatted
