@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.5] - 2024-09-25
+
+* Don't assume `delete` section present in biosphere mappings
+
 ## [0.4.1] - 2024-09-05
 
 * Use `conversion_factor` instead of `allocation` for `replace` transformations
