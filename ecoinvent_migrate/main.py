@@ -254,7 +254,8 @@ Please check the outputs carefully before applying them."""
             keep_deletions=keep_deletions,
         )
         affected_uuids = {
-            o["source"]["uuid"] for o in itertools.chain(data["replace"], data["delete"])
+            o["source"]["uuid"]
+            for o in itertools.chain(data.get("replace", []), data.get("delete", []))
         }
         data = supplement_biosphere_changes_with_real_data_comparison(
             data=data,
@@ -271,9 +272,7 @@ Please check the outputs carefully before applying them."""
         )
 
     if not data["delete"] and not data["replace"]:
-        logger.info(
-            "It seems like there are no biosphere changes for this release. Doing nothing."
-        )
+        logger.info("It seems like there are no biosphere changes for this release. Doing nothing.")
         return
 
     dp = Datapackage(
@@ -355,6 +354,8 @@ def supplement_biosphere_changes_with_real_data_comparison(
     # Patch changes which aren't included in the change report
     for key_source, value_source in source_ee.items():
         if key_source not in target_ee and key_source not in affected_uuids:
+            if "delete" not in data:
+                data["delete"] = []
             data["delete"].append(
                 {
                     "source": {"uuid": key_source, "name": value_source["name"]},
