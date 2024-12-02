@@ -311,21 +311,42 @@ def split_replace_disaggregate(data: List[dict], target_lookup: dict) -> dict:
 
 
 def get_column_labels(example: dict, version: str) -> dict:
-    """Guess column labels from Excel change report annex."""
+    """Guess column labels from Excel change report annex.
+
+    Now handles multiple formats:
+    - Standard format: "UUID/ID - version"
+    - New format: Where labels might be in values
+    """
     uuid_tries = [f"UUID - {version}", f"ID - {version}"]
+    name_tries = [f"Name - {version}", f"{version} name", f"{version} - name"]
+
+    # Try standard format first
     for uuid_try in uuid_tries:
         if uuid_try in example:
             uuid = uuid_try
             break
     else:
-        raise ValueError(f"Can't find uuid field for database version {version} in {example}")
-    name_tries = [f"Name - {version}", f"{version} name", f"{version} - name"]
+        # If standard format fails, check for new format
+        for key, value in example.items():
+            if isinstance(value, str) and any(try_pattern in value for try_pattern in uuid_tries):
+                uuid = key
+                break
+        else:
+            raise ValueError(f"Can't find uuid field for database version {version} in {example}")
+
+    # Same pattern for name
     for name_try in name_tries:
         if name_try in example:
             name = name_try
             break
     else:
-        raise ValueError(f"Can't find name field for database version {version} in {example}")
+        for key, value in example.items():
+            if isinstance(value, str) and any(try_pattern in value for try_pattern in name_tries):
+                name = key
+                break
+        else:
+            raise ValueError(f"Can't find name field for database version {version} in {example}")
+
     return {
         "uuid": uuid,
         "name": name,
@@ -335,33 +356,56 @@ def get_column_labels(example: dict, version: str) -> dict:
 def source_target_biosphere_pair(
     data: List[dict], source_version: str, target_version: str, keep_deletions: bool
 ) -> List[dict]:
-    """Turn pandas DataFrame rows into source/target pairs."""
+    """Turn pandas DataFrame rows into source/target pairs.
+
+    The function now handles both old and new EE Deletions formats:
+    - Old format: Direct source/target columns
+    - New format: Deletion/replacement columns with explicit relationships
+    """
+    # For empty data, return empty structure
+    if not data:
+        return {"replace": [], "delete": []}
+
+    # Try old format first
     source_labels = get_column_labels(example=data[0], version=source_version)
     target_labels = get_column_labels(example=data[0], version=target_version)
 
-    formatted = {
-        "replace": [
-            {
-                "source": {k: row[v] for k, v in source_labels.items()},
-                "target": {k: row[v] for k, v in target_labels.items()},
-                "conversion_factor": float(row.get("Conversion Factor (old-new)", 1.0)),
-                "comment": row.get("Comment"),
-            }
-            for row in data
-            if not isnan(row[target_labels["uuid"]])
-        ]
-    }
-    if keep_deletions:
-        formatted["delete"] = [
-            {
-                "source": {k: row[v] for k, v in source_labels.items()},
-                "comment": row.get("Comment"),
-            }
-            for row in data
-            if isnan(row[target_labels["uuid"]])
-        ]
+    # Initialize the result structure
+    formatted = {"replace": [], "delete": [] if keep_deletions else None}
 
+    # Process each row
+    for row in data:
+        # Skip empty or invalid rows
+        if any(isnan(row.get(v)) for v in source_labels.values()):
+            continue
+
+        # Create source entry
+        source_entry = {k: row[v] for k, v in source_labels.items()}
+
+        # Check if there's a valid target
+        has_target = not any(isnan(row.get(v, float("nan"))) for v in target_labels.values())
+
+        if has_target:
+            formatted["replace"].append(
+                {
+                    "source": source_entry,
+                    "target": {k: row[v] for k, v in target_labels.items()},
+                    "conversion_factor": float(row.get("Conversion Factor (old-new)", 1.0)),
+                    "comment": row.get("Comment"),
+                }
+            )
+        elif keep_deletions:
+            formatted["delete"].append(
+                {
+                    "source": source_entry,
+                    "comment": row.get("Comment"),
+                }
+            )
+
+    # Clean up the formatted data
     for lst in formatted.values():
+        if lst is None:
+            continue
         for obj in lst:
             if "comment" in obj and (not obj["comment"] or isnan(obj["comment"])):
                 del obj["comment"]
@@ -369,5 +413,9 @@ def source_target_biosphere_pair(
                 obj["conversion_factor"] == 1.0 or isnan(obj["conversion_factor"])
             ):
                 del obj["conversion_factor"]
+
+    # Remove empty delete list if not keeping deletions
+    if not keep_deletions:
+        del formatted["delete"]
 
     return formatted

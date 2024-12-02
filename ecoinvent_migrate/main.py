@@ -168,8 +168,8 @@ def generate_technosphere_mapping(
         name=f"{source_db_name}-{target_db_name}",
         description=description,
         contributors=[
-            {"title": "ecoinvent association", "path": "https://ecoinvent.org/", "role": "author"},
-            {"title": "Chris Mutel", "path": "https://chris.mutel.org/", "role": "wrangler"},
+            {"title": "ecoinvent association", "path": "https://ecoinvent.org/", "roles": ["author"]},
+            {"title": "Chris Mutel", "path": "https://chris.mutel.org/", "roles": ["wrangler"]},
         ],
         mapping_source=MappingConstants.ECOSPOLD2,
         mapping_target=MappingConstants.ECOSPOLD2,
@@ -205,7 +205,7 @@ def generate_biosphere_mapping(
     output_directory: Optional[Path] = None,
     output_version: str = "3.0.0",
     description: Optional[str] = None,
-) -> Path:
+) -> Optional[Path]:
     """Generate a Randonneur mapping file for biosphere edge attributes from source to target."""
     configure_logs(write_logs=write_logs)
 
@@ -246,23 +246,52 @@ Please check the outputs carefully before applying them."""
         description = f"Data migration file from {source_db_name} to {target_db_name} generated with `ecoinvent_migrate` version {__version__}"
 
     if not missing_sheet:
-        data = pd.read_excel(io=excel_filepath, sheet_name=candidates[0]).to_dict(orient="records")
-        data = source_target_biosphere_pair(
-            data=data,
-            source_version=source_version,
-            target_version=target_version,
-            keep_deletions=keep_deletions,
-        )
-        affected_uuids = {
-            o["source"]["uuid"]
-            for o in itertools.chain(data.get("replace", []), data.get("delete", []))
-        }
-        data = supplement_biosphere_changes_with_real_data_comparison(
-            data=data,
-            affected_uuids=affected_uuids,
-            source_version=source_version,
-            target_version=target_version,
-        )
+        # Try reading the sheet
+        df = pd.read_excel(io=excel_filepath, sheet_name=candidates[0])
+
+        # Handle the multi-index case
+        if df.columns[0].startswith("**"):
+            logger.debug("Detected multi-index format, adjusting reading parameters")
+            df = pd.read_excel(io=excel_filepath, sheet_name=candidates[0], skiprows=1)
+
+        # Handle the new format case
+        if "deleted exchanges" in df.columns:
+            logger.debug("Detected new exchange format, adjusting data structure")
+            # Get the actual column headers from the first row
+            new_headers = {col: val for col, val in df.iloc[0].items() if isinstance(val, str)}
+            df = df.rename(columns=new_headers).iloc[1:]
+
+        if df.empty:
+            logger.info(
+                "EE Deletions sheet is empty in change report for {source_v} to {target_v}. This likely means no biosphere changes.",
+                source_v=source_version,
+                target_v=target_version,
+            )
+            data = {"delete": [], "replace": []}
+        else:
+            data = df.to_dict(orient="records")
+            data = source_target_biosphere_pair(
+                data=data,
+                source_version=source_version,
+                target_version=target_version,
+                keep_deletions=keep_deletions,
+            )
+            # Ensure both keys exist
+            if "delete" not in data:
+                data["delete"] = []
+            if "replace" not in data:
+                data["replace"] = []
+
+            affected_uuids = {
+                o["source"]["uuid"]
+                for o in itertools.chain(data.get("replace", []), data.get("delete", []))
+            }
+            data = supplement_biosphere_changes_with_real_data_comparison(
+                data=data,
+                affected_uuids=affected_uuids,
+                source_version=source_version,
+                target_version=target_version,
+            )
     else:
         data = supplement_biosphere_changes_with_real_data_comparison(
             data={"delete": [], "replace": []},
@@ -271,15 +300,27 @@ Please check the outputs carefully before applying them."""
             target_version=target_version,
         )
 
-    if not data["delete"] and not data["replace"]:
-        logger.info("It seems like there are no biosphere changes for this release. Doing nothing.")
-        return
+    # Ensure we have non-empty data before creating Datapackage
+    has_data = False
+    cleaned_data = {}
+    for key in ["delete", "replace"]:
+        if data.get(key) and len(data[key]) > 0:
+            cleaned_data[key] = data[key]
+            has_data = True
+
+    if not has_data:
+        logger.info("No valid biosphere changes found after processing. Doing nothing.")
+        return None
 
     dp = Datapackage(
         name=f"{source_db_name}-{target_db_name}",
         description=description,
         contributors=[
-            {"title": "ecoinvent association", "path": "https://ecoinvent.org/", "roles": ["author"]},
+            {
+                "title": "ecoinvent association",
+                "path": "https://ecoinvent.org/",
+                "roles": ["author"],
+            },
             {"title": "Chris Mutel", "path": "https://chris.mutel.org/", "roles": ["wrangler"]},
         ],
         mapping_source=MappingConstants.ECOSPOLD2_BIO,
@@ -290,7 +331,9 @@ Please check the outputs carefully before applying them."""
         target_id=target_db_name,
         licenses=licenses,
     )
-    for key, value in data.items():
+
+    # Only add non-empty data sections
+    for key, value in cleaned_data.items():
         dp.add_data(key, value)
 
     if write_file:
