@@ -168,8 +168,8 @@ def generate_technosphere_mapping(
         name=f"{source_db_name}-{target_db_name}",
         description=description,
         contributors=[
-            {"title": "ecoinvent association", "path": "https://ecoinvent.org/", "role": "author"},
-            {"title": "Chris Mutel", "path": "https://chris.mutel.org/", "role": "wrangler"},
+            {"title": "ecoinvent association", "path": "https://ecoinvent.org/", "roles": ["author"]},
+            {"title": "Chris Mutel", "path": "https://chris.mutel.org/", "roles": ["wrangler"]},
         ],
         mapping_source=MappingConstants.ECOSPOLD2,
         mapping_target=MappingConstants.ECOSPOLD2,
@@ -279,8 +279,8 @@ Please check the outputs carefully before applying them."""
         name=f"{source_db_name}-{target_db_name}",
         description=description,
         contributors=[
-            {"title": "ecoinvent association", "path": "https://ecoinvent.org/", "role": "author"},
-            {"title": "Chris Mutel", "path": "https://chris.mutel.org/", "role": "wrangler"},
+            {"title": "ecoinvent association", "path": "https://ecoinvent.org/", "roles": ["author"]},
+            {"title": "Chris Mutel", "path": "https://chris.mutel.org/", "roles": ["wrangler"]},
         ],
         mapping_source=MappingConstants.ECOSPOLD2_BIO,
         mapping_target=MappingConstants.ECOSPOLD2_BIO,
