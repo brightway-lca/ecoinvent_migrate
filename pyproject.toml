@@ -50,6 +50,7 @@ testing = [
     "ecoinvent_migrate",
     "pytest",
     "pytest-cov",
+    "pytest-loguru",
     "python-coveralls",
 ]
 dev = [
