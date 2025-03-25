@@ -192,8 +192,8 @@ def generate_biosphere_mapping(
         ecoinvent_username=ecoinvent_username,
         ecoinvent_password=ecoinvent_password,
     )
-    load_release_data(verson=source_version, system_model="cutoff", release=release)
-    load_release_data(verson=target_version, system_model="cutoff", release=release)
+    load_release_data(version=source_version, system_model="cutoff", release=release)
+    load_release_data(version=target_version, system_model="cutoff", release=release)
     excel_filepath = get_change_report(
         source_version=source_version,
         target_version=target_version,
@@ -302,9 +302,9 @@ Please check the outputs carefully before applying them."""
             {
                 "title": "ecoinvent association",
                 "path": "https://ecoinvent.org/",
-                "role": "author",
+                "roles": ["author"],
             },
-            {"title": "Chris Mutel", "path": "https://chris.mutel.org/", "role": "wrangler"},
+            {"title": "Chris Mutel", "path": "https://chris.mutel.org/", "roles": ["wrangler"]},
         ],
         mapping_source=MappingConstants.ECOSPOLD2_BIO,
         mapping_target=MappingConstants.ECOSPOLD2_BIO,
