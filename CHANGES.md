@@ -7,6 +7,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.6] - 2025-03-25
+
+* Examine technosphere changes in release data to autogenerate more changes and log cases where manual fixes are necessary
+* Remove dependency on any Brightway libraries
+* Compatibility with ecoinvent 3.11 change report file format
+* Support multiple manual patch file formats
+* Move to `src` layout
+* Fix compatibility problem with new `randonneur` versions
+
 ## [0.5] - 2024-09-25
 
 * Don't assume `delete` section present in biosphere mappings

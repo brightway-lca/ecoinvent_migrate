@@ -29,12 +29,11 @@ classifiers = [
 ]
 requires-python = ">=3.10"
 dependencies = [
-    "bw2data>=4.0.dev41",
-    "bw2io>=0.9.dev27",
     "ecoinvent_interface",
     "loguru",
     "platformdirs",
     "randonneur",
+    "tqdm",
     "xmltodict",
 ]
 
@@ -58,6 +57,7 @@ dev = [
     "pylint",
     "pytest",
     "pytest-cov",
+    "pytest-loguru",
     "pytest-randomly",
     "setuptools",
 ]
@@ -65,7 +65,6 @@ dev = [
 [tool.setuptools]
 license-files = ["LICENSE"]
 include-package-data = true
-packages = ["ecoinvent_migrate"]
 
 [tool.setuptools.dynamic]
 version = {attr = "ecoinvent_migrate.__version__"}
@@ -77,7 +76,7 @@ norecursedirs = [
     "build",
     ".tox"
 ]
-testpaths = ["tests/*.py"]
+testpaths = ["tests/**/*.py"]
 
 [tool.flake8]
 # Some sane defaults for the code style checker flake8

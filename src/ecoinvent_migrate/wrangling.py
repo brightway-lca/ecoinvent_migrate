@@ -1,16 +1,26 @@
 import itertools
 import math
 from collections import defaultdict
+from copy import copy
 from numbers import Number
 from typing import List, Union
 
 from loguru import logger
 
-from .errors import Mismatch, Uncombinable
+from ecoinvent_migrate.errors import Mismatch, Uncombinable
 
 
 def isnan(o: Union[str, Number]) -> bool:
     return isinstance(o, Number) and math.isnan(o)
+
+
+def tuple_key_for_data(obj: dict) -> tuple:
+    if "reference product" in obj:
+        return tuple([obj[field] for field in ("name", "location", "reference product", "unit")])
+    else:
+        return tuple(
+            [obj[field] for field in ("activity_name", "geography", "product_name", "unit")]
+        )
 
 
 def split_by_semicolon(row: dict, version: str) -> list[dict]:
@@ -29,9 +39,9 @@ def split_by_semicolon(row: dict, version: str) -> list[dict]:
 
     return [
         {
-            "name": row[f"Activity Name - {version}"],
-            "location": row[f"Geography - {version}"],
-            "reference product": x,
+            "activity_name": row[f"Activity Name - {version}"],
+            "geography": row[f"Geography - {version}"],
+            "product_name": x,
             "unit": y,
         }
         for x, y in zip(
@@ -41,8 +51,17 @@ def split_by_semicolon(row: dict, version: str) -> list[dict]:
     ]
 
 
-def source_target_pair_as_bw_dict(
-    row: dict, source_version: str, target_version: str
+def relabel(obj: dict) -> dict:
+    """Change from ecospold2-ish labels to Randonneur constants.ECOSPOLD2 labels"""
+    obj = copy(obj)
+    obj["name"] = obj.pop("activity_name")
+    obj["reference product"] = obj.pop("product_name")
+    obj["location"] = obj.pop("geography")
+    return obj
+
+
+def source_target_pair_as_dict(
+    row: dict, row_index: int, filename: str, source_version: str, target_version: str
 ) -> list[dict]:
     """Transform a row from the change report dataframe into one or more dicts.
 
@@ -51,10 +70,10 @@ def source_target_pair_as_bw_dict(
 
     Only include the attributes we use for linking:
 
-    * name
-    * reference product
+    * activity_name
+    * product_name
     * unit
-    * location
+    * geography
 
     Example usage:
 
@@ -69,18 +88,18 @@ def source_target_pair_as_bw_dict(
         'Reference Product - 3.10': 'baling',
         'Reference Product Unit - 3.10': 'unit',
     }
-    >>> source_target_pair_as_bw_dict(given)
+    >>> source_target_pair_as_dict(given)
     [{
         'source': {
-            'name': 'baling',
-            'location': 'GLO',
-            'reference product': 'baling',
+            'activity_name': 'baling',
+            'geography': 'GLO',
+            'product_name': 'baling',
             'unit': 'unit'
         },
         'target': {
             'name': 'baling',
-            'location': 'GLO',
-            'reference product': 'baling',
+            'geography': 'GLO',
+            'product_name': 'baling',
             'unit': 'unit'
         }
     }]
@@ -99,35 +118,38 @@ def source_target_pair_as_bw_dict(
         'Reference Product - 3.10': 'autoclaved aerated concrete block;\nhard coal ash',
         'Reference Product Unit - 3.10': 'kg;\nkg',
     }
-    >>> source_target_pair_as_bw_dict(given)
+    >>> source_target_pair_as_dict(given)
     [{
         'source': {
-            'name': 'autoclaved aerated concrete block production',
-            'location': 'IN',
-            'reference product': 'autoclaved aerated concrete block',
+            'activity_name': 'autoclaved aerated concrete block production',
+            'geography': 'IN',
+            'product_name': 'autoclaved aerated concrete block',
             'unit': 'kg'
         },
         'target': {
-            'name': 'autoclaved aerated concrete block production',
-            'location': 'IN',
-            'reference product': 'autoclaved aerated concrete block',
+            'activity_name': 'autoclaved aerated concrete block production',
+            'geography': 'IN',
+            'product_name': 'autoclaved aerated concrete block',
             'unit': 'kg'
         }
     }, {
         'source': {
-            'name': 'autoclaved aerated concrete block production',
-            'location': 'IN',
-            'reference product': 'hard coal ash',
+            'activity_name': 'autoclaved aerated concrete block production',
+            'geography': 'IN',
+            'product_name': 'hard coal ash',
             'unit': 'kg'
         },
         'target': {
-            'name': 'autoclaved aerated concrete block production',
-            'location': 'IN',
-            'reference product': 'hard coal ash',
+            'activity_name': 'autoclaved aerated concrete block production',
+            'geography': 'IN',
+            'product_name': 'hard coal ash',
             'unit': 'kg'
         }
     }]
     ```
+
+    The line breaks are in the change report, and are from individual rows which refer to multiple
+    products.
 
     """
     versions = [x.split(" - ")[-1].strip() for x in row if x.startswith("Activity Name")]
@@ -153,14 +175,24 @@ def source_target_pair_as_bw_dict(
             f"Can't do M:N combination of {len(sources)} source and {len(targets)} target datasets."
         )
     elif len(sources) == 1 and len(targets) == 1:
-        return [{"source": sources[0], "target": targets[0]}]
+        return [
+            {
+                "source": sources[0],
+                "target": targets[0],
+                "comment": f"Line {row_index} in change report file `{filename}`",
+            }
+        ]
     elif len(sources) == 1:
         sources = itertools.repeat(sources[0])
     elif len(targets) == 1:
         targets = itertools.repeat(targets[0])
 
     return [
-        {"source": s, "target": t}
+        {
+            "source": s,
+            "target": t,
+            "comment": f"Line {row_index} in change report file `{filename}`",
+        }
         for s, t in zip(sources, targets)
         if all(v.lower() != "nan" for v in itertools.chain(s.values(), t.values()))
     ]
@@ -173,9 +205,11 @@ def resolve_glo_row_rer_roe(
     source_lookup: dict,
     target_lookup: dict,
 ) -> List[dict]:
-    """Iterate through `data`, and change `location` attribute to `RoW` or `RoE` when needed.
+    """Iterate through `data`, and change `geography` attribute to `RoW` or `RoE` when needed.
 
-    Looks in actual database to get correct `location` attributes."""
+    Looks in actual database to get correct `geography` attributes."""
+
+    warned = set()
 
     for obj in data:
         source_missing = None
@@ -183,30 +217,30 @@ def resolve_glo_row_rer_roe(
             ("source", source_lookup, source_db_name),
             ("target", target_lookup, target_db_name),
         ]:
-            key = tuple([obj[kind][attr] for attr in ("name", "location", "reference product")])
+            key = tuple_key_for_data(obj[kind])
             if key in lookup:
                 continue
             elif (
                 key not in lookup
-                and obj[kind]["location"] == "GLO"
-                and (key[0], "RoW", key[2]) in lookup
+                and obj[kind]["geography"] == "GLO"
+                and (key[0], "RoW", key[2], key[3]) in lookup
             ):
-                obj[kind]["location"] = "RoW"
+                obj[kind]["geography"] = "RoW"
                 logger.debug(
-                    "{kind} process {name} location corrected to 'RoW'",
+                    "{kind} process {name} geography corrected to 'RoW'",
                     kind=kind,
-                    name=obj[kind]["name"],
+                    name=obj[kind]["activity_name"],
                 )
             elif (
                 key not in lookup
-                and obj[kind]["location"] == "RER"
-                and (key[0], "RoE", key[2]) in lookup
+                and obj[kind]["geography"] == "RER"
+                and (key[0], "RoE", key[2], key[3]) in lookup
             ):
-                obj[kind]["location"] = "RoE"
+                obj[kind]["geography"] = "RoE"
                 logger.debug(
-                    "{kind} process {name} location corrected to 'RoE'",
+                    "{kind} process {name} geography corrected to 'RoE'",
                     kind=kind,
-                    name=obj[kind]["name"],
+                    name=obj[kind]["activity_name"],
                 )
             else:
                 if kind == "target" and source_missing:
@@ -218,12 +252,14 @@ def resolve_glo_row_rer_roe(
                 else:
                     # Only missing in target database - but this is a big problem, we don't have a
                     # suitable target for existing edges to relink to.
-                    logger.warning(
-                        "{kind} process given in change report but missing in {db_name} lookup: {ds}",
-                        kind=kind.title(),
-                        db_name=db_name,
-                        ds=obj[kind],
-                    )
+                    if key := tuple_key_for_data(obj[kind]) not in warned:
+                        warned.add(key)
+                        logger.warning(
+                            "{kind} process given in change report but missing in {db_name} lookup: {ds}",
+                            kind=kind.title(),
+                            db_name=db_name,
+                            ds=obj[kind],
+                        )
         if source_missing:
             # Only a debug message because this won't break anything - there is no process in the
             # source database to miss a link from.
@@ -236,13 +272,6 @@ def resolve_glo_row_rer_roe(
     return data
 
 
-FIELDS = ("name", "location", "reference product", "unit")
-
-
-def astuple(obj: dict, fields: List[str] = FIELDS) -> tuple:
-    return tuple([obj[field] for field in fields])
-
-
 def disaggregated(data: List[dict], lookup: dict) -> dict:
     """Take a list of mapping dictionaries with the same `source`, and create one `disaggregate`
     object.
@@ -252,9 +281,7 @@ def disaggregated(data: List[dict], lookup: dict) -> dict:
     """
     for obj in data:
         try:
-            obj["pv"] = lookup[
-                astuple(obj["target"], ("name", "location", "reference product"))
-            ].rp_exchange()["production volume"]
+            obj["pv"] = lookup[tuple_key_for_data(obj["target"])]["production_volume"]
         except KeyError:
             logger.warning(
                 """Change report annex dataset missing from database.
@@ -296,7 +323,7 @@ def split_replace_disaggregate(data: List[dict], target_lookup: dict) -> dict:
     respective production volumes to get the disaggregation factors."""
     groupie = defaultdict(list)
     for obj in data:
-        groupie[astuple(obj["source"])].append(obj)
+        groupie[tuple_key_for_data(obj["source"])].append(obj)
 
     return {
         "replace": [
@@ -380,7 +407,7 @@ def source_target_biosphere_pair(
             continue
 
         # Create source entry
-        source_entry = {k: row[v] for k, v in source_labels.items()}
+        source_entry = {k: row[v].strip() for k, v in source_labels.items()}
 
         # Check if there's a valid target
         has_target = not any(isnan(row.get(v, float("nan"))) for v in target_labels.values())
@@ -389,16 +416,16 @@ def source_target_biosphere_pair(
             formatted["replace"].append(
                 {
                     "source": source_entry,
-                    "target": {k: row[v] for k, v in target_labels.items()},
+                    "target": {k: row[v].strip() for k, v in target_labels.items()},
                     "conversion_factor": float(row.get("Conversion Factor (old-new)", 1.0)),
-                    "comment": row.get("Comment"),
+                    "comment": row.get("Comment").strip(),
                 }
             )
         elif keep_deletions:
             formatted["delete"].append(
                 {
                     "source": source_entry,
-                    "comment": row.get("Comment"),
+                    "comment": row.get("Comment").strip(),
                 }
             )
 
@@ -419,3 +446,162 @@ def source_target_biosphere_pair(
         del formatted["delete"]
 
     return formatted
+
+
+def apply_missing_patches(data: list[dict], patches: list[dict]) -> list[dict]:
+    """
+    Apply patches which add transformations missing from the change report.
+
+    Patches can be 1-to-1 or disaggregation. Both versions take a complete `source` dictionary, and
+    use the `target` dictionary to model the changes needed to make a successful migration. Normally
+    the `target` dictionary only has the elements which change.
+
+    1-to-1 patches look like this:
+
+    ```python
+    >>> patches = [{
+        "source": {
+            "activity_name": "kraft paper production",
+            "product_name": "electricity, high voltage",
+            "unit": "kWh",
+            "geography": "RER",
+        },
+        "target": {
+            "activity_name": "sulfate pulp production, from softwood, unbleached",
+        },
+        "comment": "By-product production removed and not documented in 3.11 change report.",
+    }]
+    >>> apply_missing_patches([], patches)
+    [{
+        "source": {
+            "activity_name": "kraft paper production",
+            "product_name": "electricity, high voltage",
+            "unit": "kWh",
+            "geography": "RER",
+        },
+        "target": {
+            "activity_name": "sulfate pulp production, from softwood, unbleached",
+            "product_name": "electricity, high voltage",
+            "unit": "kWh",
+            "geography": "RER",
+        },
+        "comment": "By-product production removed and not documented in 3.11 change report.",
+    }]
+    ```
+
+    In disaggregation, instead of a `target` dictionary, there is a `targets` dictionary with
+    multiple objects. The production volume of the targets will get added later with the
+    `disaggregated` function. Disaggregation patches look like this:
+
+    ```python
+    >>> patches = [{
+        "source": {
+            "activity_name": "wheat grain production, organic",
+            "product_name": "straw, organic",
+            "unit": "kg",
+            "geography": "CH",
+        },
+        "targets": [
+            {
+                "activity_name": "wheat grain production, spring, organic, hill region",
+            },
+            {
+                "activity_name": "wheat grain production, spring, organic, mountain region",
+            }
+        ],
+        "comment": "Split of wheat production into many specific processes",
+    }]
+    >>> apply_missing_patches([], patches)
+    [{
+        "source": {
+            "activity_name": "wheat grain production, organic",
+            "product_name": "straw, organic",
+            "unit": "kg",
+            "geography": "CH",
+        },
+        "target": {
+            "activity_name": "wheat grain production, spring, organic, hill region",
+            "product_name": "straw, organic",
+            "unit": "kg",
+            "geography": "CH",
+        },
+        "comment": "Split of wheat production into many specific processes",
+    }, {
+        "source": {
+            "activity_name": "wheat grain production, organic",
+            "product_name": "straw, organic",
+            "unit": "kg",
+            "geography": "CH",
+        },
+        "target": {
+            "activity_name": "wheat grain production, spring, organic, mountain region",
+            "product_name": "straw, organic",
+            "unit": "kg",
+            "geography": "CH",
+        },
+        "comment": "Split of wheat production into many specific processes",
+    }]
+    ```
+
+    """
+    for patch in patches:
+        if "targets" in patch:
+            for target in patch["targets"]:
+                data.append(
+                    {key: value for key, value in patch.items() if key != "targets"}
+                    | {"target": copy(patch["source"]) | target}
+                )
+        else:
+            data.append(
+                {key: value for key, value in patch.items() if key != "target"}
+                | {"target": copy(patch["source"]) | patch["target"]}
+            )
+
+    return data
+
+
+def apply_replacement_patches(data: list[dict], patches: list[dict]) -> list[dict]:
+    """
+    Replace elements of existing `source` or `target` dictionaries in `data`.
+
+    Uses `context` to determine which mapping dictionary to modify.
+    """
+    # These will be modified during the following loop, but we assume that the patches are
+    # well-behaved and don't overlap.
+    source_lookup = defaultdict(list)
+    target_lookup = defaultdict(list)
+    for obj in data:
+        source_lookup[tuple_key_for_data(obj["source"])].append(obj)
+        target_lookup[tuple_key_for_data(obj["target"])].append(obj)
+
+    for patch in patches:
+        patch_key = tuple_key_for_data(patch["source"])
+        for kind, lookup in (("source", source_lookup), ("target", target_lookup)):
+            if patch["context"] == kind:
+                if patch_key not in lookup:
+                    logger.warning(
+                        "Expected to patch the following {k} dict but it's not in the given data: {p}",
+                        k=kind,
+                        p=patch["source"],
+                    )
+                    continue
+                for obj in lookup[patch_key]:
+                    logger.debug(
+                        "Patching change report {k} {s} with updated values {t}",
+                        k=kind,
+                        s=obj,
+                        t=patch["target"],
+                    )
+                    obj[kind].update(**patch["target"])
+                    if "comment" in patch:
+                        if "comment" in obj:
+                            string = (
+                                ("." if not obj["comment"].endswith(".") else "")
+                                + f" Patched with comment '"
+                                + patch["comment"]
+                                + "'."
+                            )
+                            obj["comment"] += string
+                        else:
+                            obj["comment"] = patch["comment"]
+    return data

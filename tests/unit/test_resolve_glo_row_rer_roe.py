@@ -1,0 +1,1 @@
+from ecoinvent_migrate.wrangling import resolve_glo_row_rer_roe

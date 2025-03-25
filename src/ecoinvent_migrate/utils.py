@@ -34,3 +34,10 @@ def setup_output_directory(output_directory: Optional[Path]) -> Path:
     elif not output_directory.is_dir() or not os.access(output_directory, os.W_OK):
         raise ValueError(f"`output_directory` {output_directory} must be a writable directory")
     return output_directory
+
+
+def cache_dir() -> Path:
+    cache_directory = Path(user_data_dir("ecoinvent_migrate", "pylca")) / "cache"
+    if not cache_directory.exists():
+        cache_directory.mkdir(parents=True)
+    return cache_directory

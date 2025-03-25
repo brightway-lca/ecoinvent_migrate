@@ -8,7 +8,3 @@ class Mismatch(Exception):
 
 class VersionJump(Exception):
     pass
-
-
-class MissingDatabase(Exception):
-    pass

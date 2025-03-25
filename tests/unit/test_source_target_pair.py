@@ -1,10 +1,10 @@
 import pytest
 
 from ecoinvent_migrate.errors import Mismatch, Uncombinable
-from ecoinvent_migrate.wrangling import source_target_pair_as_bw_dict
+from ecoinvent_migrate.wrangling import source_target_pair_as_dict
 
 
-def test_source_target_pair_as_bw_dict_simple():
+def test_source_target_pair_as_dict_simple():
     given = {
         "Activity Name - 3.9.1": "baling",
         "Geography - 3.9.1": "GLO",
@@ -18,23 +18,24 @@ def test_source_target_pair_as_bw_dict_simple():
     expected = [
         {
             "source": {
-                "name": "baling",
-                "location": "GLO",
-                "reference product": "baling",
+                "activity_name": "baling",
+                "geography": "GLO",
+                "product_name": "baling",
                 "unit": "unit",
             },
             "target": {
-                "name": "baling",
-                "location": "GLO",
-                "reference product": "baling",
+                "activity_name": "baling",
+                "geography": "GLO",
+                "product_name": "baling",
                 "unit": "unit",
             },
+            "comment": "Line 42 in change report file `filename`",
         }
     ]
-    assert source_target_pair_as_bw_dict(given, "3.9.1", "3.10") == expected
+    assert source_target_pair_as_dict(given, 42, "filename", "3.9.1", "3.10") == expected
 
 
-def test_source_target_pair_as_bw_dict_multiple():
+def test_source_target_pair_as_dict_multiple():
     given = {
         "Activity Name - 3.9.1": "autoclaved aerated concrete block production",
         "Geography - 3.9.1": "IN",
@@ -48,37 +49,39 @@ def test_source_target_pair_as_bw_dict_multiple():
     expected = [
         {
             "source": {
-                "name": "autoclaved aerated concrete block production",
-                "location": "IN",
-                "reference product": "autoclaved aerated concrete block",
+                "activity_name": "autoclaved aerated concrete block production",
+                "geography": "IN",
+                "product_name": "autoclaved aerated concrete block",
                 "unit": "kg",
             },
             "target": {
-                "name": "autoclaved aerated concrete block production",
-                "location": "IN",
-                "reference product": "autoclaved aerated concrete block",
+                "activity_name": "autoclaved aerated concrete block production",
+                "geography": "IN",
+                "product_name": "autoclaved aerated concrete block",
                 "unit": "kg",
             },
+            "comment": "Line 42 in change report file `filename`",
         },
         {
             "source": {
-                "name": "autoclaved aerated concrete block production",
-                "location": "IN",
-                "reference product": "hard coal ash",
+                "activity_name": "autoclaved aerated concrete block production",
+                "geography": "IN",
+                "product_name": "hard coal ash",
                 "unit": "kg",
             },
             "target": {
-                "name": "autoclaved aerated concrete block production",
-                "location": "IN",
-                "reference product": "hard coal ash",
+                "activity_name": "autoclaved aerated concrete block production",
+                "geography": "IN",
+                "product_name": "hard coal ash",
                 "unit": "kg",
             },
+            "comment": "Line 42 in change report file `filename`",
         },
     ]
-    assert source_target_pair_as_bw_dict(given, "3.9.1", "3.10") == expected
+    assert source_target_pair_as_dict(given, 42, "filename", "3.9.1", "3.10") == expected
 
 
-def test_source_target_pair_as_bw_dict_n_to_1():
+def test_source_target_pair_as_dict_n_to_1():
     given = {
         "Activity Name - 3.9.1": "autoclaved aerated concrete block production",
         "Geography - 3.9.1": "IN",
@@ -92,37 +95,39 @@ def test_source_target_pair_as_bw_dict_n_to_1():
     expected = [
         {
             "source": {
-                "name": "autoclaved aerated concrete block production",
-                "location": "IN",
-                "reference product": "autoclaved aerated concrete block",
+                "activity_name": "autoclaved aerated concrete block production",
+                "geography": "IN",
+                "product_name": "autoclaved aerated concrete block",
                 "unit": "kg",
             },
             "target": {
-                "name": "autoclaved aerated concrete block production",
-                "location": "IN",
-                "reference product": "autoclaved aerated concrete block",
+                "activity_name": "autoclaved aerated concrete block production",
+                "geography": "IN",
+                "product_name": "autoclaved aerated concrete block",
                 "unit": "kg",
             },
+            "comment": "Line 42 in change report file `filename`",
         },
         {
             "source": {
-                "name": "autoclaved aerated concrete block production",
-                "location": "IN",
-                "reference product": "hard coal ash",
+                "activity_name": "autoclaved aerated concrete block production",
+                "geography": "IN",
+                "product_name": "hard coal ash",
                 "unit": "kg",
             },
             "target": {
-                "name": "autoclaved aerated concrete block production",
-                "location": "IN",
-                "reference product": "autoclaved aerated concrete block",
+                "activity_name": "autoclaved aerated concrete block production",
+                "geography": "IN",
+                "product_name": "autoclaved aerated concrete block",
                 "unit": "kg",
             },
+            "comment": "Line 42 in change report file `filename`",
         },
     ]
-    assert source_target_pair_as_bw_dict(given, "3.9.1", "3.10") == expected
+    assert source_target_pair_as_dict(given, 42, "filename", "3.9.1", "3.10") == expected
 
 
-def test_source_target_pair_as_bw_dict_1_to_n():
+def test_source_target_pair_as_dict_1_to_n():
     given = {
         "Activity Name - 3.9.1": "autoclaved aerated concrete block production",
         "Geography - 3.9.1": "IN",
@@ -136,37 +141,39 @@ def test_source_target_pair_as_bw_dict_1_to_n():
     expected = [
         {
             "source": {
-                "name": "autoclaved aerated concrete block production",
-                "location": "IN",
-                "reference product": "autoclaved aerated concrete block",
+                "activity_name": "autoclaved aerated concrete block production",
+                "geography": "IN",
+                "product_name": "autoclaved aerated concrete block",
                 "unit": "kg",
             },
             "target": {
-                "name": "autoclaved aerated concrete block production",
-                "location": "IN",
-                "reference product": "autoclaved aerated concrete block",
+                "activity_name": "autoclaved aerated concrete block production",
+                "geography": "IN",
+                "product_name": "autoclaved aerated concrete block",
                 "unit": "kg",
             },
+            "comment": "Line 42 in change report file `filename`",
         },
         {
             "source": {
-                "name": "autoclaved aerated concrete block production",
-                "location": "IN",
-                "reference product": "autoclaved aerated concrete block",
+                "activity_name": "autoclaved aerated concrete block production",
+                "geography": "IN",
+                "product_name": "autoclaved aerated concrete block",
                 "unit": "kg",
             },
             "target": {
-                "name": "autoclaved aerated concrete block production",
-                "location": "IN",
-                "reference product": "hard coal ash",
+                "activity_name": "autoclaved aerated concrete block production",
+                "geography": "IN",
+                "product_name": "hard coal ash",
                 "unit": "kg",
             },
+            "comment": "Line 42 in change report file `filename`",
         },
     ]
-    assert source_target_pair_as_bw_dict(given, "3.9.1", "3.10") == expected
+    assert source_target_pair_as_dict(given, 42, "filename", "3.9.1", "3.10") == expected
 
 
-def test_source_target_pair_as_bw_dict_mismatch():
+def test_source_target_pair_as_dict_mismatch():
     given = {
         "Activity Name - 3.9.1": "autoclaved aerated concrete block production",
         "Geography - 3.9.1": "IN",
@@ -178,10 +185,10 @@ def test_source_target_pair_as_bw_dict_mismatch():
         "Reference Product Unit - 3.10": "kg;\nkg",
     }
     with pytest.raises(Mismatch):
-        source_target_pair_as_bw_dict(given, "3.9.1", "3.10")
+        source_target_pair_as_dict(given, 42, "filename", "3.9.1", "3.10")
 
 
-def test_source_target_pair_as_bw_dict_uncombinable():
+def test_source_target_pair_as_dict_uncombinable():
     given = {
         "Activity Name - 3.9.1": "autoclaved aerated concrete block production",
         "Geography - 3.9.1": "IN",
@@ -193,10 +200,10 @@ def test_source_target_pair_as_bw_dict_uncombinable():
         "Reference Product Unit - 3.10": "kg;\nkg",
     }
     with pytest.raises(Uncombinable):
-        source_target_pair_as_bw_dict(given, "3.9.1", "3.10")
+        source_target_pair_as_dict(given, 42, "filename", "3.9.1", "3.10")
 
 
-def test_source_target_pair_as_bw_dict_valueerror():
+def test_source_target_pair_as_dict_valueerror():
     given = {
         "Activity Name - 3.9.1": "autoclaved aerated concrete block production",
         "Geography - 3.9.1": "IN",
@@ -207,14 +214,14 @@ def test_source_target_pair_as_bw_dict_valueerror():
         "Reference Product - 3.10": "autoclaved aerated concrete block;\nhard coal ash",
         "Reference Product Unit - 3.10": "kg;\nkg",
     }
-    assert source_target_pair_as_bw_dict(given, "3.9.1", "3.10")
+    assert source_target_pair_as_dict(given, 42, "filename", "3.9.1", "3.10")
     with pytest.raises(ValueError):
-        source_target_pair_as_bw_dict(given, "3.8", "3.10")
+        source_target_pair_as_dict(given, 42, "filename", "3.8", "3.10")
     with pytest.raises(ValueError):
-        source_target_pair_as_bw_dict(given, "3.9.1", "3.11")
+        source_target_pair_as_dict(given, 42, "filename", "3.9.1", "3.11")
 
 
-def test_source_target_pair_as_bw_dict_new_dataset():
+def test_source_target_pair_as_dict_new_dataset():
     given = {
         "Activity Name - 3.9.1": float("NaN"),
         "Geography - 3.9.1": float("NaN"),
@@ -225,10 +232,10 @@ def test_source_target_pair_as_bw_dict_new_dataset():
         "Reference Product - 3.10": "baling",
         "Reference Product Unit - 3.10": "unit",
     }
-    assert source_target_pair_as_bw_dict(given, "3.9.1", "3.10") == []
+    assert source_target_pair_as_dict(given, 42, "filename", "3.9.1", "3.10") == []
 
 
-def test_source_target_pair_as_bw_dict_multiple_some_missing():
+def test_source_target_pair_as_dict_multiple_some_missing():
     given = {
         "Activity Name - 3.9.1": "p-nitrotoluene production",
         "Geography - 3.9.1": "GLO",
@@ -242,17 +249,18 @@ def test_source_target_pair_as_bw_dict_multiple_some_missing():
     expected = [
         {
             "source": {
-                "name": "p-nitrotoluene production",
-                "location": "GLO",
-                "reference product": "p-nitrotoluene",
+                "activity_name": "p-nitrotoluene production",
+                "geography": "GLO",
+                "product_name": "p-nitrotoluene",
                 "unit": "kg",
             },
             "target": {
-                "name": "nitrotoluenes production, toluene nitration",
-                "location": "GLO",
-                "reference product": "p-nitrotoluene",
+                "activity_name": "nitrotoluenes production, toluene nitration",
+                "geography": "GLO",
+                "product_name": "p-nitrotoluene",
                 "unit": "kg",
             },
+            "comment": "Line 42 in change report file `filename`",
         },
     ]
-    assert source_target_pair_as_bw_dict(given, "3.9.1", "3.10") == expected
+    assert source_target_pair_as_dict(given, 42, "filename", "3.9.1", "3.10") == expected
