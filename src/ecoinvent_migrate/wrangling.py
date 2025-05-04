@@ -52,11 +52,33 @@ def split_by_semicolon(row: dict, version: str) -> list[dict]:
 
 
 def relabel(obj: dict) -> dict:
-    """Change from ecospold2-ish labels to Randonneur constants.ECOSPOLD2 labels"""
+    """Change from ecospold2-ish labels to Randonneur constants.ECOSPOLD2 labels.
+
+    Logs a warning if the target key already exists and the source key is missing.
+    """
     obj = copy(obj)
-    obj["name"] = obj.pop("activity_name")
-    obj["reference product"] = obj.pop("product_name")
-    obj["location"] = obj.pop("geography")
+    mappings = {
+        "activity_name": "name",
+        "product_name": "reference product",
+        "geography": "location",
+    }
+
+    for old_key, new_key in mappings.items():
+        if old_key in obj:
+            # If the old key exists, rename it to the new key.
+            # This will overwrite the new key if it somehow already exists.
+            obj[new_key] = obj.pop(old_key)
+        elif new_key in obj:
+            # If the old key doesn't exist, but the new key does,
+            # log a warning and assume it's already (partially) relabeled.
+            # No change needed as the desired key is already present.
+            logger.warning(
+                f"Key '{new_key}' already exists and '{old_key}' not found in object. "
+                "Assuming already relabeled: {data}", data=obj
+            )
+        # Optional: else: neither key exists, potentially log this too if needed.
+        # logger.debug(f"Neither '{old_key}' nor '{new_key}' found in object: {data}", data=obj)
+
     return obj
 
 
