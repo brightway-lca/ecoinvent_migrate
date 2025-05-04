@@ -413,19 +413,23 @@ def source_target_biosphere_pair(
         has_target = not any(isnan(row.get(v, float("nan"))) for v in target_labels.values())
 
         if has_target:
+            comment_val = row.get("Comment")
             formatted["replace"].append(
                 {
                     "source": source_entry,
                     "target": {k: row[v].strip() for k, v in target_labels.items()},
                     "conversion_factor": float(row.get("Conversion Factor (old-new)", 1.0)),
-                    "comment": row.get("Comment").strip(),
+                    # Check if comment is a string before stripping, otherwise use empty string
+                    "comment": comment_val.strip() if isinstance(comment_val, str) else "",
                 }
             )
         elif keep_deletions:
+            comment_val = row.get("Comment")
             formatted["delete"].append(
                 {
                     "source": source_entry,
-                    "comment": row.get("Comment").strip(),
+                    # Check if comment is a string before stripping, otherwise use empty string
+                    "comment": comment_val.strip() if isinstance(comment_val, str) else "",
                 }
             )
 
