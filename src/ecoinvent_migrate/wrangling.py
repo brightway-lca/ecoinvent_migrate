@@ -428,7 +428,6 @@ def source_target_biosphere_pair(
             formatted["delete"].append(
                 {
                     "source": source_entry,
-                    # Check if comment is a string before stripping, otherwise use empty string
                     "comment": comment_val.strip() if isinstance(comment_val, str) else "",
                 }
             )
