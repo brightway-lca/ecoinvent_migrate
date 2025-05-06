@@ -380,6 +380,19 @@ def get_column_labels(example: dict, version: str) -> dict:
     }
 
 
+def _get_comment_from_row(row: dict) -> Union[str, None]:
+    """Safely retrieves and strips the 'Comment' field from a row.
+
+    Returns None if 'Comment' is not found, is not a string, or is NaN.
+    Returns an empty string if the comment is an empty string after stripping.
+    """
+    comment_val = row.get("Comment")
+    if isinstance(comment_val, str):
+        return comment_val.strip()
+    # If comment_val is NaN (a float) or None, or any other non-string type
+    return None
+
+
 def source_target_biosphere_pair(
     data: List[dict], source_version: str, target_version: str, keep_deletions: bool
 ) -> List[dict]:
@@ -411,25 +424,25 @@ def source_target_biosphere_pair(
 
         # Check if there's a valid target
         has_target = not any(isnan(row.get(v, float("nan"))) for v in target_labels.values())
+        
+        comment = _get_comment_from_row(row)
 
         if has_target:
-            comment_val = row.get("Comment")
-            formatted["replace"].append(
-                {
-                    "source": source_entry,
-                    "target": {k: row[v].strip() for k, v in target_labels.items()},
-                    "conversion_factor": float(row.get("Conversion Factor (old-new)", 1.0)),
-                    "comment": comment_val.strip() if isinstance(comment_val, str) else "",
-                }
-            )
+            entry = {
+                "source": source_entry,
+                "target": {k: row[v].strip() for k, v in target_labels.items()},
+                "conversion_factor": float(row.get("Conversion Factor (old-new)", 1.0)),
+            }
+            if comment is not None:
+                entry["comment"] = comment
+            formatted["replace"].append(entry)
         elif keep_deletions:
-            comment_val = row.get("Comment")
-            formatted["delete"].append(
-                {
-                    "source": source_entry,
-                    "comment": comment_val.strip() if isinstance(comment_val, str) else "",
-                }
-            )
+            entry = {
+                "source": source_entry,
+            }
+            if comment is not None:
+                entry["comment"] = comment
+            formatted["delete"].append(entry)
 
     # Clean up the formatted data
     for lst in formatted.values():
