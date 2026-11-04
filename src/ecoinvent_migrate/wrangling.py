@@ -3,7 +3,7 @@ import math
 from collections import defaultdict
 from copy import copy
 from numbers import Number
-from typing import List, Union
+from typing import List, Optional, Union
 
 from loguru import logger
 
@@ -359,7 +359,7 @@ def get_column_labels(example: dict, version: str) -> dict:
                 uuid = key
                 break
         else:
-            raise ValueError(f"Can't find uuid field for database version {version} in {example}")
+            uuid = None
 
     # Same pattern for name
     for name_try in name_tries:
@@ -374,10 +374,25 @@ def get_column_labels(example: dict, version: str) -> dict:
         else:
             raise ValueError(f"Can't find name field for database version {version} in {example}")
 
-    return {
-        "uuid": uuid,
-        "name": name,
-    }
+    if uuid is None:
+        # The column before the name can be mislabelled, e.g. "ID - 3.11" instead of "ID - 3.12"
+        # in the v3.12 - v3.13 change report
+        keys = list(example)
+        previous = keys[keys.index(name) - 1] if keys.index(name) else None
+        if isinstance(previous, str) and previous.startswith(("ID - ", "UUID - ")):
+            logger.warning(
+                "Using column {c} as the uuid column for version {v}", c=previous, v=version
+            )
+            uuid = previous
+        else:
+            raise ValueError(f"Can't find uuid field for database version {version} in {example}")
+
+    labels = {"uuid": uuid, "name": name}
+    for field in ("compartment", "subcompartment"):
+        label = f"{field.capitalize()} - {version}"
+        if label in example:
+            labels[field] = label
+    return labels
 
 
 def _get_comment_from_row(row: dict) -> Union[str, None]:
@@ -393,14 +408,49 @@ def _get_comment_from_row(row: dict) -> Union[str, None]:
     return None
 
 
+def _clean(value) -> Union[str, None]:
+    if isinstance(value, str) and value.strip():
+        return value.strip()
+    return None
+
+
+def _biosphere_entry(row: dict, labels: dict, uuid_lookup: Optional[dict]) -> Union[dict, None]:
+    """Build a `{"uuid": ..., "name": ...}` dict from a change report row.
+
+    If the row has no UUID (e.g. v3.12 - v3.13 change report), resolve it from `uuid_lookup`,
+    which maps `(name, compartment, subcompartment)` to UUIDs."""
+    name = _clean(row.get(labels["name"]))
+    if name is None:
+        return None
+    uuid = _clean(row.get(labels["uuid"]))
+    if uuid is None:
+        key = (
+            name,
+            _clean(row.get(labels.get("compartment"))),
+            _clean(row.get(labels.get("subcompartment"))),
+        )
+        uuid = (uuid_lookup or {}).get(key)
+        if uuid is None:
+            logger.warning("Can't find UUID for change report elementary flow {k}", k=key)
+            return None
+    return {"uuid": uuid, "name": name}
+
+
 def source_target_biosphere_pair(
-    data: List[dict], source_version: str, target_version: str, keep_deletions: bool
+    data: List[dict],
+    source_version: str,
+    target_version: str,
+    keep_deletions: bool,
+    source_uuid_lookup: Optional[dict] = None,
+    target_uuid_lookup: Optional[dict] = None,
 ) -> List[dict]:
     """Turn pandas DataFrame rows into source/target pairs.
 
     The function now handles both old and new EE Deletions formats:
     - Old format: Direct source/target columns
     - New format: Deletion/replacement columns with explicit relationships
+
+    Rows without UUIDs are resolved using the `(name, compartment, subcompartment)` lookups.
     """
     # For empty data, return empty structure
     if not data:
@@ -416,21 +466,19 @@ def source_target_biosphere_pair(
     # Process each row
     for row in data:
         # Skip empty or invalid rows
-        if any(isnan(row.get(v)) for v in source_labels.values()):
+        source_entry = _biosphere_entry(row, source_labels, source_uuid_lookup)
+        if source_entry is None:
             continue
 
-        # Create source entry
-        source_entry = {k: row[v].strip() for k, v in source_labels.items()}
-
         # Check if there's a valid target
-        has_target = not any(isnan(row.get(v, float("nan"))) for v in target_labels.values())
-        
+        target_entry = _biosphere_entry(row, target_labels, target_uuid_lookup)
+
         comment = _get_comment_from_row(row)
 
-        if has_target:
+        if target_entry is not None:
             entry = {
                 "source": source_entry,
-                "target": {k: row[v].strip() for k, v in target_labels.items()},
+                "target": target_entry,
                 "conversion_factor": float(row.get("Conversion Factor (old-new)", 1.0)),
             }
             if comment is not None:
@@ -461,6 +509,15 @@ def source_target_biosphere_pair(
         del formatted["delete"]
 
     return formatted
+
+
+def apply_biosphere_patches(data: dict, patches: List[dict]) -> dict:
+    """Apply manual `replace` patches, overriding any change report entry with the same source."""
+    patched = {obj["source"]["uuid"] for obj in patches}
+    for key in ("replace", "delete"):
+        data[key] = [obj for obj in data.get(key, []) if obj["source"]["uuid"] not in patched]
+    data["replace"].extend(copy(obj) for obj in patches)
+    return data
 
 
 def apply_missing_patches(data: list[dict], patches: list[dict]) -> list[dict]:
