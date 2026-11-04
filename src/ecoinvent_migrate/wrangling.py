@@ -272,6 +272,23 @@ def resolve_glo_row_rer_roe(
     return data
 
 
+def drop_absent_sources(data: List[dict], lookup: dict, db_name: str) -> List[dict]:
+    """Remove migrations whose `source` dataset isn't in `lookup`.
+
+    Change report rows and patches aren't specific to a system model. Some of their sources don't
+    exist in every system model, e.g. by-products which only have their own datasets in cut-off
+    and APOS. Writing those migrations would give entries which never match anything, and whose
+    targets often don't exist in the target system model either."""
+    for obj in data:
+        if tuple_key_for_data(obj["source"]) not in lookup:
+            logger.info(
+                "Skipping migration whose source is not in {db_name}: {s}",
+                db_name=db_name,
+                s=obj["source"],
+            )
+    return [obj for obj in data if tuple_key_for_data(obj["source"]) in lookup]
+
+
 def disaggregated(data: List[dict], lookup: dict) -> dict:
     """Take a list of mapping dictionaries with the same `source`, and create one `disaggregate`
     object.

@@ -356,6 +356,92 @@ TECHNOSPHERE_PATCHES_MISSING_DATA = {
             #     } for geo in ("AE","BR","CN","CO","DE","EC","GB","IQ","KW","MY","NG","QA","RO","SA","VE")
         ]
     ),
+    # Change report v3.12 - v3.13 only lists reference products; these by-products follow
+    # their parent activity's mapping. Not patched (no equivalent in 3.13):
+    #   * bark chips from folding boxboard carton production (by-product dropped)
+    #   * steam (kg) from formaldehyde production, methanol oxidation; now
+    #     "heat, from steam, in chemical industry" in MJ with no documented conversion
+    #   * NL residual mix electricity datasets (deleted, no replacement)
+    ("3.12", "3.13"): (
+        [
+            byproduct(
+                old_name="propylene oxide production, from isobutene, PO/TBA process",
+                new_name="propylene oxide production, from isobutane, PO/TBA process",
+                product="tert-butanol",
+                geography=geo,
+                unit="kg",
+            )
+            for geo in ("RER", "US")
+        ]
+        + [
+            byproduct(
+                old_name=old_name,
+                new_name="cartonboard production, virgin",
+                product="turpentine",
+                geography=geo,
+                unit="kg",
+            )
+            for old_name, geo in (
+                ("folding boxboard carton production", "RER"),
+                ("folding boxboard carton production", "RoW"),
+                ("solid bleached and unbleached board carton production", "RER"),
+            )
+        ]
+        + [
+            # APOS only; skipped in other system models where this by-product has no dataset
+            byproduct(
+                old_name=old_name,
+                new_name=new_name,
+                product="waste paper, sorted",
+                geography=geo,
+                unit="kg",
+            )
+            for old_name, new_name in (
+                ("folding boxboard carton production", "cartonboard production, virgin"),
+                ("white lined chipboard carton production", "cartonboard production, recycled"),
+            )
+            for geo in ("RER", "RoW")
+        ]
+        + [
+            byproduct(
+                old_name="calcined petroleum coke production",
+                new_name="calcined petroleum coke production, vertical shaft",
+                product="gypsum, mineral",
+                geography="CN",
+                unit="kg",
+            )
+        ]
+        + [
+            {
+                "source": {
+                    "activity_name": "lithium carbonate production, from spodumene",
+                    "product_name": "sodium sulfate, anhydrite",
+                    "unit": "kg",
+                    "geography": geo,
+                },
+                "target": {
+                    "activity_name": "lithium carbonate production, battery grade, from spodumene concentrate, Shehong",
+                    "geography": "CN",
+                },
+                "comment": "By-product production missed in change report during name change; follows reference product mapping",
+            }
+            for geo in ("CN", "RoW")
+        ]
+        + [
+            {
+                "source": {
+                    "activity_name": "treatment of used Li-ion battery, hydrometallurgical treatment",
+                    "product_name": "lithium carbonate",
+                    "unit": "kg",
+                    "geography": "GLO",
+                },
+                "target": {
+                    "product_name": "lithium carbonate, battery grade",
+                },
+                "comment": "By-product renamed and not documented in change report",
+            }
+        ]
+    ),
 }
 
 

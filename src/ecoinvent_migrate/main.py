@@ -20,6 +20,7 @@ from ecoinvent_migrate.utils import configure_logs, setup_output_directory
 from ecoinvent_migrate.wrangling import (
     apply_missing_patches,
     apply_replacement_patches,
+    drop_absent_sources,
     relabel,
     resolve_glo_row_rer_roe,
     source_target_biosphere_pair,
@@ -113,6 +114,8 @@ def generate_technosphere_mapping(
         source_lookup=source_lookup,
         target_lookup=target_lookup,
     )
+
+    data = drop_absent_sources(data=data, lookup=source_lookup, db_name=source_db_name)
 
     changed_sources = (
         set(source_lookup)
