@@ -301,7 +301,11 @@ def disaggregated(data: List[dict], lookup: dict) -> dict:
         )
         return {
             "source": data[0]["source"],
-            "targets": [obj["target"] | {"allocation": 1 / len(data)} for ob in data],
+            "targets": [obj["target"] | {"allocation": 1 / len(data)} for obj in data],
+            "comment": (
+                "Equal allocation factors used because all target datasets have zero "
+                "production volume"
+            ),
         }
     elif total < 0:
         logger.warning(
