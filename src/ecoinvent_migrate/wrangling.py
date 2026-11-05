@@ -356,6 +356,41 @@ def drop_absent_sources(data: List[dict], lookup: dict, db_name: str) -> List[di
     return [obj for obj in data if tuple_key_for_data(obj["source"]) in lookup]
 
 
+def drop_unit_changes(data: List[dict]) -> List[dict]:
+    """Remove migrations whose `target` unit differs from the `source` unit.
+
+    The technosphere change report gives no conversion factors, so a migration which changes the
+    unit would silently apply the old amount in the new unit (e.g. kg of electric arc furnace dust
+    becoming hectares of land use change). These entries are errors in the change report, or
+    changes which can't be expressed as a migration.
+
+    A disaggregation has one entry per target at this stage. If any target changes unit, all entries
+    for that source are removed, as allocating to only the remaining targets would also be wrong."""
+    changed = {
+        tuple_key_for_data(obj["source"])
+        for obj in data
+        if obj["target"].get("unit", obj["source"]["unit"]) != obj["source"]["unit"]
+    }
+    for obj in data:
+        if tuple_key_for_data(obj["source"]) in changed:
+            logger.warning(
+                "Skipping migration which changes unit without a conversion factor: {s} -> {t}",
+                s=obj["source"],
+                t=obj["target"],
+            )
+    return [obj for obj in data if tuple_key_for_data(obj["source"]) not in changed]
+
+
+# Biosphere unit changes which are only relabelling, so the amount doesn't change
+EQUIVALENT_BIOSPHERE_UNITS = {("m3", "Sm3")}
+
+
+def biosphere_unit_change_allowed(source_unit: str, target_unit: str) -> bool:
+    """Biosphere flows can keep their UUID but change unit, e.g. Manganese-55 in kBq became
+    Manganese in kg in 3.10. Without a conversion factor that isn't a valid migration."""
+    return source_unit == target_unit or (source_unit, target_unit) in EQUIVALENT_BIOSPHERE_UNITS
+
+
 def disaggregated(data: List[dict], lookup: dict) -> dict:
     """Take a list of mapping dictionaries with the same `source`, and create one `disaggregate`
     object.

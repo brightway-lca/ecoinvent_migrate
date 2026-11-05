@@ -22,7 +22,9 @@ from ecoinvent_migrate.wrangling import (
     apply_biosphere_patches,
     apply_missing_patches,
     apply_replacement_patches,
+    biosphere_unit_change_allowed,
     drop_absent_sources,
+    drop_unit_changes,
     patches_for_system_model,
     relabel,
     resolve_glo_row_rer_roe,
@@ -139,6 +141,8 @@ def generate_technosphere_mapping(
             "Source dataset changed but neither change report nor patches have migrations: {s}",
             s=source_lookup[item],
         )
+
+    data = drop_unit_changes(data)
 
     data = [{"source": relabel(obj["source"]), "target": relabel(obj["target"])} for obj in data]
     data = split_replace_disaggregate(data=data, target_lookup=target_lookup)
@@ -445,6 +449,16 @@ def supplement_biosphere_changes_with_real_data_comparison(
             for key, value in target_ee[key_source].items()
             if value and value != value_source[key]
         }
+        if "unit" in diff and not biosphere_unit_change_allowed(
+            value_source["unit"], diff["unit"]
+        ):
+            logger.warning(
+                "Skipping flow {u} whose unit changes without a conversion factor: {s} -> {t}",
+                u=key_source,
+                s=value_source,
+                t=target_ee[key_source],
+            )
+            continue
         if diff:
             data["replace"].append(
                 {
