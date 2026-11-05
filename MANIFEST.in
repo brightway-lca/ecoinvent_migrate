@@ -1,0 +1,4 @@
+include CHANGES.md
+recursive-include outputs *.json
+recursive-include tests *.py
+recursive-include docs *.md *.py *.yaml
