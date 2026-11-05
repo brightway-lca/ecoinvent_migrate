@@ -6,6 +6,6 @@ __all__ = (
     "generate_biosphere_mapping",
 )
 
-__version__ = "0.6.2"
+__version__ = "0.7"
 
 from ecoinvent_migrate.main import generate_biosphere_mapping, generate_technosphere_mapping
