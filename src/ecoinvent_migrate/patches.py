@@ -81,109 +81,109 @@ TECHNOSPHERE_PATCHES_MISSING_DATA = {
     ("3.9.1", "3.10"): [
         {
             "source": {
-                "name": "modified Solvay process, Hou's process",
-                "location": "GLO",
-                "reference product": "ammonium chloride",
+                "activity_name": "modified Solvay process, Hou's process",
+                "geography": "GLO",
+                "product_name": "ammonium chloride",
                 "unit": "kg",
             },
             "target": {
-                "name": "soda ash production, dense, Hou's process",
+                "activity_name": "soda ash production, dense, Hou's process",
             },
             "comment": "By-product production missed in change report during name change",
         },
         {
             "source": {
-                "name": "Mannheim process",
-                "location": "RER",
-                "reference product": "sodium sulfate, anhydrite",
+                "activity_name": "Mannheim process",
+                "geography": "RER",
+                "product_name": "sodium sulfate, anhydrite",
                 "unit": "kg",
             },
             "target": {
-                "name": "hydrochloric acid production, Mannheim process",
+                "activity_name": "hydrochloric acid production, Mannheim process",
             },
             "comment": "By-product production missed in change report during name change",
         },
         {
             "source": {
-                "name": "Mannheim process",
-                "location": "RoW",
-                "reference product": "sodium sulfate, anhydrite",
+                "activity_name": "Mannheim process",
+                "geography": "RoW",
+                "product_name": "sodium sulfate, anhydrite",
                 "unit": "kg",
             },
             "target": {
-                "name": "hydrochloric acid production, Mannheim process",
+                "activity_name": "hydrochloric acid production, Mannheim process",
             },
             "comment": "By-product production missed in change report during name change",
         },
         {
             "source": {
-                "name": "wheat production, Swiss integrated production, intensive",
-                "location": "CH",
-                "reference product": "straw",
+                "activity_name": "wheat production, Swiss integrated production, intensive",
+                "geography": "CH",
+                "product_name": "straw",
                 "unit": "kg",
             },
             "target": {
-                "name": "wheat grain production, Swiss integrated production, intensive",
+                "activity_name": "wheat grain production, Swiss integrated production, intensive",
             },
             "comment": "By-product production missed in change report during name change",
         },
         {
             "source": {
-                "name": "wheat production, Swiss integrated production, extensive",
-                "location": "CH",
-                "reference product": "straw",
+                "activity_name": "wheat production, Swiss integrated production, extensive",
+                "geography": "CH",
+                "product_name": "straw",
                 "unit": "kg",
             },
             "target": {
-                "name": "wheat grain production, Swiss integrated production, extensive",
+                "activity_name": "wheat grain production, Swiss integrated production, extensive",
             },
             "comment": "By-product production missed in change report during name change",
         },
         {
             "source": {
-                "name": "air separation, cryogenic",
-                "reference product": "nitrogen, liquid",
-                "location": "RER",
+                "activity_name": "air separation, cryogenic",
+                "product_name": "nitrogen, liquid",
+                "geography": "RER",
                 "unit": "kg",
             },
             "target": {
-                "name": "industrial gases production, cryogenic air separation",
+                "activity_name": "industrial gases production, cryogenic air separation",
             },
             "comment": "By-product production missed in change report during name change",
         },
         {
             "source": {
-                "name": "air separation, cryogenic",
-                "reference product": "nitrogen, liquid",
-                "location": "RoW",
+                "activity_name": "air separation, cryogenic",
+                "product_name": "nitrogen, liquid",
+                "geography": "RoW",
                 "unit": "kg",
             },
             "target": {
-                "name": "industrial gases production, cryogenic air separation",
+                "activity_name": "industrial gases production, cryogenic air separation",
             },
             "comment": "By-product production missed in change report during name change",
         },
         {
             "source": {
-                "name": "air separation, cryogenic",
-                "reference product": "argon, crude, liquid",
-                "location": "RER",
+                "activity_name": "air separation, cryogenic",
+                "product_name": "argon, crude, liquid",
+                "geography": "RER",
                 "unit": "kg",
             },
             "target": {
-                "name": "industrial gases production, cryogenic air separation",
+                "activity_name": "industrial gases production, cryogenic air separation",
             },
             "comment": "By-product production missed in change report during name change",
         },
         {
             "source": {
-                "name": "air separation, cryogenic",
-                "reference product": "argon, crude, liquid",
-                "location": "RoW",
+                "activity_name": "air separation, cryogenic",
+                "product_name": "argon, crude, liquid",
+                "geography": "RoW",
                 "unit": "kg",
             },
             "target": {
-                "name": "industrial gases production, cryogenic air separation",
+                "activity_name": "industrial gases production, cryogenic air separation",
             },
             "comment": "By-product production missed in change report during name change",
         },
