@@ -7,10 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.7.1] - 2026-11-05
+
 ### Fixed
 
-* Technosphere migrations which change unit are skipped, as the change report has no conversion factors. Removes e.g. kg of electric arc furnace dust becoming hectares of land use change (3.9.1 → 3.10), kg of liquid packaging board becoming units of beverage cartons (3.9.1 → 3.10), and kWh of compressor station electricity becoming MJ of natural gas burned (3.8 → 3.9). If any target of a disaggregation changes unit, the whole disaggregation is skipped
-* Biosphere flow changes found by comparing release data are skipped when the unit changes, except for `m3` → `Sm3`. Removes Manganese-55 in kBq becoming Manganese in kg (3.9.1 → 3.10)
+* Technosphere migrations which change unit are skipped, as the change report has no conversion factors. Removes e.g. kg of electric arc furnace dust becoming hectares of land use change (3.9.1 → 3.10), kg of liquid packaging board becoming units of beverage cartons (3.9.1 → 3.10), and kWh of compressor station electricity becoming MJ of natural gas burned (3.8 → 3.9). If any target of a disaggregation changes unit, the whole disaggregation is skipped ([#32](https://github.com/brightway-lca/ecoinvent_migrate/pull/32))
+* Biosphere flow changes found by comparing release data are skipped when the unit changes, except for `m3` → `Sm3`. Removes Manganese-55 in kBq becoming Manganese in kg (3.9.1 → 3.10) ([#32](https://github.com/brightway-lca/ecoinvent_migrate/pull/32))
+* Source distributions include the migration files in `outputs`, tests and docs; `MANIFEST.in` was empty
+* License metadata uses `project.license` and `project.license-files` instead of the deprecated `tool.setuptools.license-files`, which setuptools stops supporting in 2027. Building now needs `setuptools>=77`
 
 ## [0.7] - 2026-11-05
 
