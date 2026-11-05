@@ -8,9 +8,12 @@ from loguru import logger
 from platformdirs import user_data_dir, user_log_dir
 
 
-def configure_logs(write_logs: bool = True) -> None:
+def configure_logs(write_logs: bool = True, log_level: str = "INFO") -> None:
+    """Log to stderr at `log_level`, and optionally write detailed log files.
+
+    The log files always use the `DEBUG` and `INFO` levels, independent of `log_level`."""
     logger.remove()
-    logger.add(sys.stderr, level="INFO")
+    logger.add(sys.stderr, level=log_level)
     if write_logs:
         logs_dir = Path(
             user_log_dir("ecoinvent_migrate", "pylca")

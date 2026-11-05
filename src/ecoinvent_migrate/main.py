@@ -40,6 +40,7 @@ def generate_technosphere_mapping(
     ecoinvent_username: Optional[str] = None,
     ecoinvent_password: Optional[str] = None,
     write_logs: bool = True,
+    log_level: str = "INFO",
     write_file: bool = True,
     licenses: Optional[List[dict]] = None,
     output_directory: Optional[Path] = None,
@@ -47,7 +48,7 @@ def generate_technosphere_mapping(
     description: Optional[str] = None,
 ) -> Union[Path, Datapackage]:
     """Generate a Randonneur mapping file for technosphere edge attributes from source to target."""
-    configure_logs(write_logs=write_logs)
+    configure_logs(write_logs=write_logs, log_level=log_level)
 
     release = get_ei_release(
         ecoinvent_username=ecoinvent_username,
@@ -184,6 +185,7 @@ def generate_biosphere_mapping(
     ecoinvent_username: Optional[str] = None,
     ecoinvent_password: Optional[str] = None,
     write_logs: bool = True,
+    log_level: str = "INFO",
     write_file: bool = True,
     licenses: Optional[List[dict]] = None,
     output_directory: Optional[Path] = None,
@@ -191,7 +193,7 @@ def generate_biosphere_mapping(
     description: Optional[str] = None,
 ) -> Optional[Path]:
     """Generate a Randonneur mapping file for biosphere edge attributes from source to target."""
-    configure_logs(write_logs=write_logs)
+    configure_logs(write_logs=write_logs, log_level=log_level)
 
     release = get_ei_release(
         ecoinvent_username=ecoinvent_username,

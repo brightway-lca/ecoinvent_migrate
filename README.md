@@ -210,6 +210,7 @@ Both `generate_technosphere_mapping` and `generate_biosphere_mapping` accept the
 * ecoinvent_username (str, optional): Ecoinvent account username
 * ecoinvent_password (str, optional): Ecoinvent account password
 * write_logs (bool, default `True`): Create detailed and high-level logs during mapping file creation
+* log_level (str, default `"INFO"`): Minimum level of log messages printed to the console, e.g. `"WARNING"` to only see problems. Doesn't change the log files written with `write_logs`.
 * output_directory (`pathlib.Path`, default is `platformlibs.user_data_dir`): Directory for the result files
 
 Note that we **strongly recommend** [permanently setting your ecoinvent user credentials](https://github.com/brightway-lca/ecoinvent_interface?tab=readme-ov-file#authentication-via-settings-object).
