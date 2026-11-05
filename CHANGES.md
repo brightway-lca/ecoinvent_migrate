@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Fixed
+
+* Technosphere migrations which change unit are skipped, as the change report has no conversion factors. Removes e.g. kg of electric arc furnace dust becoming hectares of land use change (3.9.1 → 3.10), kg of liquid packaging board becoming units of beverage cartons (3.9.1 → 3.10), and kWh of compressor station electricity becoming MJ of natural gas burned (3.8 → 3.9). If any target of a disaggregation changes unit, the whole disaggregation is skipped
+* Biosphere flow changes found by comparing release data are skipped when the unit changes, except for `m3` → `Sm3`. Removes Manganese-55 in kBq becoming Manganese in kg (3.9.1 → 3.10)
+
 ## [0.7] - 2026-11-05
 
 ### Added

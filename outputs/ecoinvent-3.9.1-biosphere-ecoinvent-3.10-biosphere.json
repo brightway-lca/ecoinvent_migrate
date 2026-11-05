@@ -17,7 +17,7 @@
       ]
     }
   ],
-  "created": "2026-11-05T08:24:04.393318+00:00",
+  "created": "2026-11-05T09:02:20.009937+00:00",
   "version": "2.0.0",
   "licenses": [
     {
@@ -5304,20 +5304,6 @@
       "target": {
         "formula": "54Mn",
         "uuid": "d2643677-b96c-4aec-a687-b5b2d4ba9368"
-      },
-      "comment": "Flow attribute change not listed in change report"
-    },
-    {
-      "source": {
-        "name": "Manganese-55",
-        "formula": "Mn",
-        "unit": "kBq",
-        "uuid": "583eec00-1480-4cd7-8670-31eaf94053ad"
-      },
-      "target": {
-        "name": "Manganese",
-        "unit": "kg",
-        "uuid": "583eec00-1480-4cd7-8670-31eaf94053ad"
       },
       "comment": "Flow attribute change not listed in change report"
     },
@@ -13457,62 +13443,6 @@
       "target": {
         "formula": "54Mn",
         "uuid": "729eac4f-0339-4d0f-8956-a71ebe20a527"
-      },
-      "comment": "Flow attribute change not listed in change report"
-    },
-    {
-      "source": {
-        "name": "Manganese-55",
-        "formula": "Mn",
-        "unit": "kBq",
-        "uuid": "957d4d94-9f88-4f40-9755-cfc3918882bb"
-      },
-      "target": {
-        "name": "Manganese",
-        "unit": "kg",
-        "uuid": "957d4d94-9f88-4f40-9755-cfc3918882bb"
-      },
-      "comment": "Flow attribute change not listed in change report"
-    },
-    {
-      "source": {
-        "name": "Manganese-55",
-        "formula": "Mn",
-        "unit": "kBq",
-        "uuid": "6ed06a59-4fd1-422e-a397-4c3274596701"
-      },
-      "target": {
-        "name": "Manganese",
-        "unit": "kg",
-        "uuid": "6ed06a59-4fd1-422e-a397-4c3274596701"
-      },
-      "comment": "Flow attribute change not listed in change report"
-    },
-    {
-      "source": {
-        "name": "Manganese-55",
-        "formula": "Mn",
-        "unit": "kBq",
-        "uuid": "32299af9-3432-470b-8f90-5d06df12b062"
-      },
-      "target": {
-        "name": "Manganese",
-        "unit": "kg",
-        "uuid": "32299af9-3432-470b-8f90-5d06df12b062"
-      },
-      "comment": "Flow attribute change not listed in change report"
-    },
-    {
-      "source": {
-        "name": "Manganese-55",
-        "formula": "Mn",
-        "unit": "kBq",
-        "uuid": "06ee87f5-4946-4ecd-9615-b4723595fbaf"
-      },
-      "target": {
-        "name": "Manganese",
-        "unit": "kg",
-        "uuid": "06ee87f5-4946-4ecd-9615-b4723595fbaf"
       },
       "comment": "Flow attribute change not listed in change report"
     },
