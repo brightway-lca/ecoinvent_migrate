@@ -470,3 +470,69 @@ TECHNOSPHERE_PATCHES_REPLACEMENT_DATA = {
         },
     ]
 }
+
+ALLYL_ALCOHOL_COMMENT = (
+    "Deleted in change report without replacement; same substance (CAS 107-18-6) as existing "
+    "flow 'Allyl alcohol'"
+)
+
+# Manual biosphere `replace` patches. These override change report entries with the same source UUID.
+BIOSPHERE_PATCHES = {
+    # v3.12 - v3.13 change report deletes 2-Propen-1-ol without replacement, but it is the same
+    # substance (CAS 107-18-6) as the existing "Allyl alcohol" flows. There are no soil
+    # "Allyl alcohol" flows, so those stay as deletions.
+    ("3.12", "3.13"): [
+        {
+            "source": {
+                "uuid": "0e1ad87f-928a-5f2e-990c-8f431f261416",
+                "name": "2-Propen-1-ol",
+                "context": ["air", "non-urban air or from high stacks"],
+            },
+            "target": {
+                "uuid": "c8d084b4-a980-49a3-a385-8476ed020c6b",
+                "name": "Allyl alcohol",
+                "context": ["air", "unspecified"],
+            },
+            "comment": ALLYL_ALCOHOL_COMMENT + "; subcompartment 'non-urban air or from high stacks' not available, mapped to unspecified",
+        },
+        {
+            "source": {
+                "uuid": "f8828e44-6c1e-50ee-afa4-1b2f2a89590c",
+                "name": "2-Propen-1-ol",
+                "context": ["air", "unspecified"],
+            },
+            "target": {
+                "uuid": "c8d084b4-a980-49a3-a385-8476ed020c6b",
+                "name": "Allyl alcohol",
+                "context": ["air", "unspecified"],
+            },
+            "comment": ALLYL_ALCOHOL_COMMENT,
+        },
+        {
+            "source": {
+                "uuid": "13368c7b-d50e-5559-b4dc-9b7bf9ef32d0",
+                "name": "2-Propen-1-ol",
+                "context": ["water", "surface water"],
+            },
+            "target": {
+                "uuid": "3dbfcc62-4898-48a7-969b-74270615e36e",
+                "name": "Allyl alcohol",
+                "context": ["water", "unspecified"],
+            },
+            "comment": ALLYL_ALCOHOL_COMMENT + "; subcompartment 'surface water' not available, mapped to unspecified",
+        },
+        {
+            "source": {
+                "uuid": "0d8d3729-7b68-5669-bc51-fa692e31c561",
+                "name": "2-Propen-1-ol",
+                "context": ["water", "unspecified"],
+            },
+            "target": {
+                "uuid": "3dbfcc62-4898-48a7-969b-74270615e36e",
+                "name": "Allyl alcohol",
+                "context": ["water", "unspecified"],
+            },
+            "comment": ALLYL_ALCOHOL_COMMENT,
+        },
+    ],
+}

@@ -13,11 +13,13 @@ from ecoinvent_migrate import __version__
 from ecoinvent_migrate.data_io import get_change_report, load_release_data
 from ecoinvent_migrate.ei_release import get_ei_release
 from ecoinvent_migrate.patches import (
+    BIOSPHERE_PATCHES,
     TECHNOSPHERE_PATCHES_MISSING_DATA,
     TECHNOSPHERE_PATCHES_REPLACEMENT_DATA,
 )
 from ecoinvent_migrate.utils import configure_logs, setup_output_directory
 from ecoinvent_migrate.wrangling import (
+    apply_biosphere_patches,
     apply_missing_patches,
     apply_replacement_patches,
     relabel,
@@ -258,12 +260,18 @@ Please check the outputs carefully before applying them."""
                 source_version=source_version,
                 target_version=target_version,
                 keep_deletions=keep_deletions,
+                source_uuid_lookup=elementary_exchange_uuid_lookup(source_version),
+                target_uuid_lookup=elementary_exchange_uuid_lookup(target_version),
             )
             # Ensure both keys exist
             if "delete" not in data:
                 data["delete"] = []
             if "replace" not in data:
                 data["replace"] = []
+
+            data = apply_biosphere_patches(
+                data=data, patches=BIOSPHERE_PATCHES.get((source_version, target_version), [])
+            )
 
             affected_uuids = {
                 o["source"]["uuid"]
@@ -327,6 +335,31 @@ Please check the outputs carefully before applying them."""
         return dp.to_json(fp)
     else:
         return dp
+
+
+def elementary_exchanges_filepath(version: str) -> Path:
+    return (
+        Path(
+            CachedStorage().catalogue[
+                ReleaseType.ecospold.filename(version=version, system_model_abbr="cutoff")
+            ]["path"]
+        )
+        / "MasterData"
+        / "ElementaryExchanges.xml"
+    )
+
+
+def elementary_exchange_uuid_lookup(version: str) -> dict:
+    """Map `(name, compartment, subcompartment)` to elementary exchange UUIDs."""
+    ecospold = xmltodict.parse(open(elementary_exchanges_filepath(version), "rb"))
+    return {
+        (
+            obj["name"]["#text"].strip(),
+            obj["compartment"]["compartment"]["#text"].strip(),
+            obj["compartment"]["subcompartment"]["#text"].strip(),
+        ): obj["@id"]
+        for obj in ecospold["validElementaryExchanges"]["elementaryExchange"]
+    }
 
 
 def supplement_biosphere_changes_with_real_data_comparison(
