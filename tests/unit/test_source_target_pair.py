@@ -264,3 +264,36 @@ def test_source_target_pair_as_dict_multiple_some_missing():
         },
     ]
     assert source_target_pair_as_dict(given, 42, "filename", "3.9.1", "3.10") == expected
+
+
+def test_source_target_pair_as_dict_strips_whitespace():
+    given = {
+        "Activity Name - 3.9.1": "oxidation of methanol ",
+        "Geography - 3.9.1": " RoW",
+        "Reference Product - 3.9.1": "formaldehyde\xa0;\nmethanol ",
+        "Reference Product Unit - 3.9.1": "kg ;\n kg",
+        "Activity Name - 3.10": "formaldehyde production, methanol oxidation\xa0",
+        "Geography - 3.10": "RoW\xa0",
+        "Reference Product - 3.10": "formaldehyde",
+        "Reference Product Unit - 3.10": "kg\xa0",
+    }
+    target = {
+        "activity_name": "formaldehyde production, methanol oxidation",
+        "geography": "RoW",
+        "product_name": "formaldehyde",
+        "unit": "kg",
+    }
+    expected = [
+        {
+            "source": {
+                "activity_name": "oxidation of methanol",
+                "geography": "RoW",
+                "product_name": product,
+                "unit": "kg",
+            },
+            "target": target,
+            "comment": "Line 42 in change report file `filename`",
+        }
+        for product in ("formaldehyde", "methanol")
+    ]
+    assert source_target_pair_as_dict(given, 42, "filename", "3.9.1", "3.10") == expected

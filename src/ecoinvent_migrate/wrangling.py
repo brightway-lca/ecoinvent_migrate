@@ -23,10 +23,16 @@ def tuple_key_for_data(obj: dict) -> tuple:
         )
 
 
+def _strip(value):
+    """Strip leading and trailing whitespace, including non-breaking spaces, from strings."""
+    return value.strip() if isinstance(value, str) else value
+
+
 def split_by_semicolon(row: dict, version: str) -> list[dict]:
     """Turn a data `row` into one or more dictionaries.
 
-    Splits reference product and unit values by `;\n`."""
+    Splits reference product and unit values by `;\n`. Strips whitespace from all values, as some
+    change report cells have trailing whitespace (e.g. `\xa0`) not present in the release data."""
     if isinstance(row[f"Activity Name - {version}"], Number) and math.isnan(
         row[f"Activity Name - {version}"]
     ):
@@ -39,10 +45,10 @@ def split_by_semicolon(row: dict, version: str) -> list[dict]:
 
     return [
         {
-            "activity_name": row[f"Activity Name - {version}"],
-            "geography": row[f"Geography - {version}"],
-            "product_name": x,
-            "unit": y,
+            "activity_name": _strip(row[f"Activity Name - {version}"]),
+            "geography": _strip(row[f"Geography - {version}"]),
+            "product_name": _strip(x),
+            "unit": _strip(y),
         }
         for x, y in zip(
             row[f"Reference Product - {version}"].split(";\n"),
