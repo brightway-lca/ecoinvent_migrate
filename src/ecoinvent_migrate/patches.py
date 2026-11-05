@@ -447,6 +447,11 @@ TECHNOSPHERE_PATCHES_MISSING_DATA = {
 
 TECHNOSPHERE_PATCHES_REPLACEMENT_DATA = {
     # This is for cases where there is an entry in the change report, but that entry is incorrect.
+    #
+    # The change report describes the unallocated database, not any system model, so a correction
+    # can be right for one system model and wrong for another. Patches which only apply to some
+    # system models list them in `system_models`; patches without it apply to all. Lists were set
+    # by checking which system models contain the patched (and the unpatched) dataset.
     ("3.10.1", "3.11"): [
         # Misc. errors in change report or source data
         {
@@ -472,9 +477,14 @@ TECHNOSPHERE_PATCHES_REPLACEMENT_DATA = {
             "target": {"product_name": "refrigerant R134a"},
             "comment": "Data error in original dataset; should have treated used refrigerant. Change report assumes correct product.",
             "context": "source",
+            # Consequential 3.10.1 only has `used refrigerant R134a`, which the change report
+            # already gives correctly
+            "system_models": ["cutoff", "apos", "EN15804"],
         },
         # Both change report and change documentation think product is `flakes`, but it's actually
-        # `pellets`
+        # `pellets` in cutoff, APOS (food grade only) and EN15804. Consequential 3.11 has `flakes`,
+        # so the change report is correct there. APOS 3.11 has no non-food grade pelletising
+        # datasets at all.
         {
             "source": {
                 "activity_name": "pelletising of polyethylene, high density",
@@ -487,6 +497,7 @@ TECHNOSPHERE_PATCHES_REPLACEMENT_DATA = {
             },
             "context": "target",
             "comment": "Data error in change report product name.",
+            "system_models": ["cutoff", "EN15804"],
         },
         {
             "source": {
@@ -500,6 +511,7 @@ TECHNOSPHERE_PATCHES_REPLACEMENT_DATA = {
             },
             "context": "target",
             "comment": "Data error in change report product name.",
+            "system_models": ["cutoff", "EN15804"],
         },
         {
             "source": {
@@ -513,8 +525,11 @@ TECHNOSPHERE_PATCHES_REPLACEMENT_DATA = {
             },
             "context": "target",
             "comment": "Data error in change report product name.",
+            "system_models": ["cutoff", "apos", "EN15804"],
         },
-        # Change report uses unsorted reference product
+        # Change report uses unsorted reference product. That's correct for consequential and
+        # EN15804, where the reference product is the unsorted waste; cutoff uses the sorted
+        # output. APOS 3.10.1 only has a RoW dataset, and APOS 3.11 has both products.
         {
             "source": {
                 "activity_name": "treatment of waste polyethylene terephthalate, for recycling, unsorted, sorting",
@@ -527,6 +542,7 @@ TECHNOSPHERE_PATCHES_REPLACEMENT_DATA = {
             },
             "context": "source",
             "comment": "Change report has unsorted reference product, should be sorted.",
+            "system_models": ["cutoff"],
         },
         {
             "source": {
@@ -540,6 +556,7 @@ TECHNOSPHERE_PATCHES_REPLACEMENT_DATA = {
             },
             "context": "source",
             "comment": "Change report has unsorted reference product, should be sorted.",
+            "system_models": ["cutoff"],
         },
         {
             "source": {
@@ -553,6 +570,7 @@ TECHNOSPHERE_PATCHES_REPLACEMENT_DATA = {
             },
             "context": "target",
             "comment": "Change report has unsorted reference product, should be sorted.",
+            "system_models": ["cutoff", "apos"],
         },
     ]
 }

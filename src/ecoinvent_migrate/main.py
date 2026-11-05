@@ -23,12 +23,14 @@ from ecoinvent_migrate.wrangling import (
     apply_missing_patches,
     apply_replacement_patches,
     drop_absent_sources,
+    patches_for_system_model,
     relabel,
     resolve_glo_row_rer_roe,
     source_target_biosphere_pair,
     source_target_pair_as_dict,
     split_replace_disaggregate,
     tuple_key_for_data,
+    warn_on_absent_patch_results,
 )
 
 
@@ -96,18 +98,25 @@ def generate_technosphere_mapping(
     if not description:
         description = f"Data migration file from {source_db_name} to {target_db_name} generated with `ecoinvent_migrate` version {__version__}"
 
-    try:
-        data = apply_replacement_patches(
-            data, TECHNOSPHERE_PATCHES_REPLACEMENT_DATA[(source_version, target_version)]
-        )
-    except KeyError:
-        pass
-    try:
-        data = apply_missing_patches(
-            data, TECHNOSPHERE_PATCHES_MISSING_DATA[(source_version, target_version)]
-        )
-    except KeyError:
-        pass
+    replacement_patches = patches_for_system_model(
+        TECHNOSPHERE_PATCHES_REPLACEMENT_DATA.get((source_version, target_version), []),
+        system_model,
+    )
+    warn_on_absent_patch_results(
+        patches=replacement_patches,
+        source_lookup=source_lookup,
+        target_lookup=target_lookup,
+        source_db_name=source_db_name,
+        target_db_name=target_db_name,
+    )
+    data = apply_replacement_patches(data, replacement_patches)
+    data = apply_missing_patches(
+        data,
+        patches_for_system_model(
+            TECHNOSPHERE_PATCHES_MISSING_DATA.get((source_version, target_version), []),
+            system_model,
+        ),
+    )
 
     data = resolve_glo_row_rer_roe(
         data=data,

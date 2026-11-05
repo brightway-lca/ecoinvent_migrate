@@ -272,6 +272,67 @@ def resolve_glo_row_rer_roe(
     return data
 
 
+SYSTEM_MODELS = {"cutoff", "apos", "consequential", "EN15804"}
+
+
+def patches_for_system_model(patches: List[dict], system_model: str) -> List[dict]:
+    """Return the `patches` which apply to `system_model`, without their `system_models` key.
+
+    The change report describes the unallocated database, so some corrections are only right for
+    some system models. A patch with a `system_models` list only applies to those system models; a
+    patch without one applies to all."""
+    selected = []
+    for patch in patches:
+        models = patch.get("system_models")
+        if models is not None:
+            unknown = set(models).difference(SYSTEM_MODELS)
+            if unknown:
+                raise ValueError(f"Unknown system model(s) {sorted(unknown)} in patch: {patch}")
+            if system_model not in models:
+                logger.debug(
+                    "Skipping patch not valid for system model {sm}: {p}",
+                    sm=system_model,
+                    p=patch,
+                )
+                continue
+        selected.append({key: value for key, value in patch.items() if key != "system_models"})
+    return selected
+
+
+def _in_lookup_with_row_roe(key: tuple, lookup: dict) -> bool:
+    """`key` is in `lookup`, possibly after the GLO -> RoW or RER -> RoE correction."""
+    if key in lookup:
+        return True
+    alternative = {"GLO": "RoW", "RER": "RoE"}.get(key[1])
+    return alternative is not None and (key[0], alternative, key[2], key[3]) in lookup
+
+
+def warn_on_absent_patch_results(
+    patches: List[dict],
+    source_lookup: dict,
+    target_lookup: dict,
+    source_db_name: str,
+    target_db_name: str,
+) -> None:
+    """Warn when a replacement patch produces a dataset which isn't in the relevant release.
+
+    This usually means the patch is only correct for some system models, and needs a
+    `system_models` list."""
+    for patch in patches:
+        if patch["context"] == "source":
+            lookup, db_name = source_lookup, source_db_name
+        else:
+            lookup, db_name = target_lookup, target_db_name
+        patched = tuple_key_for_data(patch["source"] | patch["target"])
+        if not _in_lookup_with_row_roe(patched, lookup):
+            logger.warning(
+                "Replacement patch gives a {kind} dataset not in {db_name}; does this patch need a `system_models` list? {p}",
+                kind=patch["context"],
+                db_name=db_name,
+                p=patch,
+            )
+
+
 def drop_absent_sources(data: List[dict], lookup: dict, db_name: str) -> List[dict]:
     """Remove migrations whose `source` dataset isn't in `lookup`.
 
