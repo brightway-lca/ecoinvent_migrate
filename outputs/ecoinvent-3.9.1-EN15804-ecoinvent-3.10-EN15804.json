@@ -17,7 +17,7 @@
       ]
     }
   ],
-  "created": "2026-11-05T08:24:21.331873+00:00",
+  "created": "2026-11-05T09:02:17.625409+00:00",
   "version": "2.0.0",
   "licenses": [
     {
@@ -2321,34 +2321,6 @@
         "name": "market for 1,3-dichloropropene",
         "reference product": "1,3-dichloropropene",
         "location": "GLO"
-      }
-    },
-    {
-      "source": {
-        "unit": "kg",
-        "name": "market for electric arc furnace dust",
-        "reference product": "electric arc furnace dust",
-        "location": "RER"
-      },
-      "target": {
-        "unit": "ha",
-        "name": "market group for land use change, annual crop",
-        "reference product": "land use change, annual crop",
-        "location": "RER"
-      }
-    },
-    {
-      "source": {
-        "unit": "kg",
-        "name": "market for electric arc furnace slag",
-        "reference product": "electric arc furnace slag",
-        "location": "RER"
-      },
-      "target": {
-        "unit": "ha",
-        "name": "market group for land use change, annual crop",
-        "reference product": "land use change, annual crop",
-        "location": "RER"
       }
     },
     {
@@ -8374,68 +8346,6 @@
     {
       "source": {
         "unit": "kg",
-        "name": "liquid packaging board container production",
-        "reference product": "liquid packaging board container",
-        "location": "RoW"
-      },
-      "targets": [
-        {
-          "unit": "unit",
-          "name": "beverage carton production, 1 L, for UHT milk (ambient)",
-          "reference product": "beverage carton, 1 L, for UHT milk (ambient)",
-          "location": "RER",
-          "allocation": 0.6511537465317732
-        },
-        {
-          "unit": "unit",
-          "name": "beverage carton production, 1 L, for fresh milk (chilled)",
-          "reference product": "beverage carton, 1 L, for fresh milk (chilled)",
-          "location": "RER",
-          "allocation": 0.2143721777652595
-        },
-        {
-          "unit": "unit",
-          "name": "beverage carton production, 1 L, for juice (ambient)",
-          "reference product": "beverage carton, 1 L, for juice (ambient)",
-          "location": "RER",
-          "allocation": 0.1344740757029674
-        }
-      ]
-    },
-    {
-      "source": {
-        "unit": "kg",
-        "name": "liquid packaging board container production",
-        "reference product": "liquid packaging board container",
-        "location": "RER"
-      },
-      "targets": [
-        {
-          "unit": "unit",
-          "name": "beverage carton production, 1 L, for UHT milk (ambient)",
-          "reference product": "beverage carton, 1 L, for UHT milk (ambient)",
-          "location": "RER",
-          "allocation": 0.6511537465317732
-        },
-        {
-          "unit": "unit",
-          "name": "beverage carton production, 1 L, for fresh milk (chilled)",
-          "reference product": "beverage carton, 1 L, for fresh milk (chilled)",
-          "location": "RER",
-          "allocation": 0.2143721777652595
-        },
-        {
-          "unit": "unit",
-          "name": "beverage carton production, 1 L, for juice (ambient)",
-          "reference product": "beverage carton, 1 L, for juice (ambient)",
-          "location": "RER",
-          "allocation": 0.1344740757029674
-        }
-      ]
-    },
-    {
-      "source": {
-        "unit": "kg",
         "name": "maize grain production",
         "reference product": "maize grain",
         "location": "RoW"
@@ -9333,37 +9243,6 @@
           "reference product": "hydrogen, gaseous, medium pressure, merchant",
           "location": "US",
           "allocation": 0.6142857142857143
-        }
-      ]
-    },
-    {
-      "source": {
-        "unit": "kg",
-        "name": "market for liquid packaging board container",
-        "reference product": "liquid packaging board container",
-        "location": "GLO"
-      },
-      "targets": [
-        {
-          "unit": "unit",
-          "name": "market for beverage carton, 1 L, for UHT milk (ambient)",
-          "reference product": "beverage carton, 1 L, for UHT milk (ambient)",
-          "location": "RER",
-          "allocation": 0.6511537465317732
-        },
-        {
-          "unit": "unit",
-          "name": "market for beverage carton, 1 L, for fresh milk (chilled)",
-          "reference product": "beverage carton, 1 L, for fresh milk (chilled)",
-          "location": "RER",
-          "allocation": 0.2143721777652595
-        },
-        {
-          "unit": "unit",
-          "name": "market for beverage carton, 1 L, for juice (ambient)",
-          "reference product": "beverage carton, 1 L, for juice (ambient)",
-          "location": "RER",
-          "allocation": 0.1344740757029674
         }
       ]
     },
